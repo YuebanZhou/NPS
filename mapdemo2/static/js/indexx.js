@@ -266,10 +266,10 @@ var option2 = {
         data: [
           [
             {
-              coord: ["上网信号稳定性", 0]
+              coord: ["上网信号\n稳定性", 0]
             },
             {
-              coord: ["上网信号稳定性", 10]
+              coord: ["上网信号\n稳定性", 10]
             }
           ]
         ]
@@ -504,10 +504,10 @@ var option4 = {
         data: [
           [
             {
-              coord: ["与互联网公司合作的产品", 0]
+              coord: ["与互联网公司\n合作的产品", 0]
             },
             {
-              coord: ["与互联网公司合作的产品", 10]
+              coord: ["与互联网公司\n合作的产品", 10]
             }
           ]
         ]
@@ -769,7 +769,7 @@ var option6 = {
   grid: {
     left: "3%",
     right: "6%",
-    bottom: "30%",
+    bottom: "3%",
     containLabel: true
   },
   series: [
@@ -809,10 +809,10 @@ var option6 = {
         data: [
           [
             {
-              coord: ["热线服务人员态度和技能", 0]
+              coord: ["热线\n服务人员\n态度和技能", 0]
             },
             {
-              coord: ["热线服务人员态度和技能", -10]
+              coord: ["热线\n服务人员\n态度和技能", -10]
             }
           ]
         ]
@@ -859,10 +859,10 @@ var option6 = {
         data: [
           [
             {
-              coord: ["热线业务办理方便快捷", 0]
+              coord: ["热线业务\n办理\n方便快捷", 0]
             },
             {
-              coord: ["热线业务办理方便快捷", -10]
+              coord: ["热线业务\n办理\n方便快捷", -10]
             }
           ]
         ]
@@ -960,7 +960,7 @@ var option7 = {
   grid: {
     left: "3%",
     right: "6%",
-    bottom: "20%",
+    bottom: "3%",
     containLabel: true
   },
   series: [
@@ -1018,10 +1018,10 @@ var option7 = {
         data: [
           [
             {
-              coord: ["垃圾短信/诈骗电话", 0]
+              coord: ["垃圾短信\n诈骗电话", 0]
             },
             {
-              coord: ["垃圾短信/诈骗电话", 10]
+              coord: ["垃圾短信\n诈骗电话", 10]
             }
           ]
         ]

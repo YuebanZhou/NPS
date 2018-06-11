@@ -16,7 +16,7 @@ h5 {
 .ibox {
   z-index: 10;
   margin-bottom: 0;
-  width: 18%;
+  width: 48%;
   min-width: 205px;
   background: #000;
   color: #fff;
@@ -26,8 +26,8 @@ h5 {
 .ibox3 {
   position: absolute;
   top: 40px;
-  left: 5px;
-  width: 500px;
+  left: 25px;
+  /* width: 500px; */
   height: 250px;
 }
 
@@ -42,8 +42,8 @@ h5 {
 .ibox4 {
   position: absolute;
   bottom: 5px;
-  left: 5px;
-  width: 500px;
+  left: 25px;
+  /* width: 500px; */
   height: 250px;
 }
 
@@ -128,7 +128,7 @@ td {
 .ibox5 {
   position: absolute;
   bottom: 5px;
-  right: 5px;
+  right: 25px;
   width: 495px;
   height: 275px;
 }

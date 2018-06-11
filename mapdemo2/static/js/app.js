@@ -141,10 +141,10 @@ function renderMap(map, data) {
   option.geo = {
     show: true,
     map: map,
-    right: 10,
+    right: 25,
     top: 10,
     height: '50%',
-    width: '50%',
+    width: '40%',
     label: {
       normal: {
         show: false

@@ -87,14 +87,11 @@ var lineoption1 = {
       }
     }
   },
-  series: [
-    {
+  series: [{
       name: "中国联通",
       type: "line",
       // stack: '总量',
-      data: [
-        -1.2,
-        -0.5,
+      data: [-1.2, -0.5,
         0.6,
         5,
         {
@@ -256,14 +253,11 @@ var lineoption2 = {
       }
     }
   },
-  series: [
-    {
+  series: [{
       name: "中国联通",
       type: "line",
       // stack: '总量',
-      data: [
-        -0.1,
-        -1.1,
+      data: [-0.1, -1.1,
         0.8,
         4.2,
         {
@@ -291,11 +285,7 @@ var lineoption2 = {
       name: "中国移动",
       type: "line",
       // stack: '总量',
-      data: [
-        ,
-        ,
-        ,
-        ,
+      data: [, , , ,
         {
           value: -0.7,
           label: {
@@ -321,11 +311,7 @@ var lineoption2 = {
       name: "中国电信",
       type: "line",
       // stack: '总量',
-      data: [
-        ,
-        ,
-        ,
-        ,
+      data: [, , , ,
         {
           value: 6.9,
           label: {
@@ -352,11 +338,18 @@ var lineoption2 = {
 
 lineChart2.setOption(lineoption2);
 
-$(".ibox3").click(function() {
+$(".ibox3").click(function () {
   console.log("ibox3");
   window.location.href = "indexx.html";
 });
-$(".ibox4").click(function() {
+$(".ibox4").click(function () {
   console.log("ibox4");
   window.location.href = "indexx.html";
 });
+$(window).resize(function () {
+  // console.log("wawa")
+  //重置容器高宽
+  // resizeWorldMapContainer();
+  lineChart1.resize();
+  lineChart2.resize();
+})
