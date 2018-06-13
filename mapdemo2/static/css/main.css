@@ -7,11 +7,22 @@ html,
 body.gray-bg {
   /* height: 100%; */
   background-color: #091c3d;
-  overflow: hidden;
+  /* overflow: hidden; */
 
+}
+#main {
+  position: absolute;
+  top: 0;
+  right: 10px;
 }
 h5 {
   color: #fff
+}
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .ibox {
   z-index: 10;
@@ -36,7 +47,7 @@ h5 {
   padding-bottom: 10px;
   height: 202px;
   padding-right: 100px;
-  padding-left: 80px;
+  /* padding-left: 80px; */
 }
 
 .ibox4 {
@@ -130,13 +141,13 @@ td {
   bottom: 5px;
   right: 25px;
   width: 495px;
-  height: 275px;
+  height: 260px;
 }
 
 .ibox5 .ibox-content {
   padding-top: 0;
   padding-bottom: 0;
-  height: 220px;
+  height: 200px;
 }
 thead tr th {
   text-align: center;

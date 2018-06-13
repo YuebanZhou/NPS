@@ -77,19 +77,29 @@
 //     }]
 // }
 // chart2.setOption(option2);
-$(".btn11").click(function() {
+$(".btn11").click(function () {
+  $("#chart7").show()
+  $("#chart8").show()
+  $("#chart9").hide()
+  $("#chart10").hide()
+
   if ($(".btn12").hasClass("active")) {
     $(".btn12").removeClass("active");
     $(this).addClass("active");
   }
 });
-$(".btn12").click(function() {
+$(".btn12").click(function () {
+  $("#chart7").hide()
+  $("#chart8").hide()
+  $("#chart9").show()
+  $("#chart10").show()
+
   $(this).addClass("active");
   if ($(".btn11").hasClass("active")) {
     $(".btn11").removeClass("active");
   }
 });
-$(".btn21").click(function() {
+$(".btn21").click(function () {
   if ($(".btn22").hasClass("active")) {
     $(".btn22").removeClass("active");
     $(this).addClass("active");
@@ -107,7 +117,7 @@ $(".btn21").click(function() {
     $(this).addClass("active");
   }
 });
-$(".btn22").click(function() {
+$(".btn22").click(function () {
   $(this).addClass("active");
   if ($(".btn21").hasClass("active")) {
     $(".btn21").removeClass("active");
@@ -122,7 +132,7 @@ $(".btn22").click(function() {
     $(".btn25").removeClass("active");
   }
 });
-$(".btn23").click(function() {
+$(".btn23").click(function () {
   $(this).addClass("active");
   if ($(".btn21").hasClass("active")) {
     $(".btn21").removeClass("active");
@@ -137,7 +147,7 @@ $(".btn23").click(function() {
     $(".btn25").removeClass("active");
   }
 });
-$(".btn24").click(function() {
+$(".btn24").click(function () {
   $(this).addClass("active");
   if ($(".btn21").hasClass("active")) {
     $(".btn21").removeClass("active");
@@ -152,7 +162,7 @@ $(".btn24").click(function() {
     $(".btn25").removeClass("active");
   }
 });
-$(".btn25").click(function() {
+$(".btn25").click(function () {
   $(this).addClass("active");
   if ($(".btn21").hasClass("active")) {
     $(".btn21").removeClass("active");
@@ -167,96 +177,96 @@ $(".btn25").click(function() {
     $(".btn24").removeClass("active");
   }
 });
-var chart3 = echarts.init(document.getElementById("chart3"));
-var option3 = {
-  tooltip: {
-    trigger: "axis",
-    axisPointer: {
-      type: "shadow"
-    }
-  },
-  grid: {
-    left: "5%",
-    right: "4%",
-    top: "top",
-    containLabel: true
-  },
-  xAxis: {
-    type: "value"
-  },
-  yAxis: {
-    type: "category",
-    data: ["天津", "山东", "内蒙古"]
-  },
-  label: {
-    normal: {
-      show: true
-    }
-  },
-  barWidth: 20,
-  series: [
-    {
-      type: "bar",
-      itemStyle: {
-        normal: {
-          color: function(params) {
-            var colorList = ["#1296DB", "#EAE470", "#D81E06"];
-            return colorList[params.dataIndex];
-          }
-        }
-      },
-      data: [25.4, 28.8, 39.1]
-    }
-  ]
-};
-chart3.setOption(option3);
-var chart4 = echarts.init(document.getElementById("chart4"));
-var option4 = {
-  tooltip: {
-    trigger: "axis",
-    axisPointer: {
-      type: "shadow"
-    }
-  },
-  grid: {
-    left: "5%",
-    right: "4%",
-    top: "top",
-    containLabel: true
-  },
-  xAxis: {
-    type: "value"
-  },
-  yAxis: {
-    type: "category",
-    data: ["甘肃", "青海", "云南"]
-  },
-  label: {
-    normal: {
-      show: true
-    }
-  },
-  barWidth: 20,
-  series: [
-    {
-      type: "bar",
-      itemStyle: {
-        normal: {
-          color: function(params) {
-            var colorList = ["#1296DB", "#EAE470", "#D81E06"];
-            return colorList[params.dataIndex];
-          }
-        }
-      },
-      data: [29.5, 31.1, 41.2]
-    }
-  ]
-};
-chart4.setOption(option4);
+// var chart3 = echarts.init(document.getElementById("chart3"));
+// var option3 = {
+//   tooltip: {
+//     trigger: "axis",
+//     axisPointer: {
+//       type: "shadow"
+//     }
+//   },
+//   grid: {
+//     left: "5%",
+//     right: "4%",
+//     top: "top",
+//     containLabel: true
+//   },
+//   xAxis: {
+//     type: "value"
+//   },
+//   yAxis: {
+//     type: "category",
+//     data: ["天津", "山东", "内蒙古"]
+//   },
+//   label: {
+//     normal: {
+//       show: true
+//     }
+//   },
+//   barWidth: 20,
+//   series: [
+//     {
+//       type: "bar",
+//       itemStyle: {
+//         normal: {
+//           color: function(params) {
+//             var colorList = ["#1296DB", "#EAE470", "#D81E06"];
+//             return colorList[params.dataIndex];
+//           }
+//         }
+//       },
+//       data: [25.4, 28.8, 39.1]
+//     }
+//   ]
+// };
+// chart3.setOption(option3);
+// var chart4 = echarts.init(document.getElementById("chart4"));
+// var option4 = {
+//   tooltip: {
+//     trigger: "axis",
+//     axisPointer: {
+//       type: "shadow"
+//     }
+//   },
+//   grid: {
+//     left: "5%",
+//     right: "4%",
+//     top: "top",
+//     containLabel: true
+//   },
+//   xAxis: {
+//     type: "value"
+//   },
+//   yAxis: {
+//     type: "category",
+//     data: ["甘肃", "青海", "云南"]
+//   },
+//   label: {
+//     normal: {
+//       show: true
+//     }
+//   },
+//   barWidth: 20,
+//   series: [
+//     {
+//       type: "bar",
+//       itemStyle: {
+//         normal: {
+//           color: function(params) {
+//             var colorList = ["#1296DB", "#EAE470", "#D81E06"];
+//             return colorList[params.dataIndex];
+//           }
+//         }
+//       },
+//       data: [29.5, 31.1, 41.2]
+//     }
+//   ]
+// };
+// chart4.setOption(option4);
 
 var chart5 = echarts.init(document.getElementById("chart5"));
 var option5 = {
-  color: ["#D2000B", "#95C72D", "#053F9D"],
+  color: ["#F8352F", "#63BA79", "#37B3D7"],
   tooltip: {
     trigger: "item",
     formatter: "{a} <br/>{b} : {c} ({d}%)"
@@ -565,3 +575,165 @@ var option8 = {
   ]
 };
 chart8.setOption(option8);
+var chart9 = echarts.init(document.getElementById("chart9"));
+var option9 = {
+  color: ["#8DBC92", "#FFFAC2"],
+
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      // 坐标轴指示器，坐标轴触发有效
+      type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+    }
+  },
+  legend: {
+    data: ["女", "男"]
+  },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true
+  },
+  yAxis: {
+    type: "value"
+  },
+  xAxis: {
+    type: "category",
+    data: ["移动宽带", "电信宽带", "联通宽带"]
+  },
+  series: [
+    {
+      name: "女",
+      type: "bar",
+      stack: "总量",
+      label: {
+        normal: {
+          show: true,
+          position: "insideRight"
+        }
+      },
+      data: [35.2, 33.2, 30.4],
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            color: "#000"
+          }
+        }
+      },
+    },
+    {
+      name: "男",
+      type: "bar",
+      stack: "总量",
+      label: {
+        normal: {
+          show: true,
+          position: "insideRight"
+        }
+      },
+      data: [64.8, 66.8, 69.6],
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            color: "#000"
+          }
+        }
+      },
+    }
+  ]
+};
+chart9.setOption(option9);
+var chart10 = echarts.init(document.getElementById("chart10"));
+var option10 = {
+  color: ["#8DBC92", "#FFFAC2"],
+
+  tooltip: {
+    trigger: "axis",
+    axisPointer: {
+      // 坐标轴指示器，坐标轴触发有效
+      type: "shadow" // 默认为直线，可选为：'line' | 'shadow'
+    }
+  },
+  legend: {
+    data: ["FTTH接入", "LAN接入", "XDSL接入"]
+  },
+  grid: {
+    left: "3%",
+    right: "4%",
+    bottom: "3%",
+    containLabel: true
+  },
+  yAxis: {
+    type: "value"
+  },
+  xAxis: {
+    type: "category",
+    data: ["联通用户", "调研样本"]
+  },
+  series: [
+    {
+      name: "FTTH接入",
+      type: "bar",
+      stack: "总量",
+      label: {
+        normal: {
+          show: true,
+          position: "insideRight"
+        }
+      },
+      data: [82.1, 82.5],
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            color: "#000"
+          }
+        }
+      },
+    },
+    {
+      name: "LAN接入",
+      type: "bar",
+      stack: "总量",
+      label: {
+        normal: {
+          show: true,
+          position: "insideRight"
+        }
+      },
+      data: [13.3, 13.7],
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            color: "#000"
+          }
+        }
+      },
+    },
+    {
+      name: "XDSL接入",
+      type: "bar",
+      stack: "总量",
+      label: {
+        normal: {
+          show: true,
+          position: "insideRight"
+        }
+      },
+      data: [4.7, 3.9],
+      label: {
+        normal: {
+          show: true,
+          textStyle: {
+            color: "#000"
+          }
+        }
+      },
+    }
+  ]
+};
+chart10.setOption(option10);

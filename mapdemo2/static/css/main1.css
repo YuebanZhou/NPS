@@ -1,6 +1,6 @@
 body {
   padding: 10px;
-  /* background-color: #eee; */
+  background-color: #eee;
 }
 h2 {
   text-align: center;
@@ -90,12 +90,12 @@ th {
 }
 .tablepm {
   padding: 5px;
-  border: 1px solid #999;
-  border-radius: 5px;
-  background-color: #ddd;
+  /* border: 1px solid #999; */
+  /* border-radius: 5px; */
+  /* background-color: #ddd; */
   width: 500px;
   margin: 0 auto;
-  box-shadow: 10px 10px 5px #888888;
+  /* box-shadow: 10px 10px 5px #888888; */
 }
 
 .quanguo {
@@ -166,7 +166,10 @@ th {
   left: 50%;
   margin-left: -100px;
   top: -45px;
-  background-color: #fff;
+  background-color: #eee;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
 }
 .child {
   background-color: #eee;
@@ -174,6 +177,7 @@ th {
 }
 .tablemx {
   text-align: center;
+  /* box-shadow: 10px 10px 10px #888; */
 }
 .tablemx td:first-child {
   width: 150px;
@@ -266,4 +270,13 @@ th {
         -webkit-transform: rotate(360deg);
     }
 } */
+table {
+  box-shadow: 10px 10px 10px #888;
+}
 
+#chart9 {
+  display: none;
+}
+#chart10 {
+  display: none;
+}

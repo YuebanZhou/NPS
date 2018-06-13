@@ -34,14 +34,14 @@ body {
   /* background-color: greenyellow */
 }
 .line {
-    width: 800px;
     height: 2px;
     border: 1px solid #000;
-    width: 800px;
+    width: 900px;
     /* margin: 0 auto; */
     padding-left: 10px;
     position: relative;
     margin-bottom: 70px;
+
 }
 .line ul {
     position: absolute;
@@ -49,21 +49,22 @@ body {
     top: -20px;
     width: 100%;
     padding-left: 70px;
+    padding-right: 70px
 }
 .line ul li {
     list-style: none;
     float: left;
 }
 .line1 li {
-    width: 12.5%;
+    width: 11.1%;
     text-align: center;
 }
 .line2 li {
-    width: 14.2%;
+    width: 12.5%;
     text-align: center;
 }
 .line3 li {
-    width: 8.3%;
+    width: 7.7%;
     text-align: center;
 }
 .line4 li {

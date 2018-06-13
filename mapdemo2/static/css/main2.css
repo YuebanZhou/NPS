@@ -1,6 +1,6 @@
 body {
   padding: 10px;
-  /* background-color: #eee; */
+  background-color: #eee;
 }
 h2 {
   text-align: center;
@@ -187,7 +187,11 @@ th {
   left: 50%;
   margin-left: -100px;
   top: -45px;
-  background-color: #fff;
+  background-color: #eee;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+
 }
 .left {
   float: left;
@@ -245,4 +249,10 @@ th {
 }
 .num:hover {
   transform: rotate(30deg) scale(1.5);
+}
+#chart9 {
+  display: none;
+}
+#chart10 {
+  display: none;
 }
