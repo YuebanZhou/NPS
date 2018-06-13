@@ -53,16 +53,18 @@ $.getJSON('static/map/china.json', function (data) {
   //遍历json文件中的地图数据
   for (var i = 0; i < data.features.length; i++) {
     d.push({
-      name: data.features[i].properties.name,
-      //value: data.features[i].properties.cp
+      name: mapobj[i].PROVINCE_NAME,
+      ywvalue: mapobj[i].U_NPS,
+      kdvalue: mapobj[i].U_K_NPS
     })
   }
+
   //mapdata数组中包含name和cp地理坐标
   mapdata = d;
   //注册地图
   echarts.registerMap('china', data);
   //绘制地图
-  renderMap('china', d, "provinces");
+  renderMap('china', d);
 });
 //地图点击事件
 /*
@@ -97,13 +99,13 @@ chart.on('click', function (params) {
 
 //初始化绘制全国地图配置
 var option = {
-  backgroundColor: '#091C3D',
-  tooltip: {
-    trigger: 'item',
-    formatter: function (params, mapobj ) {
-      return params.name + '</br>移网：' + mapobj.U_NPS + '</br>宽带：' + mapobj.U_K_NPS + '</br>'
-    }
-  },
+  // backgroundColor: '#091C3D',
+  // tooltip: {
+  //   trigger: 'item',
+  //   formatter: function (d) {
+  //     return d.name + '</br>移网：' + d.ywvalue + '</br>宽带：' + d.kdvalue + '</br>'
+  //   }
+  // },
 };
 
 // //数据的排序
@@ -112,11 +114,12 @@ var option = {
 // }
 
 /* 添加内容end */
-function renderMap(map, data, url) {
+function renderMap(map, data) {
+
   //数组，name为地区名称，value为值
   var jdata = []
   //y轴名称列表
-  var titledata = [];
+  // var titledata = [];
 
   //绘制全国地图的时候，执行请求操作
   $.ajax({
@@ -141,9 +144,9 @@ function renderMap(map, data, url) {
 
       }
       //将省份名称push到y轴的临时数组中
-      for (var i = 0; i < jdata.length; i++) {
-        titledata.push(jdata[i].name)
-      }
+      // for (var i = 0; i < jdata.length; i++) {
+      //   titledata.push(jdata[i].name)
+      // }
       //按照数据的大小进行排序
       // jdata.sort(NumDescSort);
       //对chart的相关内容进行配置
@@ -155,6 +158,7 @@ function renderMap(map, data, url) {
       $("#text").html(subtext)
       var width = $("#text").width() / 2;
       $("#text").css("margin-right", -width)
+      option.backgroundColor = '#091C3D';
       option.series = [{
         z: 1,
         name: '全部',
@@ -192,7 +196,6 @@ function renderMap(map, data, url) {
         //roam: true,
         data: jdata
       }];
-
       option.visualMap = {
         show: false,
         min: 0,
@@ -224,18 +227,27 @@ $.ajax({
   url: "json/index.json",
   success: function (result) {
     console.log("请求成功");
-    console.log(result.province);
     for (var i = 0; i < result.province.length; i++) {
       mapobj.push({
+        PROVINCE_NAME: result.province[i].PROVINCE_NAME,
         U_NPS: result.province[i].U_NPS,
         U_K_NPS: result.province[i].U_K_NPS
       })
     }
+    option.tooltip = {
+      trigger: 'item',
+      formatter: function () {
+        for(var i=0;i<mapdata.length;i++){
+          // str=mapobj[i].PROVINCE_NAME + '</br>移网：' + mapobj[i].U_NPS + '</br>宽带：' + mapobj[i].U_K_NPS + '</br>'
+        }
+        // return str
+      }
+    }
+
 
   },
   error: function () {
     console.log("请求失败");
   }
 })
-console.log(mapobj);
 

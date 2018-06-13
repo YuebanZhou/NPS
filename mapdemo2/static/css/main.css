@@ -13,7 +13,8 @@ body.gray-bg {
 #main {
   position: absolute;
   top: 0;
-  right: 10px;
+  right: 50%;
+  transform: translateX(50%)
 }
 h5 {
   color: #fff
@@ -27,7 +28,7 @@ h2 {
 .ibox {
   z-index: 10;
   margin-bottom: 0;
-  width: 48%;
+  width: 32%;
   min-width: 205px;
   background: #000;
   color: #fff;
@@ -36,9 +37,9 @@ h2 {
 
 .ibox3 {
   position: absolute;
-  top: 40px;
-  left: 25px;
-  /* width: 500px; */
+  top: 0px;
+  left: 5px;
+  /* width: 400px; */
   height: 250px;
 }
 
@@ -53,8 +54,8 @@ h2 {
 .ibox4 {
   position: absolute;
   bottom: 5px;
-  left: 25px;
-  /* width: 500px; */
+  left: 5px;
+  /* width: 400px; */
   height: 250px;
 }
 
@@ -69,6 +70,69 @@ h2 {
   font-size: 12px;
   height: 20px;
   line-height: 20px;
+}
+.ibox6 {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox6 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox7 {
+  position: absolute;
+  top: 197px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox7 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox8 {
+  position: absolute;
+  top: 395px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox8 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox9 {
+  position: absolute;
+  top: 592px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox9 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
 }
 
 .ibox-title,
@@ -139,8 +203,8 @@ td {
 .ibox5 {
   position: absolute;
   bottom: 5px;
-  right: 25px;
-  width: 495px;
+  right: 50%;
+  transform: translateX(50%);
   height: 260px;
 }
 

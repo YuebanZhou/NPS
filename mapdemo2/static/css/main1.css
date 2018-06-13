@@ -9,7 +9,7 @@ h3 {
   text-align: center;
 }
 #con1 {
-  height: 200px;
+  height: 290px;
 }
 
 #con2 {
@@ -123,7 +123,19 @@ th {
   margin: 0 auto;
   margin-top: 50px;
 }
-#cir div {
+.cirtop {
+  height: 135px;
+}
+.cirbottom {
+  height: 135px;
+}
+.cirtop div {
+  width: 25%;
+  /* display: inline-block; */
+  float: left;
+  position: relative;
+}
+.cirbottom div {
   width: 25%;
   /* display: inline-block; */
   float: left;

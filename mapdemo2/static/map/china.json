@@ -2,53 +2,6 @@
   "type": "FeatureCollection",
   "features": [
     {
-      "id": "710000",
-      "geometry": {
-        "type": "MultiPolygon",
-        "coordinates": [
-          [
-            "@@°Ü¯Û",
-            "@@ƛĴÕƊÉɼģºðʀ\\ƎsÆNŌÔĚänÜƤɊĂǀĆĴĤǊŨxĚĮǂƺòƌâÔ®ĮXŦţƸZûÐƕƑGđ¨ĭMó·ęcëƝɉlÝƯֹÅŃ^Ó·śŃǋƏďíåɛGɉ¿IċããF¥ĘWǬÏĶñÄ",
-            "@@\\p|WoYG¿¥Ij@",
-            "@@¡@V^RqBbAnTXeQr©C",
-            "@@ÆEEkWqë I"
-          ]
-        ],
-        "encodeOffsets": [
-          [
-            [
-              122886,
-              24033
-            ],
-            [
-              123335,
-              22980
-            ],
-            [
-              122375,
-              24193
-            ],
-            [
-              122518,
-              24117
-            ],
-            [
-              124427,
-              22618
-            ]
-          ]
-        ]
-      },
-      "properties": {
-        "cp": [
-          121.509062,
-          25.044332
-        ],
-        "name": "台湾",
-        "childNum": 5
-      }
-    },
-    {
       "id": "130000",
       "geometry": {
         "type": "MultiPolygon",
@@ -1490,76 +1443,6 @@
           29.533155
         ],
         "name": "重庆",
-        "childNum": 1
-      }
-    },
-    {
-      "id": "810000",
-      "geometry": {
-        "type": "MultiPolygon",
-        "coordinates": [
-          [
-            "@@AlFi",
-            "@@mp",
-            "@@EpHo",
-            "@@rMUwAS¬]",
-            "@@ea¢pl¸Eõ¹hj[]ÔCÎ@lj¡uBX´AI¹[yDU]W`çwZkmcMpÅv}IoJlcafŃK°ä¬XJmÐ đhI®æÔtSHnEÒrÄc"
-          ]
-        ],
-        "encodeOffsets": [
-          [
-            [
-              117111,
-              23002
-            ],
-            [
-              117072,
-              22876
-            ],
-            [
-              117045,
-              22887
-            ],
-            [
-              116882,
-              22747
-            ],
-            [
-              116975,
-              23082
-            ]
-          ]
-        ]
-      },
-      "properties": {
-        "cp": [
-          114.173355,
-          22.320048
-        ],
-        "name": "香港",
-        "childNum": 5
-      }
-    },
-    {
-      "id": "820000",
-      "geometry": {
-        "type": "Polygon",
-        "coordinates": [
-          "@@áw{Îr"
-        ],
-        "encodeOffsets": [
-          [
-            116285,
-            22746
-          ]
-        ]
-      },
-      "properties": {
-        "cp": [
-          113.54909,
-          22.198951
-        ],
-        "name": "澳门",
         "childNum": 1
       }
     }
