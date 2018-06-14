@@ -1,5 +1,5 @@
 //地图容器
-var chart = echarts.init(document.getElementById('main'));
+var chart = echarts.init(document.getElementById('map'));
 //34个省、市、自治区的名字拼音映射数组
 var provinces = {
   //23个省

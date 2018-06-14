@@ -1,5 +1,5 @@
 //地图容器
-var chart = echarts.init(document.getElementById('main'));
+var chart = echarts.init(document.getElementById('map'));
 //34个省、市、自治区的名字拼音映射数组
 var provinces = {
   //23个省
@@ -100,12 +100,12 @@ chart.on('click', function (params) {
 //初始化绘制全国地图配置
 var option = {
   // backgroundColor: '#091C3D',
-  // tooltip: {
-  //   trigger: 'item',
-  //   formatter: function (d) {
-  //     return d.name + '</br>移网：' + d.ywvalue + '</br>宽带：' + d.kdvalue + '</br>'
-  //   }
-  // },
+  tooltip: {
+    trigger: 'item',
+    formatter: function (d) {
+      return d.name + '</br>移网：' + 9.1 + '</br>宽带：' + 9.1 + '</br>'
+    }
+  },
 };
 
 // //数据的排序
@@ -158,7 +158,7 @@ function renderMap(map, data) {
       $("#text").html(subtext)
       var width = $("#text").width() / 2;
       $("#text").css("margin-right", -width)
-      option.backgroundColor = '#091C3D';
+      option.backgroundColor = '#090A29';
       option.series = [{
         z: 1,
         name: '全部',
@@ -176,6 +176,12 @@ function renderMap(map, data) {
               color: "#fff",
               fontSize: 12,
               fontStyle: 'bold'
+            },
+            itemStyle:{
+              borderColor:'#fff',
+              borderWidth:1,
+              shadowColor: 'rgba(5, 5, 0, 0.5)', 
+              shadowBlur: 10
             }
           },
           emphasis: {
@@ -204,7 +210,7 @@ function renderMap(map, data) {
         calculable: true,
         // colorLightness: [0.2, 100],
         // color: ['#40B298', '#F7DA98', '#D0130F'],
-        color: ['green', 'yellow', 'red'],
+        color: ['#1A2867', '#254E8E', '#181B46'],
         dimension: 0,
         textStyle: {
           color: '#fff',
@@ -234,16 +240,6 @@ $.ajax({
         U_K_NPS: result.province[i].U_K_NPS
       })
     }
-    option.tooltip = {
-      trigger: 'item',
-      formatter: function () {
-        for(var i=0;i<mapdata.length;i++){
-          // str=mapobj[i].PROVINCE_NAME + '</br>移网：' + mapobj[i].U_NPS + '</br>宽带：' + mapobj[i].U_K_NPS + '</br>'
-        }
-        // return str
-      }
-    }
-
 
   },
   error: function () {
