@@ -54,6 +54,13 @@ body {
 .contop {
   height: 450px;
 }
+.enter1 {
+  position: absolute;
+  top: 34px;
+  right: 40px;
+  color: #2AE0ED;
+  cursor: pointer;
+}
 /* #chart1 {
   background-color: #ccc;
 }
@@ -95,14 +102,20 @@ body {
   font-size: 12px;
   border: 1px solid #006ACD;
 }
-.btn div:active {
+.btn div:hover {
+  background-color: #006ACD;
+}
+.btn .active {
+  background-color: #093063;
+}
+.active:hover {
   background-color: #093063;
 }
 #btn1 {
   margin-right: 10px;
 }
-#chart3 {
-  background-color: #ccc;
+#chart3r {
+  display: none;
 }
 .right {
   float: right;
