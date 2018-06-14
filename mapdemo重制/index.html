@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPS</title>
+
+  <!--[if lt IE 8]>
+  <meta http-equiv="refresh" content="0;ie.html" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=100">
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="static/css/animate.css">
+  <link rel="stylesheet" href="static/css/style.css">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <link rel="stylesheet" href="static/css/font-awesome.css">
+  <link rel="stylesheet" href="static/css/font-awesome.min.css-v=4.4.0.css">
+
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
+
+</head>
+
+<body class="gray-bg">
+
+  <h2>2018第一季度NPS运营情况概览</h2>
+  <div class="box" style="width: 100%;height: 92%;position: relative;">
+    <div id="main" style="width: 40%;height:50%"></div>
+    <div class="ibox ibox3">
+      <div class="title">
+
+      </div>
+      <div class="ibox-title">
+        <h5>移网_年度完成率:68% 年度提升值:5.4 季度提升值:5.4</h5>
+      </div>
+      <div class="ibox-content">
+        <div class="subtitle">
+          <div class="subtitle1">落后移动18.8分</div>
+          <div class="subtitle2">落后电信11.5分</div>
+        </div>
+        <div class="echarts echarts-h" id="echarts-line-chart1" style="height: 100%;"></div>
+      </div>
+    </div>
+    <div class="ibox ibox4">
+      <div class="title">
+
+      </div>
+      <div class="ibox-title">
+        <h5>宽带_年度完成率:68% 年度提升值:5.4 季度提升值:5.4</h5>
+      </div>
+      <div class="ibox-content">
+        <div class="subtitle">
+          <div class="subtitle3">领先移动8.2分</div>
+          <div class="subtitle4">领先电信0.6分</div>
+        </div>
+        <div class="echarts echarts-h" id="echarts-line-chart2" style="height: 100%;"></div>
+      </div>
+    </div>
+    <div class="ibox ibox6">
+      <div class="title">
+
+      </div>
+      <div class="ibox-title">
+        <h5>不同流量类型用户评价</h5>
+      </div>
+      <div class="ibox-content">
+        <div class="echarts echarts-h" id="echarts-line-chart11" style="height: 100%;"></div>
+      </div>
+    </div>
+    <div class="ibox ibox7">
+      <div class="title">
+
+      </div>
+      <div class="ibox-title">
+        <h5>2I 用户评价</h5>
+      </div>
+      <div class="ibox-content">
+        <div class="echarts echarts-h" id="echarts-line-chart12" style="height: 100%;"></div>
+      </div>
+    </div>
+    <div class="ibox ibox8">
+      <div class="title">
+
+      </div>
+      <div class="ibox-title">
+        <h5>北方宽带</h5>
+      </div>
+      <div class="ibox-content">
+        <div class="echarts echarts-h" id="echarts-line-chart21" style="height: 100%;"></div>
+      </div>
+    </div>
+    <div class="ibox ibox9">
+        <div class="title">
+  
+        </div>
+        <div class="ibox-title">
+          <h5>南方宽带</h5>
+        </div>
+        <div class="ibox-content">
+          <div class="echarts echarts-h" id="echarts-line-chart22" style="height: 100%;"></div>
+        </div>
+      </div>
+    <div class="ibox ibox5">
+      <div class="ibox-title">
+        <h5>排名</h5>
+      </div>
+      <div class="ibox-content">
+        <div>
+          <table class="footable foottable_tab">
+            <thead>
+              <tr>
+                <th width="10%" align="center">排名</th>
+                <th width="20%" align="center">省分</th>
+                <th width="20%" align="center">合计完成进度</th>
+                <th width="20%" align="center">移网提升值</th>
+                <th width="20%" align="center">宽带提升值</th>
+                <th width="10%" align="center">区域排名</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div style="width:100%;height:160px;overflow:auto; border-bottom:1px solid #dddddd">
+          <table id="Template_listZ" class="footable foottable_tab">
+            <tbody id="tplWrapper_TemplateZ">
+              <tr>
+                <td width="75" align="center">1</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">1</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">2</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">2</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">3</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">4</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">5</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">6</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">7</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+              <tr>
+                <td width="75" align="center">8</td>
+                <td width="75" align="center">江苏</td>
+                <td width="75" align="center">100%</td>
+                <td width="75" align="center">11.11</td>
+                <td width="75" align="center">10.69</td>
+                <td width="75" align="center">1</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </div>
+
+
+  </div>
+
+  <!--引入jquery-->
+  <script src="static/js/jquery-1.9.1.min.js"></script>
+  <script src="static/js/bootstrap.min.js?v=3.3.6"></script>
+
+  <!-- 全国344个市、区、州对应的数字编号 -->
+  <script type="text/javascript" src="static/js/citymap.js"></script>
+
+  <!-- ECharts -->
+  <script src="static/js/echarts.min.js"></script>
+  <!-- 主要js文件渲染地图和散点 -->
+  <script src="static/js/app.js"></script>
+  <!-- 模态框linechart -->
+  <!-- <script src="static/js/appTwo.js"></script> -->
+  <!-- 静态linechart -->
+  <script src="static/js/appThree.js"></script>
+  <!-- 获取数据 -->
+  <script type="text/javascript" src="static/js/cp.js"></script>
+  <!-- 拖拽插件 -->
+  <!-- <script src="static/js/drag.js"></script> -->
+  <!-- H+模板的js文件 -->
+  <script src="static/js/content.js"></script>
+  <script src="static/js/table.js"></script>
+
+
+  <!--[if lt IE ]>
+  <script type="text/javascript">
+      //IE
+      var shell = new ActiveXObject("WScript.Shell");
+      shell.SendKeys("{F11}");
+  </script>
+  <![endif]-->
+
+
+</body>
+
+</html>

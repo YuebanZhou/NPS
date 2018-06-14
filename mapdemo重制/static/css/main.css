@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body.gray-bg {
+  /* height: 100%; */
+  background-color: #091c3d;
+  /* overflow: hidden; */
+
+}
+#main {
+  position: absolute;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%)
+}
+h5 {
+  color: #fff
+}
+h2 {
+  color: #fff;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.ibox {
+  z-index: 10;
+  margin-bottom: 0;
+  width: 32%;
+  min-width: 205px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.ibox3 {
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  /* width: 400px; */
+  height: 250px;
+}
+
+.ibox3 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 202px;
+  padding-right: 100px;
+  /* padding-left: 80px; */
+}
+
+.ibox4 {
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+  /* width: 400px; */
+  height: 250px;
+}
+
+.ibox4 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 202px;
+  padding-right: 100px;
+}
+
+.ibox4 td {
+  font-size: 12px;
+  height: 20px;
+  line-height: 20px;
+}
+.ibox6 {
+  position: absolute;
+  top: 0;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox6 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox7 {
+  position: absolute;
+  top: 197px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox7 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox8 {
+  position: absolute;
+  top: 395px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox8 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox9 {
+  position: absolute;
+  top: 592px;
+  right: 5px;
+  /* width: 500px; */
+  height: 185px;
+}
+
+.ibox9 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 10px;
+  height: 137px;
+  /* padding-right: 100px; */
+  /* padding-left: 80px; */
+}
+
+.ibox-title,
+.ibox-content {
+  border-color: #03395d;
+}
+
+.ibox-content table.table tr,
+td {
+  border-color: #1f516f !important;
+}
+
+.ibox-content table tr:hover {
+  background-color: #091c3d;
+}
+
+.ibox-content div {
+  max-height: 100%;
+}
+
+.btna {
+  width: 50px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 100;
+  cursor: pointer;
+}
+
+#btn1 {
+  top: 10px;
+  left: 415px;
+  background-color: #999;
+}
+
+#btn2 {
+  top: 40px;
+  left: 415px;
+  background-color: #eee;
+}
+
+.ibox-content .subtitle1 {
+  position: absolute;
+  right: 5px;
+  top: 117px;
+}
+
+.ibox-content .subtitle2 {
+  position: absolute;
+  right: 5px;
+  top: 139px;
+}
+
+.ibox-content .subtitle3 {
+  position: absolute;
+  right: 5px;
+  top: 188px;
+}
+
+.ibox-content .subtitle4 {
+  position: absolute;
+  right: 5px;
+  top: 111px;
+}
+
+.ibox5 {
+  position: absolute;
+  bottom: 5px;
+  right: 50%;
+  transform: translateX(50%);
+  height: 260px;
+}
+
+.ibox5 .ibox-content {
+  padding-top: 0;
+  padding-bottom: 0;
+  height: 200px;
+}
+thead tr th {
+  text-align: center;
+}
+
+.title {
+  position: absolute;
+  left: 15px;
+  top: -30px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.ibox3 .img img {
+  width: 80px;
+  /* height: 45px; */
+  height: 30px;
+  position: absolute;
+}
+
+.ibox3 .img .imgyd {
+  left: 10px;
+  top: 80px;
+}
+
+.ibox3 .img .imgdx {
+  left: 10px;
+  top: 125px;
+}
+
+.ibox3 .img .imglt {
+  left: 10px;
+  top: 170px;
+}

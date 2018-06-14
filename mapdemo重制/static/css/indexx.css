@@ -1,0 +1,78 @@
+body {
+    padding: 10px;
+    background-color: #eee;
+}
+.con {
+    padding: 10px;
+}
+.con>div {
+    margin-bottom: 40px;
+}
+.left {
+    float: left;
+    width: 50%;
+}
+.right {
+    float: right;
+    width: 50%;
+}
+#con1 {
+  /* width: 800px; */
+  height: 500px;
+  /* background-color: pink */
+}
+#con2 {
+  display: none;
+  /* width: 800px; */
+  height: 500px;
+  /* background-color: skyblue */
+}
+#con3 {
+  display: none;
+  /* width: 800px; */
+  height: 500px;
+  /* background-color: greenyellow */
+}
+.line {
+    height: 2px;
+    border: 1px solid #000;
+    width: 900px;
+    /* margin: 0 auto; */
+    padding-left: 10px;
+    position: relative;
+    margin-bottom: 70px;
+
+}
+.line ul {
+    position: absolute;
+    left: 0;
+    top: -20px;
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 70px
+}
+.line ul li {
+    list-style: none;
+    float: left;
+}
+.line1 li {
+    width: 11.1%;
+    text-align: center;
+}
+.line2 li {
+    width: 12.5%;
+    text-align: center;
+}
+.line3 li {
+    width: 7.7%;
+    text-align: center;
+}
+.line4 li {
+    width: 11.1%;
+    text-align: center;
+}
+.line i {
+    position: absolute;
+    right: -6px;
+    top: -7px;
+}
