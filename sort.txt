@@ -1,0 +1,23 @@
+//todo  经典写法：
+var arr = [{key1:"2",key2:"wang2"},{key1:"1",key2:"wang1"},{key1:"3",key2:"wang3"}];
+var sortBy=function(attr,rev){
+    //第二个参数没有传递 默认升序排列
+    if(rev ==  undefined){
+        rev = 1;
+    }else{
+        rev = (rev) ? 1 : -1;
+    }
+    return function(a,b){
+        a = a[attr];
+        b = b[attr];
+        if(a < b){
+            return rev * -1;
+        }
+        if(a > b){
+            return rev * 1;
+        }
+        return 0;
+    }
+}
+// todo 使用
+arr.sort(sortBy('key1',false)) // false :倒序，true : 正序，不传值的时候： 参数没有传递 默认升序排列；

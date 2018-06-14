@@ -1,3 +1,17 @@
+var lineCacheData = {
+  "LT": {
+    nomalColor: "rgba(55, 130, 193",
+    activeColor: "rgba(246, 179, 127"
+  },
+  "YD": {
+    nomalColor: "rgba(55, 130, 193",
+    activeColor: "rgba(42, 215, 237"
+  },
+  "DX": {
+    nomalColor: "rgba(55, 130, 193",
+    activeColor: "rgba(34, 172, 56"
+  },
+}
 //绘制index页面上静态的折线图
 var chart1 = echarts.init(document.getElementById("chart1"));
 var option1 = {
@@ -10,7 +24,7 @@ var option1 = {
     {
       name: '仪表盘',
       type: 'gauge',
-      data: [{ value: '29', name: '年度完成率' }],
+      data: [{ value: '82', name: '年度完成率' }],
       radius: '80%',
       center: ['30%', '50%'],
       min: 0,
@@ -61,119 +75,155 @@ var chart2 = echarts.init(document.getElementById("chart2"));
 var option2 = {
   tooltip: {
     trigger: 'axis',
+    axisPointer: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    }
   },
   legend: {
+    icon: 'rect',
+    itemWidth: 14,
+    itemHeight: 5,
+    itemGap: 13,
     data: ['中国联通', '中国移动', '中国电信'],
+    right: '4%',
     textStyle: {
-      color: "#fff",
-      fontSize: 12
+      fontSize: 12,
+      color: '#fff'
     }
   },
   grid: {
     left: '3%',
-    right: '5%',
+    right: '4%',
     bottom: '3%',
     containLabel: true
   },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: false,
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          color: "#fff"
-        },
-        //数据全部展示，不隐藏
-        interval: 0
-      },
-      axisLine: {
-        // show:true,
-        lineStyle: {
-          color: "#333"
-        }
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#333"
-        }
+  xAxis: [{
+    type: 'category',
+    boundaryGap: false,
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
       }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+  }],
+  yAxis: [{
+    type: 'value',
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    splitLine: {
+      show: false
     }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      scale: true,
-      show: true,
-      splitLine: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
-          color: "#fff"
-        }
-      },
-      axisLabel: {
-        color: "#fff"
-      },
-    }
-  ],
+  }],
   series: [
     {
       name: '中国联通',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#F6B37F",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#F6B37F'
-        }
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.LT.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.LT.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        },
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.LT.activeColor + ')'
+        },
       },
       data: [-1.2, -0.5, 0.6, 5, 5]
-    },
-    {
+    }, {
       name: '中国移动',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#25D8ED",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#25D8ED'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.YD.nomalColor + ', 0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.YD.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.YD.activeColor + ')'
         }
       },
       data: [28.4, 23.4, 24.2, 26.9, 23.8]
-    },
-    {
+    }, {
       name: '中国电信',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#21A838",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#21A838'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.DX.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.DX.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.DX.activeColor + ')'
         }
       },
       data: [14.1, 13.9, 14.4, 17.9, 16.5]
-    }
+    },
   ]
 };
 chart2.setOption(option2);
@@ -182,119 +232,155 @@ var chart3 = echarts.init(document.getElementById("chart3"));
 var option3 = {
   tooltip: {
     trigger: 'axis',
+    axisPointer: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    }
   },
   legend: {
+    icon: 'rect',
+    itemWidth: 14,
+    itemHeight: 5,
+    itemGap: 13,
     data: ['纯语音用户', '有流量4G用户', '有流量非4G用户'],
+    right: '4%',
     textStyle: {
-      color: "#fff",
-      fontSize: 12
+      fontSize: 12,
+      color: '#fff'
     }
   },
   grid: {
     left: '3%',
-    right: '5%',
+    right: '4%',
     bottom: '3%',
     containLabel: true
   },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: false,
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          color: "#fff"
-        },
-        //数据全部展示，不隐藏
-        interval: 0
-      },
-      axisLine: {
-        // show:true,
-        lineStyle: {
-          color: "#333"
-        }
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#333"
-        }
+  xAxis: [{
+    type: 'category',
+    boundaryGap: false,
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
       }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+  }],
+  yAxis: [{
+    type: 'value',
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    splitLine: {
+      show: false
     }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      scale: true,
-      show: true,
-      splitLine: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
-          color: "#fff"
-        }
-      },
-      axisLabel: {
-        color: "#fff"
-      },
-    }
-  ],
+  }],
   series: [
     {
       name: '纯语音用户',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#F6B37F",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#F6B37F'
-        }
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.LT.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.LT.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        },
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.LT.activeColor + ')'
+        },
       },
       data: [11.2, 17.2, 17.4, 23.2, 17.1]
-    },
-    {
+    }, {
       name: '有流量4G用户',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#25D8ED",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#25D8ED'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.YD.nomalColor + ', 0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.YD.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.YD.activeColor + ')'
         }
       },
       data: [-6.4, -2.9, -1.8, 2.1, 3.6]
-    },
-    {
+    }, {
       name: '有流量非4G用户',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#21A838",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#21A838'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.DX.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.DX.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.DX.activeColor + ')'
         }
       },
       data: [-4.5, -2.9, 0.0, 8.1, 5.5]
-    }
+    },
   ]
 };
 chart3.setOption(option3);
@@ -303,97 +389,123 @@ var chart3r = echarts.init(document.getElementById("chart3r"));
 var option3r = {
   tooltip: {
     trigger: 'axis',
+    axisPointer: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    }
   },
   legend: {
-    data: ['2I2C', '非2I2C',],
+    icon: 'rect',
+    itemWidth: 14,
+    itemHeight: 5,
+    itemGap: 13,
+    data: ['2I2C', '非2I2C'],
+    right: '4%',
     textStyle: {
-      color: "#fff",
-      fontSize: 12
+      fontSize: 12,
+      color: '#fff'
     }
   },
   grid: {
     left: '3%',
-    right: '5%',
+    right: '4%',
     bottom: '3%',
     containLabel: true
   },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: false,
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          color: "#fff"
-        },
-        //数据全部展示，不隐藏
-        interval: 0
-      },
-      axisLine: {
-        // show:true,
-        lineStyle: {
-          color: "#333"
-        }
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#333"
-        }
+  xAxis: [{
+    type: 'category',
+    boundaryGap: false,
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
       }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+  }],
+  yAxis: [{
+    type: 'value',
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    splitLine: {
+      show: false
     }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      scale: true,
-      show: true,
-      splitLine: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
-          color: "#fff"
-        }
-      },
-      axisLabel: {
-        color: "#fff"
-      },
-    }
-  ],
+  }],
   series: [
     {
       name: '2I2C',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#F6B37F",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#F6B37F'
-        }
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.LT.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.LT.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        },
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.LT.activeColor + ')'
+        },
       },
       data: [31.8, 11.9, 9.8, 9.9, 6.5]
-    },
-    {
+    }, {
       name: '非2I2C',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#25D8ED",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#25D8ED'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.YD.nomalColor + ', 0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.YD.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.YD.activeColor + ')'
         }
       },
       data: [, -1.0, -0.6, 4.0, 4.6]
@@ -470,119 +582,155 @@ var chart5 = echarts.init(document.getElementById("chart5"));
 var option5 = {
   tooltip: {
     trigger: 'axis',
+    axisPointer: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    }
   },
   legend: {
+    icon: 'rect',
+    itemWidth: 14,
+    itemHeight: 5,
+    itemGap: 13,
     data: ['中国联通', '中国移动', '中国电信'],
+    right: '4%',
     textStyle: {
-      color: "#fff",
-      fontSize: 12
+      fontSize: 12,
+      color: '#fff'
     }
   },
   grid: {
     left: '3%',
-    right: '5%',
+    right: '4%',
     bottom: '3%',
     containLabel: true
   },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: false,
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          color: "#fff"
-        },
-        //数据全部展示，不隐藏
-        interval: 0
-      },
-      axisLine: {
-        // show:true,
-        lineStyle: {
-          color: "#333"
-        }
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#333"
-        }
+  xAxis: [{
+    type: 'category',
+    boundaryGap: false,
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
       }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+  }],
+  yAxis: [{
+    type: 'value',
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        color: '#57617B'
+      }
+    },
+    axisLabel: {
+      margin: 10,
+      textStyle: {
+        fontSize: 14,
+        color: '#fff'
+      }
+    },
+    splitLine: {
+      show: false
     }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      scale: true,
-      show: true,
-      splitLine: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
-          color: "#fff"
-        }
-      },
-      axisLabel: {
-        color: "#fff"
-      },
-    }
-  ],
+  }],
   series: [
     {
       name: '中国联通',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#F6B37F",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#F6B37F'
-        }
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.LT.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.LT.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        },
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.LT.activeColor + ')'
+        },
       },
       data: [-0.1, -1.1, 0.8, 4.2, 7.5]
-    },
-    {
+    }, {
       name: '中国移动',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#25D8ED",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#25D8ED'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.YD.nomalColor + ', 0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.YD.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.YD.activeColor + ')'
         }
       },
       data: [, , , , 6.9]
-    },
-    {
+    }, {
       name: '中国电信',
       type: 'line',
-      itemStyle: {
+      smooth: false,
+      lineStyle: {
         normal: {
-          color: "#21A838",
-          label: {
-            show: true
-          }
+          width: 1
         }
       },
       areaStyle: {
         normal: {
-          color: '#21A838'
+          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+            offset: 0,
+            color: lineCacheData.DX.nomalColor + ',0.3)'
+          }, {
+            offset: 0.8,
+            color: lineCacheData.DX.nomalColor + ', 0)'
+          }], false),
+          shadowColor: 'rgba(0, 0, 0, 0.1)',
+          shadowBlur: 10
+        }
+      },
+      itemStyle: {
+        normal: {
+          color: lineCacheData.DX.activeColor + ')'
         }
       },
       data: [, , , , -0.7]
-    }
+    },
   ]
 };
 chart5.setOption(option5);
@@ -762,14 +910,14 @@ var option6 = {
 };
 chart6.setOption(option6);
 
-$("#chart2").click(function () {
-  window.location.href = "indexx.html"
-})
-$("#chart5").click(function () {
-  window.location.href = "indexx.html"
-})
 $(".enter1").click(function () {
   window.location.href = "index1.html"
+})
+$(".enter2").click(function () {
+  window.location.href = "indexx.html"
+})
+$(".enter3").click(function () {
+  window.location.href = "indexx.html"
 })
 $("#btn1").click(function () {
   $("#chart3").show();
@@ -779,3 +927,57 @@ $("#btn2").click(function () {
   $("#chart3").hide();
   $("#chart3r").show();
 })
+function redraw(chart, option, t) {
+  if (option && typeof option === "object") {
+    chart.setOption(option, true);
+    chart.on("click", function (e) {
+      var tName = e.seriesName;
+
+      console.log(e);
+      console.log(e.seriesId);
+      console.log(e.seriesName);
+      //console.log(this);
+
+      for (var i = 0; i < option.series.length; i++) {
+        console.log("#########");
+        console.log(option.series[i].name);
+        if (option.series[i].name == tName) {
+          option.series[i].areaStyle.normal.color =
+            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData[t[tName]].activeColor + ', 1)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData[t[tName]].activeColor + ',0.5 )'
+            }], false)
+        } else {
+          option.series[i].areaStyle.normal.color =
+            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0)'
+            }], false)
+        }
+      }
+
+      chart.clear();
+      chart.setOption(option, true);
+
+      e.color = "#005aa0";
+    });
+  }
+
+
+}
+t2 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
+t3 = { "纯语音用户": "LT", "有流量4G用户": "YD", "有流量非4G用户": "DX" };
+t3r = { "2I2C": "LT", "非2I2C": "YD" };
+t5 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
+t6 = { "联通北方": "LT", "联通南方": "YD" };
+redraw(chart2, option2, t2);
+redraw(chart3, option3, t3);
+redraw(chart5, option5, t5);
+redraw(chart6, option6, t6);
+redraw(chart3r, option3r, t3r);

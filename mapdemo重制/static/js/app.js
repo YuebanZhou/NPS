@@ -67,7 +67,7 @@ $.getJSON('static/map/china.json', function (data) {
   renderMap('china', d);
 });
 //地图点击事件
-/*
+
 chart.on('click', function (params) {
 
   if (params.name in provinces) {
@@ -94,7 +94,7 @@ chart.on('click', function (params) {
     renderMap('china', mapdata, "provinces");
   }
 
-});*/
+});
 
 
 //初始化绘制全国地图配置
@@ -169,20 +169,26 @@ function renderMap(map, data) {
         height: '100%',
         width: '100%',
         zoom: 1,
+        itemStyle: {
+          normal: {
+            // areaColor: '#323c48',
+            borderColor: '#fff',
+            borderWidth: 1,
+            shadowColor: '#fff',
+            shadowBlur: 5
+          },
+          emphasis: {
+            areaColor: 'rgba(63, 218, 255, 0.5)'
+          }
+        },
         label: {
           normal: {
-            show: true,
+            show: false,
             textStyle: {
               color: "#fff",
               fontSize: 12,
               fontStyle: 'bold'
             },
-            itemStyle:{
-              borderColor:'#fff',
-              borderWidth:1,
-              shadowColor: 'rgba(5, 5, 0, 0.5)', 
-              shadowBlur: 10
-            }
           },
           emphasis: {
             show: true,
