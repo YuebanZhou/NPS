@@ -246,7 +246,6 @@ $.ajax({
         U_K_NPS: result.province[i].U_K_NPS
       })
     }
-
   },
   error: function () {
     console.log("请求失败");

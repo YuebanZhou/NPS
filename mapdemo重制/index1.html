@@ -11,143 +11,226 @@
 <link rel="stylesheet" href="static/css/main1.css">
 
 <body>
-    <h2>2018年第一季度省分运营情况</h2>
-    <div id="con1">
-        <div id="btn1">
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default active btn11">移网</button>
-                <button type="button" class="btn btn-default btn12">宽带</button>
-            </div>
+    <div class="con clearfix">
+        <div class="top">
+            <img src="static/img/top.png" alt="">
         </div>
-        <div id="btn2">
-            <div class="title">
-                季度
-            </div>
-            <div class="btn-group-vertical" role="group">
-                <button type="button" class="btn btn-default active btn21">2017年第一季度</button>
-                <button type="button" class="btn btn-default btn22">2017年第二季度</button>
-                <button type="button" class="btn btn-default btn23">2017年第三季度</button>
-                <button type="button" class="btn btn-default btn24">2017年第四季度</button>
-            </div>
+        <div class="enter1">
+            <i class="glyphicon glyphicon-circle-arrow-right"></i>
+            <span>返回首页</span>
         </div>
-        <div id="cir">
-            <div class="cirtop">
-                <div class="num num1">
-                    <span class="dec">年度完成值</span>
-                    <span class="val">9.1</span>
-                </div>
-                <div class="num num2">
-                    <span class="dec">年度提升值</span>
-                    <span class="val">10.9</span>
-                </div>
-                <div class="num num3">
-                    <span class="dec">年度完成率</span>
-                    <span class="val">-1.8</span>
-                </div>
-            </div>
-            <div class="cirbottom">
-                <div class="num num1">
-                    <span class="dec">季度完成值</span>
-                    <span class="val">9.1</span>
-                </div>
-                <div class="num num2">
-                    <span class="dec">季度提升值</span>
-                    <span class="val">10.9</span>
-                </div>
-            </div>
+        <div class="toptitle">
+            2018年第一季度省分运营情况
         </div>
-    </div>
-    <hr style=" height:2px;border:none;border-top:2px dotted #185598;">
+        <div class="pm">
+            <div class="left clearfix">
+                <div class="btnzu">
+                    <img src="static/img/yiwang.png" alt="" class="ywpng">
+                    <img src="static/img/kuandai.png" alt="" class="kdpng">
+                </div>
+                <div class="sel">
+                    <span>季度</span>
+                    <select>
+                        <option value="17Q1">17Q1</option>
+                        <option value="17Q2">17Q2</option>
+                        <option value="17Q3">17Q3</option>
+                        <option value="17Q4">17Q4</option>
+                        <option value="18Q1">18Q1</option>
+                    </select>
+                </div>
+                <div class="dec">
+                    <div class="nor">
+                        <span>北方排名</span>
+                        <span class="num">8</span>
+                    </div>
 
-    <div id="con2">
-        <div class="hrimg">
-            <!-- <img src="static/img/hr.png" alt=""> -->
-            <span>移网综合排名</span>
-        </div>
-        <div id="btn3">
-            <!-- <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default">本季度</button>
-                <button type="button" class="btn btn-default">全年</button>
-            </div> -->
-        </div>
-        <div class="paiming">
-            <div class="pmt">
-                <div class="title title1">北方排名：8</div>
-                <div class="title title2">全国排名：12</div>
+                    <div class="glo">
+                        <span>全国排名</span>
+                        <span class="num">12</span>
+                    </div>
+
+                </div>
+                <div id="map" style="width: 550px;height: 480px;"></div>
+                <!-- <img src="static/img/line-bottom.png" alt="" class="line3"> -->
+                <!-- <img src="static/img/line-left1.png" alt="" class="line1"> -->
+                <!-- <img src="static/img/line-left2.png" alt="" class="line2"> -->
+
+            </div>
+            <div class="right">
+                <div class="five">
+                    <ul class="clearfix">
+                        <li>
+                            <div>年度完成值</div>
+                            <span class="num">9.1</span>
+                        </li>
+                        <li>
+                            <div>年度提升值</div>
+                            <span class="num">9.1</span>
+                        </li>
+                        <li>
+                            <div>年度完成率</div>
+                            <span class="num">9.1</span>
+                        </li>
+                        <li>
+                            <div>季度完成值</div>
+                            <span class="num">9.1</span>
+                        </li>
+                        <li>
+                            <div>季度提升值</div>
+                            <span class="num">9.1</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="topfive">
+                    <div class="title">移网综合排名</div>
+                    <span class="top1">第一</span>
+                    <span class="top2">第二</span>
+                    <span class="top3">第三</span>
+                    <span class="top4">第四</span>
+                    <span class="top5">第五</span>
+                </div>
+                <div class="rang">
+                    <div class="title">省份运营排名</div>
+                    <div>
+                        <table class="footable foottable_tab">
+                            <thead>
+                                <tr class="th">
+                                    <th width="10%" align="center">排名</th>
+                                    <th width="10%" align="center">省分</th>
+                                    <th width="20%" align="center">合计完成进度</th>
+                                    <th width="20%" align="center">移网提升值</th>
+                                    <th width="20%" align="center">宽带提升值</th>
+                                    <th width="20%" align="center">区域排名</th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div style="width:100%;height:200px;overflow:auto;">
+                        <table id="Template_listZ" class="footable foottable_tab">
+                            <tbody id="tplWrapper_TemplateZ">
+                                <tr>
+                                    <td width="10%" align="center">1</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">1</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">2</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">2</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">3</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">3</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">4</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">4</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">4</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                                <tr>
+                                    <td width="10%" align="center">4</td>
+                                    <td width="10%" align="center">江苏</td>
+                                    <td width="20%" align="center">100%</td>
+                                    <td width="20%" align="center">11.11</td>
+                                    <td width="20%" align="center">10.69</td>
+                                    <td width="20%" align="center">1</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
             </div>
 
-
-            <div class="tablepm">
-                <table class="table table-hover table-condensed table-bordered">
-                    <thead>
-                        <tr class="info">
-                            <th>排名</th>
-                            <th>省份</th>
-                            <th>移网提升值</th>
-                            <th>完成进度</th>
-                            <th>区域排名</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>河北</td>
-                            <td>10.27</td>
-                            <td>100%</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>河北</td>
-                            <td>10.27</td>
-                            <td>100%</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>河北</td>
-                            <td>10.27</td>
-                            <td>100%</td>
-                            <td>1</td>
-                        </tr>
-                        <tr>
-                            <td>1</td>
-                            <td>河北</td>
-                            <td>10.27</td>
-                            <td>100%</td>
-                            <td>1</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
         </div>
-        <hr style=" height:2px;border:none;border-top:2px dotted #185598;">
-        <div class="mingxi">
-            <div class="hrimg">
-                <!-- <img src="static/img/hr.png" alt=""> -->
-                <span>移网NPS指标明细</span>
-            </div>
-            <h3>移网NPS指标明细</h3>
+        <div class="data">
+            <h4>移网NPS指标明细</h4>
             <div class="tablemx">
-                <table class="table table-hover table-condensed table-bordered">
+                <table class="footable foottable_tab">
                     <thead>
-                        <tr class="info">
+                        <tr class="th">
                             <th>指标</th>
-                            <th>联通NPS值</th>
-                            <th>联通提及率</th>
-                            <th>移动NPS值</th>
-                            <th>移动提及率</th>
-                            <th>电信NPS值</th>
-                            <th>电信提及率</th>
-                            <th>对标移动NPS</th>
-                            <th>对标电信NPS</th>
-                            <th>竞争差距NPS</th>
+                            <th>联通
+                                <br>NPS值</th>
+                            <th>联通
+                                <br>提及率</th>
+                            <th>联通
+                                <br>用户数</th>
+                            <th>联通
+                                <br>同比</th>
+                            <th>联通
+                                <br>环比</th>
+                            <th>移动
+                                <br>NPS值</th>
+                            <th>电信
+                                <br>NPS值</th>
+                            <th>对标
+                                <br>移动NPS</th>
+                            <th>对标
+                                <br>电信NPS</th>
+                            <th>竞争
+                                <br>差距NPS</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
                             <td>整体</td>
                             <td>9.1</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -171,9 +254,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>语音</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -195,9 +280,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>语音信号覆盖</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -219,9 +306,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>上网信号覆盖</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -243,9 +332,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>4G上网信号</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -267,9 +358,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>室内信号</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -291,9 +384,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>室内语音信号</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -315,6 +410,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>室内上网信号</td>
@@ -327,9 +423,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row1 child">
                             <td>室外上网信号</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -354,9 +452,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>计费准确</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -378,9 +478,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>价格水平</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -402,9 +504,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>流量包</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -426,9 +530,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>终端</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -450,9 +556,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>促销活动</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -474,9 +582,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row2 child">
                             <td>与互联网公司合作的产品</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -501,9 +611,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>营业厅整体服务</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -525,9 +637,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>营业厅整体服务</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -549,9 +663,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——营业厅业务办理方便快捷</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -573,9 +689,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>电子渠道整体服务（在线客服仅2I）</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -597,9 +715,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——电子渠道在线服务人员态度和技能（全客户）</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -621,9 +741,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——电子渠道业务办理方便快捷</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -645,9 +767,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>热线整体服务</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -669,9 +793,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——10010热线业务办理方便快捷</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -693,9 +819,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>服务人员态度、技能</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -717,9 +845,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>电子渠道体验</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -741,9 +871,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>账详单、发票方便获取，收费明晰</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -765,9 +897,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——账详单、发票获取便捷</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -789,9 +923,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>——各渠道查询结果一致</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -813,9 +949,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>充值缴费方便快捷</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -837,9 +975,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>业务办理方便快捷（三渠道含业务规则）</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -861,9 +1001,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>业务办理成功率</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -885,9 +1027,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>投诉解决</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -909,9 +1053,11 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
                         </tr>
                         <tr class="child_row3 child">
                             <td>沃钱包方便快捷、优惠活动多</td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -926,147 +1072,129 @@
                     </tbody>
                 </table>
             </div>
+
+            <h4>移网NPS指标明细-黑龙江</h4>
+            <div id="btn4">
+                <div class="btn-group" role="group" aria-label="...">
+                    <button type="button" class="btn btn-default active btn31">整体</button>
+                    <button type="button" class="btn btn-default btn32">业务</button>
+                    <button type="button" class="btn btn-default btn33">网络</button>
+                    <button type="button" class="btn btn-default btn34">服务</button>
+                </div>
+            </div>
+            <div class="talezbmx">
+                <table class="footable foottable_tab">
+                    <thead>
+                        <tr class="th">
+                            <th>名次</th>
+                            <th>地市</th>
+                            <th>NPS值</th>
+                            <th>样本量</th>
+                            <th>同比</th>
+                            <th>环比</th>
+                            <th>移动NPS</th>
+                            <th>竞争差距</th>
+                            <th>电信NPS</th>
+                            <th>竞争差距</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>伊春</td>
+                            <td>40.0285</td>
+                            <td>1404</td>
+                            <td>1%</td>
+                            <td>1%</td>
+                            <td>50.04</td>
+                            <td>1251</td>
+                            <td>36.0197</td>
+                            <td>1216</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+        <div class="chart">
+            <h4>样本配额</h4>
+            <h5>整体移动用户市场，N=17.54万</h5>
+            <div id="chart1" style="width: 450px;height: 400px"></div>
+            <div id="chart2" style="width: 500px;height: 200px"></div>
+            <div id="chart3" style="width: 250px;height: 250px"></div>
+            <div id="chart4" style="width: 250px;height: 250px"></div>
         </div>
 
-    </div>
-    <hr style=" height:2px;border:none;border-top:2px dotted #185598;">
 
-    <div id="con3">
-        <div class="hrimg">
-            <!-- <img src="static/img/hr.png" alt=""> -->
-            <span>省内地市NPS值排名</span>
-        </div>
-        <h3>移网NPS指标明细-黑龙江</h3>
-        <div id="btn4">
-            <div class="btn-group" role="group" aria-label="...">
-                <button type="button" class="btn btn-default active btn31">整体</button>
-                <button type="button" class="btn btn-default btn32">业务</button>
-                <button type="button" class="btn btn-default btn33">网络</button>
-                <button type="button" class="btn btn-default btn34">服务</button>
-            </div>
-        </div>
-        <div class="talezbmx">
-            <table class="table table-hover table-condensed table-bordered">
-                <thead>
-                    <tr class="info">
-                        <th>名次</th>
-                        <th>地市</th>
-                        <th>NPS值</th>
-                        <th>样本量</th>
-                        <th>同比</th>
-                        <th>环比</th>
-                        <th>移动NPS</th>
-                        <th>竞争差距</th>
-                        <th>电信NPS</th>
-                        <th>竞争差距</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>伊春</td>
-                        <td>40.0285</td>
-                        <td>1404</td>
-                        <td>1%</td>
-                        <td>1%</td>
-                        <td>50.04</td>
-                        <td>1251</td>
-                        <td>36.0197</td>
-                        <td>1216</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
     </div>
 
-    <div id="con4">
-        <h3>样本配额</h3>
-        <div class="top">
-            <div class="title">
-                整体移动用户市场，N=17.54万
-            </div>
-            <div id="chart5" style="width:400px;height:300px"></div>
-        </div>
-        <div class="bottom">
-            <div class="title">
-                联通移网用户，N=7.39万
-            </div>
-            <div class="ywchart">
-                <div id="chart7" style="width:400px;height:300px"></div>
-                <div id="chart6" style="width:400px;height:300px"></div>
-                <div id="chart8" style="width:400px;height:300px"></div>
-            </div>
-            <div class="kdchart">
-                <div id="chart9" style="width:400px;height:300px"></div>
-                <div id="chart11" style="width:400px;height:300px"></div>
-                <div id="chart10" style="width:400px;height:300px"></div>
-            </div>
-        </div>
-    </div>
 </body>
 <script src="static/js/jquery-1.9.1.min.js"></script>
 <script src="static/js/bootstrap.min.js"></script>
 <script src="static/js/echarts.min.js"></script>
 <script src="static/js/index1.js"></script>
+<script src="static/js/apptwo.js"></script>
+<script src="static/js/table.js"></script>
+
 
 </html>

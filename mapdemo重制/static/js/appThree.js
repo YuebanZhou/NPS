@@ -15,7 +15,6 @@ var lineCacheData = {
 //绘制index页面上静态的折线图
 var chart1 = echarts.init(document.getElementById("chart1"));
 var option1 = {
-
   tooltip: {
     trigger: 'item',
     formatter: '{a} <br/>{b} : {c} %'
@@ -24,7 +23,8 @@ var option1 = {
     {
       name: '仪表盘',
       type: 'gauge',
-      data: [{ value: '82', name: '年度完成率' }],
+
+      data: [{ value: '29', name: '年度完成率' }],
       radius: '80%',
       center: ['30%', '50%'],
       min: 0,
@@ -49,7 +49,10 @@ var option1 = {
         }
       },
       axisLabel: {
-        color: '#666',
+        textStyle: {
+          color: '#fff',
+        }
+
       },
       detail: {
         formatter: '{value}%',
@@ -58,16 +61,17 @@ var option1 = {
       },
       title: {
         fontSize: 12,
-        offsetCenter: [0, '20%'],
         textStyle: {
           color: '#fff'
-        }
+        },
+
+        offsetCenter: [0, '20%']
       },
       pointer: {
         width: 3            // 指针大小
       }
     }
-  ]
+  ],
 };
 chart1.setOption(option1);
 
@@ -573,7 +577,9 @@ var option4 = {
         width: 3            // 指针大小
       }
     }
-  ]
+  ],
+
+
 
 };
 chart4.setOption(option4);
@@ -981,3 +987,5 @@ redraw(chart3, option3, t3);
 redraw(chart5, option5, t5);
 redraw(chart6, option6, t6);
 redraw(chart3r, option3r, t3r);
+
+
