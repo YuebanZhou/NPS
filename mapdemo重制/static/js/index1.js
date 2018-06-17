@@ -1,119 +1,38 @@
-$(".btn11").click(function () {
-  $(".ywchart").show()
-  $(".kdchart").hide()
-  if ($(".btn12").hasClass("active")) {
-    $(".btn12").removeClass("active");
-    $(this).addClass("active");
+$(".img").click(function (ev) {
+  var ofx=$(".img").offset().left;
+  var oEvent = ev || event;
+  var xx = oEvent.clientX;
+  if (xx <= (100+ofx)) {
+    //整体
+    $(".img1").show();
+    $(".img2").hide();
+    $(".img3").hide();
+    $(".img4").hide();
+
+  } else if (xx > (100+ofx) && xx <= (200+ofx)) {
+    //业务
+    $(".img1").hide();
+    $(".img2").show();
+    $(".img3").hide();
+    $(".img4").hide();
+
+  } else if (xx > (200+ofx)&&xx<=(300+ofx)) {
+    //网络
+    $(".img1").hide();
+    $(".img2").hide();
+    $(".img3").show();
+    $(".img4").hide();
+
+  }else if (xx>(300+ofx)){
+    // 服务
+    $(".img1").hide();
+    $(".img2").hide();
+    $(".img3").hide();
+    $(".img4").show();
+
   }
-});
-$(".btn12").click(function () {
-  $(".kdchart").show()
-  $(".ywchart").hide()
-  $(this).addClass("active");
-  if ($(".btn11").hasClass("active")) {
-    $(".btn11").removeClass("active");
-  }
-});
-$(".btn21").click(function () {
-  if ($(".btn22").hasClass("active")) {
-    $(".btn22").removeClass("active");
-    $(this).addClass("active");
-  }
-  if ($(".btn23").hasClass("active")) {
-    $(".btn23").removeClass("active");
-    $(this).addClass("active");
-  }
-  if ($(".btn24").hasClass("active")) {
-    $(".btn24").removeClass("active");
-    $(this).addClass("active");
-  }
-});
-$(".btn22").click(function () {
-  $(this).addClass("active");
-  if ($(".btn21").hasClass("active")) {
-    $(".btn21").removeClass("active");
-  }
-  if ($(".btn23").hasClass("active")) {
-    $(".btn23").removeClass("active");
-  }
-  if ($(".btn24").hasClass("active")) {
-    $(".btn24").removeClass("active");
-  }
-});
-$(".btn23").click(function () {
-  $(this).addClass("active");
-  if ($(".btn21").hasClass("active")) {
-    $(".btn21").removeClass("active");
-  }
-  if ($(".btn22").hasClass("active")) {
-    $(".btn22").removeClass("active");
-  }
-  if ($(".btn24").hasClass("active")) {
-    $(".btn24").removeClass("active");
-  }
-});
-$(".btn24").click(function () {
-  $(this).addClass("active");
-  if ($(".btn21").hasClass("active")) {
-    $(".btn21").removeClass("active");
-  }
-  if ($(".btn22").hasClass("active")) {
-    $(".btn22").removeClass("active");
-  }
-  if ($(".btn23").hasClass("active")) {
-    $(".btn23").removeClass("active");
-  }
-});
-$(".btn31").click(function () {
-  if ($(".btn32").hasClass("active")) {
-    $(".btn32").removeClass("active");
-    $(this).addClass("active");
-  }
-  if ($(".btn33").hasClass("active")) {
-    $(".btn33").removeClass("active");
-    $(this).addClass("active");
-  }
-  if ($(".btn34").hasClass("active")) {
-    $(".btn34").removeClass("active");
-    $(this).addClass("active");
-  }
-});
-$(".btn32").click(function () {
-  $(this).addClass("active");
-  if ($(".btn31").hasClass("active")) {
-    $(".btn31").removeClass("active");
-  }
-  if ($(".btn33").hasClass("active")) {
-    $(".btn33").removeClass("active");
-  }
-  if ($(".btn34").hasClass("active")) {
-    $(".btn34").removeClass("active");
-  }
-});
-$(".btn33").click(function () {
-  $(this).addClass("active");
-  if ($(".btn31").hasClass("active")) {
-    $(".btn31").removeClass("active");
-  }
-  if ($(".btn32").hasClass("active")) {
-    $(".btn32").removeClass("active");
-  }
-  if ($(".btn34").hasClass("active")) {
-    $(".btn34").removeClass("active");
-  }
-});
-$(".btn34").click(function () {
-  $(this).addClass("active");
-  if ($(".btn31").hasClass("active")) {
-    $(".btn31").removeClass("active");
-  }
-  if ($(".btn32").hasClass("active")) {
-    $(".btn32").removeClass("active");
-  }
-  if ($(".btn33").hasClass("active")) {
-    $(".btn33").removeClass("active");
-  }
-});
+})
+
 
 $(".enter1").click(function () {
   window.location.href = "index.html"
@@ -178,7 +97,7 @@ var option1 = {
   legend: {
     orient: 'vertical',
     top: 'top',
-    left:'left',
+    left: 'left',
     right: 60,
     data: data_name,
     textStyle: {
@@ -187,11 +106,11 @@ var option1 = {
       fontFamily: '宋体'
     }
   },
-  grid:{
-    top:'3%',
-    bottom:'3%',
-    left:'6%',
-    right:'6%'
+  grid: {
+    top: '3%',
+    bottom: '3%',
+    left: '6%',
+    right: '6%'
   },
   series: [
 
