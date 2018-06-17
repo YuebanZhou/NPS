@@ -338,3 +338,6 @@ select {
 .rbtn:hover {
   background-color: #083165;
 }
+.bmimg {
+  width: 90%;
+}
