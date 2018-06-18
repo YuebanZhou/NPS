@@ -54,8 +54,6 @@ $.getJSON('static/map/china.json', function (data) {
   for (var i = 0; i < data.features.length; i++) {
     d.push({
       name: mapobj[i].PROVINCE_NAME,
-      ywvalue: mapobj[i].U_NPS,
-      kdvalue: mapobj[i].U_K_NPS
     })
   }
 
@@ -102,8 +100,14 @@ var option = {
   // backgroundColor: '#091C3D',
   tooltip: {
     trigger: 'item',
-    formatter: function (d) {
-      return d.name + '</br>移网：' + 9.1 + '</br>宽带：' + 9.1 + '</br>'
+    formatter: function (params) {
+      var str = '';
+      for (var i = 0; i < mapobj.length; i++) {
+        if (params.name == mapobj[i].name) {
+          str = params.name + '</br>移网：' + mapobj[i].ywval + '</br>宽带：' + mapobj[i].kdval + '</br>'
+        }
+      }
+      return str
     }
   },
 };
@@ -233,6 +237,7 @@ function renderMap(map, data) {
   })
 }
 var mapobj = [];
+//请求地图数据
 $.ajax({
   type: "post",
   dataType: "json",
@@ -241,14 +246,16 @@ $.ajax({
     console.log("请求成功");
     for (var i = 0; i < result.province.length; i++) {
       mapobj.push({
-        PROVINCE_NAME: result.province[i].PROVINCE_NAME,
-        U_NPS: result.province[i].U_NPS,
-        U_K_NPS: result.province[i].U_K_NPS
+        name: result.province[i].PROVINCE_NAME,
+        ywval: result.province[i].U_NPS,
+        kdval: result.province[i].U_K_NPS
       })
     }
+
+
   },
   error: function () {
     console.log("请求失败");
   }
 })
-
+console.log(mapobj);

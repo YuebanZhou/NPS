@@ -44,8 +44,8 @@ $.ajax({
   url: "json/index.json",
   success: function (result) {
     console.log("请求成功");
-    console.log(result.proN);
-    console.log(result.proS);
+    // console.log(result.proN);
+    // console.log(result.proS);
     for (var i = 0; i < result.proN.length; i++) {
       np.push({
         PROVINCE_NAME:result.proN[i].PROVINCE_NAME,
