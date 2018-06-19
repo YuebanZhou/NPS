@@ -64,18 +64,21 @@ $.ajax({
       if (num == "1") {
         // console.log(i)
         tr.eq(i).find("td").eq(0).html(imgstr1)
-        tr.eq(i).find("td").eq(1).css("color", "#bf4959")
+        // tr.eq(i).find("td").eq(1).css("color", "#bf4959")
+        tr.eq(i).css("color", "#bf4959")
       }
       if (num == "2") {
         // console.log(i)
         tr.eq(i).find("td").eq(0).html(imgstr2)
-        tr.eq(i).find("td").eq(1).css("color", "#b9542a")
+        // tr.eq(i).find("td").eq(1).css("color", "#b9542a")
+        tr.eq(i).css("color", "#b9542a")
 
       }
       if (num == "3") {
         // console.log(i)
         tr.eq(i).find("td").eq(0).html(imgstr3)
-        tr.eq(i).find("td").eq(1).css("color", "#137b8a")
+        // tr.eq(i).find("td").eq(1).css("color", "#137b8a")
+        tr.eq(i).css("color", "#137b8a")
 
       }
     }

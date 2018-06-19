@@ -3,6 +3,8 @@ var ywchart = [];
 var kdchart = [];
 var icchart = [];
 var ftchart = [];
+var kdNchart = [];
+var kdSchart = [];
 // 移网折线图数据
 var ywxa = [];
 var ywuv = [];
@@ -22,6 +24,16 @@ var ftxa = [];
 var fty = [];
 var ftn = [];
 var fts = [];
+// 宽带北方
+var kdnxa = [];
+var kdnuv = [];
+var kdnmv = [];
+var kdntv = [];
+// 宽带南方
+var kdsxa = [];
+var kdsuv = [];
+var kdsmv = [];
+var kdstv = [];
 // 弱化效果颜色控制
 var lineCacheData = {
   "LT": {
@@ -792,184 +804,336 @@ function drawchart5(kdxa, kduv, kdmv, kdtv) {
   chart5.setOption(option5);
   redraw(chart5, option5, t5);
 }
-function drawchart6() {
+function drawchart6(kdnxa, kdnuv, kdnmv, kdntv) {
   var chart6 = echarts.init(document.getElementById("chart6"));
   var option6 = {
     tooltip: {
       trigger: 'axis',
+      axisPointer: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      }
     },
     legend: {
-      data: ['联通北方', '移动北方', '电信北方', '联通南方', '移动南方', '电信南方'],
+      icon: 'rect',
+      itemWidth: 14,
+      itemHeight: 5,
+      itemGap: 13,
+      data: ['中国联通', '中国移动', '中国电信'],
+      right: '4%',
       textStyle: {
-        color: "#fff",
-        fontSize: 12
+        fontSize: 12,
+        color: '#fff'
       }
     },
     grid: {
       left: '3%',
-      right: '5%',
+      right: '3%',
       bottom: '3%',
       containLabel: true
     },
-    xAxis: [
-      {
-        type: 'category',
-        boundaryGap: false,
-        data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-        axisLabel: {
-          show: true,
-          textStyle: {
-            color: "#fff"
-          },
-          //数据全部展示，不隐藏
-          interval: 0
-        },
-        axisLine: {
-          // show:true,
-          lineStyle: {
-            color: "#333"
-          }
-        },
-        splitLine: {
-          lineStyle: {
-            color: "#333"
-          }
+    xAxis: [{
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
         }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        },
+        interval: 0
+      },
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: kdnxa
+    }],
+    yAxis: [{
+      type: 'value',
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        }
+      },
+      splitLine: {
+        show: false
       }
-    ],
-    yAxis: [
-      {
-        type: 'value',
-        scale: true,
-        show: true,
-        splitLine: {
-          show: false
-        },
-        axisLine: {
-          lineStyle: {
-            color: "#fff"
-          }
-        },
-        axisLabel: {
-          color: "#fff"
-        },
-      }
-    ],
+    }],
     series: [
       {
-        name: '联通北方',
+        name: '中国联通',
         type: 'line',
-        itemStyle: {
+        smooth: false,
+        lineStyle: {
           normal: {
-            color: "#299ae7",
-            label: {
-              show: true
-            }
+            width: 1
           }
         },
         areaStyle: {
           normal: {
-            color: '#299ae7'
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.LT.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.LT.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          },
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.LT.activeColor + ')'
+          },
+        },
+        // data: [-1.2, -0.5, 0.6, 5, 5]
+        data: kdnuv
+      }, {
+        name: '中国移动',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
           }
         },
-        data: [12.1, 13.3, 13.4, 13.7, 16.0]
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.YD.nomalColor + ', 0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.YD.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.YD.activeColor + ')'
+          }
+        },
+        // data: [28.4, 23.4, 24.2, 26.9, 23.8]
+        data: kdnmv
+      }, {
+        name: '中国电信',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.DX.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.DX.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.DX.activeColor + ')'
+          }
+        },
+        // data: [14.1, 13.9, 14.4, 17.9, 16.5]
+        data: kdntv
       },
-      {
-        name: '移动北方',
-        type: 'line',
-        itemStyle: {
-          normal: {
-            color: "#627f41",
-            label: {
-              show: true
-            }
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: '#25D8ED'
-          }
-        },
-        data: [, , , , 5.5]
-      },
-      {
-        name: '电信北方',
-        type: 'line',
-        itemStyle: {
-          normal: {
-            color: "#5a5ade",
-            label: {
-              show: true
-            }
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: '#21A838'
-          }
-        },
-        data: [, , , , -0.8]
-      },
-      {
-        name: '联通南方',
-        type: 'line',
-        itemStyle: {
-          normal: {
-            color: "#277f7e",
-            label: {
-              show: true
-            }
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: '#277f7e'
-          }
-        },
-        data: [-7.2, -9.5, -6.7, -1.3, -0.8]
-      },
-      {
-        name: '移动南方',
-        type: 'line',
-        itemStyle: {
-          normal: {
-            color: "#627f41",
-            label: {
-              show: true
-            }
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: '#25D8ED'
-          }
-        },
-        data: [, , , , 7.7]
-      },
-      {
-        name: '电信南方',
-        type: 'line',
-        itemStyle: {
-          normal: {
-            color: "#5a5ade",
-            label: {
-              show: true
-            }
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: '#21A838'
-          }
-        },
-        data: [, , , , -0.6]
-      }
     ]
   };
   chart6.setOption(option6);
   redraw(chart6, option6, t6);
 
 }
+function drawchart6r(kdsxa, kdsuv, kdsmv, kdstv) {
+  var chart6r = echarts.init(document.getElementById("chart6r"));
+  var option6r = {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      }
+    },
+    legend: {
+      icon: 'rect',
+      itemWidth: 14,
+      itemHeight: 5,
+      itemGap: 13,
+      data: ['中国联通', '中国移动', '中国电信'],
+      right: '4%',
+      textStyle: {
+        fontSize: 12,
+        color: '#fff'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '3%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        },
+        interval: 0
+      },
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: kdsxa
+    }],
+    yAxis: [{
+      type: 'value',
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        }
+      },
+      splitLine: {
+        show: false
+      }
+    }],
+    series: [
+      {
+        name: '中国联通',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.LT.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.LT.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          },
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.LT.activeColor + ')'
+          },
+        },
+        // data: [-1.2, -0.5, 0.6, 5, 5]
+        data: kdsuv
+      }, {
+        name: '中国移动',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.YD.nomalColor + ', 0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.YD.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.YD.activeColor + ')'
+          }
+        },
+        // data: [28.4, 23.4, 24.2, 26.9, 23.8]
+        data: kdsmv
+      }, {
+        name: '中国电信',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.DX.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.DX.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.DX.activeColor + ')'
+          }
+        },
+        // data: [14.1, 13.9, 14.4, 17.9, 16.5]
+        data: kdstv
+      },
+
+    ]
+  };
+  chart6r.setOption(option6r);
+  redraw(chart6r, option6r, t6r);
+
+}
+
 // 按钮的切换效果
 $(".enter1").click(function () {
   window.location.href = "index1.html"
@@ -987,6 +1151,16 @@ $("#btn1").click(function () {
 $("#btn2").click(function () {
   $("#chart3").hide();
   $("#chart3r").show();
+})
+$("#btn3").click(function () {
+  $("#chart6").show();
+  $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
+  $("#chart6r").hide();
+})
+$("#btn4").click(function () {
+  $("#chart6").hide();
+  $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
+  $("#chart6r").show();
 })
 // 弱化效果函数
 function redraw(chart, option, t) {
@@ -1031,7 +1205,8 @@ t2 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t3 = { "纯语音用户": "LT", "有流量4G用户": "YD", "有流量非4G用户": "DX" };
 t3r = { "2I2C": "LT", "非2I2C": "YD" };
 t5 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
-t6 = { "联通北方": "LT", "联通南方": "YD" };
+t6 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
+t6r = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 //请求折线图数据
 $.ajax({
   type: "post",
@@ -1085,7 +1260,24 @@ $.ajax({
         nval: parseFloat(result.flowType[i].NO_4G_NPS).toFixed(2),
         sval: parseFloat(result.flowType[i].SOUND_NPS).toFixed(2)
       })
-
+    }
+    // 宽带北方折线图
+    for (var i = 0; i < result.kdN.length; i++) {
+      kdNchart.push({
+        age: result.kdN[i].YEAR_Q,
+        uval: parseFloat(result.kdN[i].U_K_NPS).toFixed(2),
+        mval: parseFloat(result.kdN[i].M_K_NPS).toFixed(2),
+        tval: parseFloat(result.kdN[i].T_K_NPS).toFixed(2)
+      })
+    }
+    // 宽带南方折线图
+    for (var i = 0; i < result.kdS.length; i++) {
+      kdSchart.push({
+        age: result.kdS[i].YEAR_Q,
+        uval: parseFloat(result.kdS[i].U_K_NPS).toFixed(2),
+        mval: parseFloat(result.kdS[i].M_K_NPS).toFixed(2),
+        tval: parseFloat(result.kdS[i].T_K_NPS).toFixed(2)
+      })
     }
     for (var i = 0; i < 5; i++) {
       ywxa.push(ywchart[i].age)
@@ -1107,12 +1299,22 @@ $.ajax({
       ftn.push(ftchart[i].nval)
       fts.push(ftchart[i].sval)
 
+      kdnxa.push(kdNchart[i].age)
+      kdnuv.push(kdNchart[i].uval)
+      kdnmv.push(kdNchart[i].mval)
+      kdntv.push(kdNchart[i].tval)
+
+      kdsxa.push(kdSchart[i].age)
+      kdsuv.push(kdSchart[i].uval)
+      kdsmv.push(kdSchart[i].mval)
+      kdstv.push(kdSchart[i].tval)
     }
     drawchart2(ywxa, ywuv, ywmv, ywtv)
     drawchart5(kdxa, kduv, kdmv, kdtv)
     drawchart3(ftxa, fty, ftn, fts)
     drawchart3r(icxa, icy, icn)
-    drawchart6(icxa, icy, icn)
+    drawchart6(kdnxa, kdnuv, kdnmv, kdntv)
+    drawchart6r(kdsxa, kdsuv, kdsmv, kdstv)
   },
   error: function () {
     console.log("请求失败");

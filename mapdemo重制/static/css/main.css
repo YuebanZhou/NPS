@@ -121,6 +121,14 @@ transform: translateX(-50%)
 #chart3r {
   display: none;
 }
+#chart6r {
+  display: none;
+}
+.kd .btn {
+  position: absolute;
+  left: 412px;
+  top: 155px;
+}
 .right {
   float: right;
   width: 69%;
@@ -170,10 +178,13 @@ td{
   padding-left: 10px;
   padding-right: 10px;
   position: absolute;
-  bottom: 10px;
+  bottom: 15px;
   right: 0;
 }
 #chart6 {
+  bottom: 10px;
+}
+#chart6r {
   bottom: 10px;
 }
 .map {
