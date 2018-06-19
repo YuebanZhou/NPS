@@ -1,14 +1,28 @@
+// 折线图数组
 var ywchart = [];
 var kdchart = [];
-var ywxa = []
-var ywuv = []
-var ywmv = []
-var ywtv = []
-var kdxa = []
-var kduv = []
-var kdmv = []
-var kdtv = []
-
+var icchart = [];
+var ftchart = [];
+// 移网折线图数据
+var ywxa = [];
+var ywuv = [];
+var ywmv = [];
+var ywtv = [];
+// 宽带折线图数据
+var kdxa = [];
+var kduv = [];
+var kdmv = [];
+var kdtv = [];
+// 2I2C折线图数据
+var icxa = [];
+var icy = [];
+var icn = [];
+// ft折线图数据
+var ftxa = [];
+var fty = [];
+var ftn = [];
+var fts = [];
+// 弱化效果颜色控制
 var lineCacheData = {
   "LT": {
     nomalColor: "rgba(55, 130, 193",
@@ -250,292 +264,306 @@ function drawchart2(ywxa, ywuv, ywmv, ywtv) {
   chart2.setOption(option2);
   redraw(chart2, option2, t2);
 }
+function drawchart3(ftxa, fty, ftn, fts) {
+  var chart3 = echarts.init(document.getElementById("chart3"));
+  var option3 = {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      }
+    },
+    legend: {
+      icon: 'rect',
+      itemWidth: 14,
+      itemHeight: 5,
+      itemGap: 13,
+      data: ['纯语音用户', '有流量4G用户', '有流量非4G用户'],
+      right: '4%',
+      textStyle: {
+        fontSize: 12,
+        color: '#fff'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        },
+        interval: 0
+      },
+      //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: ftxa
+    }],
+    yAxis: [{
+      type: 'value',
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        }
+      },
+      splitLine: {
+        show: false
+      }
+    }],
+    series: [
+      {
+        name: '纯语音用户',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.LT.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.LT.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          },
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.LT.activeColor + ')'
+          },
+        },
+        // data: [11.2, 17.2, 17.4, 23.2, 17.1]
+        data: fts
+      }, {
+        name: '有流量4G用户',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.YD.nomalColor + ', 0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.YD.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.YD.activeColor + ')'
+          }
+        },
+        // data: [-6.4, -2.9, -1.8, 2.1, 3.6]
+        data: fty
+      }, {
+        name: '有流量非4G用户',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.DX.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.DX.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.DX.activeColor + ')'
+          }
+        },
+        // data: [-4.5, -2.9, 0.0, 8.1, 5.5]
+        data: ftn
+      },
+    ]
+  };
+  chart3.setOption(option3);
+  redraw(chart3, option3, t3);
+}
+function drawchart3r(icxa, icy, icn) {
+  var chart3r = echarts.init(document.getElementById("chart3r"));
+  var option3r = {
+    tooltip: {
+      trigger: 'axis',
+      axisPointer: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      }
+    },
+    legend: {
+      icon: 'rect',
+      itemWidth: 14,
+      itemHeight: 5,
+      itemGap: 13,
+      data: ['2I2C', '非2I2C'],
+      right: '4%',
+      textStyle: {
+        fontSize: 12,
+        color: '#fff'
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '4%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [{
+      type: 'category',
+      boundaryGap: false,
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        },
+        interval: 0
+      },
+      //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: icxa
+    }],
+    yAxis: [{
+      type: 'value',
+      axisTick: {
+        show: false
+      },
+      axisLine: {
+        lineStyle: {
+          color: '#57617B'
+        }
+      },
+      axisLabel: {
+        margin: 10,
+        textStyle: {
+          fontSize: 14,
+          color: '#fff'
+        }
+      },
+      splitLine: {
+        show: false
+      }
+    }],
+    series: [
+      {
+        name: '2I2C',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.LT.nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.LT.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          },
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.LT.activeColor + ')'
+          },
+        },
+        // data: [31.8, 11.9, 9.8, 9.9, 6.5]
+        data: icy
+      }, {
+        name: '非2I2C',
+        type: 'line',
+        smooth: false,
+        lineStyle: {
+          normal: {
+            width: 1
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData.YD.nomalColor + ', 0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData.YD.nomalColor + ', 0)'
+            }], false),
+            shadowColor: 'rgba(0, 0, 0, 0.1)',
+            shadowBlur: 10
+          }
+        },
+        itemStyle: {
+          normal: {
+            color: lineCacheData.YD.activeColor + ')'
+          }
+        },
+        // data: [, -1.0, -0.6, 4.0, 4.6]
+        data: icn
+      }
+    ]
+  };
+  chart3r.setOption(option3r);
+  redraw(chart3r, option3r, t3r);
 
-var chart3 = echarts.init(document.getElementById("chart3"));
-var option3 = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    }
-  },
-  legend: {
-    icon: 'rect',
-    itemWidth: 14,
-    itemHeight: 5,
-    itemGap: 13,
-    data: ['纯语音用户', '有流量4G用户', '有流量非4G用户'],
-    right: '4%',
-    textStyle: {
-      fontSize: 12,
-      color: '#fff'
-    }
-  },
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true
-  },
-  xAxis: [{
-    type: 'category',
-    boundaryGap: false,
-    axisLine: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    },
-    axisLabel: {
-      margin: 10,
-      textStyle: {
-        fontSize: 14,
-        color: '#fff'
-      }
-    },
-    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
-  }],
-  yAxis: [{
-    type: 'value',
-    axisTick: {
-      show: false
-    },
-    axisLine: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    },
-    axisLabel: {
-      margin: 10,
-      textStyle: {
-        fontSize: 14,
-        color: '#fff'
-      }
-    },
-    splitLine: {
-      show: false
-    }
-  }],
-  series: [
-    {
-      name: '纯语音用户',
-      type: 'line',
-      smooth: false,
-      lineStyle: {
-        normal: {
-          width: 1
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-            offset: 0,
-            color: lineCacheData.LT.nomalColor + ',0.3)'
-          }, {
-            offset: 0.8,
-            color: lineCacheData.LT.nomalColor + ', 0)'
-          }], false),
-          shadowColor: 'rgba(0, 0, 0, 0.1)',
-          shadowBlur: 10
-        },
-      },
-      itemStyle: {
-        normal: {
-          color: lineCacheData.LT.activeColor + ')'
-        },
-      },
-      data: [11.2, 17.2, 17.4, 23.2, 17.1]
-    }, {
-      name: '有流量4G用户',
-      type: 'line',
-      smooth: false,
-      lineStyle: {
-        normal: {
-          width: 1
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-            offset: 0,
-            color: lineCacheData.YD.nomalColor + ', 0.3)'
-          }, {
-            offset: 0.8,
-            color: lineCacheData.YD.nomalColor + ', 0)'
-          }], false),
-          shadowColor: 'rgba(0, 0, 0, 0.1)',
-          shadowBlur: 10
-        }
-      },
-      itemStyle: {
-        normal: {
-          color: lineCacheData.YD.activeColor + ')'
-        }
-      },
-      data: [-6.4, -2.9, -1.8, 2.1, 3.6]
-    }, {
-      name: '有流量非4G用户',
-      type: 'line',
-      smooth: false,
-      lineStyle: {
-        normal: {
-          width: 1
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-            offset: 0,
-            color: lineCacheData.DX.nomalColor + ',0.3)'
-          }, {
-            offset: 0.8,
-            color: lineCacheData.DX.nomalColor + ', 0)'
-          }], false),
-          shadowColor: 'rgba(0, 0, 0, 0.1)',
-          shadowBlur: 10
-        }
-      },
-      itemStyle: {
-        normal: {
-          color: lineCacheData.DX.activeColor + ')'
-        }
-      },
-      data: [-4.5, -2.9, 0.0, 8.1, 5.5]
-    },
-  ]
-};
-chart3.setOption(option3);
-
-var chart3r = echarts.init(document.getElementById("chart3r"));
-var option3r = {
-  tooltip: {
-    trigger: 'axis',
-    axisPointer: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    }
-  },
-  legend: {
-    icon: 'rect',
-    itemWidth: 14,
-    itemHeight: 5,
-    itemGap: 13,
-    data: ['2I2C', '非2I2C'],
-    right: '4%',
-    textStyle: {
-      fontSize: 12,
-      color: '#fff'
-    }
-  },
-  grid: {
-    left: '3%',
-    right: '4%',
-    bottom: '3%',
-    containLabel: true
-  },
-  xAxis: [{
-    type: 'category',
-    boundaryGap: false,
-    axisLine: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    },
-    axisLabel: {
-      margin: 10,
-      textStyle: {
-        fontSize: 14,
-        color: '#fff'
-      }
-    },
-    //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-    data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
-  }],
-  yAxis: [{
-    type: 'value',
-    axisTick: {
-      show: false
-    },
-    axisLine: {
-      lineStyle: {
-        color: '#57617B'
-      }
-    },
-    axisLabel: {
-      margin: 10,
-      textStyle: {
-        fontSize: 14,
-        color: '#fff'
-      }
-    },
-    splitLine: {
-      show: false
-    }
-  }],
-  series: [
-    {
-      name: '2I2C',
-      type: 'line',
-      smooth: false,
-      lineStyle: {
-        normal: {
-          width: 1
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-            offset: 0,
-            color: lineCacheData.LT.nomalColor + ',0.3)'
-          }, {
-            offset: 0.8,
-            color: lineCacheData.LT.nomalColor + ', 0)'
-          }], false),
-          shadowColor: 'rgba(0, 0, 0, 0.1)',
-          shadowBlur: 10
-        },
-      },
-      itemStyle: {
-        normal: {
-          color: lineCacheData.LT.activeColor + ')'
-        },
-      },
-      data: [31.8, 11.9, 9.8, 9.9, 6.5]
-    }, {
-      name: '非2I2C',
-      type: 'line',
-      smooth: false,
-      lineStyle: {
-        normal: {
-          width: 1
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-            offset: 0,
-            color: lineCacheData.YD.nomalColor + ', 0.3)'
-          }, {
-            offset: 0.8,
-            color: lineCacheData.YD.nomalColor + ', 0)'
-          }], false),
-          shadowColor: 'rgba(0, 0, 0, 0.1)',
-          shadowBlur: 10
-        }
-      },
-      itemStyle: {
-        normal: {
-          color: lineCacheData.YD.activeColor + ')'
-        }
-      },
-      data: [, -1.0, -0.6, 4.0, 4.6]
-    }
-  ]
-};
-chart3r.setOption(option3r);
+}
 
 function drawchart4(kdfin) {
   var chart4 = echarts.init(document.getElementById("chart4"));
@@ -764,182 +792,185 @@ function drawchart5(kdxa, kduv, kdmv, kdtv) {
   chart5.setOption(option5);
   redraw(chart5, option5, t5);
 }
-
-var chart6 = echarts.init(document.getElementById("chart6"));
-var option6 = {
-  tooltip: {
-    trigger: 'axis',
-  },
-  legend: {
-    data: ['联通北方', '移动北方', '电信北方', '联通南方', '移动南方', '电信南方'],
-    textStyle: {
-      color: "#fff",
-      fontSize: 12
-    }
-  },
-  grid: {
-    left: '3%',
-    right: '5%',
-    bottom: '3%',
-    containLabel: true
-  },
-  xAxis: [
-    {
-      type: 'category',
-      boundaryGap: false,
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
-      axisLabel: {
-        show: true,
-        textStyle: {
-          color: "#fff"
+function drawchart6() {
+  var chart6 = echarts.init(document.getElementById("chart6"));
+  var option6 = {
+    tooltip: {
+      trigger: 'axis',
+    },
+    legend: {
+      data: ['联通北方', '移动北方', '电信北方', '联通南方', '移动南方', '电信南方'],
+      textStyle: {
+        color: "#fff",
+        fontSize: 12
+      }
+    },
+    grid: {
+      left: '3%',
+      right: '5%',
+      bottom: '3%',
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: 'category',
+        boundaryGap: false,
+        data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1'],
+        axisLabel: {
+          show: true,
+          textStyle: {
+            color: "#fff"
+          },
+          //数据全部展示，不隐藏
+          interval: 0
         },
-        //数据全部展示，不隐藏
-        interval: 0
-      },
-      axisLine: {
-        // show:true,
-        lineStyle: {
-          color: "#333"
-        }
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#333"
+        axisLine: {
+          // show:true,
+          lineStyle: {
+            color: "#333"
+          }
+        },
+        splitLine: {
+          lineStyle: {
+            color: "#333"
+          }
         }
       }
-    }
-  ],
-  yAxis: [
-    {
-      type: 'value',
-      scale: true,
-      show: true,
-      splitLine: {
-        show: false
-      },
-      axisLine: {
-        lineStyle: {
+    ],
+    yAxis: [
+      {
+        type: 'value',
+        scale: true,
+        show: true,
+        splitLine: {
+          show: false
+        },
+        axisLine: {
+          lineStyle: {
+            color: "#fff"
+          }
+        },
+        axisLabel: {
           color: "#fff"
-        }
-      },
-      axisLabel: {
-        color: "#fff"
-      },
-    }
-  ],
-  series: [
-    {
-      name: '联通北方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#299ae7",
-          label: {
-            show: true
+        },
+      }
+    ],
+    series: [
+      {
+        name: '联通北方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#299ae7",
+            label: {
+              show: true
+            }
           }
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: '#299ae7'
-        }
-      },
-      data: [12.1, 13.3, 13.4, 13.7, 16.0]
-    },
-    {
-      name: '移动北方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#627f41",
-          label: {
-            show: true
+        },
+        areaStyle: {
+          normal: {
+            color: '#299ae7'
           }
-        }
+        },
+        data: [12.1, 13.3, 13.4, 13.7, 16.0]
       },
-      areaStyle: {
-        normal: {
-          color: '#25D8ED'
-        }
-      },
-      data: [, , , , 5.5]
-    },
-    {
-      name: '电信北方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#5a5ade",
-          label: {
-            show: true
+      {
+        name: '移动北方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#627f41",
+            label: {
+              show: true
+            }
           }
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: '#21A838'
-        }
-      },
-      data: [, , , , -0.8]
-    },
-    {
-      name: '联通南方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#277f7e",
-          label: {
-            show: true
+        },
+        areaStyle: {
+          normal: {
+            color: '#25D8ED'
           }
-        }
+        },
+        data: [, , , , 5.5]
       },
-      areaStyle: {
-        normal: {
-          color: '#277f7e'
-        }
-      },
-      data: [-7.2, -9.5, -6.7, -1.3, -0.8]
-    },
-    {
-      name: '移动南方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#627f41",
-          label: {
-            show: true
+      {
+        name: '电信北方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#5a5ade",
+            label: {
+              show: true
+            }
           }
-        }
-      },
-      areaStyle: {
-        normal: {
-          color: '#25D8ED'
-        }
-      },
-      data: [, , , , 7.7]
-    },
-    {
-      name: '电信南方',
-      type: 'line',
-      itemStyle: {
-        normal: {
-          color: "#5a5ade",
-          label: {
-            show: true
+        },
+        areaStyle: {
+          normal: {
+            color: '#21A838'
           }
-        }
+        },
+        data: [, , , , -0.8]
       },
-      areaStyle: {
-        normal: {
-          color: '#21A838'
-        }
+      {
+        name: '联通南方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#277f7e",
+            label: {
+              show: true
+            }
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: '#277f7e'
+          }
+        },
+        data: [-7.2, -9.5, -6.7, -1.3, -0.8]
       },
-      data: [, , , , -0.6]
-    }
-  ]
-};
-chart6.setOption(option6);
+      {
+        name: '移动南方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#627f41",
+            label: {
+              show: true
+            }
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: '#25D8ED'
+          }
+        },
+        data: [, , , , 7.7]
+      },
+      {
+        name: '电信南方',
+        type: 'line',
+        itemStyle: {
+          normal: {
+            color: "#5a5ade",
+            label: {
+              show: true
+            }
+          }
+        },
+        areaStyle: {
+          normal: {
+            color: '#21A838'
+          }
+        },
+        data: [, , , , -0.6]
+      }
+    ]
+  };
+  chart6.setOption(option6);
+  redraw(chart6, option6, t6);
 
+}
+// 按钮的切换效果
 $(".enter1").click(function () {
   window.location.href = "index1.html"
 })
@@ -957,6 +988,7 @@ $("#btn2").click(function () {
   $("#chart3").hide();
   $("#chart3r").show();
 })
+// 弱化效果函数
 function redraw(chart, option, t) {
   if (option && typeof option === "object") {
     chart.setOption(option, true);
@@ -1000,13 +1032,7 @@ t3 = { "纯语音用户": "LT", "有流量4G用户": "YD", "有流量非4G用户
 t3r = { "2I2C": "LT", "非2I2C": "YD" };
 t5 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t6 = { "联通北方": "LT", "联通南方": "YD" };
-redraw(chart3, option3, t3);
-
-redraw(chart6, option6, t6);
-redraw(chart3r, option3r, t3r);
 //请求折线图数据
-
-
 $.ajax({
   type: "post",
   dataType: "json",
@@ -1025,7 +1051,7 @@ $.ajax({
     var kdfin = parseFloat(result.kdAIM[0].YEAR_FINISH).toFixed(2) * 100
     drawchart4(kdfin)
 
-
+    // 移网折线图
     for (var i = 0; i < result.ywNPS.length; i++) {
       ywchart.push({
         age: result.ywNPS[i].YEAR_Q,
@@ -1034,6 +1060,7 @@ $.ajax({
         tval: parseFloat(result.ywNPS[i].T_NPS).toFixed(2)
       })
     }
+    // 宽带折线图
     for (var i = 0; i < result.kdNPS.length; i++) {
       kdchart.push({
         age: result.kdNPS[i].YEAR_Q,
@@ -1042,21 +1069,52 @@ $.ajax({
         tval: parseFloat(result.kdNPS[i].T_K_NPS).toFixed(2)
       })
     }
-    for (var i = 0; i < ywchart.length; i++) {
+    // 2I2C折线图
+    for (var i = 0; i < result.user2I2C.length; i++) {
+      icchart.push({
+        age: result.user2I2C[i].YEAR_Q,
+        yval: parseFloat(result.user2I2C[i].YES_2I2C).toFixed(2),
+        nval: parseFloat(result.user2I2C[i].NO_2I2C).toFixed(2),
+      })
+    }
+    // ft折线图
+    for (var i = 0; i < result.flowType.length; i++) {
+      ftchart.push({
+        age: result.flowType[i].YEAR_Q,
+        yval: parseFloat(result.flowType[i].YES_4G_NPS).toFixed(2),
+        nval: parseFloat(result.flowType[i].NO_4G_NPS).toFixed(2),
+        sval: parseFloat(result.flowType[i].SOUND_NPS).toFixed(2)
+      })
+
+    }
+    for (var i = 0; i < 5; i++) {
       ywxa.push(ywchart[i].age)
       ywuv.push(ywchart[i].uval)
       ywmv.push(ywchart[i].mval)
       ywtv.push(ywchart[i].tval)
+
       kdxa.push(kdchart[i].age)
       kduv.push(kdchart[i].uval)
       kdmv.push(kdchart[i].mval)
       kdtv.push(kdchart[i].tval)
+
+      icxa.push(icchart[i].age)
+      icy.push(icchart[i].yval)
+      icn.push(icchart[i].nval)
+
+      ftxa.push(ftchart[i].age)
+      fty.push(ftchart[i].yval)
+      ftn.push(ftchart[i].nval)
+      fts.push(ftchart[i].sval)
+
     }
     drawchart2(ywxa, ywuv, ywmv, ywtv)
     drawchart5(kdxa, kduv, kdmv, kdtv)
+    drawchart3(ftxa, fty, ftn, fts)
+    drawchart3r(icxa, icy, icn)
+    drawchart6(icxa, icy, icn)
   },
   error: function () {
     console.log("请求失败");
   }
 })
-

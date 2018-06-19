@@ -5,6 +5,8 @@
 body {
   background-color: #0A0A2D;
   height: 100%;
+  min-width: 1200px;
+  overflow: scroll;
 }
 .clearfix:after{
   content:"";
@@ -53,6 +55,14 @@ body {
 }
 .contop {
   height: 450px;
+}
+.toptitle {
+  color: #25D8ED;
+  font-size: 20px;
+  position: absolute;
+  top: 20px;
+  left: 50%;
+transform: translateX(-50%)
 }
 .enter1 {
   position: absolute;
@@ -124,6 +134,9 @@ table {
 }
 th {
   text-align: center;
+}
+td{
+  text-overflow:ellipsis;
 }
 .rang {
   width: 46%;
