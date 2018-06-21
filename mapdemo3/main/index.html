@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NPS</title>
+
+  <!--[if lt IE 8]>
+  <meta http-equiv="refresh" content="0;ie.html" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <![endif]-->
+  <meta http-equiv="X-UA-Compatible" content="IE=100">
+  <!--[if lt IE 9]>
+  <script src="https://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.js"></script>
+  <![endif]-->
+
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css-v=4.4.0.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+
+</head>
+
+<body>
+  <div class="con clearfix">
+    <div class="top">
+      <img src="img/top.png" alt="">
+    </div>
+    <div class="enter1">
+      <i class="glyphicon glyphicon-circle-arrow-right"></i>
+      <span>查看省份运营情况</span>
+    </div>
+    <div class="toptitle">
+      <span class="age">2018第一季度</span>
+      NPS运营情况概览
+    </div>
+    <div class="left">
+      <div class="contop">
+        <div class="title">移网运营情况</div>
+        <div class="con">
+          <div class="upval">
+            <div class="up1">
+              <span class="span1">年度提升值</span>
+              <i class="glyphicon glyphicon-arrow-up"></i>
+              <span class="span2 ywy">5.4</span>
+            </div>
+            <div class="up1">
+              <span class="span1">季度提升值</span>
+              <i class="glyphicon glyphicon-arrow-up"></i>
+              <span class="span2 ywj">5.4</span>
+            </div>
+          </div>
+          <div class="enter2">
+            <i class="glyphicon glyphicon-circle-arrow-right"></i>
+            <span>查看移网运营情况</span>
+          </div>
+          <img src="./img/maichong2.png" alt="" id="maichong2">
+          <div id="chart1" style="height: 190px;width: 200px;"></div>
+          <div id="chart2" style="height: 190px;width: 300px;"></div>
+          <div class="dec">总结：落后移动18.8分，落后电信18.8分</div>
+        </div>
+      </div>
+      <div class="conbottom">
+        <div class="title">移网综合评价</div>
+        <div class="btn">
+          <div id="btn1">不同流量类型用户评价</div>
+          <div id="btn2">2I用户评价</div>
+        </div>
+        <div class="con">
+          <div id="chart3" style="height: 190px;width: 300px;"></div>
+          <div id="chart3r" style="height: 190px;width: 300px;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="right">
+      <div class="rang">
+        <div class="title">省份运营排名</div>
+        <div style="width:100%;">
+          <table class="footable foottable_tab">
+            <thead>
+              <tr class="th">
+                <th width="43" align="center">排名</th>
+                <th width="76" align="center">省分</th>
+                <th width="84" align="center">合计完成进度</th>
+                <th width="80" align="center">移网提升值</th>
+                <th width="80" align="center">宽带提升值</th>
+                <th width="58" align="center">区域排名</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div style="width:100%;height:217px;overflow:auto;">
+          <table id="Template_listZ" class="footable foottable_tab">
+            <tbody id="tplWrapper_TemplateZ">
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+      <div class="kd">
+        <div class="contop clearfix">
+          <div class="title">宽带运营情况</div>
+          <div class="con1">
+            <div class="upval">
+              <div class="up1">
+                <span class="span1">年度提升值</span>
+                <i class="glyphicon glyphicon-arrow-up"></i>
+                <span class="span2 kdy">5.4</span>
+              </div>
+              <div class="up1">
+                <span class="span1">季度提升值</span>
+                <i class="glyphicon glyphicon-arrow-up"></i>
+                <span class="span2 kdj">5.4</span>
+              </div>
+            </div>
+            <div class="enter3">
+              <i class="glyphicon glyphicon-circle-arrow-right"></i>
+              <span>查看宽带运营情况</span>
+            </div>
+            <div id="chart4" style="height: 190px;width: 200px;"></div>
+            <div id="chart5" style="height: 190px;width: 300px;"></div>
+            <div class="dec">总结：落后移动18.8分，落后电信18.8分</div>
+          </div>
+          <div class="btn">
+            <div id="btn3">北方宽带</div>
+            <div id="btn4">南方宽带</div>
+          </div>
+          <div class="con2">
+            <div id="chart6" style="height: 190px;width: 300px;"></div>
+            <div id="chart6r" style="height: 190px;width: 300px;"></div>
+            <div class="dec">北方持续稳步提升，领先电信10.5分，领先移动16.8分。</div>
+          </div>
+        </div>
+
+      </div>
+      <div class="map">
+        <div id="map" style="height: 100%;width: 100%"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!--引入jquery-->
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/bootstrap.min.js?v=3.3.6"></script>
+
+  <!-- 全国344个市、区、州对应的数字编号 -->
+  <script type="text/javascript" src="js/citymap.js"></script>
+
+  <!-- ECharts -->
+  <script src="js/echarts.min.js"></script>
+  <!-- 主要js文件渲染地图和散点 -->
+  <script src="js/app.js"></script>
+  <!-- 模态框linechart -->
+  <!-- <script src="js/appTwo.js"></script> -->
+  <!-- 静态linechart -->
+  <script src="js/appThree.js"></script>
+  <!-- 获取数据 -->
+  <!-- <script type="text/javascript" src="js/cp.js"></script> -->
+  <!-- 拖拽插件 -->
+  <!-- <script src="js/drag.js"></script> -->
+  <!-- H+模板的js文件 -->
+  <script src="js/content.js"></script>
+  <script src="js/table.js"></script>
+
+
+  <!--[if lt IE ]>
+  <script type="text/javascript">
+      //IE
+      var shell = new ActiveXObject("WScript.Shell");
+      shell.SendKeys("{F11}");
+  </script>
+  <![endif]-->
+
+
+</body>
+
+</html>

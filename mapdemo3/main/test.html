@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body>
+
+    <div id="cir" style="width:500px;height:500px;"></div>
+    <script src="js/echarts.min.js"></script>
+    <script>
+        var placeHolderStyle = {
+            normal: {
+                label: {
+                    show: false
+                },
+                labelLine: {
+                    show: false
+                },
+                color: "rgba(0,0,0,0)",
+                borderWidth: 0
+            },
+            emphasis: {
+                color: "rgba(0,0,0,0)",
+                borderWidth: 0
+            }
+        };
+
+
+        var dataStyle = {
+            normal: {
+                formatter: '{c}%',
+                position: 'center',
+                show: true,
+                textStyle: {
+                    fontSize: '28',
+                    fontWeight: 'normal',
+                    color: '#fff'
+                }
+            }
+        };
+        var chart = echarts.init(document.getElementById("cir"));
+        var option = {
+            backgroundColor: '#142058',
+            title: [
+                {
+                    text: '年度完成率',
+                    left: '70%',
+                    top: '60%',
+                    textAlign: 'center',
+                    textStyle: {
+                        color: '#fff',
+                        fontWeight: 'normal',
+                        fontSize: '16',
+                        textAlign: 'center',
+                    },
+                }],
+            series: [
+                {
+                    type: 'pie',
+                    hoverAnimation: false,
+                    radius: ['25%', '31%'],
+                    center: ['50%', '50%'],
+                    startAngle: 225,
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    label: {
+                        normal: {
+                            position: 'center'
+                        }
+                    },
+                    data: [{
+                        value: 20,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: '#9f3edd'
+                                }, {
+                                    offset: 1,
+                                    color: '#4897f6'
+                                }]),
+                            }
+                        },
+                        label: dataStyle,
+                    }, {
+                        value: 80,
+                        itemStyle: placeHolderStyle,
+                    },
+
+                    ]
+                },
+
+                //外圈的边框
+
+                {
+                    type: 'pie',
+                    hoverAnimation: false,
+                    radius: ['31%', '32%'],
+                    center: ['50%', '50%'],
+                    startAngle: 225,
+                    labelLine: {
+                        normal: {
+                            show: false
+                        }
+                    },
+                    label: {
+                        normal: {
+                            position: 'center'
+                        }
+                    },
+                    data: [{
+                        value: 75,
+                        itemStyle: {
+                            normal: {
+                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                                    offset: 0,
+                                    color: '#4897f6'
+                                }, {
+                                    offset: 1,
+                                    color: '#9f3edd'
+                                }]),
+                            }
+                        },
+                    }, {
+                        value: 25,
+                        itemStyle: placeHolderStyle,
+                    },
+
+                    ]
+                },
+            ]
+        };
+        chart.setOption(option);
+
+    </script>
+</body>
+
+</html>
