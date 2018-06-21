@@ -43,6 +43,13 @@ var destrYWf = ''
 var destrYWc = ''
 var destrFWf = ''
 var destrFWc = ''
+// rank
+var area=''
+var rankarea=''
+var rankall=''
+
+// 模拟获取省份名称
+var proname="山东"
 // 切换移网和宽带
 $(".btnzu").click(function (ev) {
   var ofx = $(".btnzu").offset().left;
@@ -173,6 +180,26 @@ $(".img").click(function (ev) {
 $(".enter1").click(function () {
   window.location.href = "index.html"
 })
+$("select").on("cluck", )
+$("select").change(function () {
+  var option = $(".sel option:selected");
+  var temp = option.val().split("Q");
+  if (temp[1] == 1) {
+    temp[1] = "一"
+  }
+  if (temp[1] == 2) {
+    temp[1] = "二"
+  }
+  if (temp[1] == 3) {
+    temp[1] = "三"
+  }
+  if (temp[1] == 4) {
+    temp[1] = "四"
+  }
+  var str = "20" + temp[0] + "年第" + temp[1] + "季度"
+  $(".age").html(str)
+})
+
 // 表格收起放出
 function drawchart1(uv, mv, tv) {
   /* chart1配置内容 start */
@@ -1124,7 +1151,7 @@ $.ajax({
       }
 
     }
-    destrall=destrZT+destrWLf+destrWLc+destrYWf+destrYWc+destrFWf+destrFWc;
+    destrall = destrZT + destrWLf + destrWLc + destrYWf + destrYWc + destrFWf + destrFWc;
     $(".tablemx tbody").html(destrall)
     $("tr.parent").click(function () {
       $(this)
@@ -1139,10 +1166,26 @@ $.ajax({
         icon.addClass("glyphicon-chevron-down");
       }
     });
-    
+
     /* ***** detail end ***** */
-    
-    
+
+    /* ***** rank start ***** */
+    for(var i=0;i<prorank.length;i++){
+      if(prorank[i].name==proname){
+        rankarea=prorank[i].arearank;
+        rankall=prorank[i].allrank;
+        $(".nor .num").html(rankarea)
+        $(".glo .num").html(rankall)
+      }
+    }
+    for(var i=0;i<result.allRankYWN.length;i++){
+      if(result.allRankYWN[i].PROVINCE_NAME==proname){
+        $(".nor .area").html("北")
+      }else {
+        $(".nor .area").html("南")
+      }
+    }
+    /* ***** rank end ***** */
 
 
 

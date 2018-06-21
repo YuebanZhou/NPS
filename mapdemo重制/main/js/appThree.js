@@ -87,7 +87,7 @@ function drawchart1(ywfin) {
     title: [
       {
         text: '年度完成率',
-        left: 'center',
+        left: '50%',
         top: '50%',
         textAlign: 'center',
         textStyle: {
@@ -102,7 +102,7 @@ function drawchart1(ywfin) {
         type: 'pie',
         hoverAnimation: false,
         radius: ['80%', '95%'],
-        center: ['35%', '50%'],
+        center: ['50%', '50%'],
         startAngle: 225,
         labelLine: {
           normal: {
@@ -164,7 +164,7 @@ function drawchart2(ywxa, ywuv, ywmv, ywtv) {
     },
     grid: {
       left: '3%',
-      right: '3%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
@@ -327,7 +327,7 @@ function drawchart3(ftxa, fty, ftn, fts) {
     },
     grid: {
       left: '3%',
-      right: '4%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
@@ -491,7 +491,7 @@ function drawchart3r(icxa, icy, icn) {
     },
     grid: {
       left: '3%',
-      right: '4%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
@@ -609,7 +609,7 @@ function drawchart4(kdfin) {
     title: [
       {
         text: '年度完成率',
-        left: 'center',
+        left: '50%',
         top: '50%',
         textAlign: 'center',
         textStyle: {
@@ -624,7 +624,7 @@ function drawchart4(kdfin) {
         type: 'pie',
         hoverAnimation: false,
         radius: ['80%', '95%'],
-        center: ['35%', '50%'],
+        center: ['50%', '50%'],
         startAngle: 225,
         labelLine: {
           normal: {
@@ -686,7 +686,7 @@ function drawchart5(kdxa, kduv, kdmv, kdtv) {
     },
     grid: {
       left: '3%',
-      right: '4%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
@@ -850,7 +850,7 @@ function drawchart6(kdnxa, kdnuv, kdnmv, kdntv) {
     },
     grid: {
       left: '3%',
-      right: '3%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
@@ -1014,7 +1014,7 @@ function drawchart6r(kdsxa, kdsuv, kdsmv, kdstv) {
     },
     grid: {
       left: '3%',
-      right: '3%',
+      right: '9%',
       bottom: '3%',
       containLabel: true
     },
