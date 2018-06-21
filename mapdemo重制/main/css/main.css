@@ -126,8 +126,11 @@ transform: translateX(-50%)
 }
 .kd .btn {
   position: absolute;
-  left: 412px;
+  right: 10%;
   top: 155px;
+}
+#btn3 {
+  margin-right: 10px;
 }
 .right {
   float: right;
@@ -149,6 +152,7 @@ td{
 .rang {
   width: 46%;
   margin-bottom: 10px;
+  min-width: 421px;
 }
 .th {
   height: 30px;
@@ -178,7 +182,7 @@ td{
   padding-left: 10px;
   padding-right: 10px;
   position: absolute;
-  bottom: 15px;
+  bottom: 5px;
   right: 0;
 }
 #chart6 {
@@ -191,9 +195,27 @@ td{
   position: absolute;
   right: 0;
   top: 125px;
-  width: 445px;
-  height: 300px;
+  width: 35%;
+  height: 50%;
 }
 #maichong2 {
   display: none;
+}
+#chart2 {
+  margin: 5px auto;
+}
+#chart3 {
+  margin: 5px auto;
+}
+#chart3r {
+  margin: 5px auto;
+}
+#chart5 {
+  margin: 5px auto;
+}
+#chart6 {
+  margin: 5px auto;
+}
+#chart6r {
+  margin: 5px auto;
 }

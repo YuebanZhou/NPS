@@ -162,7 +162,8 @@ function renderMap(map, data) {
       $("#text").html(subtext)
       var width = $("#text").width() / 2;
       $("#text").css("margin-right", -width)
-      option.backgroundColor = '#090A29';
+      // option.backgroundColor = '#0A0A2D';
+      option.backgroundColor = 'transparent';
       option.series = [{
         z: 1,
         name: '全部',
@@ -258,4 +259,5 @@ $.ajax({
     console.log("请求失败");
   }
 })
+
 

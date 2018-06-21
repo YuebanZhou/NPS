@@ -49,6 +49,7 @@ var lineCacheData = {
     activeColor: "rgba(34, 172, 56"
   },
 }
+// 仪表盘部分的颜色控制
 var placeHolderStyle = {
   normal: {
     label: {
@@ -65,6 +66,7 @@ var placeHolderStyle = {
     borderWidth: 0
   }
 };
+// 仪表盘部分的颜色控制
 var dataStyle = {
   normal: {
     formatter: '{c}%',
@@ -1166,6 +1168,7 @@ $(".enter3").click(function () {
 $("#btn1").click(function () {
   $("#chart3").show();
   $("#chart3r").hide();
+  
 })
 $("#btn2").click(function () {
   $("#chart3").hide();
