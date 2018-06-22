@@ -1,31 +1,26 @@
-$(".img").click(function (ev) {
-  var oEvent = ev || event;
-  var xx = oEvent.clientX;
-  if (xx <= 120) {
-    //网络
-    $(".img1").show();
-    $(".img2").hide();
-    $(".img3").hide();
-    $("#con1").show();
-    $("#con2").hide();
-    $("#con3").hide();
-  } else if (xx > 120 && xx <= 220) {
-    //业务
-    $(".img1").hide();
-    $(".img2").show();
-    $(".img3").hide();
-    $("#con1").hide();
-    $("#con2").show();
-    $("#con3").hide();
-  } else if (xx > 220) {
-    //服务
-    $(".img1").hide();
-    $(".img2").hide();
-    $(".img3").show();
-    $("#con1").hide();
-    $("#con2").hide();
-    $("#con3").show();
-  }
+$(".btnzu1 .btn1").click(function(){
+  $(".btnzu1 .btn1").addClass("active");
+  $(".btnzu1 .btn2").removeClass("active");
+  $(".btnzu1 .btn3").removeClass("active");
+  $("#con1").show();
+  $("#con2").hide();
+  $("#con3").hide();
+})
+$(".btnzu1 .btn2").click(function(){
+  $(".btnzu1 .btn1").removeClass("active");
+  $(".btnzu1 .btn2").addClass("active");
+  $(".btnzu1 .btn3").removeClass("active");
+  $("#con1").hide();
+  $("#con2").show();
+  $("#con3").hide();
+})
+$(".btnzu1 .btn3").click(function(){
+  $(".btnzu1 .btn1").removeClass("active");
+  $(".btnzu1 .btn2").removeClass("active");
+  $(".btnzu1 .btn3").addClass("active");
+  $("#con1").hide();
+  $("#con2").hide();
+  $("#con3").show();
 })
 $(".enter1").click(function () {
   window.location.href = "index.html";
@@ -51,7 +46,7 @@ var option1 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     }
   },
@@ -64,7 +59,7 @@ var option1 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#000'
     }
   },
   grid: {
@@ -78,14 +73,14 @@ var option1 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -98,14 +93,14 @@ var option1 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     splitLine: {
@@ -210,7 +205,7 @@ var option3 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     }
   },
@@ -223,7 +218,7 @@ var option3 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#000'
     }
   },
   grid: {
@@ -237,14 +232,14 @@ var option3 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -257,14 +252,14 @@ var option3 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     splitLine: {
@@ -368,7 +363,7 @@ var option5 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     }
   },
@@ -381,7 +376,7 @@ var option5 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#000'
     }
   },
   grid: {
@@ -395,14 +390,14 @@ var option5 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -415,14 +410,14 @@ var option5 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#57617B'
+        color: '#000'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#000'
       }
     },
     splitLine: {
@@ -519,23 +514,6 @@ var option5 = {
 };
 chart5.setOption(option5);
 
-// $("tr.parent").click(function () {
-//   console.log("parent");
-//   // $(this).toggleClass('selected');
-//   $(this)
-//     .siblings(".child_" + this.id)
-//     .slideToggle();
-//   var icon = $(this).find("i");
-//   console.log(icon);
-//   if (icon.hasClass("glyphicon-chevron-down")) {
-//     console.log("glyphicon-chevron-down");
-//     icon.removeClass("glyphicon-chevron-down");
-//     icon.addClass("glyphicon-chevron-up");
-//   } else {
-//     icon.removeClass("glyphicon-chevron-up");
-//     icon.addClass("glyphicon-chevron-down");
-//   }
-// });
 function redraw(chart, option, t) {
   if (option && typeof option === "object") {
     chart.setOption(option, true);

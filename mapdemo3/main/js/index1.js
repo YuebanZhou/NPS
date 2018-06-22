@@ -44,163 +44,195 @@ var destrYWc = ''
 var destrFWf = ''
 var destrFWc = ''
 // rank
-var area=''
-var rankarea=''
-var rankall=''
+var area = ''
+var rankarea = ''
+var rankall = ''
 
 // 模拟获取省份名称
-var proname="山东"
-// 切换移网和宽带
-$(".btnzu").click(function (ev) {
-  var ofx = $(".btnzu").offset().left;
-  var oEvent = ev || event;
-  var xx = oEvent.clientX;
-  if (xx <= (100 + ofx)) {
-    //移网
-    $(".ywpng").show();
-    $(".kdpng").hide();
+var proname = "山东"
 
-  } else if (xx > (100 + ofx) && xx <= (200 + ofx)) {
-    //宽带
-    $(".ywpng").hide();
-    $(".kdpng").show();
+// 切换移网和宽带
+$(".btnzu1 .btn1").click(function () {
+  // 移网
+  if ($(".btnzu1 .btn2").hasClass("active")) {
+    $(".btnzu1 .btn1").addClass("active");
+    $(".btnzu1 .btn2").removeClass("active");
+  }
+
+})
+$(".btnzu1 .btn2").click(function () {
+  // 宽带
+  if ($(".btnzu1 .btn1").hasClass("active")) {
+    $(".btnzu1 .btn2").addClass("active");
+    $(".btnzu1 .btn1").removeClass("active");
   }
 })
-// 切换网络业务服务
-$(".img").click(function (ev) {
-  var ofx = $(".img").offset().left;
-  var oEvent = ev || event;
-  var xx = oEvent.clientX;
-  if (xx <= (100 + ofx)) {
-    //整体
-    $(".img1").show();
-    $(".img2").hide();
-    $(".img3").hide();
-    $(".img4").hide();
-    var strZT = '';
-    for (var i = 0; i < npsZT.length; i++) {
-      strZT += `
-      <tr>
-          <td>`+ npsZT[i].name + `</td>
-          <td>`+ npsZT[i].unps + `</td>
-          <td>`+ npsZT[i].uyb + `</td>
-          <td>`+ npsZT[i].same + `</td>
-          <td>`+ npsZT[i].clrcle + `</td>
-          <td>`+ npsZT[i].mnps + `</td>
-          <td>`+ npsZT[i].myb + `</td>
-          <td>`+ npsZT[i].mm + `</td>
-          <td>`+ npsZT[i].tnps + `</td>
-          <td>`+ npsZT[i].tyb + `</td>
-          <td>`+ npsZT[i].mt + `</td>
-          <td>`+ npsZT[i].del + `</td>
-      </tr>
-      `
-    }
-    $(".talezbmx tbody").html(strZT)
-  } else if (xx > (100 + ofx) && xx <= (200 + ofx)) {
-    //业务
-    $(".img1").hide();
-    $(".img2").show();
-    $(".img3").hide();
-    $(".img4").hide();
-    var strYW = '';
-    for (var i = 0; i < npsYW.length; i++) {
-      strYW += `
-      <tr>
-          <td>`+ npsYW[i].name + `</td>
-          <td>`+ npsYW[i].unps + `</td>
-          <td>`+ npsYW[i].uyb + `</td>
-          <td>`+ npsYW[i].same + `</td>
-          <td>`+ npsYW[i].clrcle + `</td>
-          <td>`+ npsYW[i].mnps + `</td>
-          <td>`+ npsYW[i].myb + `</td>
-          <td>`+ npsYW[i].mm + `</td>
-          <td>`+ npsYW[i].tnps + `</td>
-          <td>`+ npsYW[i].tyb + `</td>
-          <td>`+ npsYW[i].mt + `</td>
-          <td>`+ npsYW[i].del + `</td>
-      </tr>
-      `
-    }
-    $(".talezbmx tbody").html(strYW)
-  } else if (xx > (200 + ofx) && xx <= (300 + ofx)) {
-    //网络
-    $(".img1").hide();
-    $(".img2").hide();
-    $(".img3").show();
-    $(".img4").hide();
-    var strWL = '';
-    for (var i = 0; i < npsWL.length; i++) {
-      strWL += `
-      <tr>
-          <td>`+ npsWL[i].name + `</td>
-          <td>`+ npsWL[i].unps + `</td>
-          <td>`+ npsWL[i].uyb + `</td>
-          <td>`+ npsWL[i].same + `</td>
-          <td>`+ npsWL[i].clrcle + `</td>
-          <td>`+ npsWL[i].mnps + `</td>
-          <td>`+ npsWL[i].myb + `</td>
-          <td>`+ npsWL[i].mm + `</td>
-          <td>`+ npsWL[i].tnps + `</td>
-          <td>`+ npsWL[i].tyb + `</td>
-          <td>`+ npsWL[i].mt + `</td>
-          <td>`+ npsWL[i].del + `</td>
-      </tr>
-      `
-    }
-    $(".talezbmx tbody").html(strWL)
-  } else if (xx > (300 + ofx)) {
-    // 服务
-    $(".img1").hide();
-    $(".img2").hide();
-    $(".img3").hide();
-    $(".img4").show();
-    var strFW = '';
-    for (var i = 0; i < npsFW.length; i++) {
-      strFW += `
-      <tr>
-          <td>`+ npsFW[i].name + `</td>
-          <td>`+ npsFW[i].unps + `</td>
-          <td>`+ npsFW[i].uyb + `</td>
-          <td>`+ npsFW[i].same + `</td>
-          <td>`+ npsFW[i].clrcle + `</td>
-          <td>`+ npsFW[i].mnps + `</td>
-          <td>`+ npsFW[i].myb + `</td>
-          <td>`+ npsFW[i].mm + `</td>
-          <td>`+ npsFW[i].tnps + `</td>
-          <td>`+ npsFW[i].tyb + `</td>
-          <td>`+ npsFW[i].mt + `</td>
-          <td>`+ npsFW[i].del + `</td>
-      </tr>
-      `
-    }
-    $(".talezbmx tbody").html(strFW)
+
+// 切换季度
+$(".btnzu2 .btn1").click(function () {
+  // 17Q1
+  $(".btnzu2 .btn1").addClass("active");
+  $(".btnzu2 .btn2").removeClass("active");
+  $(".btnzu2 .btn3").removeClass("active");
+  $(".btnzu2 .btn4").removeClass("active");
+  $(".btnzu2 .btn5").removeClass("active");
+  $(".top .age").html("2017年第一季度");
+})
+$(".btnzu2 .btn2").click(function () {
+  // 17Q2
+  $(".btnzu2 .btn1").removeClass("active");
+  $(".btnzu2 .btn2").addClass("active");
+  $(".btnzu2 .btn3").removeClass("active");
+  $(".btnzu2 .btn4").removeClass("active");
+  $(".btnzu2 .btn5").removeClass("active");
+  $(".top .age").html("2017年第二季度");
+})
+$(".btnzu2 .btn3").click(function () {
+  // 17Q3
+  $(".btnzu2 .btn1").removeClass("active");
+  $(".btnzu2 .btn2").removeClass("active");
+  $(".btnzu2 .btn3").addClass("active");
+  $(".btnzu2 .btn4").removeClass("active");
+  $(".btnzu2 .btn5").removeClass("active");
+  $(".top .age").html("2017年第三季度");
+})
+$(".btnzu2 .btn4").click(function () {
+  // 17Q4
+  $(".btnzu2 .btn1").removeClass("active");
+  $(".btnzu2 .btn2").removeClass("active");
+  $(".btnzu2 .btn3").removeClass("active");
+  $(".btnzu2 .btn4").addClass("active");
+  $(".btnzu2 .btn5").removeClass("active");
+  $(".top .age").html("2017年第四季度");
+})
+$(".btnzu2 .btn5").click(function () {
+  // 18Q1
+  $(".btnzu2 .btn1").removeClass("active");
+  $(".btnzu2 .btn2").removeClass("active");
+  $(".btnzu2 .btn3").removeClass("active");
+  $(".btnzu2 .btn4").removeClass("active");
+  $(".btnzu2 .btn5").addClass("active");
+  $(".top .age").html("2018年第一季度");
+})
+
+// 整体网络业务服务
+// 切换季度
+$(".btnzu3 .btn1").click(function () {
+  // 整体
+  $(".btnzu3 .btn1").addClass("active");
+  $(".btnzu3 .btn2").removeClass("active");
+  $(".btnzu3 .btn3").removeClass("active");
+  $(".btnzu3 .btn4").removeClass("active");
+  var strZT = '';
+  for (var i = 0; i < npsZT.length; i++) {
+    strZT += `
+    <tr>
+        <td>`+ npsZT[i].name + `</td>
+        <td>`+ npsZT[i].unps + `</td>
+        <td>`+ npsZT[i].uyb + `</td>
+        <td>`+ npsZT[i].same + `</td>
+        <td>`+ npsZT[i].clrcle + `</td>
+        <td>`+ npsZT[i].mnps + `</td>
+        <td>`+ npsZT[i].myb + `</td>
+        <td>`+ npsZT[i].mm + `</td>
+        <td>`+ npsZT[i].tnps + `</td>
+        <td>`+ npsZT[i].tyb + `</td>
+        <td>`+ npsZT[i].mt + `</td>
+        <td>`+ npsZT[i].del + `</td>
+    </tr>
+    `
   }
+  $(".talezbmx tbody").html(strZT)
+
+})
+$(".btnzu3 .btn2").click(function () {
+  // 网络
+  $(".btnzu3 .btn1").removeClass("active");
+  $(".btnzu3 .btn2").addClass("active");
+  $(".btnzu3 .btn3").removeClass("active");
+  $(".btnzu3 .btn4").removeClass("active");
+  var strWL = '';
+  for (var i = 0; i < npsWL.length; i++) {
+    strWL += `
+    <tr>
+        <td>`+ npsWL[i].name + `</td>
+        <td>`+ npsWL[i].unps + `</td>
+        <td>`+ npsWL[i].uyb + `</td>
+        <td>`+ npsWL[i].same + `</td>
+        <td>`+ npsWL[i].clrcle + `</td>
+        <td>`+ npsWL[i].mnps + `</td>
+        <td>`+ npsWL[i].myb + `</td>
+        <td>`+ npsWL[i].mm + `</td>
+        <td>`+ npsWL[i].tnps + `</td>
+        <td>`+ npsWL[i].tyb + `</td>
+        <td>`+ npsWL[i].mt + `</td>
+        <td>`+ npsWL[i].del + `</td>
+    </tr>
+    `
+  }
+  $(".talezbmx tbody").html(strWL)
+
+})
+$(".btnzu3 .btn3").click(function () {
+  // 业务
+  $(".btnzu3 .btn1").removeClass("active");
+  $(".btnzu3 .btn2").removeClass("active");
+  $(".btnzu3 .btn3").addClass("active");
+  $(".btnzu3 .btn4").removeClass("active");
+  var strYW = '';
+  for (var i = 0; i < npsYW.length; i++) {
+    strYW += `
+    <tr>
+        <td>`+ npsYW[i].name + `</td>
+        <td>`+ npsYW[i].unps + `</td>
+        <td>`+ npsYW[i].uyb + `</td>
+        <td>`+ npsYW[i].same + `</td>
+        <td>`+ npsYW[i].clrcle + `</td>
+        <td>`+ npsYW[i].mnps + `</td>
+        <td>`+ npsYW[i].myb + `</td>
+        <td>`+ npsYW[i].mm + `</td>
+        <td>`+ npsYW[i].tnps + `</td>
+        <td>`+ npsYW[i].tyb + `</td>
+        <td>`+ npsYW[i].mt + `</td>
+        <td>`+ npsYW[i].del + `</td>
+    </tr>
+    `
+  }
+  $(".talezbmx tbody").html(strYW)
+
+})
+$(".btnzu3 .btn4").click(function () {
+  // 服务
+  $(".btnzu3 .btn1").removeClass("active");
+  $(".btnzu3 .btn2").removeClass("active");
+  $(".btnzu3 .btn3").removeClass("active");
+  $(".btnzu3 .btn4").addClass("active");
+  var strFW = '';
+  for (var i = 0; i < npsFW.length; i++) {
+    strFW += `
+    <tr>
+        <td>`+ npsFW[i].name + `</td>
+        <td>`+ npsFW[i].unps + `</td>
+        <td>`+ npsFW[i].uyb + `</td>
+        <td>`+ npsFW[i].same + `</td>
+        <td>`+ npsFW[i].clrcle + `</td>
+        <td>`+ npsFW[i].mnps + `</td>
+        <td>`+ npsFW[i].myb + `</td>
+        <td>`+ npsFW[i].mm + `</td>
+        <td>`+ npsFW[i].tnps + `</td>
+        <td>`+ npsFW[i].tyb + `</td>
+        <td>`+ npsFW[i].mt + `</td>
+        <td>`+ npsFW[i].del + `</td>
+    </tr>
+    `
+  }
+  $(".talezbmx tbody").html(strFW)
 })
 $(".enter1").click(function () {
   window.location.href = "index.html"
 })
-$("select").on("cluck", )
-$("select").change(function () {
-  var option = $(".sel option:selected");
-  var temp = option.val().split("Q");
-  if (temp[1] == 1) {
-    temp[1] = "一"
-  }
-  if (temp[1] == 2) {
-    temp[1] = "二"
-  }
-  if (temp[1] == 3) {
-    temp[1] = "三"
-  }
-  if (temp[1] == 4) {
-    temp[1] = "四"
-  }
-  var str = "20" + temp[0] + "年第" + temp[1] + "季度"
-  $(".age").html(str)
-})
 
-// 表格收起放出
+
 function drawchart1(uv, mv, tv) {
   /* chart1配置内容 start */
   val1 = (uv / (uv + mv + tv) * 100).toFixed(1)
@@ -240,7 +272,7 @@ function drawchart1(uv, mv, tv) {
       right: 60,
       data: data_name,
       textStyle: {
-        color: "#fff",
+        color: "#000",
         fontWeight: 'normal',
         fontFamily: '宋体'
       }
@@ -264,10 +296,10 @@ function drawchart1(uv, mv, tv) {
             // shadowBlur: 30,
             borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
               offset: 0,
-              color: '#0A0A2D'
+              color: '#eee'
             }, {
               offset: 1,
-              color: '#0A0A2D'
+              color: '#eee'
             }]),
             shadowColor: 'rgba(142, 152, 241, 0.6)'
           }
@@ -281,96 +313,55 @@ function drawchart1(uv, mv, tv) {
 function drawchart2(age, agedata) {
   var chart2 = echarts.init(document.getElementById("chart2"));
   var option2 = {
-    color: ["#00C7FF"],
-    // title: {
-    //   text: '各年龄段占比',
-    //   textStyle: {
-    //       color: '#ccc'
-    //   }
-    // },
+    color: ["#DBB924", "#F48057", "#F1B599", "#95ABB9", "#85BCBF", "#DED262","#D1CAB8","#A686D1","#A5525C"],
     tooltip: {
-      trigger: 'axis',
-      axisPointer: {
-        type: 'shadow'
-      },
-      formatter: "{b} <br> 占比: {c}%"
+      trigger: "item",
+      formatter: "{a} <br/>{b} : {c} ({d}%)"
     },
-    /*legend: {
-        data: [date]
-    },*/
-    grid: {
-      left: '4%',
-      right: '4%',
-      bottom: '2%',
-      containLabel: true
-    },
-    xAxis: {
-      type: 'value',
-      axisLabel: {
-        formatter: '{value} %'
-      },
-      axisTick: {
-        show: false,
-      },
-      axisLine: {
-        show: false,
-        lineStyle: {
-          color: "#00c7ff",
-          width: 1,
-          type: "solid"
-        },
-      },
-      splitLine: {
-        lineStyle: {
-          color: "#063374",
-        }
-      }
-    },
-    yAxis: {
-      type: 'category',
-      // data: ['18-24', '25-34', '35-39', '40-44', '45-55', '55岁以上'],
+    legend: {
+      orient: "vertical",
+      bottom: 20,
+      // data: ["18-24 ", "25-34 ", "35-39 ", "40-44 ", "45-55 ", "55岁以上"],
       data: age,
-      axisLabel: {
-        show: true,
-        margin: 10,
-        inside: false,
-        textStyle: {
-          color: '#00c7ff',
-          fontWeight: '50'
-        },
-        interval: 0,
-      },
-      axisLine: {
-        show: true,
-        lineStyle: {
-          color: "#063374",
-          width: 1,
-          type: "solid"
-        }
-      },
-      axisTick: {
-        show: false,
-      },
+      right: 'right'
     },
-    series: [{
-      type: 'bar',
-      label: {
-        normal: {
-          show: true,
-          // formatter: '{c}',
-          formatter: function (v) {
-            var val = v.data;
-            if (val == 0) {
-              return '';
+    series: [
+      {
+        name: "用户群年龄占比",
+        type: "pie",
+        radius: "55%",
+        center: ["30%", "50%"],
+        selectedMode: "single",
+        label: {
+          normal: {
+            // position: 'inner',
+            formatter(params) {
+              if (params.percent) {
+                return params.name + params.percent + "%";
+              } else {
+                return "";
+              }
             }
-            return val;
-          },
-          color: '#fff'
-        }
-      },
-      // data: [20.78, 39.18, 10.28, 9.31, 13.31, 7.41]
-      data: agedata
-    }]
+          }
+        },
+        itemStyle: {
+          emphasis: {
+            shadowBlur: 20,
+            shadowOffsetX: 5,
+            shadowColor: "rgba(0, 0, 0, 0.5)"
+          }
+        },
+        // data: [
+        //   { value: 19.2, name: "18-24 " },
+        //   { value: 36.2, name: "25-34 " },
+        //   { value: 9.5, name: "35-39 " },
+        //   { value: 8.6, name: "40-44 " },
+        //   { value: 12.3, name: "45-55 " },
+        //   { value: 6.6, name: "55岁以上" }
+        // ]
+        data:agedata
+      }
+    ]
   }
   chart2.setOption(option2)
 }
@@ -388,7 +379,7 @@ function drawchart3(q4, q1) {
       align: 'right',
       right: 10,
       textStyle: {
-        color: "#fff"
+        color: "#000"
       },
       itemWidth: 10,
       itemHeight: 10,
@@ -409,7 +400,7 @@ function drawchart3(q4, q1) {
       axisLine: {
         show: true,
         lineStyle: {
-          color: "#063374",
+          color: "#000",
           width: 1,
           type: "solid"
         }
@@ -420,7 +411,7 @@ function drawchart3(q4, q1) {
       axisLabel: {
         show: true,
         textStyle: {
-          color: "#00c7ff",
+          color: "#000",
         },
         // rotate: 10,
         interval: 0,
@@ -437,14 +428,14 @@ function drawchart3(q4, q1) {
       axisLine: {
         show: false,
         lineStyle: {
-          color: "#00c7ff",
+          color: "#000",
           width: 1,
           type: "solid"
         },
       },
       splitLine: {
         lineStyle: {
-          color: "#063374",
+          color: "#000",
         }
       }
     }],
@@ -507,7 +498,7 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
       align: 'right',
       right: 10,
       textStyle: {
-        color: "#fff"
+        color: "#000"
       },
       itemWidth: 10,
       itemHeight: 10,
@@ -522,7 +513,7 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
     yAxis: {
       type: "value",
       axisLabel: {
-        formatter: '{value} %'
+        formatter: '{value} '
       },
       axisTick: {
         show: false,
@@ -530,14 +521,14 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
       axisLine: {
         show: false,
         lineStyle: {
-          color: "#00c7ff",
+          color: "#000",
           width: 1,
           type: "solid"
         },
       },
       splitLine: {
         lineStyle: {
-          color: "#063374",
+          color: "#000",
         }
       }
     },
@@ -547,7 +538,7 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
       axisLine: {
         show: true,
         lineStyle: {
-          color: "#063374",
+          color: "#000",
           width: 1,
           type: "solid"
         }
@@ -558,7 +549,7 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
       axisLabel: {
         show: true,
         textStyle: {
-          color: "#00c7ff",
+          color: "#000",
         },
         // rotate: 10,
         interval: 0,
@@ -720,14 +711,14 @@ $.ajax({
       }
     }
     // chart2
-    for (var i = 0; i < result.quotaAGEYW.length; i++) {
-      age.push(result.quotaAGEYW[i].AGE_GROUP);
-      sum += result.quotaAGEYW[i].count;
+    for(var i=0;i<result.quotaAGEYW.length;i++){
+      age.push(result.quotaAGEYW[i].AGE_GROUP+" ");
+      agedata.push({
+        value:result.quotaAGEYW[i].count,
+        name:result.quotaAGEYW[i].AGE_GROUP+" "
+      })
     }
-    // chart2
-    for (var i = 0; i < result.quotaAGEYW.length; i++) {
-      agedata.push(((result.quotaAGEYW[i].count / sum) * 100).toFixed(2));
-    }
+    
     // cahrt3
     for (var i = 0; i < result.quotaUserTypeYW.length; i++) {
       if (result.quotaUserTypeYW[i].YEAR_Q == "2017Q4") {
@@ -1170,21 +1161,27 @@ $.ajax({
     /* ***** detail end ***** */
 
     /* ***** rank start ***** */
-    for(var i=0;i<prorank.length;i++){
-      if(prorank[i].name==proname){
-        rankarea=prorank[i].arearank;
-        rankall=prorank[i].allrank;
+    for (var i = 0; i < prorank.length; i++) {
+      if (prorank[i].name == proname) {
+        rankarea = prorank[i].arearank;
+        rankall = prorank[i].allrank;
         $(".nor .num").html(rankarea)
         $(".glo .num").html(rankall)
       }
     }
-    for(var i=0;i<result.allRankYWN.length;i++){
-      if(result.allRankYWN[i].PROVINCE_NAME==proname){
-        $(".nor .area").html("北")
-      }else {
-        $(".nor .area").html("南")
+    for (var i = 0; i < result.allRankYWN.length; i++) {
+      if (result.allRankYWN[i].PROVINCE_NAME == proname) {
+        $(".nor .area").text("北方")
+        console.log("北方");
       }
+
+      if (result.allRankYWS[i].PROVINCE_NAME == proname) {
+        $(".nor .area").text("南方")
+        console.log("南方");
+      }
+
     }
+    $(".talezbmx .name").text(proname)
     /* ***** rank end ***** */
 
 

@@ -220,8 +220,10 @@ function renderMap(map, data) {
         text: ['高', '低'],
         calculable: true,
         // colorLightness: [0.2, 100],
-        // color: ['#40B298', '#F7DA98', '#D0130F'],
-        color: ['#1A2867', '#254E8E', '#181B46'],
+        // 181B46最深
+        // 254E8E最浅
+        // 1A2867中间档
+        color: ['#254E8E', '#1A2867', '#181B46'],
         dimension: 0,
         textStyle: {
           color: '#fff',
