@@ -1160,77 +1160,77 @@ function drawchart6r(kdsxa, kdsuv, kdsmv, kdstv) {
 
 // 按钮的切换效果
 $(".enter1").click(function () {
-  window.location.href = "index1.html"
-})
+    window.location.href = "index1.html"
+  })
 $(".enter2").click(function () {
-  flag = "移网";
-  localStorage.setItem("type", flag)
-  window.location.href = "indexx.html";
-})
+    flag = "移网";
+    localStorage.setItem("type", flag)
+    window.location.href = "indexx.html";
+  })
 $(".enter3").click(function () {
-  flag = "宽带";
-  localStorage.setItem("type", flag)
-  window.location.href = "indexx.html";
-})
+    flag = "宽带";
+    localStorage.setItem("type", flag)
+    window.location.href = "indexx.html";
+  })
 
 $("#btn1").click(function () {
-  $("#chart3").show();
-  $("#chart3r").hide();
+    $("#chart3").show();
+    $("#chart3r").hide();
 
-})
+  })
 $("#btn2").click(function () {
-  $("#chart3").hide();
-  $("#chart3r").show();
-})
+    $("#chart3").hide();
+    $("#chart3r").show();
+  })
 $("#btn3").click(function () {
-  $("#chart6").show();
-  $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
-  $("#chart6r").hide();
-})
+    $("#chart6").show();
+    $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
+    $("#chart6r").hide();
+  })
 $("#btn4").click(function () {
-  $("#chart6").hide();
-  $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
-  $("#chart6r").show();
-})
+    $("#chart6").hide();
+    $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
+    $("#chart6r").show();
+  })
 // 弱化效果函数
 function redraw(chart, option, t) {
-  if (option && typeof option === "object") {
-    chart.setOption(option, true);
-    chart.on("click", function (e) {
-      var tName = e.seriesName;
-      //console.log(this);
-
-      for (var i = 0; i < option.series.length; i++) {
-        if (option.series[i].name == tName) {
-          option.series[i].areaStyle.normal.color =
-            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-              offset: 0,
-              color: lineCacheData[t[tName]].activeColor + ', 1)'
-            }, {
-              offset: 0.8,
-              color: lineCacheData[t[tName]].activeColor + ',0.5 )'
-            }], false)
-        } else {
-          option.series[i].areaStyle.normal.color =
-            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-              offset: 0,
-              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0.3)'
-            }, {
-              offset: 0.8,
-              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0)'
-            }], false)
-        }
-      }
-
-      chart.clear();
+    if (option && typeof option === "object") {
       chart.setOption(option, true);
+      chart.on("click", function (e) {
+        var tName = e.seriesName;
+        //console.log(this);
 
-      e.color = "#005aa0";
-    });
+        for (var i = 0; i < option.series.length; i++) {
+          if (option.series[i].name == tName) {
+            option.series[i].areaStyle.normal.color =
+              new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0,
+                color: lineCacheData[t[tName]].activeColor + ', 1)'
+              }, {
+                offset: 0.8,
+                color: lineCacheData[t[tName]].activeColor + ',0.5 )'
+              }], false)
+          } else {
+            option.series[i].areaStyle.normal.color =
+              new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                offset: 0,
+                color: lineCacheData[t[option.series[i].name]].nomalColor + ',0.3)'
+              }, {
+                offset: 0.8,
+                color: lineCacheData[t[option.series[i].name]].nomalColor + ',0)'
+              }], false)
+          }
+        }
+
+        chart.clear();
+        chart.setOption(option, true);
+
+        e.color = "#005aa0";
+      });
+    }
+
+
   }
-
-
-}
 t2 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t3 = { "纯语音用户": "LT", "有流量4G用户": "YD", "有流量非4G用户": "DX" };
 t3r = { "2I2C": "LT", "非2I2C": "YD" };

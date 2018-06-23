@@ -116,7 +116,17 @@ var option = {
 // function NumDescSort(a, b) {
 //   return a.value - b.value;
 // }
-
+var dataRangeStyle = [
+  {
+    orient: 'vertical',      // 'vertical'
+    color: ['#254E8E', '#1A2867'],    //颜色
+    splitList: [
+      { start: 100, end: 100 },
+      { start: 50, end: 50 },
+      { end: 50, color: '#181B46' }
+    ]
+  }
+]
 /* 添加内容end */
 function renderMap(map, data) {
 
@@ -170,7 +180,8 @@ function renderMap(map, data) {
         type: 'map',
         map: map,
         height: '100%',
-        width: '100%',
+        width: '90%',
+        right: 0,
         zoom: 1,
         itemStyle: {
           normal: {
@@ -211,23 +222,25 @@ function renderMap(map, data) {
         //roam: true,
         data: jdata
       }];
-      option.visualMap = {
-        show: false,
-        min: 0,
-        max: 100,
-        text: ['高', '低'],
-        calculable: true,
-        // colorLightness: [0.2, 100],
-        // 181B46最深
-        // 254E8E最浅
-        // 1A2867中间档
-        color: ['#254E8E', '#1A2867', '#181B46'],
-        dimension: 0,
-        textStyle: {
-          color: '#fff',
-          fontSize: 12
-        }
-      },
+      // option.visualMap = {
+      //   show: true,
+      //   min: 0,
+      //   max: 100,
+      //   text: ['高', '低'],
+      //   calculable: true,
+      //   // colorLightness: [0.2, 100],
+      //   // 181B46最深
+      //   // 254E8E最浅
+      //   // 1A2867中间档
+      //   color: ['#254E8E', '#1A2867', '#181B46'],
+      //   dimension: 0,
+      //   textStyle: {
+      //     color: '#fff',
+      //     fontSize: 12
+      //   },
+      //   left:0
+      // },
+      option.dataRange = dataRangeStyle[0],
         //渲染地图
         chart.setOption(option);
 
