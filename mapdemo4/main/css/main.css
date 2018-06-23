@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
 }
+html {
+  width: 100%;
+}
 body {
   background-color: #0A0A2D;
   height: 100%;
-  min-width: 1200px;
+  min-width: 1400px;
   overflow: scroll;
 }
 .clearfix:after{
@@ -154,18 +157,18 @@ transform: translateX(-50%)
   padding: 6px 0px;
 }
 .btn div{
-  width: 150px;
+  width: 168px;
   height: 30px;
   line-height: 30px;
-  background-color: #09417E;
-  border-radius: 15px;
   float: left;
   color: #fff;
   font-size: 12px;
-  border: 1px solid #006ACD;
+  /* background-image: url("../img/btn1.png"); */
+  background-image: url("../img/btn2.png");
+  background-size: 100% 100%;
 }
 .btn div:hover {
-  background-color: #006ACD;
+  background-image: url("../img/btn2a.png");
 }
 .btn .active {
   background-color: #093063;

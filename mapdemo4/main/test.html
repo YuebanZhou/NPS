@@ -15,6 +15,20 @@
     <div id="cir" style="width:500px;height:500px;"></div>
     <script src="js/echarts.min.js"></script>
     <script>
+        var chart = echarts.init(document.getElementById("cir"));
+        var scaleData = [{
+            'name': '中国联通',
+            'value': 42
+        },
+        {
+            'name': '中国移动',
+            'value': 29
+        },
+        {
+            'name': '中国电信',
+            'value': 29
+        }
+        ];
         var placeHolderStyle = {
             normal: {
                 label: {
@@ -23,123 +37,84 @@
                 labelLine: {
                     show: false
                 },
-                color: "rgba(0,0,0,0)",
-                borderWidth: 0
-            },
-            emphasis: {
-                color: "rgba(0,0,0,0)",
+                color: 'rgba(0, 0, 0, 0)',
+                borderColor: 'rgba(0, 0, 0, 0)',
                 borderWidth: 0
             }
         };
-
-
-        var dataStyle = {
-            normal: {
-                formatter: '{c}%',
-                position: 'center',
-                show: true,
-                textStyle: {
-                    fontSize: '28',
-                    fontWeight: 'normal',
-                    color: '#fff'
+        var data = [];
+        for (var i = 0; i < scaleData.length; i++) {
+            data.push({
+                value: scaleData[i].value,
+                name: scaleData[i].name,
+                itemStyle: {
+                    normal: {
+                        borderWidth: 5,
+                        shadowBlur: 30,
+                        borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
+                            offset: 0,
+                            color: '#7777eb'
+                        }, {
+                            offset: 1,
+                            color: '#70ffac'
+                        }]),
+                        shadowColor: 'rgba(142, 152, 241, 0.6)'
+                    }
                 }
-            }
-        };
-        var chart = echarts.init(document.getElementById("cir"));
-        var option = {
-            backgroundColor: '#142058',
-            title: [
-                {
-                    text: '年度完成率',
-                    left: '70%',
-                    top: '60%',
-                    textAlign: 'center',
-                    textStyle: {
-                        color: '#fff',
-                        fontWeight: 'normal',
-                        fontSize: '16',
-                        textAlign: 'center',
-                    },
-                }],
-            series: [
-                {
-                    type: 'pie',
-                    hoverAnimation: false,
-                    radius: ['25%', '31%'],
-                    center: ['50%', '50%'],
-                    startAngle: 225,
-                    labelLine: {
-                        normal: {
+            }, {
+                // 断层区域
+                    value: 4,
+                    name: '',
+                    itemStyle: placeHolderStyle
+                });
+        }
+        option = {
+            backgroundColor: '#04243E',
+            tooltip: {
+                show: false
+            },
+            legend: {
+                show: false
+            },
+            toolbox: {
+                show: false
+            },
+            series: [{
+                name: '',
+                type: 'pie',
+                clockWise: false,
+                radius: [145, 150],
+                hoverAnimation: false,
+                itemStyle: {
+                    normal: {
+                        label: {
+                            show: true,
+                            position: 'outside',
+                            color: '#ddd',
+                            formatter: function (params) {
+                                var percent = 0;
+                                var total = 0;
+                                for (var i = 0; i < scaleData.length; i++) {
+                                    total += scaleData[i].value;
+                                }
+                                percent = ((params.value / total) * 100).toFixed(0);
+                                if (params.name !== '') {
+                                    // return params.name + '\n{white|' + '占比' + percent + '%}';
+                                    return params.name + '\n占比' + percent + '%';
+                                } else {
+                                    return '';
+                                }
+                            },
+                            // rich: rich
+                        },
+                        labelLine: {
                             show: false
                         }
-                    },
-                    label: {
-                        normal: {
-                            position: 'center'
-                        }
-                    },
-                    data: [{
-                        value: 20,
-                        itemStyle: {
-                            normal: {
-                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: '#9f3edd'
-                                }, {
-                                    offset: 1,
-                                    color: '#4897f6'
-                                }]),
-                            }
-                        },
-                        label: dataStyle,
-                    }, {
-                        value: 80,
-                        itemStyle: placeHolderStyle,
-                    },
-
-                    ]
+                    }
                 },
-
-                //外圈的边框
-
-                {
-                    type: 'pie',
-                    hoverAnimation: false,
-                    radius: ['31%', '32%'],
-                    center: ['50%', '50%'],
-                    startAngle: 225,
-                    labelLine: {
-                        normal: {
-                            show: false
-                        }
-                    },
-                    label: {
-                        normal: {
-                            position: 'center'
-                        }
-                    },
-                    data: [{
-                        value: 75,
-                        itemStyle: {
-                            normal: {
-                                color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                                    offset: 0,
-                                    color: '#4897f6'
-                                }, {
-                                    offset: 1,
-                                    color: '#9f3edd'
-                                }]),
-                            }
-                        },
-                    }, {
-                        value: 25,
-                        itemStyle: placeHolderStyle,
-                    },
-
-                    ]
-                },
-            ]
-        };
+                data: data
+            }]
+        }
         chart.setOption(option);
 
     </script>

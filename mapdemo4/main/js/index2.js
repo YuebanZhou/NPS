@@ -204,10 +204,10 @@ function drawchart1(uv, mv, tv) {
             // shadowBlur: 30,
             borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
               offset: 0,
-              color: '#eee'
+              color: '#fff'
             }, {
               offset: 1,
-              color: '#eee'
+              color: '#fff'
             }]),
             shadowColor: 'rgba(142, 152, 241, 0.6)'
           }

@@ -1,32 +1,29 @@
-$(".img").click(function () {
-  var yy=event.pageY   
-  console.log(yy)
-
-  if (yy > 176 && yy <= 260) {
-    //网络
-    $(".btn1").show();
-    $(".btn2").hide();
-    $(".btn3").hide();
-    $("#con1").show();
-    $("#con2").hide();
-    $("#con3").hide();
-  } else if (yy > 294 && yy <= 377) {
-    //业务
-    $(".btn1").hide();
-    $(".btn2").show();
-    $(".btn3").hide();
-    $("#con1").hide();
-    $("#con2").show();
-    $("#con3").hide();
-  } else if (yy > 382 && yy <= 460) {
-    //服务
-    $(".btn1").hide();
-    $(".btn2").hide();
-    $(".btn3").show();
-    $("#con1").hide();
-    $("#con2").hide();
-    $("#con3").show();
-  }
+$(".block1").click(function () {
+  //网络
+  $(".btn1").show();
+  $(".btn2").hide();
+  $(".btn3").hide();
+  $("#con1").show();
+  $("#con2").hide();
+  $("#con3").hide();
+});
+$(".block2").click(function () {
+  //业务
+  $(".btn1").hide();
+  $(".btn2").show();
+  $(".btn3").hide();
+  $("#con1").hide();
+  $("#con2").show();
+  $("#con3").hide();
+});
+$(".block3").click(function () {
+  //服务
+  $(".btn1").hide();
+  $(".btn2").hide();
+  $(".btn3").show();
+  $("#con1").hide();
+  $("#con2").hide();
+  $("#con3").show();
 })
 
 var type = localStorage.getItem("type");

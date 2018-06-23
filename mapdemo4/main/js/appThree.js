@@ -74,7 +74,7 @@ var dataStyle = {
     position: 'center',
     show: true,
     textStyle: {
-      fontSize: '28',
+      fontSize: '40',
       fontWeight: 'normal',
       color: '#fff'
     }
@@ -89,7 +89,7 @@ function drawchart1(ywfin) {
       {
         text: '年度完成率',
         left: '50%',
-        top: '30%',
+        top: '20%',
         textAlign: 'center',
         textStyle: {
           color: '#2AE0ED',
@@ -114,7 +114,7 @@ function drawchart1(ywfin) {
           normal: {
             left: '50%',
             top: '65%',
-          }
+          },
         },
         data: [{
           value: ywfin,
@@ -612,7 +612,7 @@ function drawchart4(kdfin) {
       {
         text: '年度完成率',
         left: '50%',
-        top: '30%',
+        top: '20%',
         textAlign: 'center',
         textStyle: {
           color: '#2AE0ED',

@@ -2,15 +2,23 @@
   margin: 0;
   padding: 0;
 }
+html{
+  width: 100%;
+}
 body {
   background-color: #eee;
   color: #000;
   height: 100%;
-  min-width: 1000px;
+  width: 100%;
+  min-width: 1400px;
+  overflow-x:scroll
 }
 .con {
   width: 90%;
+  
+  /* width: 1000px; */
   margin: 0 auto;
+  
 }
 .clearfix:after{
   content:"";
@@ -368,9 +376,11 @@ body {
 }
 #chart3 {
   float: left;
+  margin-left: 3%;
 }
 #chart4 {
   float: right;
+  margin-right: 3%;
 }
 .img {
   width: 400px;
