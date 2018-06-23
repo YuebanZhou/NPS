@@ -16,30 +16,79 @@ body {
   clear:both;
   visibility:hidden;
   }
-.top img {
+.top {
   width: 100%;
+  height: 75px;
+  background-image: url("../img/top.png");
+  background-size: 100% 100%;
+}
+.concon {
+  width: 98%;
+  margin: 10px auto;
 }
 .left {
   padding: 10px;
-  height: 80%;
-  width: 30%;
+  /* height: 80%; */
+  height: 780px;
+  width: 27%;
   min-height: 600px;
-  margin-top: 10px;
-  margin-left: 10px;
   background: url("../img/left.png") no-repeat;
   background-size: 100% 100%;
   float: left;
   position: relative;
 }
+
+.center {
+  width:43%;
+  /* height: 80%; */
+  /* float: left; */
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%)
+  /* margin-left: 2%; */
+
+  /* margin-right: 10px; */
+}
+  .centertop {
+    padding: 10px;
+    height: 430px;
+    /* width: 100%; */
+    /* min-height: 600px; */
+    background: url("../img/map.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .centerbottom {
+    padding: 10px;
+    height: 340px;
+    /* width: 100%; */
+    /* min-height: 600px; */
+    background: url("../img/rank.png") no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
+  }
+  .right {
+    padding: 10px;
+    /* height: 80%; */
+    height: 780px;
+    width: 27%;
+    min-height: 600px;
+    background: url("../img/left.png") no-repeat;
+    background-size: 100% 100%;
+    float: right;
+    position: relative;
+  }
 .title {
   color: #fff;
-  font-display: "Microsoft YaHei";
+  font-family: "Microsoft YaHei";
   font-size: 18px;
 }
 .upval {
   position: absolute;
   right: 10px;
-  top: 10px;
+  top: 60px;
 }
 .upval .span1 {
   color:#83e9ff;
@@ -73,7 +122,7 @@ transform: translateX(-50%)
 }
 .enter2 {
   position: absolute;
-  top: 200px;
+  top: 20px;
   right: 25px;
   color: #2AE0ED;
   cursor: pointer;
@@ -81,8 +130,8 @@ transform: translateX(-50%)
 
 .enter3 {
   position: absolute;
-  top: 164px;
-  right: 71px;
+  top: 20px;
+  right: 25px;
   color: #2AE0ED;
   cursor: pointer;
 }
@@ -94,6 +143,12 @@ transform: translateX(-50%)
   color: #a6e2ea;
   text-align: center;
   font-size: 12px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+.btn {
+  padding: 6px 0px;
 }
 .btn div{
   width: 150px;
@@ -132,12 +187,6 @@ transform: translateX(-50%)
 #btn3 {
   margin-right: 10px;
 }
-.right {
-  float: right;
-  width: 69%;
-  padding: 10px;
-  margin-top: 10px;
-}
 table {
   width:100%;
   text-align: center;
@@ -150,7 +199,7 @@ td{
   text-overflow:ellipsis;
 }
 .rang {
-  width: 46%;
+  /* width: 46%; */
   margin-bottom: 10px;
   min-width: 421px;
 }
@@ -191,12 +240,8 @@ td{
 #chart6r {
   bottom: 10px;
 }
-.map {
-  position: absolute;
-  right: 0;
-  top: 125px;
-  width: 35%;
-  height: 50%;
+#map {
+  margin: 10px auto;
 }
 #maichong2 {
   display: none;

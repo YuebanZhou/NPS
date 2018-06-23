@@ -1,4 +1,4 @@
-$(".btnzu1 .btn1").click(function(){
+$(".btnzu1 .btn1").click(function () {
   $(".btnzu1 .btn1").addClass("active");
   $(".btnzu1 .btn2").removeClass("active");
   $(".btnzu1 .btn3").removeClass("active");
@@ -6,7 +6,7 @@ $(".btnzu1 .btn1").click(function(){
   $("#con2").hide();
   $("#con3").hide();
 })
-$(".btnzu1 .btn2").click(function(){
+$(".btnzu1 .btn2").click(function () {
   $(".btnzu1 .btn1").removeClass("active");
   $(".btnzu1 .btn2").addClass("active");
   $(".btnzu1 .btn3").removeClass("active");
@@ -14,7 +14,7 @@ $(".btnzu1 .btn2").click(function(){
   $("#con2").show();
   $("#con3").hide();
 })
-$(".btnzu1 .btn3").click(function(){
+$(".btnzu1 .btn3").click(function () {
   $(".btnzu1 .btn1").removeClass("active");
   $(".btnzu1 .btn2").removeClass("active");
   $(".btnzu1 .btn3").addClass("active");
@@ -22,6 +22,8 @@ $(".btnzu1 .btn3").click(function(){
   $("#con2").hide();
   $("#con3").show();
 })
+var type = localStorage.getItem("type");
+$(".toptitle .age").text(type)
 $(".enter1").click(function () {
   window.location.href = "index.html";
 });

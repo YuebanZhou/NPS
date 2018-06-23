@@ -1,0 +1,2075 @@
+{
+    "quotaOPERATORYW": [
+        {
+            "OPERATOR_TYPE": "中国联通",
+            "N": 4100
+        },
+        {
+            "OPERATOR_TYPE": "中国移动",
+            "N": 2520
+        },
+        {
+            "OPERATOR_TYPE": "中国电信",
+            "N": 2520
+        }
+    ],
+    "res": [
+        {
+            "msg": "success",
+            "code": "200"
+        }
+    ],
+    "quotaUserTypeYW": [
+        {
+            "YEAR_Q": "2017Q4",
+            "USER_TYPE": "有流量4G用户",
+            "count": 1419
+        },
+        {
+            "YEAR_Q": "2017Q4",
+            "USER_TYPE": "有流量非4G用户",
+            "count": 284
+        },
+        {
+            "YEAR_Q": "2017Q4",
+            "USER_TYPE": "纯语音用户",
+            "count": 587
+        },
+        {
+            "YEAR_Q": "2018Q1",
+            "USER_TYPE": "有流量4G用户",
+            "count": 2739
+        },
+        {
+            "YEAR_Q": "2018Q1",
+            "USER_TYPE": "有流量非4G用户",
+            "count": 410
+        },
+        {
+            "YEAR_Q": "2018Q1",
+            "USER_TYPE": "纯语音用户",
+            "count": 951
+        }
+    ],
+    "quotaAGEYW": [
+        {
+            "AGE_GROUP": "15-17",
+            "count": 66
+        },
+        {
+            "AGE_GROUP": "15岁以下",
+            "count": 20
+        },
+        {
+            "AGE_GROUP": "18-24",
+            "count": 783
+        },
+        {
+            "AGE_GROUP": "25-34",
+            "count": 1513
+        },
+        {
+            "AGE_GROUP": "35-39",
+            "count": 391
+        },
+        {
+            "AGE_GROUP": "40-44",
+            "count": 411
+        },
+        {
+            "AGE_GROUP": "45-55",
+            "count": 536
+        },
+        {
+            "AGE_GROUP": "55岁以上",
+            "count": 271
+        },
+        {
+            "AGE_GROUP": "拒答",
+            "count": 109
+        }
+    ],
+    "npsCityYWWL": [
+        {
+            "STANDARD_M": -28.1135,
+            "U_NUM": "156",
+            "M_NPS": "42.8571",
+            "CITY_NAME": "东营",
+            "T_NUM": "118",
+            "STANDARD_T": -10.6801,
+            "T_NPS": "25.4237",
+            "U_NPS": "14.7436",
+            "M_NUM": "84",
+            "COMPETITION_BETWEEN": 34.1404
+        },
+        {
+            "STANDARD_M": -11.2138,
+            "U_NUM": "179",
+            "M_NPS": "29.0909",
+            "CITY_NAME": "临沂",
+            "T_NUM": "105",
+            "STANDARD_T": -1.1705,
+            "T_NPS": "19.0476",
+            "U_NPS": "17.8771",
+            "M_NUM": "110",
+            "COMPETITION_BETWEEN": 24.06925
+        },
+        {
+            "STANDARD_M": -13.0063,
+            "U_NUM": "160",
+            "M_NPS": "40.5063",
+            "CITY_NAME": "威海",
+            "T_NUM": "101",
+            "STANDARD_T": 3.7376,
+            "T_NPS": "23.7624",
+            "U_NPS": "27.5000",
+            "M_NUM": "79",
+            "COMPETITION_BETWEEN": 32.13435
+        },
+        {
+            "STANDARD_M": -32.8101,
+            "U_NUM": "182",
+            "M_NPS": "59.1837",
+            "CITY_NAME": "德州",
+            "T_NUM": "118",
+            "STANDARD_T": 14.5092,
+            "T_NPS": "11.8644",
+            "U_NPS": "26.3736",
+            "M_NUM": "98",
+            "COMPETITION_BETWEEN": 35.52405
+        },
+        {
+            "STANDARD_M": -40.8273,
+            "U_NUM": "137",
+            "M_NPS": "46.6667",
+            "CITY_NAME": "日照",
+            "T_NUM": "97",
+            "STANDARD_T": -29.2121,
+            "T_NPS": "35.0515",
+            "U_NPS": "5.8394",
+            "M_NUM": "90",
+            "COMPETITION_BETWEEN": 40.8591
+        },
+        {
+            "STANDARD_M": -43.7609,
+            "U_NUM": "173",
+            "M_NPS": "66.3043",
+            "CITY_NAME": "枣庄",
+            "T_NUM": "108",
+            "STANDARD_T": -0.604700000000001,
+            "T_NPS": "23.1481",
+            "U_NPS": "22.5434",
+            "M_NUM": "92",
+            "COMPETITION_BETWEEN": 44.7262
+        },
+        {
+            "STANDARD_M": -18.3902,
+            "U_NUM": "164",
+            "M_NPS": "44.0000",
+            "CITY_NAME": "泰安",
+            "T_NUM": "110",
+            "STANDARD_T": -1.6629,
+            "T_NPS": "27.2727",
+            "U_NPS": "25.6098",
+            "M_NUM": "100",
+            "COMPETITION_BETWEEN": 35.63635
+        },
+        {
+            "STANDARD_M": 0.827199999999998,
+            "U_NUM": "157",
+            "M_NPS": "25.2874",
+            "CITY_NAME": "济南",
+            "T_NUM": "119",
+            "STANDARD_T": 18.5516,
+            "T_NPS": "7.5630",
+            "U_NPS": "26.1146",
+            "M_NUM": "87",
+            "COMPETITION_BETWEEN": 16.4252
+        },
+        {
+            "STANDARD_M": -19.4116,
+            "U_NUM": "175",
+            "M_NPS": "44.5545",
+            "CITY_NAME": "济宁",
+            "T_NUM": "114",
+            "STANDARD_T": 5.8447,
+            "T_NPS": "19.2982",
+            "U_NPS": "25.1429",
+            "M_NUM": "101",
+            "COMPETITION_BETWEEN": 31.92635
+        },
+        {
+            "STANDARD_M": -20.5292,
+            "U_NUM": "155",
+            "M_NPS": "57.3034",
+            "CITY_NAME": "淄博",
+            "T_NUM": "105",
+            "STANDARD_T": 16.7742,
+            "T_NPS": "20.0000",
+            "U_NPS": "36.7742",
+            "M_NUM": "89",
+            "COMPETITION_BETWEEN": 38.6517
+        },
+        {
+            "STANDARD_M": -36.126,
+            "U_NUM": "159",
+            "M_NPS": "56.8807",
+            "CITY_NAME": "滨州",
+            "T_NUM": "103",
+            "STANDARD_T": -23.9055,
+            "T_NPS": "44.6602",
+            "U_NPS": "20.7547",
+            "M_NUM": "109",
+            "COMPETITION_BETWEEN": 50.77045
+        },
+        {
+            "STANDARD_M": -30.8771,
+            "U_NUM": "178",
+            "M_NPS": "57.2816",
+            "CITY_NAME": "潍坊",
+            "T_NUM": "109",
+            "STANDARD_T": -12.1276,
+            "T_NPS": "38.5321",
+            "U_NPS": "26.4045",
+            "M_NUM": "103",
+            "COMPETITION_BETWEEN": 47.90685
+        },
+        {
+            "STANDARD_M": 3.724,
+            "U_NUM": "166",
+            "M_NPS": "31.8182",
+            "CITY_NAME": "烟台",
+            "T_NUM": "105",
+            "STANDARD_T": 4.1136,
+            "T_NPS": "31.4286",
+            "U_NPS": "35.5422",
+            "M_NUM": "88",
+            "COMPETITION_BETWEEN": 31.6234
+        },
+        {
+            "STANDARD_M": -48.3647,
+            "U_NUM": "164",
+            "M_NPS": "55.6818",
+            "CITY_NAME": "聊城",
+            "T_NUM": "104",
+            "STANDARD_T": -9.9906,
+            "T_NPS": "17.3077",
+            "U_NPS": "7.3171",
+            "M_NUM": "88",
+            "COMPETITION_BETWEEN": 36.49475
+        },
+        {
+            "STANDARD_M": 5.7737,
+            "U_NUM": "92",
+            "M_NPS": "31.1828",
+            "CITY_NAME": "莱芜",
+            "T_NUM": "87",
+            "STANDARD_T": -3.2734,
+            "T_NPS": "40.2299",
+            "U_NPS": "36.9565",
+            "M_NUM": "93",
+            "COMPETITION_BETWEEN": 35.70635
+        },
+        {
+            "STANDARD_M": -30.454,
+            "U_NUM": "187",
+            "M_NPS": "56.1224",
+            "CITY_NAME": "菏泽",
+            "T_NUM": "114",
+            "STANDARD_T": -16.4369,
+            "T_NPS": "42.1053",
+            "U_NPS": "25.6684",
+            "M_NUM": "98",
+            "COMPETITION_BETWEEN": 49.11385
+        },
+        {
+            "STANDARD_M": -1.4762,
+            "U_NUM": "169",
+            "M_NPS": "34.0206",
+            "CITY_NAME": "青岛",
+            "T_NUM": "103",
+            "STANDARD_T": 25.7483,
+            "T_NPS": "6.7961",
+            "U_NPS": "32.5444",
+            "M_NUM": "97",
+            "COMPETITION_BETWEEN": 20.40835
+        }
+    ],
+    "npsYW": [
+        {
+            "L_NAME": "整体",
+            "STANDARD_M": -0.144400000000001,
+            "L1_NAME": "整体",
+            "M_REFERENCE_RATE": "",
+            "M_NPS": "23.4127",
+            "STANDARD_T": 1.1254,
+            "T_NPS": "22.1429",
+            "U_REFERENCE_RATE": "",
+            "U_NPS": "23.2683",
+            "COMPETITION_BETWEEN": 22.7778,
+            "T_REFERENCE_RATE": ""
+        },
+        {
+            "L_NAME": "电子渠道在线服务人员态度和技能（仅2I）",
+            "STANDARD_M": null,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.0000",
+            "M_NPS": null,
+            "STANDARD_T": null,
+            "T_NPS": null,
+            "U_REFERENCE_RATE": "0.1553",
+            "U_NPS": "50.0000",
+            "COMPETITION_BETWEEN": null,
+            "T_REFERENCE_RATE": "0.0000"
+        },
+        {
+            "L_NAME": "与互联网公司合作的产品标签",
+            "STANDARD_M": null,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "0.0000",
+            "M_NPS": null,
+            "STANDARD_T": null,
+            "T_NPS": null,
+            "U_REFERENCE_RATE": "4.1932",
+            "U_NPS": "39.2405",
+            "COMPETITION_BETWEEN": null,
+            "T_REFERENCE_RATE": "0.0000"
+        },
+        {
+            "L_NAME": "宣传标签",
+            "STANDARD_M": -41.7143,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "1.1429",
+            "M_NPS": "85.7143",
+            "STANDARD_T": 4.0,
+            "T_NPS": "40.0000",
+            "U_REFERENCE_RATE": "1.3270",
+            "U_NPS": "44.0000",
+            "COMPETITION_BETWEEN": 62.85715,
+            "T_REFERENCE_RATE": "0.8143"
+        },
+        {
+            "L_NAME": "促销活动标签",
+            "STANDARD_M": -18.3824,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "6.4490",
+            "M_NPS": "40.5063",
+            "STANDARD_T": 6.5395,
+            "T_NPS": "15.5844",
+            "U_REFERENCE_RATE": "5.9979",
+            "U_NPS": "22.1239",
+            "COMPETITION_BETWEEN": 28.04535,
+            "T_REFERENCE_RATE": "6.2704"
+        },
+        {
+            "L_NAME": "终端标签",
+            "STANDARD_M": -11.1111,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "0.3265",
+            "M_NPS": "50.0000",
+            "STANDARD_T": 64.8148,
+            "T_NPS": "-25.9259",
+            "U_REFERENCE_RATE": "0.9554",
+            "U_NPS": "38.8889",
+            "COMPETITION_BETWEEN": 12.03705,
+            "T_REFERENCE_RATE": "2.1987"
+        },
+        {
+            "L_NAME": "定向流量包标签",
+            "STANDARD_M": null,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "0.0000",
+            "M_NPS": null,
+            "STANDARD_T": null,
+            "T_NPS": null,
+            "U_REFERENCE_RATE": "0.1062",
+            "U_NPS": "0.0000",
+            "COMPETITION_BETWEEN": null,
+            "T_REFERENCE_RATE": "0.0000"
+        },
+        {
+            "L_NAME": "流量包标签",
+            "STANDARD_M": 68.0206,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "18.6122",
+            "M_NPS": "-39.0351",
+            "STANDARD_T": 32.9329,
+            "T_NPS": "-3.9474",
+            "U_REFERENCE_RATE": "7.3248",
+            "U_NPS": "28.9855",
+            "COMPETITION_BETWEEN": -21.49125,
+            "T_REFERENCE_RATE": "6.1889"
+        },
+        {
+            "L_NAME": "套餐设计标签",
+            "STANDARD_M": 42.2628,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "61.0612",
+            "M_NPS": "-14.3048",
+            "STANDARD_T": -2.7791,
+            "T_NPS": "30.7371",
+            "U_REFERENCE_RATE": "55.6263",
+            "U_NPS": "27.9580",
+            "COMPETITION_BETWEEN": 8.21615,
+            "T_REFERENCE_RATE": "58.5505"
+        },
+        {
+            "L_NAME": "价格水平标签",
+            "STANDARD_M": 63.0374,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "58.0408",
+            "M_NPS": "-27.1449",
+            "STANDARD_T": -4.8951,
+            "T_NPS": "40.7876",
+            "U_REFERENCE_RATE": "55.3079",
+            "U_NPS": "35.8925",
+            "COMPETITION_BETWEEN": 6.82135,
+            "T_REFERENCE_RATE": "57.8990"
+        },
+        {
+            "L_NAME": "不知情定制/乱收费/乱扣费方面标签",
+            "STANDARD_M": 29.0662,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "8.0816",
+            "M_NPS": "-51.5152",
+            "STANDARD_T": -24.6229,
+            "T_NPS": "2.1739",
+            "U_REFERENCE_RATE": "5.2017",
+            "U_NPS": "-22.4490",
+            "COMPETITION_BETWEEN": -24.67065,
+            "T_REFERENCE_RATE": "3.7459"
+        },
+        {
+            "L_NAME": "计费准确标签",
+            "STANDARD_M": 22.3982,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "2.7755",
+            "M_NPS": "-14.7059",
+            "STANDARD_T": 37.6923,
+            "T_NPS": "-30.0000",
+            "U_REFERENCE_RATE": "1.3800",
+            "U_NPS": "7.6923",
+            "COMPETITION_BETWEEN": -22.35295,
+            "T_REFERENCE_RATE": "1.6287"
+        },
+        {
+            "L_NAME": "沃钱包方便快捷、优惠活动多标签",
+            "STANDARD_M": 0.0,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.1116",
+            "M_NPS": "100.0000",
+            "STANDARD_T": 0.0,
+            "T_NPS": "100.0000",
+            "U_REFERENCE_RATE": "0.0776",
+            "U_NPS": "100.0000",
+            "COMPETITION_BETWEEN": 100.0,
+            "T_REFERENCE_RATE": "1.8284"
+        },
+        {
+            "L_NAME": "支持第三方充值缴费或第三方充值缴费标签使",
+            "STANDARD_M": -8.8235,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "2.9018",
+            "M_NPS": "100.0000",
+            "STANDARD_T": -8.8235,
+            "T_NPS": "100.0000",
+            "U_REFERENCE_RATE": "2.6398",
+            "U_NPS": "91.1765",
+            "COMPETITION_BETWEEN": 100.0,
+            "T_REFERENCE_RATE": "6.0478"
+        },
+        {
+            "L_NAME": "投诉解决标签",
+            "STANDARD_M": 42.8571,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.3348",
+            "M_NPS": "-100.0000",
+            "STANDARD_T": -40.4762,
+            "T_NPS": "-16.6667",
+            "U_REFERENCE_RATE": "0.5435",
+            "U_NPS": "-57.1429",
+            "COMPETITION_BETWEEN": -58.33335,
+            "T_REFERENCE_RATE": "0.8439"
+        },
+        {
+            "L_NAME": "提醒服务标签",
+            "STANDARD_M": -21.9767,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "15.7366",
+            "M_NPS": "24.1135",
+            "STANDARD_T": -13.5657,
+            "T_NPS": "15.7025",
+            "U_REFERENCE_RATE": "18.1677",
+            "U_NPS": "2.1368",
+            "COMPETITION_BETWEEN": 19.908,
+            "T_REFERENCE_RATE": "17.0183"
+        },
+        {
+            "L_NAME": "业务办理成功率标签",
+            "STANDARD_M": -100.0,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.4464",
+            "M_NPS": "50.0000",
+            "STANDARD_T": -83.3333,
+            "T_NPS": "33.3333",
+            "U_REFERENCE_RATE": "0.3106",
+            "U_NPS": "-50.0000",
+            "COMPETITION_BETWEEN": 41.66665,
+            "T_REFERENCE_RATE": "0.4219"
+        },
+        {
+            "L_NAME": "充值缴费方便快捷标签",
+            "STANDARD_M": -12.0397,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "9.8214",
+            "M_NPS": "94.3182",
+            "STANDARD_T": -9.26000000000001,
+            "T_NPS": "91.5385",
+            "U_REFERENCE_RATE": "12.2671",
+            "U_NPS": "82.2785",
+            "COMPETITION_BETWEEN": 92.92835,
+            "T_REFERENCE_RATE": "18.2841"
+        },
+        {
+            "L_NAME": "信息安全标签",
+            "STANDARD_M": 49.1667,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "1.7857",
+            "M_NPS": "-62.5000",
+            "STANDARD_T": -22.4242,
+            "T_NPS": "9.0909",
+            "U_REFERENCE_RATE": "1.1646",
+            "U_NPS": "-13.3333",
+            "COMPETITION_BETWEEN": -26.70455,
+            "T_REFERENCE_RATE": "1.5471"
+        },
+        {
+            "L_NAME": "账详单、发票清晰明了能看懂标签",
+            "STANDARD_M": 16.1616,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "1.2277",
+            "M_NPS": "-27.2727",
+            "STANDARD_T": 16.1616,
+            "T_NPS": "-27.2727",
+            "U_REFERENCE_RATE": "3.4938",
+            "U_NPS": "-11.1111",
+            "COMPETITION_BETWEEN": -27.2727,
+            "T_REFERENCE_RATE": "1.5471"
+        },
+        {
+            "L_NAME": "账详单、发票获取便捷标签",
+            "STANDARD_M": 1.4431,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "2.1205",
+            "M_NPS": "42.1053",
+            "STANDARD_T": 34.8527,
+            "T_NPS": "8.6957",
+            "U_REFERENCE_RATE": "4.8137",
+            "U_NPS": "43.5484",
+            "COMPETITION_BETWEEN": 25.4005,
+            "T_REFERENCE_RATE": "3.2349"
+        },
+        {
+            "L_NAME": "各渠道查询结果一致标签",
+            "STANDARD_M": null,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.1116",
+            "M_NPS": "-100.0000",
+            "STANDARD_T": null,
+            "T_NPS": null,
+            "U_REFERENCE_RATE": "0.0000",
+            "U_NPS": null,
+            "COMPETITION_BETWEEN": null,
+            "T_REFERENCE_RATE": "0.0000"
+        },
+        {
+            "L_NAME": "业务规则设计合理标签",
+            "STANDARD_M": 13.3764,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "9.5982",
+            "M_NPS": "-59.3023",
+            "STANDARD_T": -6.7367,
+            "T_NPS": "-39.1892",
+            "U_REFERENCE_RATE": "10.4814",
+            "U_NPS": "-45.9259",
+            "COMPETITION_BETWEEN": -49.24575,
+            "T_REFERENCE_RATE": "10.4079"
+        },
+        {
+            "L_NAME": "热线运营服务标签",
+            "STANDARD_M": -47.5719,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "16.1830",
+            "M_NPS": "49.6552",
+            "STANDARD_T": 22.0833,
+            "T_NPS": "-20.0000",
+            "U_REFERENCE_RATE": "18.6335",
+            "U_NPS": "2.0833",
+            "COMPETITION_BETWEEN": 14.8276,
+            "T_REFERENCE_RATE": "19.6906"
+        },
+        {
+            "L_NAME": "热线业务办理方便快捷标签",
+            "STANDARD_M": -3.92230000000001,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "12.1652",
+            "M_NPS": "80.7339",
+            "STANDARD_T": 39.9695,
+            "T_NPS": "36.8421",
+            "U_REFERENCE_RATE": "5.3571",
+            "U_NPS": "76.8116",
+            "COMPETITION_BETWEEN": 58.788,
+            "T_REFERENCE_RATE": "5.3446"
+        },
+        {
+            "L_NAME": "热线服务人员态度和技能标签",
+            "STANDARD_M": 1.0163,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "29.9107",
+            "M_NPS": "87.6866",
+            "STANDARD_T": 7.7029,
+            "T_NPS": "81.0000",
+            "U_REFERENCE_RATE": "18.5559",
+            "U_NPS": "88.7029",
+            "COMPETITION_BETWEEN": 84.3433,
+            "T_REFERENCE_RATE": "14.0647"
+        },
+        {
+            "L_NAME": "电子渠道界面设计、业务告知标签",
+            "STANDARD_M": -24.0,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "1.6741",
+            "M_NPS": "40.0000",
+            "STANDARD_T": 24.3333,
+            "T_NPS": "-8.3333",
+            "U_REFERENCE_RATE": "1.9410",
+            "U_NPS": "16.0000",
+            "COMPETITION_BETWEEN": 15.83335,
+            "T_REFERENCE_RATE": "1.6878"
+        },
+        {
+            "L_NAME": "电子渠道业务办理方便快捷标签",
+            "STANDARD_M": -9.4298,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "12.7232",
+            "M_NPS": "74.5614",
+            "STANDARD_T": 2.93650000000001,
+            "T_NPS": "62.1951",
+            "U_REFERENCE_RATE": "11.8012",
+            "U_NPS": "65.1316",
+            "COMPETITION_BETWEEN": 68.37825,
+            "T_REFERENCE_RATE": "11.5331"
+        },
+        {
+            "L_NAME": "电子渠道在线服务人员态度和技能标签",
+            "STANDARD_M": 6.1207,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "6.4732",
+            "M_NPS": "91.3793",
+            "STANDARD_T": 7.84480000000001,
+            "T_NPS": "89.6552",
+            "U_REFERENCE_RATE": "3.1056",
+            "U_NPS": "97.5000",
+            "COMPETITION_BETWEEN": 90.51725,
+            "T_REFERENCE_RATE": "4.0788"
+        },
+        {
+            "L_NAME": "营业厅现场运营服务标签",
+            "STANDARD_M": -22.4846,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "8.1473",
+            "M_NPS": "39.7260",
+            "STANDARD_T": 3.5159,
+            "T_NPS": "13.7255",
+            "U_REFERENCE_RATE": "6.7547",
+            "U_NPS": "17.2414",
+            "COMPETITION_BETWEEN": 26.72575,
+            "T_REFERENCE_RATE": "7.1730"
+        },
+        {
+            "L_NAME": "营业厅业务办理方便快捷标签",
+            "STANDARD_M": 3.5354,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "9.5982",
+            "M_NPS": "50.0000",
+            "STANDARD_T": -0.195899999999995,
+            "T_NPS": "53.7313",
+            "U_REFERENCE_RATE": "7.6863",
+            "U_NPS": "53.5354",
+            "COMPETITION_BETWEEN": 51.86565,
+            "T_REFERENCE_RATE": "9.4233"
+        },
+        {
+            "L_NAME": "营业厅服务人员态度和技能标签",
+            "STANDARD_M": -13.9491,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "20.6473",
+            "M_NPS": "83.7838",
+            "STANDARD_T": 9.6843,
+            "T_NPS": "60.1504",
+            "U_REFERENCE_RATE": "18.7888",
+            "U_NPS": "69.8347",
+            "COMPETITION_BETWEEN": 71.9671,
+            "T_REFERENCE_RATE": "18.7060"
+        },
+        {
+            "L_NAME": "室外上网信号标签",
+            "STANDARD_M": 1.2108,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "44.1469",
+            "M_NPS": "41.0437",
+            "STANDARD_T": 4.8587,
+            "T_NPS": "37.3958",
+            "U_REFERENCE_RATE": "49.9455",
+            "U_NPS": "42.2545",
+            "COMPETITION_BETWEEN": 39.21975,
+            "T_REFERENCE_RATE": "52.7473"
+        },
+        {
+            "L_NAME": "室内上网信号标签",
+            "STANDARD_M": 4.6516,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "48.8169",
+            "M_NPS": "23.2143",
+            "STANDARD_T": 6.8889,
+            "T_NPS": "20.9770",
+            "U_REFERENCE_RATE": "59.5714",
+            "U_NPS": "27.8659",
+            "COMPETITION_BETWEEN": 22.09565,
+            "T_REFERENCE_RATE": "57.3626"
+        },
+        {
+            "L_NAME": "室外语音信号标签",
+            "STANDARD_M": -38.8159,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "56.9116",
+            "M_NPS": "81.6193",
+            "STANDARD_T": -11.7207,
+            "T_NPS": "54.5241",
+            "U_REFERENCE_RATE": "38.6124",
+            "U_NPS": "42.8034",
+            "COMPETITION_BETWEEN": 68.0717,
+            "T_REFERENCE_RATE": "46.7582"
+        },
+        {
+            "L_NAME": "室内语音信号标签",
+            "STANDARD_M": -42.8293,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "53.3001",
+            "M_NPS": "64.2523",
+            "STANDARD_T": -14.9206,
+            "T_NPS": "36.3436",
+            "U_REFERENCE_RATE": "46.4584",
+            "U_NPS": "21.4230",
+            "COMPETITION_BETWEEN": 50.29795,
+            "T_REFERENCE_RATE": "49.8901"
+        },
+        {
+            "L_NAME": "上网速度标签",
+            "STANDARD_M": 7.6376,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "39.5392",
+            "M_NPS": "30.3937",
+            "STANDARD_T": 1.7017,
+            "T_NPS": "36.3296",
+            "U_REFERENCE_RATE": "48.7105",
+            "U_NPS": "38.0313",
+            "COMPETITION_BETWEEN": 33.36165,
+            "T_REFERENCE_RATE": "44.0110"
+        },
+        {
+            "L_NAME": "4G上网信号标签",
+            "STANDARD_M": -13.8189,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "5.1059",
+            "M_NPS": "3.6585",
+            "STANDARD_T": 11.8735,
+            "T_NPS": "-22.0339",
+            "U_REFERENCE_RATE": "6.7926",
+            "U_NPS": "-10.1604",
+            "COMPETITION_BETWEEN": -9.1877,
+            "T_REFERENCE_RATE": "6.4835"
+        },
+        {
+            "L_NAME": "上网信号稳定性标签",
+            "STANDARD_M": -4.4064,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "26.2765",
+            "M_NPS": "35.0711",
+            "STANDARD_T": 9.6871,
+            "T_NPS": "20.9776",
+            "U_REFERENCE_RATE": "24.0465",
+            "U_NPS": "30.6647",
+            "COMPETITION_BETWEEN": 28.02435,
+            "T_REFERENCE_RATE": "26.9780"
+        },
+        {
+            "L_NAME": "上网信号覆盖标签",
+            "STANDARD_M": -37.0299,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "10.1494",
+            "M_NPS": "27.6074",
+            "STANDARD_T": 2.3885,
+            "T_NPS": "-11.8110",
+            "U_REFERENCE_RATE": "11.9506",
+            "U_NPS": "-9.4225",
+            "COMPETITION_BETWEEN": 7.8982,
+            "T_REFERENCE_RATE": "13.9560"
+        },
+        {
+            "L_NAME": "语音信号稳定性标签",
+            "STANDARD_M": -41.4954,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "63.6364",
+            "M_NPS": "73.4834",
+            "STANDARD_T": -17.4755,
+            "T_NPS": "49.4635",
+            "U_REFERENCE_RATE": "48.6015",
+            "U_NPS": "31.9880",
+            "COMPETITION_BETWEEN": 61.47345,
+            "T_REFERENCE_RATE": "51.2088"
+        },
+        {
+            "L_NAME": "语音信号覆盖标签",
+            "STANDARD_M": -45.2678,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "30.5106",
+            "M_NPS": "72.4490",
+            "STANDARD_T": -14.2046,
+            "T_NPS": "41.3858",
+            "U_REFERENCE_RATE": "21.6491",
+            "U_NPS": "27.1812",
+            "COMPETITION_BETWEEN": 56.9174,
+            "T_REFERENCE_RATE": "29.3407"
+        },
+        {
+            "L_NAME": "业务办理方便快捷（三渠道含业务规则）",
+            "STANDARD_M": -11.1415,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "39.3973",
+            "M_NPS": "39.3768",
+            "STANDARD_T": 0.3383,
+            "T_NPS": "27.8970",
+            "U_REFERENCE_RATE": "32.9969",
+            "U_NPS": "28.2353",
+            "COMPETITION_BETWEEN": 33.6369,
+            "T_REFERENCE_RATE": "32.7707"
+        },
+        {
+            "L_NAME": "账详单、发票方便获取，收费明晰（含渠道查",
+            "STANDARD_M": 7.2891,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "3.4598",
+            "M_NPS": "12.9032",
+            "STANDARD_T": 23.2226,
+            "T_NPS": "-3.0303",
+            "U_REFERENCE_RATE": "8.0745",
+            "U_NPS": "20.1923",
+            "COMPETITION_BETWEEN": 4.93645,
+            "T_REFERENCE_RATE": "4.6414"
+        },
+        {
+            "L_NAME": "电子渠道整体服务（在线客服仅2I）",
+            "STANDARD_M": null,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "0.0000",
+            "M_NPS": null,
+            "STANDARD_T": null,
+            "T_NPS": null,
+            "U_REFERENCE_RATE": "13.1211",
+            "U_NPS": "56.2130",
+            "COMPETITION_BETWEEN": null,
+            "T_REFERENCE_RATE": "0.0000"
+        },
+        {
+            "L_NAME": "促销活动和宣传标签",
+            "STANDARD_M": -21.5765,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "7.5918",
+            "M_NPS": "47.3118",
+            "STANDARD_T": 7.3445,
+            "T_NPS": "18.3908",
+            "U_REFERENCE_RATE": "7.2187",
+            "U_NPS": "25.7353",
+            "COMPETITION_BETWEEN": 32.8513,
+            "T_REFERENCE_RATE": "7.0847"
+        },
+        {
+            "L_NAME": "热线服务",
+            "STANDARD_M": -45.3991,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "24.2188",
+            "M_NPS": "57.1429",
+            "STANDARD_T": 20.3645,
+            "T_NPS": "-8.6207",
+            "U_REFERENCE_RATE": "21.8168",
+            "U_NPS": "11.7438",
+            "COMPETITION_BETWEEN": 24.2611,
+            "T_REFERENCE_RATE": "24.4726"
+        },
+        {
+            "L_NAME": "账详单、发票获取便捷、清晰明了标签",
+            "STANDARD_M": 3.5256,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "3.3482",
+            "M_NPS": "16.6667",
+            "STANDARD_T": 23.2226,
+            "T_NPS": "-3.0303",
+            "U_REFERENCE_RATE": "8.0745",
+            "U_NPS": "20.1923",
+            "COMPETITION_BETWEEN": 6.8182,
+            "T_REFERENCE_RATE": "4.6414"
+        },
+        {
+            "L_NAME": "电子渠道体验",
+            "STANDARD_M": -14.881,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "13.2813",
+            "M_NPS": "71.4286",
+            "STANDARD_T": 2.1998,
+            "T_NPS": "54.3478",
+            "U_REFERENCE_RATE": "13.0435",
+            "U_NPS": "56.5476",
+            "COMPETITION_BETWEEN": 62.8882,
+            "T_REFERENCE_RATE": "12.9395"
+        },
+        {
+            "L_NAME": "营业厅体验标签",
+            "STANDARD_M": -13.5601,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "15.1786",
+            "M_NPS": "48.5294",
+            "STANDARD_T": -0.879800000000003,
+            "T_NPS": "35.8491",
+            "U_REFERENCE_RATE": "12.6553",
+            "U_NPS": "34.9693",
+            "COMPETITION_BETWEEN": 42.18925,
+            "T_REFERENCE_RATE": "14.9086"
+        },
+        {
+            "L_NAME": "业务办理方便快捷标签",
+            "STANDARD_M": -8.06510000000001,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "29.9107",
+            "M_NPS": "70.5224",
+            "STANDARD_T": 9.7946,
+            "T_NPS": "52.6627",
+            "U_REFERENCE_RATE": "22.7484",
+            "U_NPS": "62.4573",
+            "COMPETITION_BETWEEN": 61.59255,
+            "T_REFERENCE_RATE": "23.7693"
+        },
+        {
+            "L_NAME": "服务人员态度、技能标签",
+            "STANDARD_M": -6.8887,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "41.6295",
+            "M_NPS": "84.1823",
+            "STANDARD_T": 11.637,
+            "T_NPS": "65.6566",
+            "U_REFERENCE_RATE": "33.8509",
+            "U_NPS": "77.2936",
+            "COMPETITION_BETWEEN": 74.91945,
+            "T_REFERENCE_RATE": "27.8481"
+        },
+        {
+            "L_NAME": "热线整体服务标签",
+            "STANDARD_M": -28.3632,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "46.5402",
+            "M_NPS": "70.2638",
+            "STANDARD_T": 21.9803,
+            "T_NPS": "19.9203",
+            "U_REFERENCE_RATE": "35.9472",
+            "U_NPS": "41.9006",
+            "COMPETITION_BETWEEN": 45.09205,
+            "T_REFERENCE_RATE": "35.3024"
+        },
+        {
+            "L_NAME": "电子渠道整体服务标签",
+            "STANDARD_M": -15.1393,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "18.4152",
+            "M_NPS": "77.5758",
+            "STANDARD_T": 0.898000000000003,
+            "T_NPS": "61.5385",
+            "U_REFERENCE_RATE": "15.2950",
+            "U_NPS": "62.4365",
+            "COMPETITION_BETWEEN": 69.55715,
+            "T_REFERENCE_RATE": "16.4557"
+        },
+        {
+            "L_NAME": "营业厅整体服务标签",
+            "STANDARD_M": -12.9354,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "31.4732",
+            "M_NPS": "65.9574",
+            "STANDARD_T": 5.403,
+            "T_NPS": "47.6190",
+            "U_REFERENCE_RATE": "28.2609",
+            "U_NPS": "53.0220",
+            "COMPETITION_BETWEEN": 56.7882,
+            "T_REFERENCE_RATE": "29.5359"
+        },
+        {
+            "L_NAME": "室外信号标签",
+            "STANDARD_M": -21.345,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "79.7634",
+            "M_NPS": "60.3435",
+            "STANDARD_T": -1.3711,
+            "T_NPS": "40.3696",
+            "U_REFERENCE_RATE": "71.8126",
+            "U_NPS": "38.9985",
+            "COMPETITION_BETWEEN": 50.35655,
+            "T_REFERENCE_RATE": "77.3077"
+        },
+        {
+            "L_NAME": "室内信号标签",
+            "STANDARD_M": -18.8317,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "81.1955",
+            "M_NPS": "41.9479",
+            "STANDARD_T": -1.2535,
+            "T_NPS": "24.3697",
+            "U_REFERENCE_RATE": "85.3251",
+            "U_NPS": "23.1162",
+            "COMPETITION_BETWEEN": 33.1588,
+            "T_REFERENCE_RATE": "85.0000"
+        },
+        {
+            "L_NAME": "上网标签",
+            "STANDARD_M": 1.5153,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "61.1457",
+            "M_NPS": "27.5967",
+            "STANDARD_T": 6.6646,
+            "T_NPS": "22.4474",
+            "U_REFERENCE_RATE": "71.9942",
+            "U_NPS": "29.1120",
+            "COMPETITION_BETWEEN": 25.02205,
+            "T_REFERENCE_RATE": "70.4945"
+        },
+        {
+            "L_NAME": "语音标签",
+            "STANDARD_M": -45.379,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "68.6177",
+            "M_NPS": "68.5118",
+            "STANDARD_T": -15.1807,
+            "T_NPS": "38.3135",
+            "U_REFERENCE_RATE": "54.9582",
+            "U_NPS": "23.1328",
+            "COMPETITION_BETWEEN": 53.41265,
+            "T_REFERENCE_RATE": "59.9451"
+        },
+        {
+            "L_NAME": "服务标签",
+            "STANDARD_M": -17.993,
+            "L1_NAME": "服务标签",
+            "M_REFERENCE_RATE": "35.5556",
+            "M_NPS": "46.8750",
+            "STANDARD_T": 0.190000000000001,
+            "T_NPS": "28.6920",
+            "U_REFERENCE_RATE": "31.4146",
+            "U_NPS": "28.8820",
+            "COMPETITION_BETWEEN": 37.7835,
+            "T_REFERENCE_RATE": "28.2143"
+        },
+        {
+            "L_NAME": "业务标签",
+            "STANDARD_M": 44.9204,
+            "L1_NAME": "业务标签",
+            "M_REFERENCE_RATE": "48.6111",
+            "M_NPS": "-13.5510",
+            "STANDARD_T": -1.1225,
+            "T_NPS": "32.4919",
+            "U_REFERENCE_RATE": "45.9512",
+            "U_NPS": "31.3694",
+            "COMPETITION_BETWEEN": 9.47045,
+            "T_REFERENCE_RATE": "48.7302"
+        },
+        {
+            "L_NAME": "网络标签",
+            "STANDARD_M": -21.7609,
+            "L1_NAME": "网络标签",
+            "M_REFERENCE_RATE": "63.7302",
+            "M_NPS": "45.9527",
+            "STANDARD_T": -0.972999999999999,
+            "T_NPS": "25.1648",
+            "U_REFERENCE_RATE": "67.1463",
+            "U_NPS": "24.1918",
+            "COMPETITION_BETWEEN": 35.55875,
+            "T_REFERENCE_RATE": "72.2222"
+        }
+    ],
+    "npsCityYWFW": [
+        {
+            "STANDARD_M": -18.0958,
+            "U_NUM": "89",
+            "M_NPS": "31.5789",
+            "CITY_NAME": "东营",
+            "T_NUM": "35",
+            "STANDARD_T": -32.2312,
+            "T_NPS": "45.7143",
+            "U_NPS": "13.4831",
+            "M_NUM": "57",
+            "COMPETITION_BETWEEN": 38.6466
+        },
+        {
+            "STANDARD_M": 17.6454,
+            "U_NUM": "75",
+            "M_NPS": "17.0213",
+            "CITY_NAME": "临沂",
+            "T_NUM": "44",
+            "STANDARD_T": -6.2424,
+            "T_NPS": "40.9091",
+            "U_NPS": "34.6667",
+            "M_NUM": "47",
+            "COMPETITION_BETWEEN": 28.9652
+        },
+        {
+            "STANDARD_M": -25.2345,
+            "U_NUM": "82",
+            "M_NPS": "42.3077",
+            "CITY_NAME": "威海",
+            "T_NUM": "39",
+            "STANDARD_T": -0.875499999999999,
+            "T_NPS": "17.9487",
+            "U_NPS": "17.0732",
+            "M_NUM": "52",
+            "COMPETITION_BETWEEN": 30.1282
+        },
+        {
+            "STANDARD_M": -5.8125,
+            "U_NUM": "75",
+            "M_NPS": "57.8125",
+            "CITY_NAME": "德州",
+            "T_NUM": "32",
+            "STANDARD_T": 36.375,
+            "T_NPS": "15.6250",
+            "U_NPS": "52.0000",
+            "M_NUM": "64",
+            "COMPETITION_BETWEEN": 36.71875
+        },
+        {
+            "STANDARD_M": -31.579,
+            "U_NUM": "57",
+            "M_NPS": "66.6667",
+            "CITY_NAME": "日照",
+            "T_NUM": "38",
+            "STANDARD_T": 8.7719,
+            "T_NPS": "26.3158",
+            "U_NPS": "35.0877",
+            "M_NUM": "39",
+            "COMPETITION_BETWEEN": 46.49125
+        },
+        {
+            "STANDARD_M": -17.5229,
+            "U_NUM": "81",
+            "M_NPS": "48.3871",
+            "CITY_NAME": "枣庄",
+            "T_NUM": "43",
+            "STANDARD_T": 23.8875,
+            "T_NPS": "6.9767",
+            "U_NPS": "30.8642",
+            "M_NUM": "62",
+            "COMPETITION_BETWEEN": 27.6819
+        },
+        {
+            "STANDARD_M": -22.2519,
+            "U_NUM": "79",
+            "M_NPS": "52.6316",
+            "CITY_NAME": "泰安",
+            "T_NUM": "43",
+            "STANDARD_T": -11.4808,
+            "T_NPS": "41.8605",
+            "U_NPS": "30.3797",
+            "M_NUM": "57",
+            "COMPETITION_BETWEEN": 47.24605
+        },
+        {
+            "STANDARD_M": -9.6073,
+            "U_NUM": "95",
+            "M_NPS": "25.3968",
+            "CITY_NAME": "济南",
+            "T_NUM": "38",
+            "STANDARD_T": 2.6316,
+            "T_NPS": "13.1579",
+            "U_NPS": "15.7895",
+            "M_NUM": "63",
+            "COMPETITION_BETWEEN": 19.27735
+        },
+        {
+            "STANDARD_M": -23.4574,
+            "U_NUM": "80",
+            "M_NPS": "65.9574",
+            "CITY_NAME": "济宁",
+            "T_NUM": "44",
+            "STANDARD_T": 28.8636,
+            "T_NPS": "13.6364",
+            "U_NPS": "42.5000",
+            "M_NUM": "47",
+            "COMPETITION_BETWEEN": 39.7969
+        },
+        {
+            "STANDARD_M": -7.7095,
+            "U_NUM": "91",
+            "M_NPS": "29.6875",
+            "CITY_NAME": "淄博",
+            "T_NUM": "41",
+            "STANDARD_T": -24.3635,
+            "T_NPS": "46.3415",
+            "U_NPS": "21.9780",
+            "M_NUM": "64",
+            "COMPETITION_BETWEEN": 38.0145
+        },
+        {
+            "STANDARD_M": -38.6274,
+            "U_NUM": "68",
+            "M_NPS": "78.3333",
+            "CITY_NAME": "滨州",
+            "T_NUM": "56",
+            "STANDARD_T": 2.2059,
+            "T_NPS": "37.5000",
+            "U_NPS": "39.7059",
+            "M_NUM": "60",
+            "COMPETITION_BETWEEN": 57.91665
+        },
+        {
+            "STANDARD_M": -41.8767,
+            "U_NUM": "68",
+            "M_NPS": "59.5238",
+            "CITY_NAME": "潍坊",
+            "T_NUM": "51",
+            "STANDARD_T": -35.2941,
+            "T_NPS": "52.9412",
+            "U_NPS": "17.6471",
+            "M_NUM": "42",
+            "COMPETITION_BETWEEN": 56.2325
+        },
+        {
+            "STANDARD_M": 1.9608,
+            "U_NUM": "90",
+            "M_NPS": "31.3725",
+            "CITY_NAME": "烟台",
+            "T_NUM": "36",
+            "STANDARD_T": -8.3334,
+            "T_NPS": "41.6667",
+            "U_NPS": "33.3333",
+            "M_NUM": "51",
+            "COMPETITION_BETWEEN": 36.5196
+        },
+        {
+            "STANDARD_M": -9.3434,
+            "U_NUM": "72",
+            "M_NPS": "45.4545",
+            "CITY_NAME": "聊城",
+            "T_NUM": "38",
+            "STANDARD_T": 33.4795,
+            "T_NPS": "2.6316",
+            "U_NPS": "36.1111",
+            "M_NUM": "66",
+            "COMPETITION_BETWEEN": 24.04305
+        },
+        {
+            "STANDARD_M": -9.5,
+            "U_NUM": "50",
+            "M_NPS": "47.5000",
+            "CITY_NAME": "莱芜",
+            "T_NUM": "47",
+            "STANDARD_T": 3.9574,
+            "T_NPS": "34.0426",
+            "U_NPS": "38.0000",
+            "M_NUM": "40",
+            "COMPETITION_BETWEEN": 40.7713
+        },
+        {
+            "STANDARD_M": -30.3656,
+            "U_NUM": "53",
+            "M_NPS": "71.8750",
+            "CITY_NAME": "菏泽",
+            "T_NUM": "52",
+            "STANDARD_T": 16.5094,
+            "T_NPS": "25.0000",
+            "U_NPS": "41.5094",
+            "M_NUM": "32",
+            "COMPETITION_BETWEEN": 48.4375
+        },
+        {
+            "STANDARD_M": -34.9625,
+            "U_NUM": "83",
+            "M_NPS": "43.3962",
+            "CITY_NAME": "青岛",
+            "T_NUM": "34",
+            "STANDARD_T": -3.331,
+            "T_NPS": "11.7647",
+            "U_NPS": "8.4337",
+            "M_NUM": "53",
+            "COMPETITION_BETWEEN": 27.58045
+        }
+    ],
+    "allRankYW": [
+        {
+            "allrank": 1,
+            "PROVINCE_NAME": "宁夏"
+        },
+        {
+            "allrank": 2,
+            "PROVINCE_NAME": "浙江"
+        },
+        {
+            "allrank": 3,
+            "PROVINCE_NAME": "新疆"
+        },
+        {
+            "allrank": 4,
+            "PROVINCE_NAME": "江苏"
+        },
+        {
+            "allrank": 5,
+            "PROVINCE_NAME": "上海"
+        },
+        {
+            "allrank": 6,
+            "PROVINCE_NAME": "海南"
+        },
+        {
+            "allrank": 7,
+            "PROVINCE_NAME": "云南"
+        },
+        {
+            "allrank": 8,
+            "PROVINCE_NAME": "山东"
+        },
+        {
+            "allrank": 9,
+            "PROVINCE_NAME": "内蒙古"
+        },
+        {
+            "allrank": 10,
+            "PROVINCE_NAME": "北京"
+        },
+        {
+            "allrank": 11,
+            "PROVINCE_NAME": "河北"
+        },
+        {
+            "allrank": 12,
+            "PROVINCE_NAME": "天津"
+        },
+        {
+            "allrank": 13,
+            "PROVINCE_NAME": "湖北"
+        },
+        {
+            "allrank": 14,
+            "PROVINCE_NAME": "福建"
+        },
+        {
+            "allrank": 15,
+            "PROVINCE_NAME": "青海"
+        },
+        {
+            "allrank": 16,
+            "PROVINCE_NAME": "甘肃"
+        },
+        {
+            "allrank": 17,
+            "PROVINCE_NAME": "贵州"
+        },
+        {
+            "allrank": 18,
+            "PROVINCE_NAME": "黑龙江"
+        },
+        {
+            "allrank": 19,
+            "PROVINCE_NAME": "广东"
+        },
+        {
+            "allrank": 20,
+            "PROVINCE_NAME": "山西"
+        },
+        {
+            "allrank": 21,
+            "PROVINCE_NAME": "重庆"
+        },
+        {
+            "allrank": 22,
+            "PROVINCE_NAME": "陕西"
+        },
+        {
+            "allrank": 23,
+            "PROVINCE_NAME": "江西"
+        },
+        {
+            "allrank": 24,
+            "PROVINCE_NAME": "河南"
+        },
+        {
+            "allrank": 25,
+            "PROVINCE_NAME": "湖南"
+        },
+        {
+            "allrank": 26,
+            "PROVINCE_NAME": "吉林"
+        },
+        {
+            "allrank": 27,
+            "PROVINCE_NAME": "安徽"
+        },
+        {
+            "allrank": 28,
+            "PROVINCE_NAME": "四川"
+        },
+        {
+            "allrank": 29,
+            "PROVINCE_NAME": "西藏"
+        },
+        {
+            "allrank": 30,
+            "PROVINCE_NAME": "辽宁"
+        },
+        {
+            "allrank": 31,
+            "PROVINCE_NAME": "广西"
+        }
+    ],
+    "quotaStarYW": [
+        {
+            "count": 1092,
+            "USER_LEVEL": "1"
+        },
+        {
+            "count": 1381,
+            "USER_LEVEL": "2"
+        },
+        {
+            "count": 718,
+            "USER_LEVEL": "3"
+        },
+        {
+            "count": 385,
+            "USER_LEVEL": "4"
+        },
+        {
+            "count": 99,
+            "USER_LEVEL": "5"
+        },
+        {
+            "count": 425,
+            "USER_LEVEL": "未评级"
+        }
+    ],
+    "pieYW": [
+        {
+            "QUARTER_NPS": "23.2683",
+            "YEAE_LIFT": -5.10667064190784E-11,
+            "QUARTER_LIFT": 1.16277993875295,
+            "YEAR_NPS": 17.1288219233333,
+            "YEAR_FINISH": -9.67172470058303E-12
+        }
+    ],
+    "npsCityYWZT": [
+        {
+            "STANDARD_M": 4.5333,
+            "U_NUM": "250",
+            "M_NPS": "14.6667",
+            "CITY_NAME": "东营",
+            "T_NUM": "150",
+            "STANDARD_T": -4.8,
+            "T_NPS": "24.0000",
+            "U_NPS": "19.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 19.33335
+        },
+        {
+            "STANDARD_M": 2.8,
+            "U_NUM": "250",
+            "M_NPS": "18.0000",
+            "CITY_NAME": "临沂",
+            "T_NUM": "150",
+            "STANDARD_T": 2.8,
+            "T_NPS": "18.0000",
+            "U_NPS": "20.8000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 18.0
+        },
+        {
+            "STANDARD_M": 2.5333,
+            "U_NUM": "250",
+            "M_NPS": "16.6667",
+            "CITY_NAME": "威海",
+            "T_NUM": "150",
+            "STANDARD_T": -0.133300000000002,
+            "T_NPS": "19.3333",
+            "U_NPS": "19.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 18.0
+        },
+        {
+            "STANDARD_M": -11.8667,
+            "U_NUM": "250",
+            "M_NPS": "42.6667",
+            "CITY_NAME": "德州",
+            "T_NUM": "150",
+            "STANDARD_T": 16.1333,
+            "T_NPS": "14.6667",
+            "U_NPS": "30.8000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 28.6667
+        },
+        {
+            "STANDARD_M": -12.8889,
+            "U_NUM": "200",
+            "M_NPS": "28.8889",
+            "CITY_NAME": "日照",
+            "T_NUM": "135",
+            "STANDARD_T": -15.1111,
+            "T_NPS": "31.1111",
+            "U_NPS": "16.0000",
+            "M_NUM": "135",
+            "COMPETITION_BETWEEN": 30.0
+        },
+        {
+            "STANDARD_M": -4.0,
+            "U_NUM": "250",
+            "M_NPS": "28.0000",
+            "CITY_NAME": "枣庄",
+            "T_NUM": "150",
+            "STANDARD_T": 7.3333,
+            "T_NPS": "16.6667",
+            "U_NPS": "24.0000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 22.33335
+        },
+        {
+            "STANDARD_M": -0.800000000000001,
+            "U_NUM": "250",
+            "M_NPS": "22.0000",
+            "CITY_NAME": "泰安",
+            "T_NUM": "150",
+            "STANDARD_T": -0.133300000000002,
+            "T_NPS": "21.3333",
+            "U_NPS": "21.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 21.66665
+        },
+        {
+            "STANDARD_M": 13.2,
+            "U_NUM": "250",
+            "M_NPS": "6.0000",
+            "CITY_NAME": "济南",
+            "T_NUM": "150",
+            "STANDARD_T": 10.5333,
+            "T_NPS": "8.6667",
+            "U_NPS": "19.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 7.33335
+        },
+        {
+            "STANDARD_M": -5.6,
+            "U_NUM": "250",
+            "M_NPS": "32.0000",
+            "CITY_NAME": "济宁",
+            "T_NUM": "150",
+            "STANDARD_T": 8.4,
+            "T_NPS": "18.0000",
+            "U_NPS": "26.4000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 25.0
+        },
+        {
+            "STANDARD_M": 6.4,
+            "U_NUM": "250",
+            "M_NPS": "22.0000",
+            "CITY_NAME": "淄博",
+            "T_NUM": "150",
+            "STANDARD_T": 3.7333,
+            "T_NPS": "24.6667",
+            "U_NPS": "28.4000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 23.33335
+        },
+        {
+            "STANDARD_M": -14.1333,
+            "U_NUM": "250",
+            "M_NPS": "39.3333",
+            "CITY_NAME": "滨州",
+            "T_NUM": "150",
+            "STANDARD_T": -9.4667,
+            "T_NPS": "34.6667",
+            "U_NPS": "25.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 37.0
+        },
+        {
+            "STANDARD_M": -9.6,
+            "U_NUM": "250",
+            "M_NPS": "34.0000",
+            "CITY_NAME": "潍坊",
+            "T_NUM": "150",
+            "STANDARD_T": -10.2667,
+            "T_NPS": "34.6667",
+            "U_NPS": "24.4000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 34.33335
+        },
+        {
+            "STANDARD_M": 14.9333,
+            "U_NUM": "250",
+            "M_NPS": "12.6667",
+            "CITY_NAME": "烟台",
+            "T_NUM": "150",
+            "STANDARD_T": 5.6,
+            "T_NPS": "22.0000",
+            "U_NPS": "27.6000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 17.33335
+        },
+        {
+            "STANDARD_M": -2.1333,
+            "U_NUM": "250",
+            "M_NPS": "23.3333",
+            "CITY_NAME": "聊城",
+            "T_NUM": "150",
+            "STANDARD_T": 0.533300000000001,
+            "T_NPS": "20.6667",
+            "U_NPS": "21.2000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 22.0
+        },
+        {
+            "STANDARD_M": 13.4074,
+            "U_NUM": "150",
+            "M_NPS": "12.5926",
+            "CITY_NAME": "莱芜",
+            "T_NUM": "135",
+            "STANDARD_T": -3.6296,
+            "T_NPS": "29.6296",
+            "U_NPS": "26.0000",
+            "M_NUM": "135",
+            "COMPETITION_BETWEEN": 21.1111
+        },
+        {
+            "STANDARD_M": -0.666699999999999,
+            "U_NUM": "250",
+            "M_NPS": "28.6667",
+            "CITY_NAME": "菏泽",
+            "T_NUM": "150",
+            "STANDARD_T": -2.6667,
+            "T_NPS": "30.6667",
+            "U_NPS": "28.0000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 29.6667
+        },
+        {
+            "STANDARD_M": 1.6,
+            "U_NUM": "250",
+            "M_NPS": "16.0000",
+            "CITY_NAME": "青岛",
+            "T_NUM": "150",
+            "STANDARD_T": 8.2667,
+            "T_NPS": "9.3333",
+            "U_NPS": "17.6000",
+            "M_NUM": "150",
+            "COMPETITION_BETWEEN": 12.66665
+        }
+    ],
+    "allRankYWN": [
+        {
+            "QUARTER_FINISH": 1.16277993875295,
+            "rank": 1,
+            "PROVINCE_NAME": "山东",
+            "QUARTER_LIFT": 6.1394780766156
+        },
+        {
+            "QUARTER_FINISH": 1.10595187367477,
+            "rank": 2,
+            "PROVINCE_NAME": "内蒙古",
+            "QUARTER_LIFT": 11.2917686302194
+        },
+        {
+            "QUARTER_FINISH": 1.07990427591022,
+            "rank": 3,
+            "PROVINCE_NAME": "北京",
+            "QUARTER_LIFT": 9.49235858525084
+        },
+        {
+            "QUARTER_FINISH": 1.04275794665311,
+            "rank": 4,
+            "PROVINCE_NAME": "河北",
+            "QUARTER_LIFT": 10.4275794665311
+        },
+        {
+            "QUARTER_FINISH": 0.967715213918716,
+            "rank": 5,
+            "PROVINCE_NAME": "天津",
+            "QUARTER_LIFT": 4.76115885248008
+        },
+        {
+            "QUARTER_FINISH": 0.517398759924361,
+            "rank": 6,
+            "PROVINCE_NAME": "黑龙江",
+            "QUARTER_LIFT": 6.19843714389384
+        },
+        {
+            "QUARTER_FINISH": 0.415575656407299,
+            "rank": 7,
+            "PROVINCE_NAME": "山西",
+            "QUARTER_LIFT": 4.51730738514734
+        },
+        {
+            "QUARTER_FINISH": 0.100016284284785,
+            "rank": 8,
+            "PROVINCE_NAME": "河南",
+            "QUARTER_LIFT": 0.443072139381599
+        },
+        {
+            "QUARTER_FINISH": 0.0376598509796484,
+            "rank": 9,
+            "PROVINCE_NAME": "吉林",
+            "QUARTER_LIFT": 0.42517971756023
+        },
+        {
+            "QUARTER_FINISH": -1.05953912290274,
+            "rank": 10,
+            "PROVINCE_NAME": "辽宁",
+            "QUARTER_LIFT": -6.8022411690356
+        }
+    ],
+    "allRankYWS": [
+        {
+            "QUARTER_FINISH": 1.9366075127865,
+            "rank": 1,
+            "PROVINCE_NAME": "宁夏",
+            "QUARTER_LIFT": 13.1495650118203
+        },
+        {
+            "QUARTER_FINISH": 1.65896720929099,
+            "rank": 2,
+            "PROVINCE_NAME": "浙江",
+            "QUARTER_LIFT": 12.8404061999122
+        },
+        {
+            "QUARTER_FINISH": 1.59896866117573,
+            "rank": 3,
+            "PROVINCE_NAME": "新疆",
+            "QUARTER_LIFT": 3.77356604037473
+        },
+        {
+            "QUARTER_FINISH": 1.43388289801075,
+            "rank": 4,
+            "PROVINCE_NAME": "江苏",
+            "QUARTER_LIFT": 11.1125924595833
+        },
+        {
+            "QUARTER_FINISH": 1.40740490715823,
+            "rank": 5,
+            "PROVINCE_NAME": "上海",
+            "QUARTER_LIFT": 9.78146410474968
+        },
+        {
+            "QUARTER_FINISH": 1.2636514881668,
+            "rank": 6,
+            "PROVINCE_NAME": "海南",
+            "QUARTER_LIFT": 9.3889305570793
+        },
+        {
+            "QUARTER_FINISH": 1.18308139183606,
+            "rank": 7,
+            "PROVINCE_NAME": "云南",
+            "QUARTER_LIFT": 12.7417865900744
+        },
+        {
+            "QUARTER_FINISH": 0.922453613026216,
+            "rank": 8,
+            "PROVINCE_NAME": "湖北",
+            "QUARTER_LIFT": 7.27815900677684
+        },
+        {
+            "QUARTER_FINISH": 0.896283450949912,
+            "rank": 9,
+            "PROVINCE_NAME": "福建",
+            "QUARTER_LIFT": 8.1830679071727
+        },
+        {
+            "QUARTER_FINISH": 0.743581282908996,
+            "rank": 10,
+            "PROVINCE_NAME": "青海",
+            "QUARTER_LIFT": 5.37609267543204
+        },
+        {
+            "QUARTER_FINISH": 0.68889943604627,
+            "rank": 11,
+            "PROVINCE_NAME": "甘肃",
+            "QUARTER_LIFT": 3.46516416331274
+        },
+        {
+            "QUARTER_FINISH": 0.586563540891039,
+            "rank": 12,
+            "PROVINCE_NAME": "贵州",
+            "QUARTER_LIFT": 3.94170699478778
+        },
+        {
+            "QUARTER_FINISH": 0.42710981541304,
+            "rank": 13,
+            "PROVINCE_NAME": "广东",
+            "QUARTER_LIFT": 3.31010106945106
+        },
+        {
+            "QUARTER_FINISH": 0.381742035243915,
+            "rank": 14,
+            "PROVINCE_NAME": "重庆",
+            "QUARTER_LIFT": 3.3440602287367
+        },
+        {
+            "QUARTER_FINISH": 0.200247895095853,
+            "rank": 15,
+            "PROVINCE_NAME": "陕西",
+            "QUARTER_LIFT": 1.60999307657066
+        },
+        {
+            "QUARTER_FINISH": 0.127031354154307,
+            "rank": 16,
+            "PROVINCE_NAME": "江西",
+            "QUARTER_LIFT": 1.6310825873413
+        },
+        {
+            "QUARTER_FINISH": 0.0636560889683439,
+            "rank": 17,
+            "PROVINCE_NAME": "湖南",
+            "QUARTER_LIFT": 0.556990778473009
+        },
+        {
+            "QUARTER_FINISH": -0.0852782562890566,
+            "rank": 18,
+            "PROVINCE_NAME": "安徽",
+            "QUARTER_LIFT": -0.8135545649976
+        },
+        {
+            "QUARTER_FINISH": -0.155516755323677,
+            "rank": 19,
+            "PROVINCE_NAME": "四川",
+            "QUARTER_LIFT": -1.05440360109453
+        },
+        {
+            "QUARTER_FINISH": -0.337403479910484,
+            "rank": 20,
+            "PROVINCE_NAME": "西藏",
+            "QUARTER_LIFT": -0.85025676937442
+        },
+        {
+            "QUARTER_FINISH": -1.53449316652436,
+            "rank": 21,
+            "PROVINCE_NAME": "广西",
+            "QUARTER_LIFT": -10.4498984640309
+        }
+    ],
+    "npsCityYWYW": [
+        {
+            "STANDARD_M": 46.817,
+            "U_NUM": "116",
+            "M_NPS": "-19.2308",
+            "CITY_NAME": "东营",
+            "T_NUM": "63",
+            "STANDARD_T": -2.5725,
+            "T_NPS": "30.1587",
+            "U_NPS": "27.5862",
+            "M_NUM": "78",
+            "COMPETITION_BETWEEN": 5.46395
+        },
+        {
+            "STANDARD_M": 55.2103,
+            "U_NUM": "108",
+            "M_NPS": "-23.7288",
+            "CITY_NAME": "临沂",
+            "T_NUM": "66",
+            "STANDARD_T": 17.8451,
+            "T_NPS": "13.6364",
+            "U_NPS": "31.4815",
+            "M_NUM": "59",
+            "COMPETITION_BETWEEN": -5.0462
+        },
+        {
+            "STANDARD_M": 35.2692,
+            "U_NUM": "114",
+            "M_NPS": "-22.9885",
+            "CITY_NAME": "威海",
+            "T_NUM": "74",
+            "STANDARD_T": -18.8004,
+            "T_NPS": "31.0811",
+            "U_NPS": "12.2807",
+            "M_NUM": "87",
+            "COMPETITION_BETWEEN": 4.0463
+        },
+        {
+            "STANDARD_M": 55.3398,
+            "U_NUM": "103",
+            "M_NPS": "0.0000",
+            "CITY_NAME": "德州",
+            "T_NUM": "70",
+            "STANDARD_T": 23.9112,
+            "T_NPS": "31.4286",
+            "U_NPS": "55.3398",
+            "M_NUM": "62",
+            "COMPETITION_BETWEEN": 15.7143
+        },
+        {
+            "STANDARD_M": 28.8329,
+            "U_NUM": "101",
+            "M_NPS": "-6.0606",
+            "CITY_NAME": "日照",
+            "T_NUM": "66",
+            "STANDARD_T": -22.6822,
+            "T_NPS": "45.4545",
+            "U_NPS": "22.7723",
+            "M_NUM": "66",
+            "COMPETITION_BETWEEN": 19.69695
+        },
+        {
+            "STANDARD_M": 37.2095,
+            "U_NUM": "111",
+            "M_NPS": "-6.5789",
+            "CITY_NAME": "枣庄",
+            "T_NUM": "79",
+            "STANDARD_T": 4.0483,
+            "T_NPS": "26.5823",
+            "U_NPS": "30.6306",
+            "M_NUM": "76",
+            "COMPETITION_BETWEEN": 10.0017
+        },
+        {
+            "STANDARD_M": 40.1419,
+            "U_NUM": "125",
+            "M_NPS": "-17.7419",
+            "CITY_NAME": "泰安",
+            "T_NUM": "70",
+            "STANDARD_T": -21.8857,
+            "T_NPS": "44.2857",
+            "U_NPS": "22.4000",
+            "M_NUM": "62",
+            "COMPETITION_BETWEEN": 13.2719
+        },
+        {
+            "STANDARD_M": 38.4687,
+            "U_NUM": "101",
+            "M_NPS": "-18.6667",
+            "CITY_NAME": "济南",
+            "T_NUM": "49",
+            "STANDARD_T": 1.4347,
+            "T_NPS": "18.3673",
+            "U_NPS": "19.8020",
+            "M_NUM": "75",
+            "COMPETITION_BETWEEN": -0.149699999999999
+        },
+        {
+            "STANDARD_M": 29.3578,
+            "U_NUM": "109",
+            "M_NPS": "0.0000",
+            "CITY_NAME": "济宁",
+            "T_NUM": "67",
+            "STANDARD_T": 3.9847,
+            "T_NPS": "25.3731",
+            "U_NPS": "29.3578",
+            "M_NUM": "70",
+            "COMPETITION_BETWEEN": 12.68655
+        },
+        {
+            "STANDARD_M": 45.7818,
+            "U_NUM": "127",
+            "M_NPS": "-14.2857",
+            "CITY_NAME": "淄博",
+            "T_NUM": "74",
+            "STANDARD_T": 1.7664,
+            "T_NPS": "29.7297",
+            "U_NPS": "31.4961",
+            "M_NUM": "84",
+            "COMPETITION_BETWEEN": 7.722
+        },
+        {
+            "STANDARD_M": 36.5662,
+            "U_NUM": "108",
+            "M_NPS": "-5.0847",
+            "CITY_NAME": "滨州",
+            "T_NUM": "82",
+            "STANDARD_T": -11.2014,
+            "T_NPS": "42.6829",
+            "U_NPS": "31.4815",
+            "M_NUM": "59",
+            "COMPETITION_BETWEEN": 18.7991
+        },
+        {
+            "STANDARD_M": 46.5823,
+            "U_NUM": "119",
+            "M_NPS": "-10.4478",
+            "CITY_NAME": "潍坊",
+            "T_NUM": "77",
+            "STANDARD_T": -17.1123,
+            "T_NPS": "53.2468",
+            "U_NPS": "36.1345",
+            "M_NUM": "67",
+            "COMPETITION_BETWEEN": 21.3995
+        },
+        {
+            "STANDARD_M": 54.6296,
+            "U_NUM": "108",
+            "M_NPS": "-18.5185",
+            "CITY_NAME": "烟台",
+            "T_NUM": "80",
+            "STANDARD_T": 14.8611,
+            "T_NPS": "21.2500",
+            "U_NPS": "36.1111",
+            "M_NUM": "81",
+            "COMPETITION_BETWEEN": 1.36575
+        },
+        {
+            "STANDARD_M": 59.8423,
+            "U_NUM": "111",
+            "M_NPS": "-17.5000",
+            "CITY_NAME": "聊城",
+            "T_NUM": "84",
+            "STANDARD_T": 10.1994,
+            "T_NPS": "32.1429",
+            "U_NPS": "42.3423",
+            "M_NUM": "80",
+            "COMPETITION_BETWEEN": 7.32145
+        },
+        {
+            "STANDARD_M": 56.7978,
+            "U_NUM": "86",
+            "M_NPS": "-23.0769",
+            "CITY_NAME": "莱芜",
+            "T_NUM": "90",
+            "STANDARD_T": -8.5013,
+            "T_NPS": "42.2222",
+            "U_NPS": "33.7209",
+            "M_NUM": "65",
+            "COMPETITION_BETWEEN": 9.57265
+        },
+        {
+            "STANDARD_M": 62.0904,
+            "U_NUM": "113",
+            "M_NPS": "-8.1081",
+            "CITY_NAME": "菏泽",
+            "T_NUM": "56",
+            "STANDARD_T": 12.9109,
+            "T_NPS": "41.0714",
+            "U_NPS": "53.9823",
+            "M_NUM": "74",
+            "COMPETITION_BETWEEN": 16.48165
+        },
+        {
+            "STANDARD_M": 33.1048,
+            "U_NUM": "124",
+            "M_NPS": "-13.7500",
+            "CITY_NAME": "青岛",
+            "T_NUM": "81",
+            "STANDARD_T": 0.836300000000001,
+            "T_NPS": "18.5185",
+            "U_NPS": "19.3548",
+            "M_NUM": "80",
+            "COMPETITION_BETWEEN": 2.38425
+        }
+    ]
+}

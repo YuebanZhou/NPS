@@ -1182,6 +1182,7 @@ $.ajax({
 
     }
     $(".talezbmx .name").text(proname)
+    $(".toptitle .name").text(proname)
     /* ***** rank end ***** */
 
 
