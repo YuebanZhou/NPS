@@ -10,7 +10,7 @@ body {
   color: #26F7FF;
   height: 100%;
   width: 100%;
-  min-width: 1400px;
+  min-width: 1100px;
   background-image: url("../img/bodybg.jpg");
   background-size: 100% 100%;
 }
@@ -30,13 +30,13 @@ body {
   visibility:hidden;
   }
 .top {
-  height: 100px;
+  height: 75px;
   background-image: url("../img/top.png");
   background-size: 100% 100%;
 }
 .toptitle {
   color: #26F7FF;
-  font-size: 40px;
+  font-size: 25px;
   position: absolute;
   top: 20px;
   left: 50%;

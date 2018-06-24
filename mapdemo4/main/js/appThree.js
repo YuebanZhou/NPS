@@ -98,25 +98,38 @@ function drawchart1(ywfin) {
         name: '年度完成率_外表盘',
         type: 'gauge',
         min: 0,
-        max: 220,
+        max: 100,
         startAngle: 210,
         endAngle: -30,
-        splitNumber: 11,
+        splitNumber: 5,
         radius: '80%',
         axisLine: {            // 坐标轴线
           lineStyle: {       // 属性lineStyle控制线条样式
             //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#999999']],
+            // color: [
+            //   [0.1, '#6d0d8b'],
+            //   [0.2, '#9713c5'],
+            //   [0.3, '#bc1fff'],
+            //   [0.4, '#9742fd'],
+            //   [0.5, '#a4def4'],
+            //   [0.6, '#63c8ed'],
+            //   [0.7, '#22aaf5'],
+            //   [0.8, '#5287f8'],
+            //   [0.9, '#4949fc'],
+            //   [1, '#2124ea'],
+            // ],
+            
             color: [
-              [0.1, '#6d0d8b'],
-              [0.2, '#9713c5'],
-              [0.3, '#bc1fff'],
-              [0.4, '#9742fd'],
-              [0.5, '#a4def4'],
-              [0.6, '#63c8ed'],
-              [0.7, '#22aaf5'],
-              [0.8, '#5287f8'],
-              [0.9, '#4949fc'],
-              [1, '#2124ea']
+              [0.1, 'rgba(109,13,139,0.5)'],
+              [0.2, 'rgba(151,19,197,0.5)'],
+              [0.3, 'rgba(188,31,255,0.5)'],
+              [0.4, 'rgba(151,66,253,0.5)'],
+              [0.5, 'rgba(164,222,244,0.5)'],
+              [0.6, 'rgba(99,200,237,0.5)'],
+              [0.7, 'rgba(34,170,245,0.5)'],
+              [0.8, 'rgba(83,135,248,0.5)'],
+              [0.9, 'rgba(73,73,252,0.5)'],
+              [1.0, 'rgba(33,36,234,0.5)'],
             ],
             width: 0,
             shadowColor: '#fff', //默认透明
@@ -127,9 +140,9 @@ function drawchart1(ywfin) {
           //margin : 80,
           offsetCenter: [25, '20%'],
           textStyle: {       // 属性lineStyle控制线条样式
-            fontWeight: 'bolder',
+            // fontWeight: 'bolder',
             color: '#84eafe',
-            shadowColor: '#fff', //默认透明
+            shadowColor: 'rgba(132,234,254,0.5)', //默认透明
             shadowBlur: 10,
             fontSize: 8
           }
@@ -191,7 +204,7 @@ function drawchart1(ywfin) {
         name: '年度完成率_内表盘',
         type: 'gauge',
         center: ['50%', '50%'],    // 默认全局居中
-        radius: '65%',
+        radius: '75%',
         min: 0,
         max: 7,
         startAngle: 210,
@@ -768,26 +781,39 @@ function drawchart4(kdfin) {
         name: '年度完成率_外表盘',
         type: 'gauge',
         min: 0,
-        max: 220,
+        max: 100,
         startAngle: 210,
         endAngle: -30,
-        splitNumber: 11,
+        splitNumber: 5,
         radius: '80%',
         axisLine: {            // 坐标轴线
           lineStyle: {       // 属性lineStyle控制线条样式
             //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#999999']],
+            // color: [
+            //   [0.1, '#6d0d8b'],
+            //   [0.2, '#9713c5'],
+            //   [0.3, '#bc1fff'],
+            //   [0.4, '#9742fd'],
+            //   [0.5, '#a4def4'],
+            //   [0.6, '#63c8ed'],
+            //   [0.7, '#22aaf5'],
+            //   [0.8, '#5287f8'],
+            //   [0.9, '#4949fc'],
+            //   [1, '#2124ea']
+            // ],
             color: [
-              [0.1, '#6d0d8b'],
-              [0.2, '#9713c5'],
-              [0.3, '#bc1fff'],
-              [0.4, '#9742fd'],
-              [0.5, '#a4def4'],
-              [0.6, '#63c8ed'],
-              [0.7, '#22aaf5'],
-              [0.8, '#5287f8'],
-              [0.9, '#4949fc'],
-              [1, '#2124ea']
+              [0.1, 'rgba(109,13,139,0.5)'],
+              [0.2, 'rgba(151,19,197,0.5)'],
+              [0.3, 'rgba(188,31,255,0.5)'],
+              [0.4, 'rgba(151,66,253,0.5)'],
+              [0.5, 'rgba(164,222,244,0.5)'],
+              [0.6, 'rgba(99,200,237,0.5)'],
+              [0.7, 'rgba(34,170,245,0.5)'],
+              [0.8, 'rgba(83,135,248,0.5)'],
+              [0.9, 'rgba(73,73,252,0.5)'],
+              [1.0, 'rgba(33,36,234,0.5)'],
             ],
+
             width: 0,
             shadowColor: '#fff', //默认透明
             shadowBlur: 10
@@ -797,7 +823,7 @@ function drawchart4(kdfin) {
           //margin : 80,
           offsetCenter: [25, '20%'],
           textStyle: {       // 属性lineStyle控制线条样式
-            fontWeight: 'bolder',
+            // fontWeight: 'bolder',
             color: '#84eafe',
             shadowColor: '#fff', //默认透明
             shadowBlur: 10,
@@ -861,7 +887,7 @@ function drawchart4(kdfin) {
         name: '年度完成率_内表盘',
         type: 'gauge',
         center: ['50%', '50%'],    // 默认全局居中
-        radius: '65%',
+        radius: '75%',
         min: 0,
         max: 7,
         startAngle: 210,
