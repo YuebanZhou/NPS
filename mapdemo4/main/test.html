@@ -12,111 +12,96 @@
 
 <body>
 
-    <div id="cir" style="width:500px;height:500px;"></div>
+    <div id="chart" style="width:180px;height:170px;"></div>
     <script src="js/echarts.min.js"></script>
     <script>
-        var chart = echarts.init(document.getElementById("cir"));
-        var scaleData = [{
-            'name': '中国联通',
-            'value': 42
-        },
-        {
-            'name': '中国移动',
-            'value': 29
-        },
-        {
-            'name': '中国电信',
-            'value': 29
-        }
-        ];
-        var placeHolderStyle = {
-            normal: {
-                label: {
-                    show: false
+        var chart = echarts.init(document.getElementById("chart"));
+        var option = {
+            title: {
+                text: '年度完成率',
+                textAlign: "center",
+                x: '50%',
+                y: '30%',
+                textStyle: {
+                    color: '#2AE0ED',
+                    fontWeight: 'normal',
+                    fontSize: '12',
+                    textAlign: 'center',
+
                 },
-                labelLine: {
-                    show: false
-                },
-                color: 'rgba(0, 0, 0, 0)',
-                borderColor: 'rgba(0, 0, 0, 0)',
-                borderWidth: 0
-            }
-        };
-        var data = [];
-        for (var i = 0; i < scaleData.length; i++) {
-            data.push({
-                value: scaleData[i].value,
-                name: scaleData[i].name,
-                itemStyle: {
-                    normal: {
-                        borderWidth: 5,
-                        shadowBlur: 30,
-                        borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
-                            offset: 0,
-                            color: '#7777eb'
-                        }, {
-                            offset: 1,
-                            color: '#70ffac'
-                        }]),
-                        shadowColor: 'rgba(142, 152, 241, 0.6)'
-                    }
+                subtextStyle: {
+                    fontWeight: 'bold',
+                    fontSize: 20,
+                    color: '#3ea1ff',
+                   
                 }
-            }, {
-                // 断层区域
-                    value: 4,
-                    name: '',
-                    itemStyle: placeHolderStyle
-                });
-        }
-        option = {
-            backgroundColor: '#04243E',
-            tooltip: {
-                show: false
-            },
-            legend: {
-                show: false
-            },
-            toolbox: {
-                show: false
             },
             series: [{
-                name: '',
+                name: ' ',
                 type: 'pie',
-                clockWise: false,
-                radius: [145, 150],
+                radius: ['50%', '70%'],
+                // radius: ['80%', '95%'],
+                startAngle: 180,
+                color: [new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                    offset: 0,
+                    color: '#9f3edd'
+                }, {
+                    offset: 1,
+                    color: '#4897f6'
+                }]), "transparent"],
                 hoverAnimation: false,
+                legendHoverLink: false,
                 itemStyle: {
                     normal: {
-                        label: {
-                            show: true,
-                            position: 'outside',
-                            color: '#ddd',
-                            formatter: function (params) {
-                                var percent = 0;
-                                var total = 0;
-                                for (var i = 0; i < scaleData.length; i++) {
-                                    total += scaleData[i].value;
-                                }
-                                percent = ((params.value / total) * 100).toFixed(0);
-                                if (params.name !== '') {
-                                    // return params.name + '\n{white|' + '占比' + percent + '%}';
-                                    return params.name + '\n占比' + percent + '%';
-                                } else {
-                                    return '';
-                                }
-                            },
-                            // rich: rich
-                        },
-                        labelLine: {
-                            show: false
-                        }
+                        borderColor: "transparent",
+                        borderWidth: "20"
+                    },
+                    emphasis: {
+                        borderColor: "transparent",
+                        borderWidth: "20"
                     }
                 },
-                data: data
-            }]
-        }
-        chart.setOption(option);
+                z: 10,
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    
+                }, {
+                    
+                }]
+            }, {
+                name: '',
+                type: 'pie',
+                radius: ['50%', '70%'],
+                startAngle: 180,
+                color: ["#c2f5e1", "transparent"],
+                labelLine: {
+                    normal: {
+                        show: false
+                    }
+                },
+                data: [{
+                    value: 50
+                }, {
+                    value: 50
+                }]
+            }
 
+            ]
+        };
+        chart.setOption(option, true);
+        setPercent();
+        function setPercent() {
+            var value = 25,
+                value_ = 50 * value / 100;
+            option.title.subtext = value + "%";
+            option.series[0].data[0].value = value_;
+            option.series[0].data[1].value = 100 - value_;
+            chart.setOption(option, true);
+        }
     </script>
 </body>
 

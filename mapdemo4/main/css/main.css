@@ -8,7 +8,7 @@ html {
 body {
   background-color: #0A0A2D;
   height: 100%;
-  min-width: 1400px;
+  min-width: 1100px;
   overflow: scroll;
 }
 .clearfix:after{
@@ -35,7 +35,7 @@ body {
 .left {
   padding: 10px;
   /* height: 80%; */
-  height: 780px;
+  height: 730px;
   width: 27%;
   min-height: 600px;
   background: url("../img/left.png") no-repeat;
@@ -67,7 +67,7 @@ body {
   }
   .centerbottom {
     padding: 10px;
-    height: 340px;
+    height: 290px;
     /* width: 100%; */
     /* min-height: 600px; */
     background: url("../img/rank.png") no-repeat;
@@ -78,7 +78,7 @@ body {
   .right {
     padding: 10px;
     /* height: 80%; */
-    height: 780px;
+    height: 730px;
     width: 27%;
     min-height: 600px;
     background: url("../img/left.png") no-repeat;
@@ -109,7 +109,7 @@ body {
   font-size: 12px;
 }
 .contop {
-  height: 450px;
+  height: 135px;
 }
 .toptitle {
   color: #25D8ED;
@@ -157,7 +157,7 @@ transform: translateX(-50%)
   padding: 6px 0px;
 }
 .btn div{
-  width: 168px;
+  width: 140px;
   height: 30px;
   line-height: 30px;
   float: left;

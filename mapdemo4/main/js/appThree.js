@@ -85,61 +85,92 @@ var dataStyle = {
 function drawchart1(ywfin) {
   var chart1 = echarts.init(document.getElementById("chart1"));
   var option1 = {
-    title: [
-      {
-        text: '年度完成率',
-        left: '50%',
-        top: '20%',
+    title: {
+      text: '年度完成率',
+      textAlign: "center",
+      x: '50%',
+      y: '30%',
+      textStyle: {
+        color: '#2AE0ED',
+        fontWeight: 'normal',
+        fontSize: '12',
         textAlign: 'center',
-        textStyle: {
-          color: '#2AE0ED',
-          fontWeight: 'normal',
-          fontSize: '16',
-          textAlign: 'center',
-        },
-      }],
-    series: [
-      {
-        type: 'pie',
-        hoverAnimation: false,
-        radius: ['80%', '95%'],
-        center: ['50%', '50%'],
-        startAngle: 225,
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-        label: {
-          normal: {
-            left: '50%',
-            top: '65%',
-          },
-        },
-        data: [{
-          value: ywfin,
-          itemStyle: {
-            normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: '#9f3edd'
-              }, {
-                offset: 1,
-                color: '#4897f6'
-              }]),
-            }
-          },
-          label: dataStyle,
-        }, {
-          value: 100 - ywfin,
-          itemStyle: placeHolderStyle,
-        },
 
-        ]
       },
+      subtextStyle: {
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: '#3ea1ff',
+
+      }
+    },
+    series: [{
+      name: ' ',
+      type: 'pie',
+      radius: ['80%', '100%'],
+      // radius: ['80%', '95%'],
+      startAngle: 180,
+      color: [new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+        offset: 0,
+        color: '#9f3edd'
+      }, {
+        offset: 1,
+        color: '#4897f6'
+      }]), "transparent"],
+      hoverAnimation: false,
+      legendHoverLink: false,
+      itemStyle: {
+        normal: {
+          borderColor: "transparent",
+          borderWidth: "20"
+        },
+        emphasis: {
+          borderColor: "transparent",
+          borderWidth: "20"
+        }
+      },
+      z: 10,
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data: [{
+
+      }, {
+
+      }]
+    }, {
+      name: '',
+      type: 'pie',
+      radius: ['80%', '100%'],
+      startAngle: 180,
+      color: ["#c2f5e1", "transparent"],
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data: [{
+        value: 50
+      }, {
+        value: 50
+      }]
+    }
+
     ]
   };
   chart1.setOption(option1);
+  setPercent(ywfin);
+  function setPercent(ywfin) {
+    var value = ywfin,
+      value_ = 50 * value / 100;
+    option1.title.subtext = value + "%";
+    option1.series[0].data[0].value = value_;
+    option1.series[0].data[1].value = 100 - value_;
+    chart1.setOption(option1, true);
+  }
+
 }
 function drawchart2(ywxa, ywuv, ywmv, ywtv) {
   var chart2 = echarts.init(document.getElementById("chart2"));
@@ -608,61 +639,96 @@ function drawchart3r(icxa, icy, icn) {
 function drawchart4(kdfin) {
   var chart4 = echarts.init(document.getElementById("chart4"));
   var option4 = {
-    title: [
-      {
-        text: '年度完成率',
-        left: '50%',
-        top: '20%',
+    title: {
+      text: '年度完成率',
+      textAlign: "center",
+      x: '50%',
+      y: '30%',
+      textStyle: {
+        color: '#2AE0ED',
+        fontWeight: 'normal',
+        fontSize: '12',
         textAlign: 'center',
-        textStyle: {
-          color: '#2AE0ED',
-          fontWeight: 'normal',
-          fontSize: '16',
-          textAlign: 'center',
-        },
-      }],
-    series: [
-      {
-        type: 'pie',
-        hoverAnimation: false,
-        radius: ['80%', '95%'],
-        center: ['50%', '50%'],
-        startAngle: 225,
-        labelLine: {
-          normal: {
-            show: false
-          }
-        },
-        label: {
-          normal: {
-            left: '50%',
-            top: '65%',
-          }
-        },
-        data: [{
-          value: kdfin,
-          itemStyle: {
-            normal: {
-              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: '#9f3edd'
-              }, {
-                offset: 1,
-                color: '#4897f6'
-              }]),
-            }
-          },
-          label: dataStyle,
-        }, {
-          value: 100 - kdfin,
-          itemStyle: placeHolderStyle,
-        },
 
-        ]
       },
+      subtextStyle: {
+        fontWeight: 'bold',
+        fontSize: 30,
+        color: '#3ea1ff',
+
+      }
+    },
+    series: [{
+      name: ' ',
+      type: 'pie',
+      radius: ['80%', '100%'],
+      // radius: ['80%', '95%'],
+      startAngle: 180,
+      color: [new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+        offset: 0,
+        color: '#9f3edd'
+      }, {
+        offset: 1,
+        color: '#4897f6'
+      }]), "transparent"],
+      hoverAnimation: false,
+      legendHoverLink: false,
+      itemStyle: {
+        normal: {
+          borderColor: "transparent",
+          borderWidth: "20"
+        },
+        emphasis: {
+          borderColor: "transparent",
+          borderWidth: "20"
+        }
+      },
+      z: 10,
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data: [{
+
+      }, {
+
+      }]
+    }, {
+      name: '',
+      type: 'pie',
+      radius: ['80%', '100%'],
+      startAngle: 180,
+      color: ["#c2f5e1", "transparent"],
+      labelLine: {
+        normal: {
+          show: false
+        }
+      },
+      data: [{
+        value: 50
+      }, {
+        value: 50
+      }]
+    }
+
     ]
   };
   chart4.setOption(option4);
+  setPercent(kdfin);
+  function setPercent(kdfin) {
+    var value = kdfin;
+    var temp = 0;
+    if (value > 100) {
+      temp = 100
+    }
+    var value_ = 50 * temp / 100;
+    option4.title.subtext = value + "%";
+    option4.series[0].data[0].value = value_;
+    option4.series[0].data[1].value = 100 - value_;
+    chart4.setOption(option4, true);
+  }
+
 }
 function drawchart5(kdxa, kduv, kdmv, kdtv) {
   var chart5 = echarts.init(document.getElementById("chart5"));
@@ -1160,77 +1226,79 @@ function drawchart6r(kdsxa, kdsuv, kdsmv, kdstv) {
 
 // 按钮的切换效果
 $(".enter1").click(function () {
-    window.location.href = "index1.html"
-  })
+  window.location.href = "index1.html"
+})
 $(".enter2").click(function () {
-    flag = "移网";
-    localStorage.setItem("type", flag)
-    window.location.href = "indexx.html";
-  })
+  flag = "移网";
+  localStorage.setItem("type", flag)
+  window.location.href = "indexx.html";
+})
 $(".enter3").click(function () {
-    flag = "宽带";
-    localStorage.setItem("type", flag)
-    window.location.href = "indexx.html";
-  })
+  flag = "宽带";
+  localStorage.setItem("type", flag)
+  window.location.href = "indexx.html";
+})
 
 $("#btn1").click(function () {
-    $("#chart3").show();
-    $("#chart3r").hide();
+  $("#chart3").show();
+  $("#chart3r").hide();
 
-  })
+})
 $("#btn2").click(function () {
-    $("#chart3").hide();
-    $("#chart3r").show();
-  })
+  $("#chart3").hide();
+  $("#chart3r").show();
+  
+})
 $("#btn3").click(function () {
-    $("#chart6").show();
-    $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
-    $("#chart6r").hide();
-  })
+  $("#chart6").show();
+  $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
+  $("#chart6r").hide();
+})
 $("#btn4").click(function () {
-    $("#chart6").hide();
-    $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
-    $("#chart6r").show();
-  })
+  $("#chart6").hide();
+  $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
+  $("#chart6r").show();
+  $("#chart6r").width($("#chart6").width())
+})
 // 弱化效果函数
 function redraw(chart, option, t) {
-    if (option && typeof option === "object") {
-      chart.setOption(option, true);
-      chart.on("click", function (e) {
-        var tName = e.seriesName;
-        //console.log(this);
+  if (option && typeof option === "object") {
+    chart.setOption(option, true);
+    chart.on("click", function (e) {
+      var tName = e.seriesName;
+      //console.log(this);
 
-        for (var i = 0; i < option.series.length; i++) {
-          if (option.series[i].name == tName) {
-            option.series[i].areaStyle.normal.color =
-              new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: lineCacheData[t[tName]].activeColor + ', 1)'
-              }, {
-                offset: 0.8,
-                color: lineCacheData[t[tName]].activeColor + ',0.5 )'
-              }], false)
-          } else {
-            option.series[i].areaStyle.normal.color =
-              new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                offset: 0,
-                color: lineCacheData[t[option.series[i].name]].nomalColor + ',0.3)'
-              }, {
-                offset: 0.8,
-                color: lineCacheData[t[option.series[i].name]].nomalColor + ',0)'
-              }], false)
-          }
+      for (var i = 0; i < option.series.length; i++) {
+        if (option.series[i].name == tName) {
+          option.series[i].areaStyle.normal.color =
+            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData[t[tName]].activeColor + ', 1)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData[t[tName]].activeColor + ',0.5 )'
+            }], false)
+        } else {
+          option.series[i].areaStyle.normal.color =
+            new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+              offset: 0,
+              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0.3)'
+            }, {
+              offset: 0.8,
+              color: lineCacheData[t[option.series[i].name]].nomalColor + ',0)'
+            }], false)
         }
+      }
 
-        chart.clear();
-        chart.setOption(option, true);
+      chart.clear();
+      chart.setOption(option, true);
 
-        e.color = "#005aa0";
-      });
-    }
-
-
+      e.color = "#005aa0";
+    });
   }
+
+
+}
 t2 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t3 = { "纯语音用户": "LT", "有流量4G用户": "YD", "有流量非4G用户": "DX" };
 t3r = { "2I2C": "LT", "非2I2C": "YD" };
