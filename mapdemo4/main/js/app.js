@@ -119,12 +119,15 @@ var option = {
 var dataRangeStyle = [
   {
     orient: 'vertical',      // 'vertical'
-    color: ['#254E8E', '#1A2867'],    //颜色
+    color: ['#7CC5F0', '#0B59A3'],    //颜色
     splitList: [
-      { start: 100, end: 100 },
-      { start: 50, end: 50 },
-      { end: 50, color: '#181B46' }
-    ]
+      { start: 100, end: 100, label: '完成进度100%' },
+      { start: 50, end: 100, label: '完成进度100%-50%' },
+      { end: 50, color: '#005282', label: '完成进度小于50%' }
+    ],
+    textStyle:{
+      color:'#ccc'
+    }
   }
 ]
 /* 添加内容end */
@@ -196,6 +199,7 @@ function renderMap(map, data) {
           }
         },
         label: {
+          
           normal: {
             show: false,
             textStyle: {

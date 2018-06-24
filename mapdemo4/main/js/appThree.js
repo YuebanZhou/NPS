@@ -50,8 +50,7 @@ var lineCacheData = {
     activeColor: "rgba(34, 172, 56"
   },
 }
-// 仪表盘部分的颜色控制
-var placeHolderStyle = {
+var dataStyle = {
   normal: {
     label: {
       show: false
@@ -59,118 +58,231 @@ var placeHolderStyle = {
     labelLine: {
       show: false
     },
-    color: "rgba(0,0,0,0)",
-    borderWidth: 0
-  },
-  emphasis: {
-    color: "rgba(0,0,0,0)",
-    borderWidth: 0
-  }
-};
-// 仪表盘部分的颜色控制
-var dataStyle = {
-  normal: {
-    formatter: '{c}%',
-    position: 'center',
-    show: true,
-    textStyle: {
-      fontSize: '40',
-      fontWeight: 'normal',
-      color: '#fff'
-    }
+    shadowBlur: 40,
+    shadowColor: 'rgba(40, 40, 40, 0.5)',
   }
 };
 
+var placeHolderStyle = {
+  normal: {
+    color: 'rgba(44,59,70,1)', // 未完成的圆环的颜色
+    label: {
+      show: false
+    },
+    labelLine: {
+      show: false
+    }
+  },
+  emphasis: {
+    color: 'rgba(44,59,70,1)' // 未完成的圆环的颜色
+  }
+};
 //绘制index页面上静态的折线图
 function drawchart1(ywfin) {
   var chart1 = echarts.init(document.getElementById("chart1"));
   var option1 = {
-    title: {
-      text: '年度完成率',
-      textAlign: "center",
-      x: '50%',
-      y: '30%',
-      textStyle: {
-        color: '#2AE0ED',
-        fontWeight: 'normal',
-        fontSize: '12',
-        textAlign: 'center',
-
-      },
-      subtextStyle: {
-        fontWeight: 'bold',
-        fontSize: 30,
-        color: '#3ea1ff',
-
+    tooltip: {
+      // formatter: "{a} <br/>{c} {b}"
+      formatter: "{c}%"
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: { show: true },
+        restore: { show: true },
+        saveAsImage: { show: true }
       }
     },
-    series: [{
-      name: ' ',
-      type: 'pie',
-      radius: ['80%', '100%'],
-      // radius: ['80%', '95%'],
-      startAngle: 180,
-      color: [new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-        offset: 0,
-        color: '#9f3edd'
-      }, {
-        offset: 1,
-        color: '#4897f6'
-      }]), "transparent"],
-      hoverAnimation: false,
-      legendHoverLink: false,
-      itemStyle: {
-        normal: {
-          borderColor: "transparent",
-          borderWidth: "20"
+    series: [
+      {
+        name: '年度完成率_外表盘',
+        type: 'gauge',
+        min: 0,
+        max: 220,
+        startAngle: 210,
+        endAngle: -30,
+        splitNumber: 11,
+        radius: '80%',
+        axisLine: {            // 坐标轴线
+          lineStyle: {       // 属性lineStyle控制线条样式
+            //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#999999']],
+            color: [
+              [0.1, '#6d0d8b'],
+              [0.2, '#9713c5'],
+              [0.3, '#bc1fff'],
+              [0.4, '#9742fd'],
+              [0.5, '#a4def4'],
+              [0.6, '#63c8ed'],
+              [0.7, '#22aaf5'],
+              [0.8, '#5287f8'],
+              [0.9, '#4949fc'],
+              [1, '#2124ea']
+            ],
+            width: 0,
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
         },
-        emphasis: {
-          borderColor: "transparent",
-          borderWidth: "20"
-        }
+        axisLabel: {            // 坐标轴小标记
+          //margin : 80,
+          offsetCenter: [25, '20%'],
+          textStyle: {       // 属性lineStyle控制线条样式
+            fontWeight: 'bolder',
+            color: '#84eafe',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10,
+            fontSize: 8
+          }
+        },
+        axisTick: {            // 坐标轴小标记
+          //offsetCenter: [25, '20%'],
+          length: -5,        // 属性length控制线长
+          splitNumber: 9,     //属性splitNumber控制每份split细分多少段
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: 'auto',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        splitLine: {           // 分隔线
+          //type: 'solid',   // dotted  solid  dashed
+          length: -25,         // 属性length控制线长
+          lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+            width: 3,
+            color: 'rgba(0,0,0,0)',
+            shadowColor: 'rgba(0,0,0,0)', //默认透明
+            shadowBlur: 10
+          }
+        },
+        pointer: {           // 分隔线
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          width: 0,
+        },
+        title: {
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            fontSize: 10,
+            // fontStyle: 'italic',
+            color: '#84eafe',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        detail: {
+          //backgroundColor: 'rgba(30,144,255,0.8)',
+          borderWidth: 0,
+          borderColor: '#fff',
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          offsetCenter: [0, 0],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            color: '#84eafe',
+            fontSize: 38
+          },
+          formatter: '{value}%',
+        },
+        data: [{ value: ywfin, name: '年度完成率' }]
+        //data:[{value: 40, name: 'km/h'}]
       },
-      z: 10,
-      labelLine: {
-        normal: {
-          show: false
-        }
+
+      {
+        name: '年度完成率_内表盘',
+        type: 'gauge',
+        center: ['50%', '50%'],    // 默认全局居中
+        radius: '65%',
+        min: 0,
+        max: 7,
+        startAngle: 210,
+        endAngle: -30,
+        //endAngle:45,
+        //splitNumber:7,
+        axisLine: {            // 坐标轴线
+          lineStyle: {       // 属性lineStyle控制线条样式
+            //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#bababa']],
+            color: [
+              [0.1, '#6d0d8b'],
+              [0.2, '#9713c5'],
+              [0.3, '#bc1fff'],
+              [0.4, '#9742fd'],
+              [0.5, '#a4def4'],
+              [0.6, '#63c8ed'],
+              [0.7, '#22aaf5'],
+              [0.8, '#5287f8'],
+              [0.9, '#4949fc'],
+              [1, '#2124ea']
+            ],
+            width: 4,
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        axisLabel: {            // 坐标轴小标记
+          textStyle: {       // 属性lineStyle控制线条样式
+            fontWeight: 'bolder',
+            color: 'rgba(0,0,0,0)',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10,
+          }
+        },
+        axisTick: {            // 坐标轴小标记
+          length: 0,        // 属性length控制线长
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: 'auto',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        splitLine: {           // 分隔线
+          length: 0,         // 属性length控制线长
+          lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+            width: 3,
+            color: '#fff',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        pointer: {
+          width: 0,
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5
+        },
+        title: {
+          offsetCenter: [0, '-30%'],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            fontStyle: 'italic',
+            color: '#fff',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        detail: {
+
+          show: false,
+          //backgroundColor: 'rgba(30,144,255,0.8)',
+          borderWidth: 1,
+          borderColor: '#fff',
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          width: 80,
+          height: 30,
+          offsetCenter: [25, '20%'],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            fontWeight: 'bolder',
+            color: '#e4393c'
+            //color: '#fff'
+          }
+        },
+        data: [{
+          value: 1.5,
+          //name: 'x1000 r/min'
+        }]
       },
-      data: [{
-
-      }, {
-
-      }]
-    }, {
-      name: '',
-      type: 'pie',
-      radius: ['80%', '100%'],
-      startAngle: 180,
-      color: ["#c2f5e1", "transparent"],
-      labelLine: {
-        normal: {
-          show: false
-        }
-      },
-      data: [{
-        value: 50
-      }, {
-        value: 50
-      }]
-    }
-
     ]
   };
   chart1.setOption(option1);
-  setPercent(ywfin);
-  function setPercent(ywfin) {
-    var value = ywfin,
-      value_ = 50 * value / 100;
-    option1.title.subtext = value + "%";
-    option1.series[0].data[0].value = value_;
-    option1.series[0].data[1].value = 100 - value_;
-    chart1.setOption(option1, true);
-  }
-
 }
 function drawchart2(ywxa, ywuv, ywmv, ywtv) {
   var chart2 = echarts.init(document.getElementById("chart2"));
@@ -639,95 +751,208 @@ function drawchart3r(icxa, icy, icn) {
 function drawchart4(kdfin) {
   var chart4 = echarts.init(document.getElementById("chart4"));
   var option4 = {
-    title: {
-      text: '年度完成率',
-      textAlign: "center",
-      x: '50%',
-      y: '30%',
-      textStyle: {
-        color: '#2AE0ED',
-        fontWeight: 'normal',
-        fontSize: '12',
-        textAlign: 'center',
-
-      },
-      subtextStyle: {
-        fontWeight: 'bold',
-        fontSize: 30,
-        color: '#3ea1ff',
-
+    tooltip: {
+      // formatter: "{a} <br/>{c} {b}"
+      formatter: "{c}%"
+    },
+    toolbox: {
+      show: false,
+      feature: {
+        mark: { show: true },
+        restore: { show: true },
+        saveAsImage: { show: true }
       }
     },
-    series: [{
-      name: ' ',
-      type: 'pie',
-      radius: ['80%', '100%'],
-      // radius: ['80%', '95%'],
-      startAngle: 180,
-      color: [new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-        offset: 0,
-        color: '#9f3edd'
-      }, {
-        offset: 1,
-        color: '#4897f6'
-      }]), "transparent"],
-      hoverAnimation: false,
-      legendHoverLink: false,
-      itemStyle: {
-        normal: {
-          borderColor: "transparent",
-          borderWidth: "20"
+    series: [
+      {
+        name: '年度完成率_外表盘',
+        type: 'gauge',
+        min: 0,
+        max: 220,
+        startAngle: 210,
+        endAngle: -30,
+        splitNumber: 11,
+        radius: '80%',
+        axisLine: {            // 坐标轴线
+          lineStyle: {       // 属性lineStyle控制线条样式
+            //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#999999']],
+            color: [
+              [0.1, '#6d0d8b'],
+              [0.2, '#9713c5'],
+              [0.3, '#bc1fff'],
+              [0.4, '#9742fd'],
+              [0.5, '#a4def4'],
+              [0.6, '#63c8ed'],
+              [0.7, '#22aaf5'],
+              [0.8, '#5287f8'],
+              [0.9, '#4949fc'],
+              [1, '#2124ea']
+            ],
+            width: 0,
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
         },
-        emphasis: {
-          borderColor: "transparent",
-          borderWidth: "20"
-        }
+        axisLabel: {            // 坐标轴小标记
+          //margin : 80,
+          offsetCenter: [25, '20%'],
+          textStyle: {       // 属性lineStyle控制线条样式
+            fontWeight: 'bolder',
+            color: '#84eafe',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10,
+            fontSize: 8
+          }
+        },
+        axisTick: {            // 坐标轴小标记
+          //offsetCenter: [25, '20%'],
+          length: -5,        // 属性length控制线长
+          splitNumber: 9,     //属性splitNumber控制每份split细分多少段
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: 'auto',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        splitLine: {           // 分隔线
+          //type: 'solid',   // dotted  solid  dashed
+          length: -25,         // 属性length控制线长
+          lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+            width: 3,
+            color: 'rgba(0,0,0,0)',
+            shadowColor: 'rgba(0,0,0,0)', //默认透明
+            shadowBlur: 10
+          }
+        },
+        pointer: {           // 分隔线
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          width: 0,
+        },
+        title: {
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            fontSize: 10,
+            // fontStyle: 'italic',
+            color: '#84eafe',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        detail: {
+          //backgroundColor: 'rgba(30,144,255,0.8)',
+          borderWidth: 0,
+          borderColor: '#fff',
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          offsetCenter: [0, 0],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            color: '#84eafe',
+            fontSize: 38
+          },
+          formatter: '{value}%',
+        },
+        data: [{ value: kdfin, name: '年度完成率' }]
+        //data:[{value: 40, name: 'km/h'}]
       },
-      z: 10,
-      labelLine: {
-        normal: {
-          show: false
-        }
+
+      {
+        name: '年度完成率_内表盘',
+        type: 'gauge',
+        center: ['50%', '50%'],    // 默认全局居中
+        radius: '65%',
+        min: 0,
+        max: 7,
+        startAngle: 210,
+        endAngle: -30,
+        //endAngle:45,
+        //splitNumber:7,
+        axisLine: {            // 坐标轴线
+          lineStyle: {       // 属性lineStyle控制线条样式
+            //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#bababa']],
+            color: [
+              [0.1, '#6d0d8b'],
+              [0.2, '#9713c5'],
+              [0.3, '#bc1fff'],
+              [0.4, '#9742fd'],
+              [0.5, '#a4def4'],
+              [0.6, '#63c8ed'],
+              [0.7, '#22aaf5'],
+              [0.8, '#5287f8'],
+              [0.9, '#4949fc'],
+              [1, '#2124ea']
+            ],
+            width: 4,
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        axisLabel: {            // 坐标轴小标记
+          textStyle: {       // 属性lineStyle控制线条样式
+            fontWeight: 'bolder',
+            color: 'rgba(0,0,0,0)',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10,
+          }
+        },
+        axisTick: {            // 坐标轴小标记
+          length: 0,        // 属性length控制线长
+          lineStyle: {       // 属性lineStyle控制线条样式
+            color: 'auto',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        splitLine: {           // 分隔线
+          length: 0,         // 属性length控制线长
+          lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+            width: 3,
+            color: '#fff',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        pointer: {
+          width: 0,
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5
+        },
+        title: {
+          offsetCenter: [0, '-30%'],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            // fontWeight: 'bolder',
+            fontStyle: 'italic',
+            color: '#fff',
+            shadowColor: '#fff', //默认透明
+            shadowBlur: 10
+          }
+        },
+        detail: {
+
+          show: false,
+          //backgroundColor: 'rgba(30,144,255,0.8)',
+          borderWidth: 1,
+          borderColor: '#fff',
+          shadowColor: '#fff', //默认透明
+          shadowBlur: 5,
+          width: 80,
+          height: 30,
+          offsetCenter: [25, '20%'],       // x, y，单位px
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+            fontWeight: 'bolder',
+            color: '#e4393c'
+            //color: '#fff'
+          }
+        },
+        data: [{
+          value: 1.5,
+          //name: 'x1000 r/min'
+        }]
       },
-      data: [{
-
-      }, {
-
-      }]
-    }, {
-      name: '',
-      type: 'pie',
-      radius: ['80%', '100%'],
-      startAngle: 180,
-      color: ["#c2f5e1", "transparent"],
-      labelLine: {
-        normal: {
-          show: false
-        }
-      },
-      data: [{
-        value: 50
-      }, {
-        value: 50
-      }]
-    }
-
     ]
   };
   chart4.setOption(option4);
-  setPercent(kdfin);
-  function setPercent(kdfin) {
-    var value = kdfin;
-    var temp = 0;
-    if (value > 100) {
-      temp = 100
-    }
-    var value_ = 50 * temp / 100;
-    option4.title.subtext = value + "%";
-    option4.series[0].data[0].value = value_;
-    option4.series[0].data[1].value = 100 - value_;
-    chart4.setOption(option4, true);
-  }
 
 }
 function drawchart5(kdxa, kduv, kdmv, kdtv) {
@@ -1247,7 +1472,7 @@ $("#btn1").click(function () {
 $("#btn2").click(function () {
   $("#chart3").hide();
   $("#chart3r").show();
-  
+
 })
 $("#btn3").click(function () {
   $("#chart6").show();

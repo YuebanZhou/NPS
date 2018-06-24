@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>nps-中国地图(三级下钻)-V15-香港</title>
+
+    <link rel="shortcut icon" href="favicon.ico"> <link href="css/bootstrap.min.css?v=3.3.5" rel="stylesheet">
+    <link href="css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/style.min.css?v=4.0.0" rel="stylesheet"><base target="_blank">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts-all-3.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>-->
+<!--<script type="text/javascript" src="http://api.map.baidu.com/api?ak=ZUONbpqGBsYGXNIYHicvbAbM&v=2.0&services=false"></script>-->
+
+<script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+<script type="text/javascript">
+    var dom = document.getElementById("container");
+    var myChart = echarts.init(dom);
+    var app = {},option = null;
+    // 这里借鉴'5643我'和'小明的小可'两位大神的圆环图格式演示一下效果
+    var dataStyle = {
+        normal: {
+            label: {
+                show: false
+            },
+            labelLine: {
+                show: false
+            },
+            shadowBlur: 40,
+            shadowColor: 'rgba(40, 40, 40, 0.5)',
+        }
+    };
+
+    var placeHolderStyle = {
+        normal: {
+            color: 'rgba(44,59,70,1)', // 未完成的圆环的颜色
+            label: {
+                show: false
+            },
+            labelLine: {
+                show: false
+            }
+        },
+        emphasis: {
+            color: 'rgba(44,59,70,1)' // 未完成的圆环的颜色
+        }
+    };
+    //myChart.showLoading();
+    option = {
+        backgroundColor: '#1b1b1b',
+        tooltip : {
+            formatter: "{a} <br/>{c} {b}"
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        series : [
+            {
+                name:'年度完成率_外表盘',
+                type:'gauge',
+                min:0,
+                max:220,
+                startAngle: 210,
+                endAngle:-30,
+                splitNumber:11,
+                radius: '50%',
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#999999']],
+                        color: [
+                            [0.1, '#6d0d8b'],
+                            [0.2, '#9713c5'],
+                            [0.3, '#bc1fff'],
+                            [0.4, '#9742fd'],
+                            [0.5, '#a4def4'],
+                            [0.6, '#63c8ed'],
+                            [0.7, '#22aaf5'],
+                            [0.8, '#5287f8'],
+                            [0.9, '#4949fc'],
+                            [1, '#2124ea']
+                        ],
+                        width: 0,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                axisLabel: {            // 坐标轴小标记
+                    //margin : 80,
+                    offsetCenter: [25, '20%'],
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                axisTick: {            // 坐标轴小标记
+                    //offsetCenter: [25, '20%'],
+                    length : -10,        // 属性length控制线长
+                    splitNumber: 9,     //属性splitNumber控制每份split细分多少段
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                splitLine: {           // 分隔线
+                    //type: 'solid',   // dotted  solid  dashed
+                    length : -40,         // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                        width:3,
+                        color: 'rgba(0,0,0,0)',
+                        shadowColor : 'rgba(0,0,0,0)', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                pointer: {           // 分隔线
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+                    width:0,
+                },
+                title : {
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        fontSize: 20,
+                        fontStyle: 'italic',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                detail : {
+                    //backgroundColor: 'rgba(30,144,255,0.8)',
+                    borderWidth: 1,
+                    borderColor: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+                    offsetCenter: [0, '20%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        color: '#fff',
+                        fontSize:60
+                    }
+                },
+                data:[{value: 210, name: '年度完成率'}]
+                //data:[{value: 40, name: 'km/h'}]
+            },
+
+            {
+                name:'年度完成率_内表盘',
+                type:'gauge',
+                center : ['50%', '50%'],    // 默认全局居中
+                radius : '40%',
+                min:0,
+                max:7,
+                startAngle: 210,
+                endAngle:-30,
+                //endAngle:45,
+                //splitNumber:7,
+                axisLine: {            // 坐标轴线
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        //color: [[0.3, 'lime'],[0.85, '#1e90ff'],[0.95, '#ff4500'],[1, '#bababa']],
+                        color: [
+                            [0.1, '#6d0d8b'],
+                            [0.2, '#9713c5'],
+                            [0.3, '#bc1fff'],
+                            [0.4, '#9742fd'],
+                            [0.5, '#a4def4'],
+                            [0.6, '#63c8ed'],
+                            [0.7, '#22aaf5'],
+                            [0.8, '#5287f8'],
+                            [0.9, '#4949fc'],
+                            [1, '#2124ea']
+                        ],
+                        width: 4,
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                axisLabel: {            // 坐标轴小标记
+                    textStyle: {       // 属性lineStyle控制线条样式
+                        fontWeight: 'bolder',
+                        color: 'rgba(0,0,0,0)',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10,
+                    }
+                },
+                axisTick: {            // 坐标轴小标记
+                    length :0,        // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle控制线条样式
+                        color: 'auto',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                splitLine: {           // 分隔线
+                    length : 0,         // 属性length控制线长
+                    lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                        width:3,
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                pointer: {
+                    width:0,
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5
+                },
+                title : {
+                    offsetCenter: [0, '-30%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        fontStyle: 'italic',
+                        color: '#fff',
+                        shadowColor : '#fff', //默认透明
+                        shadowBlur: 10
+                    }
+                },
+                detail : {
+
+                    show: false,
+                    //backgroundColor: 'rgba(30,144,255,0.8)',
+                    // borderWidth: 1,
+                    borderColor: '#fff',
+                    shadowColor : '#fff', //默认透明
+                    shadowBlur: 5,
+                    width: 80,
+                    height:30,
+                    offsetCenter: [25, '20%'],       // x, y，单位px
+                    textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                        fontWeight: 'bolder',
+                        color: '#e4393c'
+                        //color: '#fff'
+                    }
+                },
+                data:[{
+                    value: 1.5,
+                    //name: 'x1000 r/min'
+                }]
+            },
+
+            /*{
+                name: 'Pie1',
+                type: 'pie',
+                clockWise: false,
+                //radius: '50%',
+                radius: [ "43%" , "45%"],
+                startAngle:315,
+                endAngle:225,
+                itemStyle: dataStyle,
+                hoverAnimation: false,
+                center: ['50%', '50%'],
+                data: [{
+                    value: 70,
+                    label: {
+                        normal: {
+                            formatter: '{d}%',
+                            position: 'center',
+                            show: true,
+                            textStyle: {
+                                fontSize: '35',
+                                fontWeight: 'normal',
+                                color: '#3dd4de'
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            color: '#3dd4de',
+                            shadowColor: '#3dd4de',
+                            shadowBlur: 10
+                        }
+                    }
+                }, {
+                    value: 130,
+                    name: 'invisible',
+                    itemStyle: placeHolderStyle,
+                }]
+            },*/
+
+        ]
+    };
+
+    setInterval(function (){
+        //option.series[0].data[0].value = (Math.random()*100).toFixed(2) - 0;
+        //option.series[1].data[0].value = (Math.random()*7).toFixed(2) - 0;
+        option.series[2].data[0].value = (Math.random()*2).toFixed(2) - 0;
+        option.series[3].data[0].value = (Math.random()*2).toFixed(2) - 0;
+        myChart.setOption(option);
+    },2000);
+
+
+
+    if (option && typeof option === "object") {
+        myChart.setOption(option, true);
+    }
+
+</script>
+</body>
+</html>

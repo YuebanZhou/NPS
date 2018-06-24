@@ -35,7 +35,7 @@ body {
 .left {
   padding: 10px;
   /* height: 80%; */
-  height: 730px;
+  height: 750px;
   width: 27%;
   min-height: 600px;
   background: url("../img/left.png") no-repeat;
@@ -67,7 +67,7 @@ body {
   }
   .centerbottom {
     padding: 10px;
-    height: 290px;
+    height: 310px;
     /* width: 100%; */
     /* min-height: 600px; */
     background: url("../img/rank.png") no-repeat;
@@ -78,7 +78,7 @@ body {
   .right {
     padding: 10px;
     /* height: 80%; */
-    height: 730px;
+    height: 750px;
     width: 27%;
     min-height: 600px;
     background: url("../img/left.png") no-repeat;
@@ -109,7 +109,7 @@ body {
   font-size: 12px;
 }
 .contop {
-  height: 135px;
+  height: 160px;
 }
 .toptitle {
   color: #25D8ED;
