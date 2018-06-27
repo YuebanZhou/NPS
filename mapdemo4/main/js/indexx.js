@@ -52,7 +52,7 @@ var option1 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     }
   },
@@ -65,7 +65,7 @@ var option1 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#2897E4'
     }
   },
   grid: {
@@ -79,14 +79,14 @@ var option1 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -99,14 +99,14 @@ var option1 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     splitLine: {
@@ -211,7 +211,7 @@ var option3 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     }
   },
@@ -224,7 +224,7 @@ var option3 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#2897E4'
     }
   },
   grid: {
@@ -238,14 +238,14 @@ var option3 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -258,14 +258,14 @@ var option3 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     splitLine: {
@@ -369,7 +369,7 @@ var option5 = {
     trigger: 'axis',
     axisPointer: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     }
   },
@@ -382,7 +382,7 @@ var option5 = {
     right: '4%',
     textStyle: {
       fontSize: 12,
-      color: '#fff'
+      color: '#2897E4'
     }
   },
   grid: {
@@ -396,14 +396,14 @@ var option5 = {
     boundaryGap: false,
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
@@ -416,14 +416,14 @@ var option5 = {
     },
     axisLine: {
       lineStyle: {
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     axisLabel: {
       margin: 10,
       textStyle: {
         fontSize: 14,
-        color: '#fff'
+        color: '#2897E4'
       }
     },
     splitLine: {

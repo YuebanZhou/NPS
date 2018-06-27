@@ -30,7 +30,7 @@ body {
   visibility:hidden;
   }
 .top {
-  height: 75px;
+  height: 80px;
   background-image: url("../img/top.png");
   background-size: 100% 100%;
 }
@@ -91,7 +91,7 @@ body {
     width: 100%;
   }
   #Template_listZ tr:hover {
-    background-color: #eee;
+    background-color: #080b38;
   }
   #tplWrapper_TemplateZ {
     background-color: #020927;
