@@ -4,6 +4,9 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index.json",
+  data: {
+    yearq: yearq
+  },
   success: function (result) {
     console.log("请求成功");
     for (var i = 0; i < result.allRank.length; i++) {
@@ -33,9 +36,9 @@ $.ajax({
           prorank[i].kdval = parseFloat(result.proN[k].KD_QUARTER_LIFT).toFixed(2)
         }
       }
-      if(prorank[i].finval.toString().length>5){
-        var temp=prorank[i].finval.toString().split('.')
-        prorank[i].finval=temp[0]
+      if (prorank[i].finval.toString().length > 5) {
+        var temp = prorank[i].finval.toString().split('.')
+        prorank[i].finval = temp[0]
       }
     }
     prorank.sort(sortBy('allrank', true));

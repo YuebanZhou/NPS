@@ -1,3 +1,5 @@
+var yearq=localStorage.getItem("yearq")
+
 var chart1 = [];
 var chart2 = [];
 var chart3 = [];
@@ -573,6 +575,9 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index2.json",
+  data:{
+    yearq:yearq
+  },
   success: function (result) {
     console.log("请求成功");
     // console.log(result);
@@ -999,6 +1004,20 @@ $.ajax({
     })
 
     /* ***** rank end ***** */
+    $('.tablemx tbody tr').each(function (i) {
+      $(this).children('td').each(function (j) {
+        if ($(this).text() == "NaN") {
+          $(this).text("—")
+        }
+      });
+    });
+    $('.talezbmx tbody tr').each(function (i) {
+      $(this).children('td').each(function (j) {
+        if ($(this).text() == "NaN") {
+          $(this).text("—")
+        }
+      });
+    });
 
 
   },

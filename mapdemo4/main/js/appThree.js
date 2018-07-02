@@ -1,3 +1,4 @@
+
 var flag = ''
 // 折线图数组
 var ywchart = [];
@@ -118,7 +119,7 @@ function drawchart1(ywfin) {
             //   [0.9, '#4949fc'],
             //   [1, '#2124ea'],
             // ],
-            
+
             color: [
               [0.1, 'rgba(109,13,139,0.5)'],
               [0.2, 'rgba(151,19,197,0.5)'],
@@ -1561,6 +1562,9 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index.json",
+  data:{
+    yearq:yearq
+  },
   success: function (result) {
     console.log("请求成功");
 
@@ -1584,6 +1588,22 @@ $.ajax({
         tval: parseFloat(result.ywNPS[i].T_NPS).toFixed(2)
       })
     }
+    var ywmm = ywchart[4].uval - ywchart[4].mval;
+    var ywmt = ywchart[4].uval - ywchart[4].tval;
+    if (ywmm >= 0) {
+      $(".dec1 .mmd").text("领先")
+      $(".dec1 .mmn").text(parseFloat(ywmm).toFixed(1))
+    } else {
+      $(".dec1 .mmd").text("落后")
+      $(".dec1 .mmn").text(parseFloat(-ywmm).toFixed(1))
+    }
+    if (ywmt >= 0) {
+      $(".dec1 .mtd").text("领先")
+      $(".dec1 .mtn").text(parseFloat(ywmt).toFixed(1))
+    } else {
+      $(".dec1 .mtd").text("落后")
+      $(".dec1 .mtn").text(parseFloat(-ywmt).toFixed(1))
+    }
     // 宽带折线图
     for (var i = 0; i < result.kdNPS.length; i++) {
       kdchart.push({
@@ -1593,6 +1613,25 @@ $.ajax({
         tval: parseFloat(result.kdNPS[i].T_K_NPS).toFixed(2)
       })
     }
+    var kdmm = kdchart[4].uval - kdchart[4].mval;
+    var kdmt = kdchart[4].uval - kdchart[4].tval;
+    console.log(kdmt);
+    
+    if (kdmm >= 0) {
+      $(".dec2 .mmd").text("领先")
+      $(".dec2 .mmn").text(parseFloat(kdmm).toFixed(1))
+    } else {
+      $(".dec2 .mmd").text("落后")
+      $(".dec2 .mmn").text(parseFloat(-kdmm).toFixed(1))
+    }
+    if (kdmt >= 0) {
+      $(".dec2 .mtd").text("领先")
+      $(".dec2 .mtn").text(parseFloat(kdmt).toFixed(1))
+    } else {
+      $(".dec2 .mtd").text("落后")
+      $(".dec2 .mtn").text(parseFloat(-kdmt).toFixed(1))
+    }
+
     // 2I2C折线图
     for (var i = 0; i < result.user2I2C.length; i++) {
       icchart.push({

@@ -1,3 +1,4 @@
+var yearq=localStorage.getItem("yearq")
 var chart1 = [];
 var chart2 = [];
 var chart3 = [];
@@ -155,6 +156,7 @@ $(".btnzu3 .btn1").click(function () {
     `
   }
   $(".talezbmx tbody").html(strZT)
+
 
 })
 $(".btnzu3 .btn2").click(function () {
@@ -706,6 +708,9 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index1.json",
+  data: {
+    yearq: yearq
+  },
   success: function (result) {
     console.log("请求成功");
     // console.log(result);
@@ -1170,6 +1175,7 @@ $.ajax({
       }
     });
 
+
     /* ***** detail end ***** */
 
     /* ***** rank start ***** */
@@ -1196,14 +1202,35 @@ $.ajax({
 
     $(".toptitle .name").text(proname)
     var str = $(".hrtitle2 span").text()
-    var arr=str.split("-")
-    arr[1]=proname
+    var arr = str.split("-")
+    arr[1] = proname
     console.log(arr);
-    str=arr.join("-")
+    str = arr.join("-")
     $(".hrtitle2 span").text(str)
 
     /* ***** rank end ***** */
 
+    $('.tablemx tbody tr').each(function (i) {
+      $(this).children('td').each(function (j) {
+        if ($(this).text() == "NaN") {
+          $(this).text("—")
+        }
+      });
+    });
+    $('.rang tbody tr').each(function (i) {
+      $(this).children('td').each(function (j) {
+        if ($(this).text() == "NaN") {
+          $(this).text("—")
+        }
+      });
+    });
+    $('.talezbmx tbody tr').each(function (i) {
+      $(this).children('td').each(function (j) {
+        if ($(this).text() == "NaN") {
+          $(this).text("—")
+        }
+      });
+    });
 
 
   },
@@ -1211,7 +1238,5 @@ $.ajax({
     console.log("请求失败");
   }
 })
-
-
 
 

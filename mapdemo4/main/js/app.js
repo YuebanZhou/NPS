@@ -1,3 +1,20 @@
+var yearq="2018Q1"
+localStorage.setItem("yearq",yearq)
+var arr=yearq.split("Q");
+if(arr[1]=="1"){
+  arr[1]="一"
+}
+if(arr[1]=="2"){
+  arr[1]="二"
+}
+if(arr[1]=="3"){
+  arr[1]="三"
+}
+if(arr[1]=="4"){
+  arr[1]="四"
+}
+var str=arr[0]+'第'+arr[1]+'季度'
+$(".toptitle .age").html(str)
 //地图容器
 var chart = echarts.init(document.getElementById('map'));
 //34个省、市、自治区的名字拼音映射数组
@@ -125,8 +142,8 @@ var dataRangeStyle = [
       { start: 50, end: 100, label: '完成进度100%-50%' },
       { end: 50, color: '#005282', label: '完成进度小于50%' }
     ],
-    textStyle:{
-      color:'#ccc'
+    textStyle: {
+      color: '#ccc'
     }
   }
 ]
@@ -199,7 +216,7 @@ function renderMap(map, data) {
           }
         },
         label: {
-          
+
           normal: {
             show: false,
             textStyle: {
@@ -260,6 +277,9 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index.json",
+  data: {
+    yearq: yearq
+  },
   success: function (result) {
     console.log("请求成功");
     for (var i = 0; i < result.province.length; i++) {

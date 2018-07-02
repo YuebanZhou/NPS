@@ -1,3 +1,4 @@
+var yearq=localStorage.getItem("yearq")
 // 网络
 
 // 业务
@@ -602,6 +603,9 @@ if (type == "移网") {
     type: "post",
     dataType: "json",
     url: "json/indexxyw.json",
+    data: {
+      yearq: yearq
+    },
     success: function (result) {
       console.log("请求成功");
       // 网络
@@ -685,6 +689,9 @@ if (type == "宽带") {
     type: "post",
     dataType: "json",
     url: "json/indexxkd.json",
+    data: {
+      yearq: "2018Q1"
+    },
     success: function (result) {
       console.log("请求成功");
       // 网络
