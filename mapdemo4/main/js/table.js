@@ -23,7 +23,7 @@ $.ajax({
       for (var j = 0; j < result.proS.length; j++) {
         if (prorank[i].name == result.proS[j].PROVINCE_NAME) {
           prorank[i].arearank = result.proS[j].rank
-          prorank[i].finval = parseFloat(result.proS[j].FINISH_PLAN).toFixed(2) * 100
+          prorank[i].finval = parseFloat(result.proS[j].FINISH_PLAN* 100).toFixed(2) 
           prorank[i].ywval = parseFloat(result.proS[j].YW_QUARTER_LIFT).toFixed(2)
           prorank[i].kdval = parseFloat(result.proS[j].KD_QUARTER_LIFT).toFixed(2)
         }
@@ -31,7 +31,7 @@ $.ajax({
       for (var k = 0; k < result.proN.length; k++) {
         if (prorank[i].name == result.proN[k].PROVINCE_NAME) {
           prorank[i].arearank = result.proN[k].rank
-          prorank[i].finval = parseFloat(result.proN[k].FINISH_PLAN).toFixed(2) * 100
+          prorank[i].finval = parseFloat(result.proN[k].FINISH_PLAN* 100).toFixed(2) 
           prorank[i].ywval = parseFloat(result.proN[k].YW_QUARTER_LIFT).toFixed(2)
           prorank[i].kdval = parseFloat(result.proN[k].KD_QUARTER_LIFT).toFixed(2)
         }
@@ -44,6 +44,12 @@ $.ajax({
     prorank.sort(sortBy('allrank', true));
     console.log(prorank.length);
     for (var i = 0; i < prorank.length; i++) {
+      if(prorank[i].finval>100){
+        prorank[i].finval=100
+      }
+      if(prorank[i].finval<0){
+        prorank[i].finval=0
+      }
       str += `<tr>
         <td width="43" align="center">`+ prorank[i].allrank + `</td>
         <td width="76" align="center">`+ prorank[i].name + `</td>

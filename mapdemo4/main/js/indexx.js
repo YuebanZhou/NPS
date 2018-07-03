@@ -1,8 +1,18 @@
-var yearq=localStorage.getItem("yearq")
+var yearq = localStorage.getItem("yearq")
 // 网络
-
+var wlchart = [];
+var wlyear = [];
+var wlunps = [];
+var wlmnps = [];
+var wltnps = [];
+var wltable = [];
 // 业务
-
+var ywchart = [];
+var ywyear = [];
+var ywunps = [];
+var ywmnps = [];
+var ywtnps = [];
+var ywtable = [];
 // 服务
 var fwchart = [];
 var fwyear = [];
@@ -61,7 +71,7 @@ var lineCacheData = {
   },
 }
 //网络
-function drawchart1() {
+function drawchart1(wlyear, wlunps, wlmnps, wltnps) {
   var chart1 = echarts.init(document.getElementById("chart1"));
   var option1 = {
     tooltip: {
@@ -106,7 +116,8 @@ function drawchart1() {
         }
       },
       //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: wlyear,
     }],
     yAxis: [{
       type: 'value',
@@ -157,7 +168,8 @@ function drawchart1() {
             color: lineCacheData.LT.activeColor + ')'
           },
         },
-        data: [-1.2, -0.5, 0.6, 5, 5],
+        // data: [-1.2, -0.5, 0.6, 5, 5],
+        data: wlunps,
       }, {
         name: '中国移动',
         type: 'line',
@@ -185,7 +197,8 @@ function drawchart1() {
             color: lineCacheData.YD.activeColor + ')'
           }
         },
-        data: [28.4, 23.4, 24.2, 26.9, 23.8],
+        // data: [28.4, 23.4, 24.2, 26.9, 23.8],
+        data: wlmnps,
       }, {
         name: '中国电信',
         type: 'line',
@@ -213,7 +226,8 @@ function drawchart1() {
             color: lineCacheData.DX.activeColor + ')'
           }
         },
-        data: [14.1, 13.9, 14.4, 17.9, 16.5],
+        // data: [14.1, 13.9, 14.4, 17.9, 16.5],
+        data: wltnps,
       },
     ]
 
@@ -224,7 +238,7 @@ function drawchart1() {
 }
 
 //业务
-function drawchart3() {
+function drawchart3(ywyear, ywunps, ywmnps, ywtnps) {
   var chart3 = echarts.init(document.getElementById("chart3"));
   var option3 = {
     tooltip: {
@@ -269,7 +283,8 @@ function drawchart3() {
         }
       },
       //data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月']
-      data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      // data: ['17Q1', '17Q2', '17Q3', '17Q4', '18Q1']
+      data: ywyear
     }],
     yAxis: [{
       type: 'value',
@@ -320,7 +335,8 @@ function drawchart3() {
             color: lineCacheData.LT.activeColor + ')'
           },
         },
-        data: [4.6, 3.4, 9.8, 12.3, 19.6],
+        // data: [4.6, 3.4, 9.8, 12.3, 19.6],
+        data: ywunps
       }, {
         name: '中国移动',
         type: 'line',
@@ -348,7 +364,8 @@ function drawchart3() {
             color: lineCacheData.YD.activeColor + ')'
           }
         },
-        data: [4.6, -9.2, -4.7, -3, -4.9],
+        // data: [4.6, -9.2, -4.7, -3, -4.9],
+        data: ywmnps
       }, {
         name: '中国电信',
         type: 'line',
@@ -376,7 +393,8 @@ function drawchart3() {
             color: lineCacheData.DX.activeColor + ')'
           }
         },
-        data: [9.5, 6.6, 9.8, 7.9, 25.2],
+        // data: [9.5, 6.6, 9.8, 7.9, 25.2],
+        data: ywtnps
       },
     ]
   };
@@ -596,8 +614,6 @@ function redraw(chart, option, t) {
 t1 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t3 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
 t5 = { "中国联通": "LT", "中国移动": "YD", "中国电信": "DX" };
-drawchart1()
-drawchart3()
 if (type == "移网") {
   $.ajax({
     type: "post",
@@ -609,14 +625,144 @@ if (type == "移网") {
     success: function (result) {
       console.log("请求成功");
       // 网络
+      for (var i = 0; i < result.typeNetworkYW.length; i++) {
+        wlchart.push({
+          year: result.typeNetworkYW[i].YEAR_Q,
+          unps: parseFloat(result.typeNetworkYW[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.typeNetworkYW[i].M_NPS).toFixed(2),
+          tnps: parseFloat(result.typeNetworkYW[i].T_NPS).toFixed(2)
+        })
+      }
+      for (var i = 0; i < wlchart.length; i++) {
+        if (wlchart[i].year == "2017Q1") {
+          wlyear[0] = wlchart[i].year;
+          wlunps[0] = wlchart[i].unps;
+          wlmnps[0] = wlchart[i].mnps;
+          wltnps[0] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q2") {
+          wlyear[1] = wlchart[i].year;
+          wlunps[1] = wlchart[i].unps;
+          wlmnps[1] = wlchart[i].mnps;
+          wltnps[1] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q3") {
+          wlyear[2] = wlchart[i].year;
+          wlunps[2] = wlchart[i].unps;
+          wlmnps[2] = wlchart[i].mnps;
+          wltnps[2] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q4") {
+          wlyear[3] = wlchart[i].year;
+          wlunps[3] = wlchart[i].unps;
+          wlmnps[3] = wlchart[i].mnps;
+          wltnps[3] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2018Q1") {
+          wlyear[4] = wlchart[i].year;
+          wlunps[4] = wlchart[i].unps;
+          wlmnps[4] = wlchart[i].mnps;
+          wltnps[4] = wlchart[i].tnps;
+        }
+      }
+      drawchart1(wlyear, wlunps, wlmnps, wltnps)
+      for (var i = 0; i < result.typeNetworkYWNPS.length; i++) {
+        wltable.push({
+          name: result.typeNetworkYWNPS[i].L_NAME,
+          seme: parseFloat(result.typeNetworkYWNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeNetworkYWNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeNetworkYWNPS[i].U_REFERENCE_RATE)
+        })
+      }
+      wltable.sort(sortBy('lift', false));
+      var wlstr = '';
+      for (var i = 0; i < wltable.length; i++) {
+        wlstr += `
+        <tr>
+          <td width="10%" align="canter">`+ (i + 1) + `</td>
+          <td width="60%" align="canter">`+ wltable[i].name + `</td>
+          <td width="10%" align="canter">`+ wltable[i].seme + `</td>
+          <td width="10%" align="canter">`+ wltable[i].circle + `</td>
+          <td width="10%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
+        </tr>
+    
+        `
+      }
+      $("#con1 #tplWrapper_TemplateZ").html(wlstr)
+
       // 业务
+      for (var i = 0; i < result.typeBusinessYW.length; i++) {
+        ywchart.push({
+          year: result.typeBusinessYW[i].YEAR_Q,
+          unps: parseFloat(result.typeBusinessYW[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.typeBusinessYW[i].M_NPS).toFixed(2),
+          tnps: parseFloat(result.typeBusinessYW[i].T_NPS).toFixed(2)
+        })
+      }
+      for (var i = 0; i < ywchart.length; i++) {
+        if (ywchart[i].year == "2017Q1") {
+          ywyear[0] = ywchart[i].year;
+          ywunps[0] = ywchart[i].unps;
+          ywmnps[0] = ywchart[i].mnps;
+          ywtnps[0] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q2") {
+          ywyear[1] = ywchart[i].year;
+          ywunps[1] = ywchart[i].unps;
+          ywmnps[1] = ywchart[i].mnps;
+          ywtnps[1] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q3") {
+          ywyear[2] = ywchart[i].year;
+          ywunps[2] = ywchart[i].unps;
+          ywmnps[2] = ywchart[i].mnps;
+          ywtnps[2] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q4") {
+          ywyear[3] = ywchart[i].year;
+          ywunps[3] = ywchart[i].unps;
+          ywmnps[3] = ywchart[i].mnps;
+          ywtnps[3] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2018Q1") {
+          ywyear[4] = ywchart[i].year;
+          ywunps[4] = ywchart[i].unps;
+          ywmnps[4] = ywchart[i].mnps;
+          ywtnps[4] = ywchart[i].tnps;
+        }
+      }
+      drawchart3(ywyear, ywunps, ywmnps, ywtnps)
+      for (var i = 0; i < result.typeBusinessYWNPS.length; i++) {
+        ywtable.push({
+          name: result.typeBusinessYWNPS[i].L_NAME,
+          seme: parseFloat(result.typeBusinessYWNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeBusinessYWNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeBusinessYWNPS[i].U_REFERENCE_RATE)
+        })
+      }
+      ywtable.sort(sortBy('lift', false));
+      var ywstr = '';
+      for (var i = 0; i < ywtable.length; i++) {
+        ywstr += `
+        <tr>
+          <td width="10%" align="canter">`+ (i + 1) + `</td>
+          <td width="60%" align="canter">`+ ywtable[i].name + `</td>
+          <td width="10%" align="canter">`+ ywtable[i].seme + `</td>
+          <td width="10%" align="canter">`+ ywtable[i].circle + `</td>
+          <td width="10%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
+        </tr>
+    
+        `
+      }
+      $("#con2 #tplWrapper_TemplateZ").html(ywstr)
+
       // 服务
-      for (var i = 0; i < result.typeYW.length; i++) {
+      for (var i = 0; i < result.typeServerYW.length; i++) {
         fwchart.push({
-          year: result.typeYW[i].YEAR_Q,
-          unps: parseFloat(result.typeYW[i].U_NPS).toFixed(2),
-          mnps: parseFloat(result.typeYW[i].M_NPS).toFixed(2),
-          tnps: parseFloat(result.typeYW[i].T_NPS).toFixed(2)
+          year: result.typeServerYW[i].YEAR_Q,
+          unps: parseFloat(result.typeServerYW[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.typeServerYW[i].M_NPS).toFixed(2),
+          tnps: parseFloat(result.typeServerYW[i].T_NPS).toFixed(2)
         })
       }
 
@@ -653,12 +799,12 @@ if (type == "移网") {
         }
       }
       drawchart5(fwyear, fwunps, fwmnps, fwtnps)
-      for (var i = 0; i < result.typeYWNPS.length; i++) {
+      for (var i = 0; i < result.typeServerYWNPS.length; i++) {
         fwtable.push({
-          name: result.typeYWNPS[i].L_NAME,
-          seme: parseFloat(result.typeYWNPS[i].TB).toFixed(2),
-          circle: parseFloat(result.typeYWNPS[i].HB).toFixed(2),
-          lift: parseFloat(result.typeYWNPS[i].U_REFERENCE_RATE)
+          name: result.typeServerYWNPS[i].L_NAME,
+          seme: parseFloat(result.typeServerYWNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeServerYWNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeServerYWNPS[i].U_REFERENCE_RATE)
         })
       }
       fwtable.sort(sortBy('lift', false));
@@ -690,19 +836,152 @@ if (type == "宽带") {
     dataType: "json",
     url: "json/indexxkd.json",
     data: {
-      yearq: "2018Q1"
+      yearq: yearq
     },
     success: function (result) {
       console.log("请求成功");
       // 网络
+      for (var i = 0; i < result.typeNetworkKD.length; i++) {
+        wlchart.push({
+          year: result.typeNetworkKD[i].YEAR_Q,
+          unps: parseFloat(result.typeNetworkKD[i].U_K_NPS).toFixed(2),
+          mnps: parseFloat(result.typeNetworkKD[i].M_K_NPS).toFixed(2),
+          tnps: parseFloat(result.typeNetworkKD[i].T_K_NPS).toFixed(2)
+        })
+      }
+      for (var i = 0; i < wlchart.length; i++) {
+        if (wlchart[i].year == "2017Q1") {
+          wlyear[0] = wlchart[i].year;
+          wlunps[0] = wlchart[i].unps;
+          wlmnps[0] = wlchart[i].mnps;
+          wltnps[0] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q2") {
+          wlyear[1] = wlchart[i].year;
+          wlunps[1] = wlchart[i].unps;
+          wlmnps[1] = wlchart[i].mnps;
+          wltnps[1] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q3") {
+          wlyear[2] = wlchart[i].year;
+          wlunps[2] = wlchart[i].unps;
+          wlmnps[2] = wlchart[i].mnps;
+          wltnps[2] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2017Q4") {
+          wlyear[3] = wlchart[i].year;
+          wlunps[3] = wlchart[i].unps;
+          wlmnps[3] = wlchart[i].mnps;
+          wltnps[3] = wlchart[i].tnps;
+        }
+        if (wlchart[i].year == "2018Q1") {
+          wlyear[4] = wlchart[i].year;
+          wlunps[4] = wlchart[i].unps;
+          wlmnps[4] = wlchart[i].mnps;
+          wltnps[4] = wlchart[i].tnps;
+        }
+      }
+      drawchart1(wlyear, wlunps, wlmnps, wltnps)
+      for (var i = 0; i < result.typeNetworkKDNPS.length; i++) {
+        wltable.push({
+          name: result.typeNetworkKDNPS[i].L_NAME,
+          seme: parseFloat(result.typeNetworkKDNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeNetworkKDNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeNetworkKDNPS[i].U_K_REFERENCE_RATE)
+        })
+      }
+      wltable.sort(sortBy('lift', false));
+      var wlstr = '';
+      for (var i = 0; i < wltable.length; i++) {
+        wlstr += `
+        <tr>
+          <td width="10%" align="canter">`+ (i + 1) + `</td>
+          <td width="60%" align="canter">`+ wltable[i].name + `</td>
+          <td width="10%" align="canter">`+ wltable[i].seme + `</td>
+          <td width="10%" align="canter">`+ wltable[i].circle + `</td>
+          <td width="10%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
+        </tr>
+    
+        `
+      }
+      $("#con1 #tplWrapper_TemplateZ").html(wlstr)
+
       // 业务
+
+      for (var i = 0; i < result.typeBusinessKD.length; i++) {
+        ywchart.push({
+          year: result.typeBusinessKD[i].YEAR_Q,
+          unps: parseFloat(result.typeBusinessKD[i].U_K_NPS).toFixed(2),
+          mnps: parseFloat(result.typeBusinessKD[i].M_K_NPS).toFixed(2),
+          tnps: parseFloat(result.typeBusinessKD[i].T_K_NPS).toFixed(2)
+        })
+      }
+      for (var i = 0; i < ywchart.length; i++) {
+        if (ywchart[i].year == "2017Q1") {
+          ywyear[0] = ywchart[i].year;
+          ywunps[0] = ywchart[i].unps;
+          ywmnps[0] = ywchart[i].mnps;
+          ywtnps[0] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q2") {
+          ywyear[1] = ywchart[i].year;
+          ywunps[1] = ywchart[i].unps;
+          ywmnps[1] = ywchart[i].mnps;
+          ywtnps[1] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q3") {
+          ywyear[2] = ywchart[i].year;
+          ywunps[2] = ywchart[i].unps;
+          ywmnps[2] = ywchart[i].mnps;
+          ywtnps[2] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2017Q4") {
+          ywyear[3] = ywchart[i].year;
+          ywunps[3] = ywchart[i].unps;
+          ywmnps[3] = ywchart[i].mnps;
+          ywtnps[3] = ywchart[i].tnps;
+        }
+        if (ywchart[i].year == "2018Q1") {
+          ywyear[4] = ywchart[i].year;
+          ywunps[4] = ywchart[i].unps;
+          ywmnps[4] = ywchart[i].mnps;
+          ywtnps[4] = ywchart[i].tnps;
+        }
+
+      }
+
+      drawchart3(ywyear, ywunps, ywmnps, ywtnps)
+      for (var i = 0; i < result.typeBusinessKDNPS.length; i++) {
+        ywtable.push({
+          name: result.typeBusinessKDNPS[i].L_NAME,
+          seme: parseFloat(result.typeBusinessKDNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeBusinessKDNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeBusinessKDNPS[i].U_K_REFERENCE_RATE)
+        })
+      }
+      ywtable.sort(sortBy('lift', false));
+      var ywstr = '';
+      for (var i = 0; i < ywtable.length; i++) {
+        ywstr += `
+        <tr>
+          <td width="10%" align="canter">`+ (i + 1) + `</td>
+          <td width="60%" align="canter">`+ ywtable[i].name + `</td>
+          <td width="10%" align="canter">`+ ywtable[i].seme + `</td>
+          <td width="10%" align="canter">`+ ywtable[i].circle + `</td>
+          <td width="10%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
+        </tr>
+    
+        `
+      }
+      $("#con2 #tplWrapper_TemplateZ").html(ywstr)
+
       // 服务
-      for (var i = 0; i < result.typeKD.length; i++) {
+      for (var i = 0; i < result.typeServerKD.length; i++) {
         fwchart.push({
-          year: result.typeKD[i].YEAR_Q,
-          unps: parseFloat(result.typeKD[i].U_K_NPS).toFixed(2),
-          mnps: parseFloat(result.typeKD[i].M_K_NPS).toFixed(2),
-          tnps: parseFloat(result.typeKD[i].T_K_NPS).toFixed(2)
+          year: result.typeServerKD[i].YEAR_Q,
+          unps: parseFloat(result.typeServerKD[i].U_K_NPS).toFixed(2),
+          mnps: parseFloat(result.typeServerKD[i].M_K_NPS).toFixed(2),
+          tnps: parseFloat(result.typeServerKD[i].T_K_NPS).toFixed(2)
         })
       }
       for (var i = 0; i < fwchart.length; i++) {
@@ -738,12 +1017,12 @@ if (type == "宽带") {
         }
       }
       drawchart5(fwyear, fwunps, fwmnps, fwtnps)
-      for (var i = 0; i < result.typeKDNPS.length; i++) {
+      for (var i = 0; i < result.typeServerKDNPS.length; i++) {
         fwtable.push({
-          name: result.typeKDNPS[i].L_NAME,
-          seme: parseFloat(result.typeKDNPS[i].TB).toFixed(2),
-          circle: parseFloat(result.typeKDNPS[i].HB).toFixed(2),
-          lift: parseFloat(result.typeKDNPS[i].U_K_REFERENCE_RATE)
+          name: result.typeServerKDNPS[i].L_NAME,
+          seme: parseFloat(result.typeServerKDNPS[i].TB).toFixed(2),
+          circle: parseFloat(result.typeServerKDNPS[i].HB).toFixed(2),
+          lift: parseFloat(result.typeServerKDNPS[i].U_K_REFERENCE_RATE)
         })
       }
       fwtable.sort(sortBy('lift', false));

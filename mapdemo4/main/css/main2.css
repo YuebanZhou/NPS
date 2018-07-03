@@ -324,13 +324,32 @@ body {
 #chart2 {
   margin: 0 auto;
 }
+#chart1r {
+  margin: 0 auto;
+  display: none
+}
+#chart2r {
+  margin: 0 auto;
+  display: none;
+}
+
 #chart3 {
   float: left;
   margin-left: 3%;
 }
+#chart3r {
+  float: left;
+  margin-left: 3%;
+  display: none;
+}
 #chart4 {
   float: right;
   margin-right: 3%;
+}
+#chart4r {
+  float: right;
+  margin-right: 3%;
+  display: none;
 }
 .img {
   width: 400px;

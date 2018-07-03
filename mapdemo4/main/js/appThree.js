@@ -1139,7 +1139,7 @@ function drawchart5(kdxa, kduv, kdmv, kdtv) {
           }
         },
         // data: [, , , , -0.7]
-        data: kdmv
+        data: kdtv
       },
     ]
   };
@@ -1502,15 +1502,56 @@ $("#btn2").click(function () {
 
 })
 $("#btn3").click(function () {
+  var mm = parseFloat(kdNchart[4].uval - kdNchart[4].mval).toFixed(2)
+  var mt = parseFloat(kdNchart[4].uval - kdNchart[4].tval).toFixed(2)
+  var mmd = ''
+  var mmn = 0
+  var mtd = ''
+  var mtn = 0
+  if (mm < 0) {
+    mmd = "落后";
+    mmn = -mm
+  } else {
+    mmd = "领先";
+    mmn = mm
+  }
+  if (mt < 0) {
+    mtd = "落后";
+    mtn = -mt
+  } else {
+    mtd = "领先";
+    mtn = mt
+  }
+  var strN = '总结：' + mmd + '移动' + mmn + '分，' + mtd + '电信' + mtn + '分'
   $("#chart6").show();
-  $(".con2 .dec").html("北方持续稳步提升，领先电信10.5分，领先移动16.8分。")
+  $(".con2 .dec").html(strN)
   $("#chart6r").hide();
 })
 $("#btn4").click(function () {
+  var mm = parseFloat(kdSchart[4].uval - kdSchart[4].mval).toFixed(2)
+  var mt = parseFloat(kdSchart[4].uval - kdSchart[4].tval).toFixed(2)
+  var mmd = ''
+  var mmn = 0
+  var mtd = ''
+  var mtn = 0
+  if (mm < 0) {
+    mmd = "落后";
+    mmn = -mm
+  } else {
+    mmd = "领先";
+    mmn = mm
+  }
+  if (mt < 0) {
+    mtd = "落后";
+    mtn = -mt
+  } else {
+    mtd = "领先";
+    mtn = mt
+  }
+  var strN = '总结：' + mmd + '移动' + mmn + '分，' + mtd + '电信' + mtn + '分'
   $("#chart6").hide();
-  $(".con2 .dec").html("南方与移动基本持平，落后电信8.5分。")
+  $(".con2 .dec").html(strN)
   $("#chart6r").show();
-  $("#chart6r").width($("#chart6").width())
 })
 // 弱化效果函数
 function redraw(chart, option, t) {
@@ -1562,8 +1603,8 @@ $.ajax({
   type: "post",
   dataType: "json",
   url: "json/index.json",
-  data:{
-    yearq:yearq
+  data: {
+    yearq: yearq
   },
   success: function (result) {
     console.log("请求成功");
@@ -1574,10 +1615,23 @@ $.ajax({
     $(".kdy").html(parseFloat(result.kdAIM[0].YEAE_LIFT).toFixed(1))
     $(".kdj").html(parseFloat(result.kdAIM[0].QUARTER_LIFT).toFixed(1))
     //年度完成率
-    var ywfin = parseFloat(result.ywAIM[0].YEAR_FINISH).toFixed(2) * 100
+    var ywfin = parseInt(result.ywAIM[0].YEAR_FINISH * 100)
+    if (ywfin > 100) {
+      ywfin = 100
+    }
+    if (ywfin < 0) {
+      ywfin = 0
+    }
     drawchart1(ywfin)
-    var kdfin = parseFloat(result.kdAIM[0].YEAR_FINISH).toFixed(2) * 100
+    var kdfin = parseInt(result.kdAIM[0].YEAR_FINISH * 100)
+    if (kdfin > 100) {
+      kdfin = 100
+    }
+    if (kdfin < 0) {
+      kdfin = 0
+    }
     drawchart4(kdfin)
+
 
     // 移网折线图
     for (var i = 0; i < result.ywNPS.length; i++) {
@@ -1616,7 +1670,7 @@ $.ajax({
     var kdmm = kdchart[4].uval - kdchart[4].mval;
     var kdmt = kdchart[4].uval - kdchart[4].tval;
     console.log(kdmt);
-    
+
     if (kdmm >= 0) {
       $(".dec2 .mmd").text("领先")
       $(".dec2 .mmn").text(parseFloat(kdmm).toFixed(1))
@@ -1658,6 +1712,29 @@ $.ajax({
         tval: parseFloat(result.kdN[i].T_K_NPS).toFixed(2)
       })
     }
+    var mm = parseFloat(kdNchart[4].uval - kdNchart[4].mval).toFixed(2)
+    var mt = parseFloat(kdNchart[4].uval - kdNchart[4].tval).toFixed(2)
+    var mmd = ''
+    var mmn = 0
+    var mtd = ''
+    var mtn = 0
+    if (mm < 0) {
+      mmd = "落后";
+      mmn = -mm
+    } else {
+      mmd = "领先";
+      mmn = mm
+    }
+    if (mt < 0) {
+      mtd = "落后";
+      mtn = -mt
+    } else {
+      mtd = "领先";
+      mtn = mt
+    }
+    var strN = '总结：' + mmd + '移动' + mmn + '分，' + mtd + '电信' + mtn + '分'
+    $(".con2 .dec").html(strN)
+
     // 宽带南方折线图
     for (var i = 0; i < result.kdS.length; i++) {
       kdSchart.push({

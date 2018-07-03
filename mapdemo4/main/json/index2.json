@@ -7,7 +7,7 @@
   ],
   "pieYWDept": [
     {
-      "YEAR_LIFT": 11.6522,
+      "YEAR_LIFT": "11.6522",
       "QUARTER_NPS": "18.6522",
       "QUARTER_LIFT": 11.6522,
       "YEAR_NPS": "18.6522",
@@ -290,6 +290,24 @@
       "COUNT": 1827
     }
   ],
+  "quotaDeptTypeKD": [
+    {
+      "USER_TYPE": "FTTH且安装IPTV",
+      "COUNT": 8190
+    },
+    {
+      "USER_TYPE": "FTTH且未安装IPTV",
+      "COUNT": 17765
+    },
+    {
+      "USER_TYPE": "LAN",
+      "COUNT": 3177
+    },
+    {
+      "USER_TYPE": "XDSL",
+      "COUNT": 902
+    }
+  ],
   "deptNPSKD": [
     {
       "COMPARE_M": -7.892942997,
@@ -433,7 +451,7 @@
     },
     {
       "YW_NUM_PERCENT": "13.5",
-      "USER_STAR_LEVEL": "NOT_RATING"
+      "USER_STAR_LEVEL": "未评级"
     },
     {
       "YW_NUM_PERCENT": "33.6",
@@ -487,25 +505,25 @@
     },
     {
       "YEAR_LIFT": 0.0,
-      "DEPT_NAME": "实体渠道部",
-      "rank": 7,
-      "YEAR_FINISH": null
-    },
-    {
-      "YEAR_LIFT": 46.7797,
-      "DEPT_NAME": "电子商务部",
-      "rank": 8,
-      "YEAR_FINISH": null
-    },
-    {
-      "YEAR_LIFT": 0.0,
       "DEPT_NAME": "互联网运营部",
-      "rank": 9,
+      "rank": 7,
       "YEAR_FINISH": null
     },
     {
       "YEAR_LIFT": 0.0,
       "DEPT_NAME": "国际业务部",
+      "rank": 8,
+      "YEAR_FINISH": null
+    },
+    {
+      "YEAR_LIFT": 0.0,
+      "DEPT_NAME": "实体渠道部",
+      "rank": 9,
+      "YEAR_FINISH": null
+    },
+    {
+      "YEAR_LIFT": 46.7797,
+      "DEPT_NAME": "电子商务部",
       "rank": 10,
       "YEAR_FINISH": null
     }
@@ -524,32 +542,6 @@
       "COUNT": 3150
     }
   ],
-  "quotaDeptStarKD": [
-    {
-      "COUNT": 4830,
-      "USER_LEVEL": "1"
-    },
-    {
-      "COUNT": 9954,
-      "USER_LEVEL": "2"
-    },
-    {
-      "COUNT": 4983,
-      "USER_LEVEL": "3"
-    },
-    {
-      "COUNT": 4194,
-      "USER_LEVEL": "4"
-    },
-    {
-      "COUNT": 1897,
-      "USER_LEVEL": "5"
-    },
-    {
-      "COUNT": 4176,
-      "USER_LEVEL": "未评级"
-    }
-  ],
   "pieKDDept": [
     {
       "YEAR_LIFT": 6.9696,
@@ -562,39 +554,71 @@
   "quotaDeptAGEKD": [
     {
       "AGE_GROUP": "15-17",
-      "COUNT": 866
+      "COUNT": 31
     },
     {
       "AGE_GROUP": "15岁以下",
-      "COUNT": 127
+      "COUNT": 5
     },
     {
       "AGE_GROUP": "18-24",
-      "COUNT": 6889
+      "COUNT": 1940
     },
     {
       "AGE_GROUP": "25-34",
-      "COUNT": 11074
+      "COUNT": 12410
     },
     {
       "AGE_GROUP": "35-39",
-      "COUNT": 2422
+      "COUNT": 4222
     },
     {
       "AGE_GROUP": "40-44",
-      "COUNT": 2079
+      "COUNT": 3844
     },
     {
       "AGE_GROUP": "45-55",
-      "COUNT": 3221
+      "COUNT": 4567
     },
     {
       "AGE_GROUP": "55岁以上",
-      "COUNT": 1756
+      "COUNT": 1621
     },
     {
       "AGE_GROUP": "拒答",
-      "COUNT": 1600
+      "COUNT": 1394
+    }
+  ],
+  "quotaDeptSexKD": [
+    {
+      "SEX": "女",
+      "COUNT": 8773,
+      "OPERATOR_TYPE": "中国联通"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 21261,
+      "OPERATOR_TYPE": "中国联通"
+    },
+    {
+      "SEX": "女",
+      "COUNT": 1113,
+      "OPERATOR_TYPE": "中国电信"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 2398,
+      "OPERATOR_TYPE": "中国电信"
+    },
+    {
+      "SEX": "女",
+      "COUNT": 1307,
+      "OPERATOR_TYPE": "中国移动"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 2461,
+      "OPERATOR_TYPE": "中国移动"
     }
   ],
   "yearYWNPS": [
@@ -642,13 +666,13 @@
     },
     {
       "YEAR_LIFT": 0.4,
-      "DEPT_NAME": "全集团",
+      "DEPT_NAME": "客户服务部",
       "rank": 8,
       "YEAR_FINISH": 0.05
     },
     {
       "YEAR_LIFT": 0.4,
-      "DEPT_NAME": "客户服务部",
+      "DEPT_NAME": "全集团",
       "rank": 9,
       "YEAR_FINISH": 0.05
     },
@@ -727,6 +751,48 @@
     {
       "COUNT": 5014,
       "USER_LEVEL": "未评级"
+    }
+  ],
+  "deptOPERATORKD": [
+    {
+      "USER_TYPE": "中国联通",
+      "COUNT": 30034
+    },
+    {
+      "USER_TYPE": "中国电信宽带",
+      "COUNT": 3888
+    },
+    {
+      "USER_TYPE": "中国移动宽带（含铁通）",
+      "COUNT": 3391
+    }
+  ],
+  "deptOPERATORYW": [
+    {
+      "USER_TYPE": "中国联通",
+      "COUNT": 38998
+    },
+    {
+      "USER_TYPE": "中国电信",
+      "COUNT": 28803
+    },
+    {
+      "USER_TYPE": "中国移动",
+      "COUNT": 29386
+    }
+  ],
+  "allDeptTypeKD": [
+    {
+      "KD_NUM_PERCENT": "82.1",
+      "USER_TYPE": "FTTH"
+    },
+    {
+      "KD_NUM_PERCENT": "13.3",
+      "USER_TYPE": "LAN"
+    },
+    {
+      "KD_NUM_PERCENT": "4.7",
+      "USER_TYPE": "XDSL"
     }
   ]
 }

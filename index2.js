@@ -1,4 +1,20 @@
-var yearq = localStorage.getItem("yearq")
+var curWwwPath=window.document.location.href;
+var pathName=window.document.location.pathname;
+var pos=curWwwPath.indexOf(pathName);
+var localhostPaht=curWwwPath.substring(0,pos);
+var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+
+
+
+const ajaxBaseURL = localhostPaht+projectName;
+console.log(ajaxBaseURL);
+
+var yearq=localStorage.getItem("yearq")
+var SYS_ID=localStorage.getItem("SYS_ID",SYS_ID);
+var SYS_VALUE=localStorage.getItem("SYS_VALUE",SYS_VALUE);
+var DEPT_ID=localStorage.getItem("DEPT_ID",DEPT_ID);
+var DEPT_NAME=localStorage.getItem("DEPT_NAME",DEPT_NAME);
+var provinceName=localStorage.getItem("provinceName",provinceName);
 
 var chart1 = [];
 var chart2 = [];
@@ -18,6 +34,7 @@ var q4 = [];
 var q1 = [];
 var girl = [];
 var boy = [];
+
 // chart4
 var s1 = []
 var s2 = []
@@ -29,9 +46,10 @@ var skd1 = []
 var skd2 = []
 var skd3 = []
 var skd4 = []
+
+
 // 模拟获取部门名称
-// var apartment = "市场营销部";
-var apartment = localStorage.getItem("apartment")
+var apartment = DEPT_NAME;
 $(".toptitle .apartment").html(apartment);
 
 // 切换移网和宽带
@@ -47,6 +65,7 @@ $(".btnzu1 .btn1").click(function () {
   str2 = str2.substring(2);
   $(".hrtitle1 span").text("移网" + str1)
   $(".hrtitle2 span").text("移网" + str2)
+  getMessage(yearq);
 })
 $(".btnzu1 .btn2").click(function () {
   // 宽带
@@ -60,6 +79,7 @@ $(".btnzu1 .btn2").click(function () {
   str2 = str2.substring(2);
   $(".hrtitle1 span").text("宽带" + str1)
   $(".hrtitle2 span").text("宽带" + str2)
+  getMessage(yearq);
 })
 // 切换季度
 $(".btnzu2 .btn1").click(function () {
@@ -70,9 +90,9 @@ $(".btnzu2 .btn1").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第一季度");
-  yearq = "2017Q1"
-  localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q1";
+  localStorage.setItem("yearq",yearq)
+  getMessage(yearq);
 })
 $(".btnzu2 .btn2").click(function () {
   // 17Q2
@@ -82,9 +102,9 @@ $(".btnzu2 .btn2").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第二季度");
-  yearq = "2017Q2"
-  localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q2";
+  localStorage.setItem("yearq",yearq)
+  getMessage(yearq);
 })
 $(".btnzu2 .btn3").click(function () {
   // 17Q3
@@ -94,9 +114,9 @@ $(".btnzu2 .btn3").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第三季度");
-  yearq = "2017Q3"
-  localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q3";
+  localStorage.setItem("yearq",yearq)
+  getMessage(yearq);
 })
 $(".btnzu2 .btn4").click(function () {
   // 17Q4
@@ -106,9 +126,9 @@ $(".btnzu2 .btn4").click(function () {
   $(".btnzu2 .btn4").addClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第四季度");
-  yearq = "2017Q4"
-  localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q4";
+  localStorage.setItem("yearq",yearq)
+  getMessage(yearq);
 })
 $(".btnzu2 .btn5").click(function () {
   // 18Q1
@@ -118,9 +138,9 @@ $(".btnzu2 .btn5").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").addClass("active");
   $(".top .age").html("2018年第一季度");
-  yearq = "2018Q1"
-  localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2018Q1";
+  localStorage.setItem("yearq",yearq)
+  getMessage(yearq);
 })
 
 // 切换季度年度
@@ -216,84 +236,6 @@ function drawchart1(uv, mv, tv) {
   chart1.setOption(option1);
   $(".chart1val").html(uv + mv + tv)
 }
-function drawchart1r(uv, mv, tv) {
-  /* chart1配置内容 start */
-  val1 = (uv / (uv + mv + tv) * 100).toFixed(1)
-  val2 = (mv / (uv + mv + tv) * 100).toFixed(1)
-  val3 = (tv / (uv + mv + tv) * 100).toFixed(1)
-  var data = [
-    { "value": val1, "name": "中国联通", "val": uv },
-    { "value": val2, "name": "中国移动", "val": mv },
-    { "value": val3, "name": "中国电信", "val": tv }
-  ];
-  data_name = [];
-  for (var n in data) {
-    data[n]['name'] = data[n]['name'] + ' ' + data[n]['value'] + '%';
-    data_name.push(data[n]['name'])
-  }
-  /* chart1配置内容 end */
-  var chart1r = echarts.init(document.getElementById("chart1r"));
-  var option1r = {
-    // title: {
-    //   text: '中国联通\n20%',
-    //   x: 'center',
-    //   y: 'center',
-    //   textStyle: {
-    //     fontWeight: 'normal',
-    //     color: '#0580f2',
-    //     fontSize: '40'
-    //   }
-    // },
-    tooltip: {
-      trigger: 'item',
-      formatter: "{b}"
-    },
-    legend: {
-      orient: 'vertical',
-      top: 'top',
-      left: 'left',
-      right: 60,
-      data: data_name,
-      textStyle: {
-        color: "#000",
-        fontWeight: 'normal',
-        fontFamily: '宋体'
-      }
-    },
-    grid: {
-      top: '3%',
-      bottom: '3%',
-      left: '6%',
-      right: '6%'
-    },
-    series: [
-
-      {
-        name: '',
-        type: 'pie',
-        radius: ['40%', '55%'],
-        data: data,
-        itemStyle: {
-          normal: {
-            borderWidth: 5,
-            // shadowBlur: 30,
-            borderColor: new echarts.graphic.LinearGradient(0, 0, 1, 1, [{
-              offset: 0,
-              color: '#fff'
-            }, {
-              offset: 1,
-              color: '#fff'
-            }]),
-            shadowColor: 'rgba(142, 152, 241, 0.6)'
-          }
-        },
-      }
-    ]
-  };
-  chart1r.setOption(option1r);
-  $(".chart1val").html(uv + mv + tv)
-}
-
 function drawchart2(age, agedata) {
   var chart2 = echarts.init(document.getElementById("chart2"));
   var option2 = {
@@ -349,62 +291,6 @@ function drawchart2(age, agedata) {
   }
   chart2.setOption(option2)
 }
-function drawchart2r(age, agedata) {
-  var chart2r = echarts.init(document.getElementById("chart2r"));
-  var option2r = {
-    color: ["#DBB924", "#F48057", "#F1B599", "#95ABB9", "#85BCBF", "#DED262", "#D1CAB8", "#A686D1", "#A5525C"],
-    tooltip: {
-      trigger: "item",
-      formatter: "{a} <br/>{b} : {c} ({d}%)"
-    },
-    legend: {
-      orient: "vertical",
-      bottom: 20,
-      // data: ["18-24 ", "25-34 ", "35-39 ", "40-44 ", "45-55 ", "55岁以上"],
-      data: age,
-      right: 'right'
-    },
-    series: [
-      {
-        name: "用户群年龄占比",
-        type: "pie",
-        radius: "55%",
-        center: ["30%", "50%"],
-        selectedMode: "single",
-        label: {
-          normal: {
-            // position: 'inner',
-            formatter(params) {
-              if (params.percent) {
-                return params.name + params.percent + "%";
-              } else {
-                return "";
-              }
-            }
-          }
-        },
-        itemStyle: {
-          emphasis: {
-            shadowBlur: 20,
-            shadowOffsetX: 5,
-            shadowColor: "rgba(0, 0, 0, 0.5)"
-          }
-        },
-        // data: [
-        //   { value: 19.2, name: "18-24 " },
-        //   { value: 36.2, name: "25-34 " },
-        //   { value: 9.5, name: "35-39 " },
-        //   { value: 8.6, name: "40-44 " },
-        //   { value: 12.3, name: "45-55 " },
-        //   { value: 6.6, name: "55岁以上" }
-        // ]
-        data: agedata
-      }
-    ]
-  }
-  chart2r.setOption(option2r)
-}
-
 function drawchart3(q4, q1) {
   var chart3 = echarts.init(document.getElementById("chart3"));
   var option3 = {
@@ -994,8 +880,7 @@ function drawchart4r(skd1, skd2, skd3) {
   chart4r.setOption(option4r)
 }
 
-
-getMessage(yearq)
+getMessage(yearq);
 // 获取数据
 function getMessage(yearq) {
   $.ajax({
@@ -1563,7 +1448,6 @@ var sortBy = function (attr, rev) {
     return 0;
   }
 }
-
 function delnan() {
   $('.tablemx tbody tr').each(function (i) {
     $(this).children('td').each(function (j) {
@@ -1595,5 +1479,6 @@ function delnan() {
   });
 
 }
+
 
 

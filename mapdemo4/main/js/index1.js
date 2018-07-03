@@ -1,4 +1,4 @@
-var yearq=localStorage.getItem("yearq")
+var yearq = localStorage.getItem("yearq")
 var chart1 = [];
 var chart2 = [];
 var chart3 = [];
@@ -50,8 +50,9 @@ var rankarea = ''
 var rankall = ''
 
 // 模拟获取省份名称
-var proname = "山东"
+// var proname = "山东"
 // var proname = "海南"
+var proname=localStorage.getItem("proname")
 
 // 切换移网和宽带
 $(".btnzu1 .btn1").click(function () {
@@ -90,6 +91,8 @@ $(".btnzu2 .btn1").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第一季度");
+  yearq = "2017Q1"
+  getMessage(yearq)
 })
 $(".btnzu2 .btn2").click(function () {
   // 17Q2
@@ -99,6 +102,8 @@ $(".btnzu2 .btn2").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第二季度");
+  yearq = "2017Q2"
+  getMessage(yearq)
 })
 $(".btnzu2 .btn3").click(function () {
   // 17Q3
@@ -108,6 +113,8 @@ $(".btnzu2 .btn3").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第三季度");
+  yearq = "2017Q3"
+  getMessage(yearq)
 })
 $(".btnzu2 .btn4").click(function () {
   // 17Q4
@@ -117,6 +124,8 @@ $(".btnzu2 .btn4").click(function () {
   $(".btnzu2 .btn4").addClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第四季度");
+  yearq = "2017Q4"
+  getMessage(yearq)
 })
 $(".btnzu2 .btn5").click(function () {
   // 18Q1
@@ -126,6 +135,8 @@ $(".btnzu2 .btn5").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").addClass("active");
   $(".top .age").html("2018年第一季度");
+  yearq = "2018Q1"
+  getMessage(yearq)
 })
 
 // 整体网络业务服务
@@ -702,541 +713,549 @@ function drawchart4(s1, s2, s3, s4, s5, s6) {
   chart4.setOption(option4)
 }
 
-
+getMessage(yearq)
 // 获取数据
-$.ajax({
-  type: "post",
-  dataType: "json",
-  url: "json/index1.json",
-  data: {
-    yearq: yearq
-  },
-  success: function (result) {
-    console.log("请求成功");
-    // console.log(result);
-    /* ***** chart部分 start ***** */
-    // chart1
-    for (var i = 0; i < result.quotaOPERATORYW.length; i++) {
-      if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国联通") {
-        uv = result.quotaOPERATORYW[i].N
-      }
-      if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国移动") {
-        mv = result.quotaOPERATORYW[i].N
-      }
-      if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国电信") {
-        tv = result.quotaOPERATORYW[i].N
-      }
-    }
-    // chart2
-    for (var i = 0; i < result.quotaAGEYW.length; i++) {
-      age.push(result.quotaAGEYW[i].AGE_GROUP + " ");
-      agedata.push({
-        value: result.quotaAGEYW[i].count,
-        name: result.quotaAGEYW[i].AGE_GROUP + " "
-      })
-    }
-
-    // cahrt3
-    for (var i = 0; i < result.quotaUserTypeYW.length; i++) {
-      if (result.quotaUserTypeYW[i].YEAR_Q == "2017Q4") {
-        if (result.quotaUserTypeYW[i].USER_TYPE == "纯语音用户") {
-          q4[0] = result.quotaUserTypeYW[i].count
+function getMessage(yearq) {
+  $.ajax({
+    type: "post",
+    dataType: "json",
+    url: "json/index1.json",
+    data: {
+      yearq: yearq
+    },
+    success: function (result) {
+      console.log("请求成功");
+      // console.log(result);
+      /* ***** chart部分 start ***** */
+      // chart1
+      for (var i = 0; i < result.quotaOPERATORYW.length; i++) {
+        if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国联通") {
+          uv = result.quotaOPERATORYW[i].N
         }
-        if (result.quotaUserTypeYW[i].USER_TYPE == "有流量4G用户") {
-          q4[1] = result.quotaUserTypeYW[i].count
+        if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国移动") {
+          mv = result.quotaOPERATORYW[i].N
         }
-        if (result.quotaUserTypeYW[i].USER_TYPE == "有流量非4G用户") {
-          q4[2] = result.quotaUserTypeYW[i].count
+        if (result.quotaOPERATORYW[i].OPERATOR_TYPE == "中国电信") {
+          tv = result.quotaOPERATORYW[i].N
         }
       }
-      if (result.quotaUserTypeYW[i].YEAR_Q == "2018Q1") {
-        if (result.quotaUserTypeYW[i].USER_TYPE == "纯语音用户") {
-          q1[0] = result.quotaUserTypeYW[i].count
-        }
-        if (result.quotaUserTypeYW[i].USER_TYPE == "有流量4G用户") {
-          q1[1] = result.quotaUserTypeYW[i].count
-        }
-        if (result.quotaUserTypeYW[i].USER_TYPE == "有流量非4G用户") {
-          q1[2] = result.quotaUserTypeYW[i].count
-        }
+      // chart2
+      for (var i = 0; i < result.quotaAGEYW.length; i++) {
+        age.push(result.quotaAGEYW[i].AGE_GROUP + " ");
+        agedata.push({
+          value: result.quotaAGEYW[i].count,
+          name: result.quotaAGEYW[i].AGE_GROUP + " "
+        })
       }
 
-    }
-    // chart4
-    for (var i = 0; i < result.quotaStarYW.length; i++) {
-      if (result.quotaStarYW[i].USER_LEVEL == "1") {
-        s1 = [1092, result.quotaStarYW[i].count]
-      }
-      if (result.quotaStarYW[i].USER_LEVEL == "2") {
-        s2 = [1381, result.quotaStarYW[i].count]
-      }
-      if (result.quotaStarYW[i].USER_LEVEL == "3") {
-        s3 = [718, result.quotaStarYW[i].count]
-      }
-      if (result.quotaStarYW[i].USER_LEVEL == "4") {
-        s4 = [385, result.quotaStarYW[i].count]
-      }
-      if (result.quotaStarYW[i].USER_LEVEL == "5") {
-        s5 = [99, result.quotaStarYW[i].count]
-      }
-      if (result.quotaStarYW[i].USER_LEVEL == "未评级") {
-        s6 = [425, result.quotaStarYW[i].count]
-      }
-    }
-    drawchart1(uv, mv, tv);
-    drawchart2(age, agedata);
-    drawchart3(q4, q1);
-    drawchart4(s1, s2, s3, s4, s5, s6);
-    /* ***** chart部分 end ***** */
+      // cahrt3
+      for (var i = 0; i < result.quotaUserTypeYW.length; i++) {
+        if (result.quotaUserTypeYW[i].YEAR_Q == "2017Q4") {
+          if (result.quotaUserTypeYW[i].USER_TYPE == "纯语音用户") {
+            q4[0] = result.quotaUserTypeYW[i].count
+          }
+          if (result.quotaUserTypeYW[i].USER_TYPE == "有流量4G用户") {
+            q4[1] = result.quotaUserTypeYW[i].count
+          }
+          if (result.quotaUserTypeYW[i].USER_TYPE == "有流量非4G用户") {
+            q4[2] = result.quotaUserTypeYW[i].count
+          }
+        }
+        if (result.quotaUserTypeYW[i].YEAR_Q == "2018Q1") {
+          if (result.quotaUserTypeYW[i].USER_TYPE == "纯语音用户") {
+            q1[0] = result.quotaUserTypeYW[i].count
+          }
+          if (result.quotaUserTypeYW[i].USER_TYPE == "有流量4G用户") {
+            q1[1] = result.quotaUserTypeYW[i].count
+          }
+          if (result.quotaUserTypeYW[i].USER_TYPE == "有流量非4G用户") {
+            q1[2] = result.quotaUserTypeYW[i].count
+          }
+        }
 
-    /* ***** fivebox start ***** */
-    $(".five .num1").html(parseFloat(result.pieYW[0].YEAR_NPS).toFixed(2))
-    $(".five .num2").html(parseFloat(result.pieYW[0].YEAE_LIFT).toFixed(2))
-    $(".five .num3").html(parseFloat(result.pieYW[0].YEAR_FINISH).toFixed(2))
-    $(".five .num4").html(parseFloat(result.pieYW[0].QUARTER_NPS).toFixed(2))
-    $(".five .num5").html(parseFloat(result.pieYW[0].QUARTER_LIFT).toFixed(2))
-    /* ***** fivebox end ***** */
-
-    /* ***** table start ***** */
-    for (var i = 0; i < result.allRankYW.length; i++) {
-      prorank.push({
-        name: result.allRankYW[i].PROVINCE_NAME,
-        allrank: result.allRankYW[i].allrank,
-        arearank: '',
-        qfinish: '',
-        qlift: ''
-      })
-      for (var j = 0; j < result.allRankYWN.length; j++) {
-        if (result.allRankYW[i].PROVINCE_NAME == result.allRankYWN[j].PROVINCE_NAME) {
-          prorank[i].arearank = result.allRankYWN[j].rank;
-          prorank[i].qfinish = parseFloat(result.allRankYWN[j].QUARTER_FINISH).toFixed(2);
-          prorank[i].qlift = parseFloat(result.allRankYWN[j].QUARTER_LIFT).toFixed(2);
+      }
+      // chart4
+      for (var i = 0; i < result.quotaStarYW.length; i++) {
+        if (result.quotaStarYW[i].USER_LEVEL == "1") {
+          s1 = [1092, result.quotaStarYW[i].count]
+        }
+        if (result.quotaStarYW[i].USER_LEVEL == "2") {
+          s2 = [1381, result.quotaStarYW[i].count]
+        }
+        if (result.quotaStarYW[i].USER_LEVEL == "3") {
+          s3 = [718, result.quotaStarYW[i].count]
+        }
+        if (result.quotaStarYW[i].USER_LEVEL == "4") {
+          s4 = [385, result.quotaStarYW[i].count]
+        }
+        if (result.quotaStarYW[i].USER_LEVEL == "5") {
+          s5 = [99, result.quotaStarYW[i].count]
+        }
+        if (result.quotaStarYW[i].USER_LEVEL == "未评级") {
+          s6 = [425, result.quotaStarYW[i].count]
         }
       }
-      for (var k = 0; k < result.allRankYWS.length; k++) {
-        if (result.allRankYW[i].PROVINCE_NAME == result.allRankYWS[k].PROVINCE_NAME) {
-          prorank[i].arearank = result.allRankYWS[k].rank;
-          prorank[i].qfinish = parseFloat(result.allRankYWS[k].QUARTER_FINISH).toFixed(2);
-          prorank[i].qlift = parseFloat(result.allRankYWS[k].QUARTER_LIFT).toFixed(2);
+      drawchart1(uv, mv, tv);
+      drawchart2(age, agedata);
+      drawchart3(q4, q1);
+      drawchart4(s1, s2, s3, s4, s5, s6);
+      /* ***** chart部分 end ***** */
+
+      /* ***** fivebox start ***** */
+      $(".five .num1").html(parseFloat(result.pieYW[0].YEAR_NPS).toFixed(2))
+      $(".five .num2").html(parseFloat(result.pieYW[0].YEAE_LIFT).toFixed(2))
+      $(".five .num3").html(parseFloat(result.pieYW[0].YEAR_FINISH).toFixed(2))
+      $(".five .num4").html(parseFloat(result.pieYW[0].QUARTER_NPS).toFixed(2))
+      $(".five .num5").html(parseFloat(result.pieYW[0].QUARTER_LIFT).toFixed(2))
+      /* ***** fivebox end ***** */
+
+      /* ***** table start ***** */
+      for (var i = 0; i < result.allRankYW.length; i++) {
+        prorank.push({
+          name: result.allRankYW[i].PROVINCE_NAME,
+          allrank: result.allRankYW[i].allrank,
+          arearank: '',
+          qfinish: '',
+          qlift: ''
+        })
+        for (var j = 0; j < result.allRankYWN.length; j++) {
+          if (result.allRankYW[i].PROVINCE_NAME == result.allRankYWN[j].PROVINCE_NAME) {
+            prorank[i].arearank = result.allRankYWN[j].rank;
+            prorank[i].qfinish = parseFloat(result.allRankYWN[j].QUARTER_FINISH).toFixed(2);
+            prorank[i].qlift = parseFloat(result.allRankYWN[j].QUARTER_LIFT).toFixed(2);
+          }
+        }
+        for (var k = 0; k < result.allRankYWS.length; k++) {
+          if (result.allRankYW[i].PROVINCE_NAME == result.allRankYWS[k].PROVINCE_NAME) {
+            prorank[i].arearank = result.allRankYWS[k].rank;
+            prorank[i].qfinish = parseFloat(result.allRankYWS[k].QUARTER_FINISH).toFixed(2);
+            prorank[i].qlift = parseFloat(result.allRankYWS[k].QUARTER_LIFT).toFixed(2);
+          }
         }
       }
-    }
-    for (var i = 0; i < prorank.length; i++) {
-      str += `
-    <tr>
-      <td width="20%" align="center">`+ prorank[i].allrank + `</td>
-      <td width="20%" align="center">`+ prorank[i].name + `</td>
-      <td width="20%" align="center">`+ prorank[i].qfinish + `%</td>
-      <td width="20%" align="center">`+ prorank[i].qlift + `</td>
-      <td width="20%" align="center">`+ prorank[i].arearank + `</td>
-    </tr>
-      `
-    }
-    $("#tplWrapper_TemplateZ").html(str);
-    var tr = $("#tplWrapper_TemplateZ").find("tr")
-    var imgstr1 = "<img src='img/jbb1.png' style='height:23px;width:23px;'>"
-    var imgstr2 = "<img src='img/jbb2.png' style='height:23px;width:23px;'>"
-    var imgstr3 = "<img src='img/jbb3.png' style='height:23px;width:23px;'>"
-    for (var i = 0; i < tr.length; i++) {
-      var td = tr.eq(i).find("td");
-      var num = td.eq(0).text();
-      if (num == "1") {
-        tr.eq(i).find("td").eq(0).html(imgstr1)
-        tr.eq(i).css("color", "#bf4959")
-      }
-      if (num == "2") {
-        tr.eq(i).find("td").eq(0).html(imgstr2)
-        tr.eq(i).css("color", "#b9542a")
-      }
-      if (num == "3") {
-        // console.log(i)
-        tr.eq(i).find("td").eq(0).html(imgstr3)
-        // tr.eq(i).find("td").eq(1).css("color", "#137b8a")
-        tr.eq(i).css("color", "#137b8a")
-
-      }
-    }
-    $(".topfive .top1").html(prorank[0].name)
-    $(".topfive .top2").html(prorank[1].name)
-    $(".topfive .top3").html(prorank[2].name)
-    $(".topfive .top4").html(prorank[3].name)
-    $(".topfive .top5").html(prorank[4].name)
-    /* ***** table end ***** */
-
-    /* ***** fourbtn start ***** */
-    // 整体
-    for (var i = 0; i < result.npsCityYWZT.length; i++) {
-      npsZT.push({
-        name: result.npsCityYWZT[i].CITY_NAME,
-        unps: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
-        uyb: parseFloat(result.npsCityYWZT[i].U_NUM).toFixed(2),
-        same: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
-        clrcle: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
-        mnps: parseFloat(result.npsCityYWZT[i].M_NPS).toFixed(2),
-        myb: parseFloat(result.npsCityYWZT[i].M_NUM).toFixed(2),
-        mm: parseFloat(result.npsCityYWZT[i].STANDARD_M).toFixed(2),
-        tnps: parseFloat(result.npsCityYWZT[i].T_NPS).toFixed(2),
-        tyb: parseFloat(result.npsCityYWZT[i].T_NUM).toFixed(2),
-        mt: parseFloat(result.npsCityYWZT[i].STANDARD_T).toFixed(2),
-        del: parseFloat(result.npsCityYWZT[i].COMPETITION_BETWEEN).toFixed(2),
-      })
-    }
-
-    // 业务
-    for (var i = 0; i < result.npsCityYWYW.length; i++) {
-      npsYW.push({
-        name: result.npsCityYWYW[i].CITY_NAME,
-        unps: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
-        uyb: parseFloat(result.npsCityYWYW[i].U_NUM).toFixed(2),
-        same: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
-        clrcle: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
-        mnps: parseFloat(result.npsCityYWYW[i].M_NPS).toFixed(2),
-        myb: parseFloat(result.npsCityYWYW[i].M_NUM).toFixed(2),
-        mm: parseFloat(result.npsCityYWYW[i].STANDARD_M).toFixed(2),
-        tnps: parseFloat(result.npsCityYWYW[i].T_NPS).toFixed(2),
-        tyb: parseFloat(result.npsCityYWYW[i].T_NUM).toFixed(2),
-        mt: parseFloat(result.npsCityYWYW[i].STANDARD_T).toFixed(2),
-        del: parseFloat(result.npsCityYWYW[i].COMPETITION_BETWEEN).toFixed(2),
-      })
-    }
-    // 网络
-    // npsCityYWYW
-    for (var i = 0; i < result.npsCityYWWL.length; i++) {
-      npsWL.push({
-        name: result.npsCityYWWL[i].CITY_NAME,
-        unps: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
-        uyb: parseFloat(result.npsCityYWWL[i].U_NUM).toFixed(2),
-        same: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
-        clrcle: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
-        mnps: parseFloat(result.npsCityYWWL[i].M_NPS).toFixed(2),
-        myb: parseFloat(result.npsCityYWWL[i].M_NUM).toFixed(2),
-        mm: parseFloat(result.npsCityYWWL[i].STANDARD_M).toFixed(2),
-        tnps: parseFloat(result.npsCityYWWL[i].T_NPS).toFixed(2),
-        tyb: parseFloat(result.npsCityYWWL[i].T_NUM).toFixed(2),
-        mt: parseFloat(result.npsCityYWWL[i].STANDARD_T).toFixed(2),
-        del: parseFloat(result.npsCityYWWL[i].COMPETITION_BETWEEN).toFixed(2),
-      })
-    }
-
-    // 服务
-    // npsCityYWFW
-    for (var i = 0; i < result.npsCityYWFW.length; i++) {
-      npsFW.push({
-        name: result.npsCityYWFW[i].CITY_NAME,
-        unps: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
-        uyb: parseFloat(result.npsCityYWFW[i].U_NUM).toFixed(2),
-        same: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
-        clrcle: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
-        mnps: parseFloat(result.npsCityYWFW[i].M_NPS).toFixed(2),
-        myb: parseFloat(result.npsCityYWFW[i].M_NUM).toFixed(2),
-        mm: parseFloat(result.npsCityYWFW[i].STANDARD_M).toFixed(2),
-        tnps: parseFloat(result.npsCityYWFW[i].T_NPS).toFixed(2),
-        tyb: parseFloat(result.npsCityYWFW[i].T_NUM).toFixed(2),
-        mt: parseFloat(result.npsCityYWFW[i].STANDARD_T).toFixed(2),
-        del: parseFloat(result.npsCityYWFW[i].COMPETITION_BETWEEN).toFixed(2),
-      })
-    }
-    // 默认渲染整体数据
-
-    for (var i = 0; i < npsZT.length; i++) {
-      strfour += `
+      for (var i = 0; i < prorank.length; i++) {
+        if (prorank[i].qfinish > 100) {
+          prorank[i].qfinish = 100
+        }
+        if (prorank[i].qfinish < 0) {
+          prorank[i].qfinish = 0
+        }
+        str += `
       <tr>
-          <td>`+ npsZT[i].name + `</td>
-          <td>`+ npsZT[i].unps + `</td>
-          <td>`+ npsZT[i].uyb + `</td>
-          <td>`+ npsZT[i].same + `</td>
-          <td>`+ npsZT[i].clrcle + `</td>
-          <td>`+ npsZT[i].mnps + `</td>
-          <td>`+ npsZT[i].myb + `</td>
-          <td>`+ npsZT[i].mm + `</td>
-          <td>`+ npsZT[i].tnps + `</td>
-          <td>`+ npsZT[i].tyb + `</td>
-          <td>`+ npsZT[i].mt + `</td>
-          <td>`+ npsZT[i].del + `</td>
+        <td width="20%" align="center">`+ prorank[i].allrank + `</td>
+        <td width="20%" align="center">`+ prorank[i].name + `</td>
+        <td width="20%" align="center">`+ prorank[i].qfinish + `%</td>
+        <td width="20%" align="center">`+ prorank[i].qlift + `</td>
+        <td width="20%" align="center">`+ prorank[i].arearank + `</td>
       </tr>
-      `
-    }
-    $(".talezbmx tbody").html(strfour)
-    /* ***** fourbtn end ***** */
-
-    /* ***** detail start ***** */
-    for (var i = 0; i < result.npsYW.length; i++) {
-      if (result.npsYW[i].L1_NAME == "整体") {
-        deZT.push({
-          name: result.npsYW[i].L_NAME,
-          unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
-          user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
-          mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
-          tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
-          mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
-          del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
-        })
+        `
       }
-      if (result.npsYW[i].L1_NAME == "服务标签") {
-        deFW.push({
-          name: result.npsYW[i].L_NAME,
-          unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
-          user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
-          mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
-          tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
-          mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
-          del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+      $("#tplWrapper_TemplateZ").html(str);
+      var tr = $("#tplWrapper_TemplateZ").find("tr")
+      var imgstr1 = "<img src='img/jbb1.png' style='height:23px;width:23px;'>"
+      var imgstr2 = "<img src='img/jbb2.png' style='height:23px;width:23px;'>"
+      var imgstr3 = "<img src='img/jbb3.png' style='height:23px;width:23px;'>"
+      for (var i = 0; i < tr.length; i++) {
+        var td = tr.eq(i).find("td");
+        var num = td.eq(0).text();
+        if (num == "1") {
+          tr.eq(i).find("td").eq(0).html(imgstr1)
+          tr.eq(i).css("color", "#bf4959")
+        }
+        if (num == "2") {
+          tr.eq(i).find("td").eq(0).html(imgstr2)
+          tr.eq(i).css("color", "#b9542a")
+        }
+        if (num == "3") {
+          // console.log(i)
+          tr.eq(i).find("td").eq(0).html(imgstr3)
+          // tr.eq(i).find("td").eq(1).css("color", "#137b8a")
+          tr.eq(i).css("color", "#137b8a")
 
-        })
+        }
       }
-      if (result.npsYW[i].L1_NAME == "业务标签") {
-        deYW.push({
-          name: result.npsYW[i].L_NAME,
-          unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
-          user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
-          mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
-          tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
-          mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
-          del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+      $(".topfive .top1").html(prorank[0].name)
+      $(".topfive .top2").html(prorank[1].name)
+      $(".topfive .top3").html(prorank[2].name)
+      $(".topfive .top4").html(prorank[3].name)
+      $(".topfive .top5").html(prorank[4].name)
+      /* ***** table end ***** */
 
-        })
-      }
-      if (result.npsYW[i].L1_NAME == "网络标签") {
-        deWL.push({
-          name: result.npsYW[i].L_NAME,
-          unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
-          user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
-          mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
-          mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
-          tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
-          mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
-          del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
-
+      /* ***** fourbtn start ***** */
+      // 整体
+      for (var i = 0; i < result.npsCityYWZT.length; i++) {
+        npsZT.push({
+          name: result.npsCityYWZT[i].CITY_NAME,
+          unps: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
+          uyb: parseFloat(result.npsCityYWZT[i].U_NUM).toFixed(2),
+          same: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
+          clrcle: parseFloat(result.npsCityYWZT[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.npsCityYWZT[i].M_NPS).toFixed(2),
+          myb: parseFloat(result.npsCityYWZT[i].M_NUM).toFixed(2),
+          mm: parseFloat(result.npsCityYWZT[i].STANDARD_M).toFixed(2),
+          tnps: parseFloat(result.npsCityYWZT[i].T_NPS).toFixed(2),
+          tyb: parseFloat(result.npsCityYWZT[i].T_NUM).toFixed(2),
+          mt: parseFloat(result.npsCityYWZT[i].STANDARD_T).toFixed(2),
+          del: parseFloat(result.npsCityYWZT[i].COMPETITION_BETWEEN).toFixed(2),
         })
       }
 
-    }
-    for (var i = 0; i < deZT.length; i++) {
-      destrZT += `
-      <tr>
-          <td>`+ deZT[i].name + `</td>
-          <td>`+ deZT[i].unps + `</td>
-          <td>`+ deZT[i].utj + `</td>
-          <td>`+ deZT[i].user + `</td>
-          <td>`+ deZT[i].same + `</td>
-          <td>`+ deZT[i].circle + `</td>
-          <td>`+ deZT[i].mnps + `</td>
-          <td>`+ deZT[i].mm + `</td>
-          <td>`+ deZT[i].tnps + `</td>
-          <td>`+ deZT[i].mt + `</td>
-          <td>`+ deZT[i].del + `</td>
-      </tr>
-      `
-    }
-    for (var i = 0; i < deWL.length; i++) {
-      if (deWL[i].name == "网络标签") {
-        destrWLf += `
-        <tr class="parent" id="row1">
-            <td>
-                `+ deWL[i].name + `
-                <i class="glyphicon glyphicon-chevron-down"></i>
-            </td>
-            <td>`+ deWL[i].unps + `</td>
-            <td>`+ deWL[i].utj + `</td>
-            <td>`+ deWL[i].user + `</td>
-            <td>`+ deWL[i].same + `</td>
-            <td>`+ deWL[i].circle + `</td>
-            <td>`+ deWL[i].mnps + `</td>
-            <td>`+ deWL[i].mm + `</td>
-            <td>`+ deWL[i].tnps + `</td>
-            <td>`+ deWL[i].mt + `</td>
-            <td>`+ deWL[i].del + `</td>
-        </tr>
-        `
-      } else {
-        destrWLc += `
-        <tr class="child_row1 child">
-            <td>`+ deWL[i].name + `</td>
-            <td>`+ deWL[i].unps + `</td>
-            <td>`+ deWL[i].utj + `</td>
-            <td>`+ deWL[i].user + `</td>
-            <td>`+ deWL[i].same + `</td>
-            <td>`+ deWL[i].circle + `</td>
-            <td>`+ deWL[i].mnps + `</td>
-            <td>`+ deWL[i].mm + `</td>
-            <td>`+ deWL[i].tnps + `</td>
-            <td>`+ deWL[i].mt + `</td>
-            <td>`+ deWL[i].del + `</td>
-        </tr>
-        `
+      // 业务
+      for (var i = 0; i < result.npsCityYWYW.length; i++) {
+        npsYW.push({
+          name: result.npsCityYWYW[i].CITY_NAME,
+          unps: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
+          uyb: parseFloat(result.npsCityYWYW[i].U_NUM).toFixed(2),
+          same: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
+          clrcle: parseFloat(result.npsCityYWYW[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.npsCityYWYW[i].M_NPS).toFixed(2),
+          myb: parseFloat(result.npsCityYWYW[i].M_NUM).toFixed(2),
+          mm: parseFloat(result.npsCityYWYW[i].STANDARD_M).toFixed(2),
+          tnps: parseFloat(result.npsCityYWYW[i].T_NPS).toFixed(2),
+          tyb: parseFloat(result.npsCityYWYW[i].T_NUM).toFixed(2),
+          mt: parseFloat(result.npsCityYWYW[i].STANDARD_T).toFixed(2),
+          del: parseFloat(result.npsCityYWYW[i].COMPETITION_BETWEEN).toFixed(2),
+        })
       }
-    }
-    for (var i = 0; i < deYW.length; i++) {
-      if (deYW[i].name == "业务标签") {
-        destrYWf += `
-        <tr class="parent" id="row2">
-            <td>
-                `+ deYW[i].name + `
-                <i class="glyphicon glyphicon-chevron-down"></i>
-            </td>
-            <td>`+ deYW[i].unps + `</td>
-            <td>`+ deYW[i].utj + `</td>
-            <td>`+ deYW[i].user + `</td>
-            <td>`+ deYW[i].same + `</td>
-            <td>`+ deYW[i].circle + `</td>
-            <td>`+ deYW[i].mnps + `</td>
-            <td>`+ deYW[i].mm + `</td>
-            <td>`+ deYW[i].tnps + `</td>
-            <td>`+ deYW[i].mt + `</td>
-            <td>`+ deYW[i].del + `</td>
-        </tr>
-        `
-      } else {
-        destrYWc += `
-        <tr class="child_row2 child">
-            <td>`+ deYW[i].name + `</td>
-            <td>`+ deYW[i].unps + `</td>
-            <td>`+ deYW[i].utj + `</td>
-            <td>`+ deYW[i].user + `</td>
-            <td>`+ deYW[i].same + `</td>
-            <td>`+ deYW[i].circle + `</td>
-            <td>`+ deYW[i].mnps + `</td>
-            <td>`+ deYW[i].mm + `</td>
-            <td>`+ deYW[i].tnps + `</td>
-            <td>`+ deYW[i].mt + `</td>
-            <td>`+ deYW[i].del + `</td>
+      // 网络
+      // npsCityYWYW
+      for (var i = 0; i < result.npsCityYWWL.length; i++) {
+        npsWL.push({
+          name: result.npsCityYWWL[i].CITY_NAME,
+          unps: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
+          uyb: parseFloat(result.npsCityYWWL[i].U_NUM).toFixed(2),
+          same: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
+          clrcle: parseFloat(result.npsCityYWWL[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.npsCityYWWL[i].M_NPS).toFixed(2),
+          myb: parseFloat(result.npsCityYWWL[i].M_NUM).toFixed(2),
+          mm: parseFloat(result.npsCityYWWL[i].STANDARD_M).toFixed(2),
+          tnps: parseFloat(result.npsCityYWWL[i].T_NPS).toFixed(2),
+          tyb: parseFloat(result.npsCityYWWL[i].T_NUM).toFixed(2),
+          mt: parseFloat(result.npsCityYWWL[i].STANDARD_T).toFixed(2),
+          del: parseFloat(result.npsCityYWWL[i].COMPETITION_BETWEEN).toFixed(2),
+        })
+      }
+
+      // 服务
+      // npsCityYWFW
+      for (var i = 0; i < result.npsCityYWFW.length; i++) {
+        npsFW.push({
+          name: result.npsCityYWFW[i].CITY_NAME,
+          unps: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
+          uyb: parseFloat(result.npsCityYWFW[i].U_NUM).toFixed(2),
+          same: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
+          clrcle: parseFloat(result.npsCityYWFW[i].U_NPS).toFixed(2),
+          mnps: parseFloat(result.npsCityYWFW[i].M_NPS).toFixed(2),
+          myb: parseFloat(result.npsCityYWFW[i].M_NUM).toFixed(2),
+          mm: parseFloat(result.npsCityYWFW[i].STANDARD_M).toFixed(2),
+          tnps: parseFloat(result.npsCityYWFW[i].T_NPS).toFixed(2),
+          tyb: parseFloat(result.npsCityYWFW[i].T_NUM).toFixed(2),
+          mt: parseFloat(result.npsCityYWFW[i].STANDARD_T).toFixed(2),
+          del: parseFloat(result.npsCityYWFW[i].COMPETITION_BETWEEN).toFixed(2),
+        })
+      }
+      // 默认渲染整体数据
+
+      for (var i = 0; i < npsZT.length; i++) {
+        strfour += `
+        <tr>
+            <td>`+ npsZT[i].name + `</td>
+            <td>`+ npsZT[i].unps + `</td>
+            <td>`+ npsZT[i].uyb + `</td>
+            <td>`+ npsZT[i].same + `</td>
+            <td>`+ npsZT[i].clrcle + `</td>
+            <td>`+ npsZT[i].mnps + `</td>
+            <td>`+ npsZT[i].myb + `</td>
+            <td>`+ npsZT[i].mm + `</td>
+            <td>`+ npsZT[i].tnps + `</td>
+            <td>`+ npsZT[i].tyb + `</td>
+            <td>`+ npsZT[i].mt + `</td>
+            <td>`+ npsZT[i].del + `</td>
         </tr>
         `
       }
-    }
+      $(".talezbmx tbody").html(strfour)
+      /* ***** fourbtn end ***** */
 
-    for (var i = 0; i < deFW.length; i++) {
-      if (deFW[i].name == "服务标签") {
-        destrFWf += `
-        <tr class="parent" id="row3">
-            <td>
-                `+ deFW[i].name + `
-                <i class="glyphicon glyphicon-chevron-down"></i>
-            </td>
-            <td>`+ deFW[i].unps + `</td>
-            <td>`+ deFW[i].utj + `</td>
-            <td>`+ deFW[i].user + `</td>
-            <td>`+ deFW[i].same + `</td>
-            <td>`+ deFW[i].circle + `</td>
-            <td>`+ deFW[i].mnps + `</td>
-            <td>`+ deFW[i].mm + `</td>
-            <td>`+ deFW[i].tnps + `</td>
-            <td>`+ deFW[i].mt + `</td>
-            <td>`+ deFW[i].del + `</td>
+      /* ***** detail start ***** */
+      for (var i = 0; i < result.npsYW.length; i++) {
+        if (result.npsYW[i].L1_NAME == "整体") {
+          deZT.push({
+            name: result.npsYW[i].L_NAME,
+            unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
+            user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
+            tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
+            del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+          })
+        }
+        if (result.npsYW[i].L1_NAME == "服务标签") {
+          deFW.push({
+            name: result.npsYW[i].L_NAME,
+            unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
+            user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
+            tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
+            del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+
+          })
+        }
+        if (result.npsYW[i].L1_NAME == "业务标签") {
+          deYW.push({
+            name: result.npsYW[i].L_NAME,
+            unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
+            user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
+            tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
+            del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+
+          })
+        }
+        if (result.npsYW[i].L1_NAME == "网络标签") {
+          deWL.push({
+            name: result.npsYW[i].L_NAME,
+            unps: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            utj: parseFloat(result.npsYW[i].U_REFERENCE_RATE).toFixed(2),
+            user: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            circle: parseFloat(result.npsYW[i].U_NPS).toFixed(2),
+            mnps: parseFloat(result.npsYW[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.npsYW[i].STANDARD_M).toFixed(2),
+            tnps: parseFloat(result.npsYW[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.npsYW[i].STANDARD_T).toFixed(2),
+            del: parseFloat(result.npsYW[i].COMPETITION_BETWEEN).toFixed(2)
+
+          })
+        }
+
+      }
+      for (var i = 0; i < deZT.length; i++) {
+        destrZT += `
+        <tr>
+            <td>`+ deZT[i].name + `</td>
+            <td>`+ deZT[i].unps + `</td>
+            <td>`+ deZT[i].utj + `</td>
+            <td>`+ deZT[i].user + `</td>
+            <td>`+ deZT[i].same + `</td>
+            <td>`+ deZT[i].circle + `</td>
+            <td>`+ deZT[i].mnps + `</td>
+            <td>`+ deZT[i].mm + `</td>
+            <td>`+ deZT[i].tnps + `</td>
+            <td>`+ deZT[i].mt + `</td>
+            <td>`+ deZT[i].del + `</td>
         </tr>
         `
-      } else {
-        destrFWc += `
-        <tr class="child_row3 child">
-            <td>`+ deFW[i].name + `</td>
-            <td>`+ deFW[i].unps + `</td>
-            <td>`+ deFW[i].utj + `</td>
-            <td>`+ deFW[i].user + `</td>
-            <td>`+ deFW[i].same + `</td>
-            <td>`+ deFW[i].circle + `</td>
-            <td>`+ deFW[i].mnps + `</td>
-            <td>`+ deFW[i].mm + `</td>
-            <td>`+ deFW[i].tnps + `</td>
-            <td>`+ deFW[i].mt + `</td>
-            <td>`+ deFW[i].del + `</td>
-        </tr>
-        `
+      }
+      for (var i = 0; i < deWL.length; i++) {
+        if (deWL[i].name == "网络标签") {
+          destrWLf += `
+          <tr class="parent" id="row1">
+              <td>
+                  `+ deWL[i].name + `
+                  <i class="glyphicon glyphicon-chevron-down"></i>
+              </td>
+              <td>`+ deWL[i].unps + `</td>
+              <td>`+ deWL[i].utj + `</td>
+              <td>`+ deWL[i].user + `</td>
+              <td>`+ deWL[i].same + `</td>
+              <td>`+ deWL[i].circle + `</td>
+              <td>`+ deWL[i].mnps + `</td>
+              <td>`+ deWL[i].mm + `</td>
+              <td>`+ deWL[i].tnps + `</td>
+              <td>`+ deWL[i].mt + `</td>
+              <td>`+ deWL[i].del + `</td>
+          </tr>
+          `
+        } else {
+          destrWLc += `
+          <tr class="child_row1 child">
+              <td>`+ deWL[i].name + `</td>
+              <td>`+ deWL[i].unps + `</td>
+              <td>`+ deWL[i].utj + `</td>
+              <td>`+ deWL[i].user + `</td>
+              <td>`+ deWL[i].same + `</td>
+              <td>`+ deWL[i].circle + `</td>
+              <td>`+ deWL[i].mnps + `</td>
+              <td>`+ deWL[i].mm + `</td>
+              <td>`+ deWL[i].tnps + `</td>
+              <td>`+ deWL[i].mt + `</td>
+              <td>`+ deWL[i].del + `</td>
+          </tr>
+          `
+        }
+      }
+      for (var i = 0; i < deYW.length; i++) {
+        if (deYW[i].name == "业务标签") {
+          destrYWf += `
+          <tr class="parent" id="row2">
+              <td>
+                  `+ deYW[i].name + `
+                  <i class="glyphicon glyphicon-chevron-down"></i>
+              </td>
+              <td>`+ deYW[i].unps + `</td>
+              <td>`+ deYW[i].utj + `</td>
+              <td>`+ deYW[i].user + `</td>
+              <td>`+ deYW[i].same + `</td>
+              <td>`+ deYW[i].circle + `</td>
+              <td>`+ deYW[i].mnps + `</td>
+              <td>`+ deYW[i].mm + `</td>
+              <td>`+ deYW[i].tnps + `</td>
+              <td>`+ deYW[i].mt + `</td>
+              <td>`+ deYW[i].del + `</td>
+          </tr>
+          `
+        } else {
+          destrYWc += `
+          <tr class="child_row2 child">
+              <td>`+ deYW[i].name + `</td>
+              <td>`+ deYW[i].unps + `</td>
+              <td>`+ deYW[i].utj + `</td>
+              <td>`+ deYW[i].user + `</td>
+              <td>`+ deYW[i].same + `</td>
+              <td>`+ deYW[i].circle + `</td>
+              <td>`+ deYW[i].mnps + `</td>
+              <td>`+ deYW[i].mm + `</td>
+              <td>`+ deYW[i].tnps + `</td>
+              <td>`+ deYW[i].mt + `</td>
+              <td>`+ deYW[i].del + `</td>
+          </tr>
+          `
+        }
       }
 
-    }
-    destrall = destrZT + destrWLf + destrWLc + destrYWf + destrYWc + destrFWf + destrFWc;
-    $(".tablemx tbody").html(destrall)
-    $("tr.parent").click(function () {
-      $(this)
-        .siblings(".child_" + this.id)
-        .slideToggle();
-      var icon = $(this).find("i");
-      if (icon.hasClass("glyphicon-chevron-down")) {
-        icon.removeClass("glyphicon-chevron-down");
-        icon.addClass("glyphicon-chevron-up");
-      } else {
-        icon.removeClass("glyphicon-chevron-up");
-        icon.addClass("glyphicon-chevron-down");
+      for (var i = 0; i < deFW.length; i++) {
+        if (deFW[i].name == "服务标签") {
+          destrFWf += `
+          <tr class="parent" id="row3">
+              <td>
+                  `+ deFW[i].name + `
+                  <i class="glyphicon glyphicon-chevron-down"></i>
+              </td>
+              <td>`+ deFW[i].unps + `</td>
+              <td>`+ deFW[i].utj + `</td>
+              <td>`+ deFW[i].user + `</td>
+              <td>`+ deFW[i].same + `</td>
+              <td>`+ deFW[i].circle + `</td>
+              <td>`+ deFW[i].mnps + `</td>
+              <td>`+ deFW[i].mm + `</td>
+              <td>`+ deFW[i].tnps + `</td>
+              <td>`+ deFW[i].mt + `</td>
+              <td>`+ deFW[i].del + `</td>
+          </tr>
+          `
+        } else {
+          destrFWc += `
+          <tr class="child_row3 child">
+              <td>`+ deFW[i].name + `</td>
+              <td>`+ deFW[i].unps + `</td>
+              <td>`+ deFW[i].utj + `</td>
+              <td>`+ deFW[i].user + `</td>
+              <td>`+ deFW[i].same + `</td>
+              <td>`+ deFW[i].circle + `</td>
+              <td>`+ deFW[i].mnps + `</td>
+              <td>`+ deFW[i].mm + `</td>
+              <td>`+ deFW[i].tnps + `</td>
+              <td>`+ deFW[i].mt + `</td>
+              <td>`+ deFW[i].del + `</td>
+          </tr>
+          `
+        }
+
       }
-    });
-
-
-    /* ***** detail end ***** */
-
-    /* ***** rank start ***** */
-    for (var i = 0; i < prorank.length; i++) {
-      if (prorank[i].name == proname) {
-        rankarea = prorank[i].arearank;
-        rankall = prorank[i].allrank;
-        $(".nor .num").html(rankarea)
-        $(".glo .num").html(rankall)
-      }
-    }
-    for (var i = 0; i < result.allRankYWN.length; i++) {
-      if (result.allRankYWN[i].PROVINCE_NAME == proname) {
-        $(".nor .area").text("北方")
-        console.log("北方");
-      }
-
-      if (result.allRankYWS[i].PROVINCE_NAME == proname) {
-        $(".nor .area").text("南方")
-        console.log("南方");
-      }
-
-    }
-
-    $(".toptitle .name").text(proname)
-    var str = $(".hrtitle2 span").text()
-    var arr = str.split("-")
-    arr[1] = proname
-    console.log(arr);
-    str = arr.join("-")
-    $(".hrtitle2 span").text(str)
-
-    /* ***** rank end ***** */
-
-    $('.tablemx tbody tr').each(function (i) {
-      $(this).children('td').each(function (j) {
-        if ($(this).text() == "NaN") {
-          $(this).text("—")
+      destrall = destrZT + destrWLf + destrWLc + destrYWf + destrYWc + destrFWf + destrFWc;
+      $(".tablemx tbody").html(destrall)
+      $("tr.parent").click(function () {
+        $(this)
+          .siblings(".child_" + this.id)
+          .slideToggle();
+        var icon = $(this).find("i");
+        if (icon.hasClass("glyphicon-chevron-down")) {
+          icon.removeClass("glyphicon-chevron-down");
+          icon.addClass("glyphicon-chevron-up");
+        } else {
+          icon.removeClass("glyphicon-chevron-up");
+          icon.addClass("glyphicon-chevron-down");
         }
       });
-    });
-    $('.rang tbody tr').each(function (i) {
-      $(this).children('td').each(function (j) {
-        if ($(this).text() == "NaN") {
-          $(this).text("—")
-        }
-      });
-    });
-    $('.talezbmx tbody tr').each(function (i) {
-      $(this).children('td').each(function (j) {
-        if ($(this).text() == "NaN") {
-          $(this).text("—")
-        }
-      });
-    });
 
 
-  },
-  error: function () {
-    console.log("请求失败");
-  }
-})
+      /* ***** detail end ***** */
+
+      /* ***** rank start ***** */
+      for (var i = 0; i < prorank.length; i++) {
+        if (prorank[i].name == proname) {
+          rankarea = prorank[i].arearank;
+          rankall = prorank[i].allrank;
+          $(".nor .num").html(rankarea)
+          $(".glo .num").html(rankall)
+        }
+      }
+      for (var i = 0; i < result.allRankYWN.length; i++) {
+        if (result.allRankYWN[i].PROVINCE_NAME == proname) {
+          $(".nor .area").text("北方")
+          console.log("北方");
+        }
+
+        if (result.allRankYWS[i].PROVINCE_NAME == proname) {
+          $(".nor .area").text("南方")
+          console.log("南方");
+        }
+
+      }
+
+      $(".toptitle .name").text(proname)
+      var str = $(".hrtitle2 span").text()
+      var arr = str.split("-")
+      arr[1] = proname
+      console.log(arr);
+      str = arr.join("-")
+      $(".hrtitle2 span").text(str)
+
+      /* ***** rank end ***** */
+
+      $('.tablemx tbody tr').each(function (i) {
+        $(this).children('td').each(function (j) {
+          if ($(this).text() == "NaN") {
+            $(this).text("—")
+          }
+        });
+      });
+      $('.rang tbody tr').each(function (i) {
+        $(this).children('td').each(function (j) {
+          if ($(this).text() == "NaN") {
+            $(this).text("—")
+          }
+        });
+      });
+      $('.talezbmx tbody tr').each(function (i) {
+        $(this).children('td').each(function (j) {
+          if ($(this).text() == "NaN") {
+            $(this).text("—")
+          }
+        });
+      });
+
+
+    },
+    error: function () {
+      console.log("请求失败");
+    }
+  })
+}
 
 
