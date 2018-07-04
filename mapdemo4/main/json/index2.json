@@ -7,126 +7,53 @@
   ],
   "pieYWDept": [
     {
-      "YEAR_LIFT": "11.6522",
+      "YEAR_LIFT": 11.6522385763373,
       "QUARTER_NPS": "18.6522",
       "QUARTER_LIFT": 11.6522,
-      "YEAR_NPS": "18.6522",
-      "YEAR_FINISH": 1.91019672131148
+      "YEAR_NPS": "18.6522385763373",
+      "YEAR_FINISH": 1.9102030453012
     }
   ],
   "deptNPSYW": [
     {
       "COMPARE_M": "10.978516396",
       "L_NAME": "部门整体",
+      "MONTH_ON_MONTH": "3.902197998",
       "M_NPS": "7.6737221806",
+      "YEAR_ON_YEAR": "10.9713548128333",
       "COMPARE_T": "3.3899395103",
       "T_NPS": "15.262299066",
       "U_NPS": "18.652238576",
       "COMPETITION_GAP": "7.184227953"
     },
     {
-      "COMPARE_M": "45.578913734",
-      "L_NAME": "价格水平",
-      "M_NPS": "-16.684038118",
-      "COMPARE_T": "12.867934712",
-      "T_NPS": "16.026940904",
-      "U_NPS": "28.894875616",
-      "COMPETITION_GAP": "29.223424223"
-    },
-    {
-      "COMPARE_M": "30.371256325",
-      "L_NAME": "套餐设计",
-      "M_NPS": "-8.1855200497",
-      "COMPARE_T": "5.7168040409",
-      "T_NPS": "16.468932234",
-      "U_NPS": "22.185736275",
-      "COMPETITION_GAP": "18.044030183"
-    },
-    {
-      "COMPARE_M": "52.454778114",
-      "L_NAME": "流量包",
-      "M_NPS": "-37.814043376",
-      "COMPARE_T": "25.55478658",
-      "T_NPS": "-10.914051842",
-      "U_NPS": "14.640734738",
-      "COMPETITION_GAP": "39.004782347"
-    },
-    {
-      "COMPARE_M": "-37.429782618",
-      "L_NAME": "账详单、发票清晰明了能看懂标签",
-      "M_NPS": "37.607402512",
-      "COMPARE_T": "-5.2318466731",
-      "T_NPS": "5.4094665665",
-      "U_NPS": "0.17761989343",
-      "COMPETITION_GAP": "-21.330814646"
-    },
-    {
-      "COMPARE_M": "-28.468333808",
-      "L_NAME": "账详单、发票获取便捷",
-      "M_NPS": "53.760162602",
-      "COMPARE_T": "-3.5858509036",
-      "T_NPS": "28.877679697",
-      "U_NPS": "25.291828794",
-      "COMPETITION_GAP": "-16.027092356"
-    },
-    {
-      "COMPARE_M": "-56.151578379",
-      "L_NAME": "账详单、发票清晰明了能看懂",
-      "M_NPS": "21.489001692",
-      "COMPARE_T": "-14.341721072",
-      "T_NPS": "-20.320855615",
-      "U_NPS": "-34.662576687",
-      "COMPETITION_GAP": "-35.246649726"
-    },
-    {
-      "COMPARE_M": "-24.247104247",
-      "L_NAME": "各渠道查询结果一致",
-      "M_NPS": "-24.324324324",
-      "COMPARE_T": "-17.46031746",
-      "T_NPS": "-31.111111111",
-      "U_NPS": "-48.571428571",
-      "COMPETITION_GAP": "-20.853710854"
-    },
-    {
-      "COMPARE_M": "-29.176876256",
-      "L_NAME": "促销活动和宣传",
-      "M_NPS": "47.56421612",
-      "COMPARE_T": "-2.5815950469",
-      "T_NPS": "20.968934911",
-      "U_NPS": "18.387339864",
-      "COMPETITION_GAP": "-15.879235651"
-    },
-    {
-      "COMPARE_M": "-28.463388898",
-      "L_NAME": "促销活动",
-      "M_NPS": "44.265463918",
-      "COMPARE_T": "-0.050081037543",
-      "T_NPS": "15.852156057",
-      "U_NPS": "15.80207502",
-      "COMPETITION_GAP": "-14.256734968"
-    },
-    {
-      "COMPARE_M": "-25.97409019",
-      "L_NAME": "宣传",
-      "M_NPS": "84.17721519",
-      "COMPARE_T": "-6.3019944539",
-      "T_NPS": "64.505119454",
-      "U_NPS": "58.203125",
-      "COMPETITION_GAP": "-16.138042322"
-    },
-    {
       "COMPARE_M": "-23.788228678",
-      "L_NAME": "业务办理方便快捷",
+      "L_NAME": "业务办理方便快捷标签",
+      "MONTH_ON_MONTH": "-18.83535065",
       "M_NPS": "55.646551724",
+      "YEAR_ON_YEAR": "4.19110616633333",
       "COMPARE_T": "-0.15382334979",
       "T_NPS": "32.012146396",
       "U_NPS": "31.858323046",
       "COMPETITION_GAP": "-11.971026014"
     },
     {
+      "COMPARE_M": "-29.176876256",
+      "L_NAME": "促销活动和宣传标签",
+      "MONTH_ON_MONTH": "10.1274927153",
+      "M_NPS": "47.56421612",
+      "YEAR_ON_YEAR": "27.19702285217",
+      "COMPARE_T": "-2.5815950469",
+      "T_NPS": "20.968934911",
+      "U_NPS": "18.387339864",
+      "COMPETITION_GAP": "-15.879235651"
+    },
+    {
       "COMPARE_M": "-6.5532163743",
-      "L_NAME": "营业厅业务办理方便快捷",
+      "L_NAME": "营业厅业务办理方便快捷标签",
+      "MONTH_ON_MONTH": "65.288888889",
       "M_NPS": "71.842105263",
+      "YEAR_ON_YEAR": "65.288888889",
       "COMPARE_T": "7.7047741619",
       "T_NPS": "57.584114727",
       "U_NPS": "65.288888889",
@@ -134,8 +61,10 @@
     },
     {
       "COMPARE_M": "-20.663239081",
-      "L_NAME": "电子渠道业务办理方便快捷",
+      "L_NAME": "电子渠道业务办理方便快捷标签",
+      "MONTH_ON_MONTH": "55.918025931",
       "M_NPS": "76.581265012",
+      "YEAR_ON_YEAR": "55.918025931",
       "COMPARE_T": "-1.0162806388",
       "T_NPS": "56.934306569",
       "U_NPS": "55.918025931",
@@ -144,7 +73,9 @@
     {
       "COMPARE_M": "-17.549769308",
       "L_NAME": "热线业务办理方便快捷标签",
+      "MONTH_ON_MONTH": "69.05775076",
       "M_NPS": "86.607520068",
+      "YEAR_ON_YEAR": "69.05775076",
       "COMPARE_T": "1.2127473608",
       "T_NPS": "67.845003399",
       "U_NPS": "69.05775076",
@@ -152,17 +83,54 @@
     },
     {
       "COMPARE_M": "-5.3473835449",
-      "L_NAME": "业务规则设计合理",
+      "L_NAME": "业务规则设计合理标签",
+      "MONTH_ON_MONTH": "-46.528250511",
       "M_NPS": "-41.180866966",
+      "YEAR_ON_YEAR": "-46.528250511",
       "COMPARE_T": "0.061274458998",
       "T_NPS": "-46.58952497",
       "U_NPS": "-46.528250511",
       "COMPETITION_GAP": "-2.643054543"
     },
     {
+      "COMPARE_M": "-24.247104247",
+      "L_NAME": "各渠道查询结果一致标签",
+      "MONTH_ON_MONTH": "-48.571428571",
+      "M_NPS": "-24.324324324",
+      "YEAR_ON_YEAR": "-48.571428571",
+      "COMPARE_T": "-17.46031746",
+      "T_NPS": "-31.111111111",
+      "U_NPS": "-48.571428571",
+      "COMPETITION_GAP": "-20.853710854"
+    },
+    {
+      "COMPARE_M": "-28.468333808",
+      "L_NAME": "账详单、发票获取便捷标签",
+      "MONTH_ON_MONTH": "25.291828794",
+      "M_NPS": "53.760162602",
+      "YEAR_ON_YEAR": "25.291828794",
+      "COMPARE_T": "-3.5858509036",
+      "T_NPS": "28.877679697",
+      "U_NPS": "25.291828794",
+      "COMPETITION_GAP": "-16.027092356"
+    },
+    {
+      "COMPARE_M": "-56.151578379",
+      "L_NAME": "账详单、发票清晰明了能看懂标签",
+      "MONTH_ON_MONTH": "-18.18551628257",
+      "M_NPS": "21.489001692",
+      "YEAR_ON_YEAR": "5.59452367436333",
+      "COMPARE_T": "-14.341721072",
+      "T_NPS": "-20.320855615",
+      "U_NPS": "-34.662576687",
+      "COMPETITION_GAP": "-35.246649726"
+    },
+    {
       "COMPARE_M": "-23.897799977",
-      "L_NAME": "提醒服务",
+      "L_NAME": "提醒服务标签",
+      "MONTH_ON_MONTH": "-9.2271503391",
       "M_NPS": "32.003546099",
+      "YEAR_ON_YEAR": "-2.242767183275",
       "COMPARE_T": "-1.3807018096",
       "T_NPS": "9.4864479315",
       "U_NPS": "8.1057461219",
@@ -170,48 +138,94 @@
     },
     {
       "COMPARE_M": "14.010839911",
-      "L_NAME": "不知情定制/乱收费/乱扣费方面",
+      "L_NAME": "不知情定制/乱收费/乱扣费方面标签",
+      "MONTH_ON_MONTH": "4.204773327",
       "M_NPS": "-40.99347717",
+      "YEAR_ON_YEAR": "-1.7525142584",
       "COMPARE_T": "8.2286303461",
       "T_NPS": "-35.211267606",
       "U_NPS": "-26.98263726",
       "COMPETITION_GAP": "11.119735128"
     },
     {
+      "COMPARE_M": "45.578913734",
+      "L_NAME": "价格水平标签",
+      "MONTH_ON_MONTH": "6.978664976",
+      "M_NPS": "-16.684038118",
+      "YEAR_ON_YEAR": "12.156531425",
+      "COMPARE_T": "12.867934712",
+      "T_NPS": "16.026940904",
+      "U_NPS": "28.894875616",
+      "COMPETITION_GAP": "29.223424223"
+    },
+    {
+      "COMPARE_M": "30.371256325",
+      "L_NAME": "套餐设计标签",
+      "MONTH_ON_MONTH": "9.226507866",
+      "M_NPS": "-8.1855200497",
+      "YEAR_ON_YEAR": "17.3516101066667",
+      "COMPARE_T": "5.7168040409",
+      "T_NPS": "16.468932234",
+      "U_NPS": "22.185736275",
+      "COMPETITION_GAP": "18.044030183"
+    },
+    {
+      "COMPARE_M": "52.454778114",
+      "L_NAME": "流量包标签",
+      "MONTH_ON_MONTH": "14.82255291982",
+      "M_NPS": "-37.814043376",
+      "YEAR_ON_YEAR": "18.3001188618333",
+      "COMPARE_T": "25.55478658",
+      "T_NPS": "-10.914051842",
+      "U_NPS": "14.640734738",
+      "COMPETITION_GAP": "39.004782347"
+    },
+    {
       "COMPARE_M": "14.704271632",
-      "L_NAME": "终端",
+      "L_NAME": "终端标签",
+      "MONTH_ON_MONTH": "15.909090909",
       "M_NPS": "1.2048192771",
+      "YEAR_ON_YEAR": "15.909090909",
       "COMPARE_T": "34.763506184",
       "T_NPS": "-18.854415274",
       "U_NPS": "15.909090909",
       "COMPETITION_GAP": "24.733888908"
     },
     {
-      "COMPARE_M": "",
-      "L_NAME": "营业厅体验",
-      "M_NPS": "",
-      "COMPARE_T": "",
-      "T_NPS": "",
-      "U_NPS": "",
-      "COMPETITION_GAP": ""
+      "COMPARE_M": "-28.463388898",
+      "L_NAME": "促销活动标签",
+      "MONTH_ON_MONTH": "15.80207502",
+      "M_NPS": "44.265463918",
+      "YEAR_ON_YEAR": "15.80207502",
+      "COMPARE_T": "-0.050081037543",
+      "T_NPS": "15.852156057",
+      "U_NPS": "15.80207502",
+      "COMPETITION_GAP": "-14.256734968"
     },
     {
-      "COMPARE_M": "",
-      "L_NAME": "沃钱包方便快捷、优惠活动多",
-      "M_NPS": "",
-      "COMPARE_T": "",
-      "T_NPS": "",
-      "U_NPS": "",
-      "COMPETITION_GAP": ""
+      "COMPARE_M": "-25.97409019",
+      "L_NAME": "宣传标签",
+      "MONTH_ON_MONTH": "58.203125",
+      "M_NPS": "84.17721519",
+      "YEAR_ON_YEAR": "58.203125",
+      "COMPARE_T": "-6.3019944539",
+      "T_NPS": "64.505119454",
+      "U_NPS": "58.203125",
+      "COMPETITION_GAP": "-16.138042322"
+    }
+  ],
+  "allDeptTypeKD": [
+    {
+      "USER_TYPE": "FTTH",
+      "KD_NUM_PERCENT": "82.1"
     },
     {
-      "COMPARE_M": "",
-      "L_NAME": "营业厅整体服务",
-      "M_NPS": "",
-      "COMPARE_T": "",
-      "T_NPS": "",
-      "U_NPS": "",
-      "COMPETITION_GAP": ""
+      "USER_TYPE": "LAN",
+      "KD_NUM_PERCENT": "13.3"
+    },
+    {
+      "USER_TYPE": "XDSL",
+      "KD_NUM_PERCENT": "4.7"
     }
   ],
   "quarterKDNPS": [
@@ -304,7 +318,7 @@
       "COUNT": 3177
     },
     {
-      "USER_TYPE": "XDSL",
+      "USER_TYPE": "xDSL",
       "COUNT": 902
     }
   ],
@@ -312,58 +326,42 @@
     {
       "COMPARE_M": -7.892942997,
       "L_NAME": "部门整体",
-      "U_NUM": "30034",
+      "MONTH_ON_MONTH": "7.009902502",
       "M_NPS": "25.862577411",
+      "YEAR_ON_YEAR": "17.9948754275933",
       "COMPARE_T": 16.3749842082,
       "T_NPS": "1.5946502058",
       "U_NPS": "17.969634414",
       "COMPETITION_GAP": 4.2410206056
     },
     {
-      "COMPARE_M": -24.6038311257,
-      "L_NAME": "价格水平标签",
-      "U_NUM": "20323",
-      "M_NPS": "30.94639866",
-      "COMPARE_T": 14.2019263761,
-      "T_NPS": "-7.8593588418",
-      "U_NPS": "6.3425675343",
-      "COMPETITION_GAP": -5.2009523748
+      "COMPARE_M": 1.100110665,
+      "L_NAME": "上门安装和调试",
+      "MONTH_ON_MONTH": "83.158158158",
+      "M_NPS": "82.058047493",
+      "YEAR_ON_YEAR": "83.158158158",
+      "COMPARE_T": 2.06933294300001,
+      "T_NPS": "81.088825215",
+      "U_NPS": "83.158158158",
+      "COMPETITION_GAP": 1.584721804
     },
     {
-      "COMPARE_M": -17.836613757,
-      "L_NAME": "宽带套餐设计标签",
-      "U_NUM": "2500",
-      "M_NPS": "13.756613757",
-      "COMPARE_T": -7.1773451327,
-      "T_NPS": "3.0973451327",
-      "U_NPS": "-4.08",
-      "COMPETITION_GAP": -12.50697944485
-    },
-    {
-      "COMPARE_M": -3.211233211,
-      "L_NAME": "市场主流品牌、光纤覆盖率广、升级光纤方便标签",
-      "U_NUM": "910",
-      "M_NPS": "-27.777777778",
-      "COMPARE_T": -20.07992008,
-      "T_NPS": "-10.909090909",
-      "U_NPS": "-30.989010989",
-      "COMPETITION_GAP": -11.6455766455
-    },
-    {
-      "COMPARE_M": -48.5917709076,
-      "L_NAME": "促销活动和宣传标签",
-      "U_NUM": "669",
-      "M_NPS": "39.473684211",
-      "COMPARE_T": -13.8799914585,
-      "T_NPS": "4.7619047619",
-      "U_NPS": "-9.1180866966",
-      "COMPETITION_GAP": -31.23588118305
+      "COMPARE_M": 17.884615385,
+      "L_NAME": "故障处理",
+      "MONTH_ON_MONTH": "58.461538462",
+      "M_NPS": "40.576923077",
+      "YEAR_ON_YEAR": "58.461538462",
+      "COMPARE_T": 8.642697882,
+      "T_NPS": "49.81884058",
+      "U_NPS": "58.461538462",
+      "COMPETITION_GAP": 13.2636566335
     },
     {
       "COMPARE_M": -17.661179038,
       "L_NAME": "受理业务的流程标签",
-      "U_NUM": "1105",
+      "MONTH_ON_MONTH": "7.015759088",
       "M_NPS": "64.539007092",
+      "YEAR_ON_YEAR": "-0.164130960333338",
       "COMPARE_T": 1.839660115,
       "T_NPS": "45.038167939",
       "U_NPS": "46.877828054",
@@ -372,8 +370,9 @@
     {
       "COMPARE_M": -19.226990577,
       "L_NAME": "交费方便快捷标签",
-      "U_NUM": "914",
+      "MONTH_ON_MONTH": "-2.70774831999999",
       "M_NPS": "89.795918367",
+      "YEAR_ON_YEAR": "-0.0936539519999968",
       "COMPARE_T": -13.690331469,
       "T_NPS": "84.259259259",
       "U_NPS": "70.56892779",
@@ -382,62 +381,68 @@
     {
       "COMPARE_M": -25.354779558,
       "L_NAME": "提醒服务做得好、不会不合理停机标签",
-      "U_NUM": "904",
+      "MONTH_ON_MONTH": "-5.434360635",
       "M_NPS": "45.045045045",
+      "YEAR_ON_YEAR": "-1.54753206",
       "COMPARE_T": -8.087512291,
       "T_NPS": "27.777777778",
       "U_NPS": "19.690265487",
       "COMPETITION_GAP": -16.7211459245
     },
     {
-      "COMPARE_M": 17.884615385,
-      "L_NAME": "故障处理（18年仅北方整体）",
-      "U_NUM": "7150",
-      "M_NPS": "40.576923077",
-      "COMPARE_T": 8.642697882,
-      "T_NPS": "49.81884058",
-      "U_NPS": "58.461538462",
-      "COMPETITION_GAP": 13.2636566335
+      "COMPARE_M": -24.6038311257,
+      "L_NAME": "价格水平标签",
+      "MONTH_ON_MONTH": "-5.5381000957",
+      "M_NPS": "30.94639866",
+      "YEAR_ON_YEAR": "5.5595263911",
+      "COMPARE_T": 14.2019263761,
+      "T_NPS": "-7.8593588418",
+      "U_NPS": "6.3425675343",
+      "COMPETITION_GAP": -5.2009523748
     },
     {
-      "COMPARE_M": 1.100110665,
-      "L_NAME": "上门安装和调试（18年仅北方整体）",
-      "U_NUM": "3996",
-      "M_NPS": "82.058047493",
-      "COMPARE_T": 2.06933294300001,
-      "T_NPS": "81.088825215",
-      "U_NPS": "83.158158158",
-      "COMPETITION_GAP": 1.584721804
+      "COMPARE_M": -17.836613757,
+      "L_NAME": "宽带套餐设计标签",
+      "MONTH_ON_MONTH": "1.4361114145",
+      "M_NPS": "13.756613757",
+      "YEAR_ON_YEAR": "-21.3825241193333",
+      "COMPARE_T": -7.1773451327,
+      "T_NPS": "3.0973451327",
+      "U_NPS": "-4.08",
+      "COMPETITION_GAP": -12.50697944485
+    },
+    {
+      "COMPARE_M": -3.211233211,
+      "L_NAME": "市场主流品牌、光纤覆盖率广、升级光纤方便标签",
+      "MONTH_ON_MONTH": "4.78021978",
+      "M_NPS": "-27.777777778",
+      "YEAR_ON_YEAR": "-1.16472411833333",
+      "COMPARE_T": -20.07992008,
+      "T_NPS": "-10.909090909",
+      "U_NPS": "-30.989010989",
+      "COMPETITION_GAP": -11.6455766455
+    },
+    {
+      "COMPARE_M": -48.5917709076,
+      "L_NAME": "促销活动和宣传标签",
+      "MONTH_ON_MONTH": "2.4312090784",
+      "M_NPS": "39.473684211",
+      "YEAR_ON_YEAR": "7.7948003684",
+      "COMPARE_T": -13.8799914585,
+      "T_NPS": "4.7619047619",
+      "U_NPS": "-9.1180866966",
+      "COMPETITION_GAP": -31.23588118305
     },
     {
       "COMPARE_M": 8.916599625,
       "L_NAME": "家庭互联网应用及服务产品设计标签",
-      "U_NUM": "1356",
+      "MONTH_ON_MONTH": "-21.386430678",
       "M_NPS": "-30.303030303",
+      "YEAR_ON_YEAR": "-21.386430678",
       "COMPARE_T": 6.428138858,
       "T_NPS": "-27.814569536",
       "U_NPS": "-21.386430678",
       "COMPETITION_GAP": 7.6723692415
-    },
-    {
-      "COMPARE_M": 0.0,
-      "L_NAME": "融合业务套餐设计标签",
-      "U_NUM": "",
-      "M_NPS": "",
-      "COMPARE_T": 0.0,
-      "T_NPS": "",
-      "U_NPS": "",
-      "COMPETITION_GAP": 0.0
-    },
-    {
-      "COMPARE_M": 0.0,
-      "L_NAME": "办理宽带捆绑IPTV标签",
-      "U_NUM": "",
-      "M_NPS": "",
-      "COMPARE_T": 0.0,
-      "T_NPS": "",
-      "U_NPS": "",
-      "COMPETITION_GAP": 0.0
     }
   ],
   "allDeptStarYW": [
@@ -468,62 +473,62 @@
   ],
   "yearKDNPS": [
     {
-      "YEAR_LIFT": 11.6789,
+      "YEAR_LIFT": 11.6788933343399,
       "DEPT_NAME": "网络发展部",
       "rank": 1,
-      "YEAR_FINISH": 1.57822972972973
+      "YEAR_FINISH": 1.57822882896484
     },
     {
-      "YEAR_LIFT": 9.3626,
+      "YEAR_LIFT": 9.3626026805015,
       "DEPT_NAME": "运行维护部",
       "rank": 2,
-      "YEAR_FINISH": 1.31867605633803
+      "YEAR_FINISH": 1.31867643387345
     },
     {
-      "YEAR_LIFT": 7.6218,
+      "YEAR_LIFT": 7.6217639626854,
       "DEPT_NAME": "全集团",
       "rank": 3,
-      "YEAR_FINISH": 1.08882857142857
+      "YEAR_FINISH": 1.08882342324077
     },
     {
-      "YEAR_LIFT": 6.9696,
-      "DEPT_NAME": "市场营销部",
-      "rank": 4,
-      "YEAR_FINISH": 1.07224615384615
-    },
-    {
-      "YEAR_LIFT": 3.0996,
-      "DEPT_NAME": "信息化事业部",
-      "rank": 5,
-      "YEAR_FINISH": 0.61992
-    },
-    {
-      "YEAR_LIFT": 0.1,
+      "YEAR_LIFT": 7.6217639626854,
       "DEPT_NAME": "客户服务部",
+      "rank": 4,
+      "YEAR_FINISH": 1.08882342324077
+    },
+    {
+      "YEAR_LIFT": 6.9696344143304,
+      "DEPT_NAME": "市场营销部",
+      "rank": 5,
+      "YEAR_FINISH": 1.07225144835852
+    },
+    {
+      "YEAR_LIFT": 3.0995770857363,
+      "DEPT_NAME": "信息化事业部",
       "rank": 6,
-      "YEAR_FINISH": 0.0142857142857143
+      "YEAR_FINISH": 0.61991541714726
     },
     {
       "YEAR_LIFT": 0.0,
-      "DEPT_NAME": "互联网运营部",
+      "DEPT_NAME": "实体渠道部",
       "rank": 7,
       "YEAR_FINISH": null
     },
     {
       "YEAR_LIFT": 0.0,
-      "DEPT_NAME": "国际业务部",
+      "DEPT_NAME": "电子商务部",
       "rank": 8,
       "YEAR_FINISH": null
     },
     {
       "YEAR_LIFT": 0.0,
-      "DEPT_NAME": "实体渠道部",
+      "DEPT_NAME": "互联网运营部",
       "rank": 9,
       "YEAR_FINISH": null
     },
     {
-      "YEAR_LIFT": 46.7797,
-      "DEPT_NAME": "电子商务部",
+      "YEAR_LIFT": 0.0,
+      "DEPT_NAME": "国际业务部",
       "rank": 10,
       "YEAR_FINISH": null
     }
@@ -544,11 +549,11 @@
   ],
   "pieKDDept": [
     {
-      "YEAR_LIFT": 6.9696,
+      "YEAR_LIFT": 6.9696344143304,
       "QUARTER_NPS": "17.9696",
       "QUARTER_LIFT": 6.9696,
-      "YEAR_NPS": "17.9696",
-      "YEAR_FINISH": 1.07224615384615
+      "YEAR_NPS": "17.9696344143304",
+      "YEAR_FINISH": 1.07225144835852
     }
   ],
   "quotaDeptAGEKD": [
@@ -589,98 +594,66 @@
       "COUNT": 1394
     }
   ],
-  "quotaDeptSexKD": [
-    {
-      "SEX": "女",
-      "COUNT": 8773,
-      "OPERATOR_TYPE": "中国联通"
-    },
-    {
-      "SEX": "男",
-      "COUNT": 21261,
-      "OPERATOR_TYPE": "中国联通"
-    },
-    {
-      "SEX": "女",
-      "COUNT": 1113,
-      "OPERATOR_TYPE": "中国电信"
-    },
-    {
-      "SEX": "男",
-      "COUNT": 2398,
-      "OPERATOR_TYPE": "中国电信"
-    },
-    {
-      "SEX": "女",
-      "COUNT": 1307,
-      "OPERATOR_TYPE": "中国移动"
-    },
-    {
-      "SEX": "男",
-      "COUNT": 2461,
-      "OPERATOR_TYPE": "中国移动"
-    }
-  ],
   "yearYWNPS": [
     {
-      "YEAR_LIFT": 11.6522,
+      "YEAR_LIFT": 11.6522385763373,
       "DEPT_NAME": "市场营销部",
       "rank": 1,
-      "YEAR_FINISH": 1.91019672131148
+      "YEAR_FINISH": 1.9102030453012
     },
     {
-      "YEAR_LIFT": 13.4549,
+      "YEAR_LIFT": 13.4548969072165,
       "DEPT_NAME": "实体渠道部",
       "rank": 2,
-      "YEAR_FINISH": 1.86873611111111
+      "YEAR_FINISH": 1.86873568155785
     },
     {
-      "YEAR_LIFT": 8.1267,
+      "YEAR_LIFT": 8.1266840401169,
       "DEPT_NAME": "电子商务部",
       "rank": 3,
-      "YEAR_FINISH": 1.35445
+      "YEAR_FINISH": 1.35444734001948
     },
     {
-      "YEAR_LIFT": 5.2986,
-      "DEPT_NAME": "信息化事业部",
-      "rank": 4,
-      "YEAR_FINISH": 0.725835616438356
-    },
-    {
-      "YEAR_LIFT": 5.3151,
-      "DEPT_NAME": "互联网运营部",
-      "rank": 5,
-      "YEAR_FINISH": 0.6643875
-    },
-    {
-      "YEAR_LIFT": 4.1503,
-      "DEPT_NAME": "网络发展部",
-      "rank": 6,
-      "YEAR_FINISH": 0.446268817204301
-    },
-    {
-      "YEAR_LIFT": 3.1292,
-      "DEPT_NAME": "运行维护部",
-      "rank": 7,
-      "YEAR_FINISH": 0.372523809523809
-    },
-    {
-      "YEAR_LIFT": 0.4,
-      "DEPT_NAME": "客户服务部",
-      "rank": 8,
-      "YEAR_FINISH": 0.05
-    },
-    {
-      "YEAR_LIFT": 0.4,
-      "DEPT_NAME": "全集团",
-      "rank": 9,
-      "YEAR_FINISH": 0.05
-    },
-    {
-      "YEAR_LIFT": -6.5,
+      "YEAR_LIFT": 11.3500400234364,
       "DEPT_NAME": "国际业务部",
+      "rank": 4,
+      "YEAR_FINISH": 0.908003201874912
+    },
+    {
+      "YEAR_LIFT": 5.2986087150092,
+      "DEPT_NAME": "信息化事业部",
+      "rank": 5,
+      "YEAR_FINISH": 0.725836810275233
+    },
+    {
+      "YEAR_LIFT": 5.41813948451375,
+      "DEPT_NAME": "客户服务部",
+      "rank": 6,
+      "YEAR_FINISH": 0.677267435564219
+    },
+    {
+      "YEAR_LIFT": 5.41813948451375,
+      "DEPT_NAME": "全集团",
+      "rank": 7,
+      "YEAR_FINISH": 0.677267435564219
+    },
+    {
+      "YEAR_LIFT": 5.31514743503433,
+      "DEPT_NAME": "互联网运营部",
+      "rank": 8,
+      "YEAR_FINISH": 0.664393429379291
+    },
+    {
+      "YEAR_LIFT": 4.15033947623666,
+      "DEPT_NAME": "网络发展部",
+      "rank": 9,
+      "YEAR_FINISH": 0.446273061960931
+    },
+    {
+      "YEAR_LIFT": 3.12919786817783,
+      "DEPT_NAME": "运行维护部",
       "rank": 10,
-      "YEAR_FINISH": -0.52
+      "YEAR_FINISH": 0.372523555735456
     }
   ],
   "quarterYWNPS": [
@@ -753,6 +726,38 @@
       "USER_LEVEL": "未评级"
     }
   ],
+  "quotaDeptSexKD": [
+    {
+      "SEX": "女",
+      "COUNT": 8773,
+      "OPERATOR_TYPE": "中国联通"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 21261,
+      "OPERATOR_TYPE": "中国联通"
+    },
+    {
+      "SEX": "女",
+      "COUNT": 1113,
+      "OPERATOR_TYPE": "中国电信"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 2398,
+      "OPERATOR_TYPE": "中国电信"
+    },
+    {
+      "SEX": "女",
+      "COUNT": 1307,
+      "OPERATOR_TYPE": "中国移动"
+    },
+    {
+      "SEX": "男",
+      "COUNT": 2461,
+      "OPERATOR_TYPE": "中国移动"
+    }
+  ],
   "deptOPERATORKD": [
     {
       "USER_TYPE": "中国联通",
@@ -767,6 +772,754 @@
       "COUNT": 3391
     }
   ],
+  "deptProKD": [
+    {
+      "COMPARE_M": -25.2940042414,
+      "MONTH_ON_MONTH": "-0.6893053922",
+      "M_NPS": "34.065934066",
+      "COMPARE_T": 33.0366357066,
+      "YEAR_ON_YEAR": "14.3406043503667",
+      "rank": 1,
+      "T_NPS": "-24.264705882",
+      "PROVINCE_NAME": "广东",
+      "U_NPS": "8.7719298246",
+      "COMPETITION_GAP": 3.8713157326
+    },
+    {
+      "COMPARE_M": 12.966689023,
+      "MONTH_ON_MONTH": "9.6928795",
+      "M_NPS": "34.920634921",
+      "COMPARE_T": 52.5027085594,
+      "YEAR_ON_YEAR": "42.4012128327667",
+      "rank": 2,
+      "T_NPS": "-4.6153846154",
+      "PROVINCE_NAME": "青海",
+      "U_NPS": "47.887323944",
+      "COMPETITION_GAP": 32.7346987912
+    },
+    {
+      "COMPARE_M": -0.4960525396,
+      "MONTH_ON_MONTH": "-17.2277507934",
+      "M_NPS": "5.1282051282",
+      "COMPARE_T": 13.93447817,
+      "YEAR_ON_YEAR": "3.88603930561333",
+      "rank": 3,
+      "T_NPS": "-9.3023255814",
+      "PROVINCE_NAME": "四川",
+      "U_NPS": "4.6321525886",
+      "COMPETITION_GAP": 6.7192128152
+    },
+    {
+      "COMPARE_M": 15.286219978,
+      "MONTH_ON_MONTH": "7.616332786",
+      "M_NPS": "21.649484536",
+      "COMPARE_T": 64.966007544,
+      "YEAR_ON_YEAR": "24.8361353933667",
+      "rank": 4,
+      "T_NPS": "-28.03030303",
+      "PROVINCE_NAME": "浙江",
+      "U_NPS": "36.935704514",
+      "COMPETITION_GAP": 40.126113761
+    },
+    {
+      "COMPARE_M": -1.955155363,
+      "MONTH_ON_MONTH": "-3.767041963",
+      "M_NPS": "35.514018692",
+      "COMPARE_T": 52.642832795,
+      "YEAR_ON_YEAR": "14.216630881",
+      "rank": 5,
+      "T_NPS": "-19.083969466",
+      "PROVINCE_NAME": "江苏",
+      "U_NPS": "33.558863329",
+      "COMPETITION_GAP": 25.343838716
+    },
+    {
+      "COMPARE_M": -24.210737349,
+      "MONTH_ON_MONTH": "0.0777136640000009",
+      "M_NPS": "56.034482759",
+      "COMPARE_T": 22.1463260552,
+      "YEAR_ON_YEAR": "12.238651584",
+      "rank": 6,
+      "T_NPS": "9.6774193548",
+      "PROVINCE_NAME": "湖南",
+      "U_NPS": "31.82374541",
+      "COMPETITION_GAP": -1.0322056469
+    },
+    {
+      "COMPARE_M": 24.8420357738,
+      "MONTH_ON_MONTH": "12.210202199",
+      "M_NPS": "3.8461538462",
+      "COMPARE_T": 4.159887733,
+      "YEAR_ON_YEAR": "26.574468062",
+      "rank": 7,
+      "T_NPS": "24.528301887",
+      "PROVINCE_NAME": "河南",
+      "U_NPS": "28.68818962",
+      "COMPETITION_GAP": 14.5009617534
+    },
+    {
+      "COMPARE_M": 8.881116756,
+      "MONTH_ON_MONTH": "22.8521884194",
+      "M_NPS": "19.526627219",
+      "COMPARE_T": 5.502716042,
+      "YEAR_ON_YEAR": "27.83799776756",
+      "rank": 8,
+      "T_NPS": "22.905027933",
+      "PROVINCE_NAME": "山东",
+      "U_NPS": "28.407743975",
+      "COMPETITION_GAP": 7.191916399
+    },
+    {
+      "COMPARE_M": -9.254636234,
+      "MONTH_ON_MONTH": "4.043683094",
+      "M_NPS": "37.5",
+      "COMPARE_T": 28.90761542163,
+      "YEAR_ON_YEAR": "15.3168068137",
+      "rank": 9,
+      "T_NPS": "-0.66225165563",
+      "PROVINCE_NAME": "安徽",
+      "U_NPS": "28.245363766",
+      "COMPETITION_GAP": 9.826489593815
+    },
+    {
+      "COMPARE_M": -0.843108504,
+      "MONTH_ON_MONTH": "0.790026121",
+      "M_NPS": "28.409090909",
+      "COMPARE_T": 28.565982405,
+      "YEAR_ON_YEAR": "11.2605931551333",
+      "rank": 10,
+      "T_NPS": "-1",
+      "PROVINCE_NAME": "海南",
+      "U_NPS": "27.565982405",
+      "COMPETITION_GAP": 13.8614369505
+    },
+    {
+      "COMPARE_M": 15.129337539,
+      "MONTH_ON_MONTH": "-1.577886796",
+      "M_NPS": "12",
+      "COMPARE_T": 37.655653328,
+      "YEAR_ON_YEAR": "9.79102072333334",
+      "rank": 11,
+      "T_NPS": "-10.526315789",
+      "PROVINCE_NAME": "新疆",
+      "U_NPS": "27.129337539",
+      "COMPETITION_GAP": 26.3924954335
+    },
+    {
+      "COMPARE_M": -29.271262734,
+      "MONTH_ON_MONTH": "30.9332214527",
+      "M_NPS": "54.47761194",
+      "COMPARE_T": 4.824183601,
+      "YEAR_ON_YEAR": "40.6463304981667",
+      "rank": 12,
+      "T_NPS": "20.382165605",
+      "PROVINCE_NAME": "河北",
+      "U_NPS": "25.206349206",
+      "COMPETITION_GAP": -12.2235395665
+    },
+    {
+      "COMPARE_M": -8.517156862,
+      "MONTH_ON_MONTH": "-17.066940412",
+      "M_NPS": "33.333333333",
+      "COMPARE_T": 23.93122071879,
+      "YEAR_ON_YEAR": "11.134627602",
+      "rank": 13,
+      "T_NPS": "0.88495575221",
+      "PROVINCE_NAME": "云南",
+      "U_NPS": "24.816176471",
+      "COMPETITION_GAP": 7.707031928395
+    },
+    {
+      "COMPARE_M": -25.446422089,
+      "MONTH_ON_MONTH": "19.97987010742",
+      "M_NPS": "45.801526718",
+      "COMPARE_T": -4.644895371,
+      "YEAR_ON_YEAR": "18.7145399427333",
+      "rank": 14,
+      "T_NPS": "25",
+      "PROVINCE_NAME": "山西",
+      "U_NPS": "20.355104629",
+      "COMPETITION_GAP": -15.04565873
+    },
+    {
+      "COMPARE_M": -27.1986460224,
+      "MONTH_ON_MONTH": "-4.7022744697",
+      "M_NPS": "30.188679245",
+      "COMPARE_T": -9.9729297404,
+      "YEAR_ON_YEAR": "1.98827415903333",
+      "rank": 15,
+      "T_NPS": "12.962962963",
+      "PROVINCE_NAME": "甘肃",
+      "U_NPS": "2.9900332226",
+      "COMPETITION_GAP": -18.5857878814
+    },
+    {
+      "COMPARE_M": -12.809790923,
+      "MONTH_ON_MONTH": "3.749625636",
+      "M_NPS": "32.432432432",
+      "COMPARE_T": 24.4303338167,
+      "YEAR_ON_YEAR": "13.9971806466667",
+      "rank": 16,
+      "T_NPS": "-4.8076923077",
+      "PROVINCE_NAME": "贵州",
+      "U_NPS": "19.622641509",
+      "COMPETITION_GAP": 5.81027144685
+    },
+    {
+      "COMPARE_M": 1.385394653,
+      "MONTH_ON_MONTH": "-9.800027466",
+      "M_NPS": "17.543859649",
+      "COMPARE_T": 30.849784103,
+      "YEAR_ON_YEAR": "6.88329725723333",
+      "rank": 17,
+      "T_NPS": "-11.920529801",
+      "PROVINCE_NAME": "陕西",
+      "U_NPS": "18.929254302",
+      "COMPETITION_GAP": 16.117589378
+    },
+    {
+      "COMPARE_M": -12.555236471,
+      "MONTH_ON_MONTH": "0.969632936",
+      "M_NPS": "31.092436975",
+      "COMPARE_T": 41.301428146,
+      "YEAR_ON_YEAR": "14.67680854707",
+      "rank": 18,
+      "T_NPS": "-22.764227642",
+      "PROVINCE_NAME": "湖北",
+      "U_NPS": "18.537200504",
+      "COMPETITION_GAP": 14.3730958375
+    },
+    {
+      "COMPARE_M": -2.522522523,
+      "MONTH_ON_MONTH": "-1.327979865",
+      "M_NPS": "19.81981982",
+      "COMPARE_T": 29.797297297,
+      "YEAR_ON_YEAR": "13.8786279113333",
+      "rank": 19,
+      "T_NPS": "-12.5",
+      "PROVINCE_NAME": "福建",
+      "U_NPS": "17.297297297",
+      "COMPETITION_GAP": 13.637387387
+    },
+    {
+      "COMPARE_M": -1.399776036,
+      "MONTH_ON_MONTH": "-13.829787234",
+      "M_NPS": "18.421052632",
+      "COMPARE_T": 17.021276596,
+      "YEAR_ON_YEAR": "19.1857787605",
+      "rank": 20,
+      "T_NPS": "0",
+      "PROVINCE_NAME": "西藏",
+      "U_NPS": "17.021276596",
+      "COMPETITION_GAP": 7.81075028
+    },
+    {
+      "COMPARE_M": -17.939190118,
+      "MONTH_ON_MONTH": "15.5311486429",
+      "M_NPS": "33.098591549",
+      "COMPARE_T": 6.3543699845,
+      "YEAR_ON_YEAR": "18.7393199596833",
+      "rank": 21,
+      "T_NPS": "8.8050314465",
+      "PROVINCE_NAME": "内蒙古",
+      "U_NPS": "15.159401431",
+      "COMPETITION_GAP": -5.79241006675
+    },
+    {
+      "COMPARE_M": 13.3862433864,
+      "MONTH_ON_MONTH": "-10.278818144",
+      "M_NPS": "1.4285714286",
+      "COMPARE_T": 23.6383442268,
+      "YEAR_ON_YEAR": "16.1326709227333",
+      "rank": 22,
+      "T_NPS": "-8.8235294118",
+      "PROVINCE_NAME": "宁夏",
+      "U_NPS": "14.814814815",
+      "COMPETITION_GAP": 18.5122938066
+    },
+    {
+      "COMPARE_M": -0.9375,
+      "MONTH_ON_MONTH": "26.786345429",
+      "M_NPS": "15",
+      "COMPARE_T": -6.796395706,
+      "YEAR_ON_YEAR": "30.9927843713333",
+      "rank": 23,
+      "T_NPS": "20.858895706",
+      "PROVINCE_NAME": "天津",
+      "U_NPS": "14.0625",
+      "COMPETITION_GAP": -3.866947853
+    },
+    {
+      "COMPARE_M": -4.715469806,
+      "MONTH_ON_MONTH": "-9.174209824",
+      "M_NPS": "18.367346939",
+      "COMPARE_T": 12.5529760341,
+      "YEAR_ON_YEAR": "8.0717026035",
+      "rank": 24,
+      "T_NPS": "1.0989010989",
+      "PROVINCE_NAME": "江西",
+      "U_NPS": "13.651877133",
+      "COMPETITION_GAP": 3.91875311405
+    },
+    {
+      "COMPARE_M": -15.657069309,
+      "MONTH_ON_MONTH": "14.7666904925",
+      "M_NPS": "28.834355828",
+      "COMPARE_T": 3.9287316057,
+      "YEAR_ON_YEAR": "20.8385962677333",
+      "rank": 25,
+      "T_NPS": "9.2485549133",
+      "PROVINCE_NAME": "辽宁",
+      "U_NPS": "13.177286519",
+      "COMPETITION_GAP": -5.86416885165
+    },
+    {
+      "COMPARE_M": -15.402711891,
+      "MONTH_ON_MONTH": "33.109856622",
+      "M_NPS": "27.972027972",
+      "COMPARE_T": 13.13749789918,
+      "YEAR_ON_YEAR": "33.5868146076667",
+      "rank": 26,
+      "T_NPS": "-0.56818181818",
+      "PROVINCE_NAME": "黑龙江",
+      "U_NPS": "12.569316081",
+      "COMPETITION_GAP": -1.13260699591
+    },
+    {
+      "COMPARE_M": -19.100384674,
+      "MONTH_ON_MONTH": "19.7529707043",
+      "M_NPS": "31.288343558",
+      "COMPARE_T": -7.92377296,
+      "YEAR_ON_YEAR": "23.179038145",
+      "rank": 27,
+      "T_NPS": "20.111731844",
+      "PROVINCE_NAME": "吉林",
+      "U_NPS": "12.187958884",
+      "COMPETITION_GAP": -13.512078817
+    },
+    {
+      "COMPARE_M": 6.7970822283,
+      "MONTH_ON_MONTH": "-3.635487746",
+      "M_NPS": "4.1666666667",
+      "COMPARE_T": 22.074860006,
+      "YEAR_ON_YEAR": "10.9216293298",
+      "rank": 28,
+      "T_NPS": "-11.111111111",
+      "PROVINCE_NAME": "重庆",
+      "U_NPS": "10.963748895",
+      "COMPETITION_GAP": 14.43597111715
+    },
+    {
+      "COMPARE_M": -5.096332239,
+      "MONTH_ON_MONTH": "4.6890875751",
+      "M_NPS": "15.306122449",
+      "COMPARE_T": 22.440006037,
+      "YEAR_ON_YEAR": "12.9911653445",
+      "rank": 29,
+      "T_NPS": "-12.230215827",
+      "PROVINCE_NAME": "上海",
+      "U_NPS": "10.20979021",
+      "COMPETITION_GAP": 8.671836899
+    },
+    {
+      "COMPARE_M": -18.4436274513,
+      "MONTH_ON_MONTH": "-6.7506103235",
+      "M_NPS": "8.3333333333",
+      "COMPARE_T": -16.4932728414,
+      "YEAR_ON_YEAR": "-11.0377496443",
+      "rank": 30,
+      "T_NPS": "6.3829787234",
+      "PROVINCE_NAME": "广西",
+      "U_NPS": "-10.110294118",
+      "COMPETITION_GAP": -17.46845014635
+    },
+    {
+      "COMPARE_M": -22.92082475161,
+      "MONTH_ON_MONTH": "9.91131389639",
+      "M_NPS": "22.388059701",
+      "COMPARE_T": -4.12988735281,
+      "YEAR_ON_YEAR": "19.4754881287233",
+      "rank": 31,
+      "T_NPS": "3.5971223022",
+      "PROVINCE_NAME": "北京",
+      "U_NPS": "-0.53276505061",
+      "COMPETITION_GAP": -13.52535605221
+    }
+  ],
+  "deptProYW": [
+    {
+      "COMPARE_M": "7.0246764234",
+      "MONTH_ON_MONTH": "3.410974098",
+      "M_NPS": "2.0351526364",
+      "COMPARE_T": "-9.1658218563",
+      "YEAR_ON_YEAR": "0.802463589833334",
+      "rank": 1,
+      "T_NPS": "18.225650916",
+      "PROVINCE_NAME": "广西",
+      "U_NPS": "9.0598290598",
+      "COMPETITION_GAP": "-1.0705727164"
+    },
+    {
+      "COMPARE_M": "2.0695942923",
+      "MONTH_ON_MONTH": "4.1055064833",
+      "M_NPS": "6.3112745098",
+      "COMPARE_T": "13.022219013",
+      "YEAR_ON_YEAR": "3.2125319272",
+      "rank": 2,
+      "T_NPS": "-4.641350211",
+      "PROVINCE_NAME": "广东",
+      "U_NPS": "8.3808688021",
+      "COMPETITION_GAP": "7.5459066527"
+    },
+    {
+      "COMPARE_M": "12.210701871",
+      "MONTH_ON_MONTH": "4.8549608523",
+      "M_NPS": "-4.6006389776",
+      "COMPARE_T": "-4.8412989746",
+      "YEAR_ON_YEAR": "5.76002659819",
+      "rank": 3,
+      "T_NPS": "12.451361868",
+      "PROVINCE_NAME": "四川",
+      "U_NPS": "7.6100628931",
+      "COMPETITION_GAP": "3.684701448"
+    },
+    {
+      "COMPARE_M": "14.53063008",
+      "MONTH_ON_MONTH": "2.2805244413",
+      "M_NPS": "-9.3951093951",
+      "COMPARE_T": "4.6956379868",
+      "YEAR_ON_YEAR": "15.6772310074333",
+      "rank": 4,
+      "T_NPS": "0.43988269795",
+      "PROVINCE_NAME": "上海",
+      "U_NPS": "5.1355206847",
+      "COMPETITION_GAP": "9.6131340333"
+    },
+    {
+      "COMPARE_M": "21.817583813",
+      "MONTH_ON_MONTH": "22.47614511",
+      "M_NPS": "19.351570415",
+      "COMPARE_T": "18.490968484",
+      "YEAR_ON_YEAR": "28.8362800558667",
+      "rank": 5,
+      "T_NPS": "22.678185745",
+      "PROVINCE_NAME": "云南",
+      "U_NPS": "41.169154229",
+      "COMPETITION_GAP": "20.154276149"
+    },
+    {
+      "COMPARE_M": "25.214016964",
+      "MONTH_ON_MONTH": "10.392367073",
+      "M_NPS": "13.865546218",
+      "COMPARE_T": "15.258808466",
+      "YEAR_ON_YEAR": "20.246650484",
+      "rank": 6,
+      "T_NPS": "23.820754717",
+      "PROVINCE_NAME": "内蒙古",
+      "U_NPS": "39.079563183",
+      "COMPETITION_GAP": "20.236412715"
+    },
+    {
+      "COMPARE_M": "10.757166079",
+      "MONTH_ON_MONTH": "-0.508823710000001",
+      "M_NPS": "20.357941834",
+      "COMPARE_T": "22.519720073",
+      "YEAR_ON_YEAR": "12.441203245",
+      "rank": 7,
+      "T_NPS": "8.5953878407",
+      "PROVINCE_NAME": "青海",
+      "U_NPS": "31.115107914",
+      "COMPETITION_GAP": "16.638443076"
+    },
+    {
+      "COMPARE_M": "33.750264272",
+      "MONTH_ON_MONTH": "8.05625155",
+      "M_NPS": "-3.884057971",
+      "COMPARE_T": "-7.5829117449",
+      "YEAR_ON_YEAR": "4.82874882766667",
+      "rank": 8,
+      "T_NPS": "37.449118046",
+      "PROVINCE_NAME": "河南",
+      "U_NPS": "29.866206301",
+      "COMPETITION_GAP": "13.083676264"
+    },
+    {
+      "COMPARE_M": "29.355452443",
+      "MONTH_ON_MONTH": "2.922556215",
+      "M_NPS": "0.18779342723",
+      "COMPARE_T": "10.724427051",
+      "YEAR_ON_YEAR": "9.67569912833333",
+      "rank": 9,
+      "T_NPS": "18.818818819",
+      "PROVINCE_NAME": "甘肃",
+      "U_NPS": "29.54324587",
+      "COMPETITION_GAP": "20.039939747"
+    },
+    {
+      "COMPARE_M": "28.863296216",
+      "MONTH_ON_MONTH": "2.930837249",
+      "M_NPS": "-0.067249495629",
+      "COMPARE_T": "-3.2505665351",
+      "YEAR_ON_YEAR": "3.41453465433333",
+      "rank": 10,
+      "T_NPS": "32.046613256",
+      "PROVINCE_NAME": "山东",
+      "U_NPS": "28.796046721",
+      "COMPETITION_GAP": "12.806364841"
+    },
+    {
+      "COMPARE_M": "-10.042835725",
+      "MONTH_ON_MONTH": "-6.944557874",
+      "M_NPS": "37.931034483",
+      "COMPARE_T": "5.4172203166",
+      "YEAR_ON_YEAR": "10.3166466256667",
+      "rank": 11,
+      "T_NPS": "22.470978441",
+      "PROVINCE_NAME": "湖南",
+      "U_NPS": "27.888198758",
+      "COMPETITION_GAP": "-2.3128077042"
+    },
+    {
+      "COMPARE_M": "32.377488897",
+      "MONTH_ON_MONTH": "5.713831027",
+      "M_NPS": "-6.9464544139",
+      "COMPARE_T": "1.215787846",
+      "YEAR_ON_YEAR": "12.8343289259333",
+      "rank": 12,
+      "T_NPS": "24.215246637",
+      "PROVINCE_NAME": "天津",
+      "U_NPS": "25.431034483",
+      "COMPETITION_GAP": "16.796638371"
+    },
+    {
+      "COMPARE_M": "19.178339997",
+      "MONTH_ON_MONTH": "3.615975422",
+      "M_NPS": "6.2440870388",
+      "COMPARE_T": "8.5380986771",
+      "YEAR_ON_YEAR": "8.71001089133333",
+      "rank": 13,
+      "T_NPS": "16.884328358",
+      "PROVINCE_NAME": "新疆",
+      "U_NPS": "25.422427035",
+      "COMPETITION_GAP": "13.858219337"
+    },
+    {
+      "COMPARE_M": "22.273042273",
+      "MONTH_ON_MONTH": "-2.855162855",
+      "M_NPS": "2.0512820513",
+      "COMPARE_T": "22.41956242",
+      "YEAR_ON_YEAR": "3.98334842746667",
+      "rank": 14,
+      "T_NPS": "1.9047619048",
+      "PROVINCE_NAME": "西藏",
+      "U_NPS": "24.324324324",
+      "COMPETITION_GAP": "22.346302346"
+    },
+    {
+      "COMPARE_M": "16.547496394",
+      "MONTH_ON_MONTH": "7.030063036",
+      "M_NPS": "7.5829383886",
+      "COMPARE_T": "6.3846314253",
+      "YEAR_ON_YEAR": "2.752703755",
+      "rank": 15,
+      "T_NPS": "17.745803357",
+      "PROVINCE_NAME": "宁夏",
+      "U_NPS": "24.130434783",
+      "COMPETITION_GAP": "11.46606391"
+    },
+    {
+      "COMPARE_M": "7.512410182",
+      "MONTH_ON_MONTH": "3.314196827",
+      "M_NPS": "16.242038217",
+      "COMPARE_T": "0.033975957632",
+      "YEAR_ON_YEAR": "10.7055624526667",
+      "rank": 16,
+      "T_NPS": "23.720472441",
+      "PROVINCE_NAME": "黑龙江",
+      "U_NPS": "23.754448399",
+      "COMPETITION_GAP": "3.7731930698"
+    },
+    {
+      "COMPARE_M": "16.740450392",
+      "MONTH_ON_MONTH": "6.77651507",
+      "M_NPS": "6.5326633166",
+      "COMPARE_T": "11.140291231",
+      "YEAR_ON_YEAR": "12.5163638596333",
+      "rank": 17,
+      "T_NPS": "12.132822478",
+      "PROVINCE_NAME": "陕西",
+      "U_NPS": "23.273113709",
+      "COMPETITION_GAP": "13.940370812"
+    },
+    {
+      "COMPARE_M": "-8.3323145365",
+      "MONTH_ON_MONTH": "-5.359074194",
+      "M_NPS": "30.944254835",
+      "COMPARE_T": "-2.2008939261",
+      "YEAR_ON_YEAR": "11.7237582651",
+      "rank": 18,
+      "T_NPS": "24.812834225",
+      "PROVINCE_NAME": "山西",
+      "U_NPS": "22.611940299",
+      "COMPETITION_GAP": "-5.2666042313"
+    },
+    {
+      "COMPARE_M": "-4.1768806144",
+      "MONTH_ON_MONTH": "-0.0973303144999997",
+      "M_NPS": "6.3708759954",
+      "COMPARE_T": "-7.7939709246",
+      "YEAR_ON_YEAR": "12.1047959755667",
+      "rank": 19,
+      "T_NPS": "9.9879663057",
+      "PROVINCE_NAME": "江西",
+      "U_NPS": "2.1939953811",
+      "COMPETITION_GAP": "-5.9854257695"
+    },
+    {
+      "COMPARE_M": "-0.069981853543",
+      "MONTH_ON_MONTH": "1.862780625",
+      "M_NPS": "19.899665552",
+      "COMPARE_T": "-3.4648254531",
+      "YEAR_ON_YEAR": "13.2531435943667",
+      "rank": 20,
+      "T_NPS": "23.294509151",
+      "PROVINCE_NAME": "海南",
+      "U_NPS": "19.829683698",
+      "COMPETITION_GAP": "-1.7674036533"
+    },
+    {
+      "COMPARE_M": "0.87687120202",
+      "MONTH_ON_MONTH": "-5.243191168",
+      "M_NPS": "18.429487179",
+      "COMPARE_T": "-7.6551252134",
+      "YEAR_ON_YEAR": "11.87884881044",
+      "rank": 21,
+      "T_NPS": "26.961483595",
+      "PROVINCE_NAME": "吉林",
+      "U_NPS": "19.306358382",
+      "COMPETITION_GAP": "-3.3891270057"
+    },
+    {
+      "COMPARE_M": "14.445380179",
+      "MONTH_ON_MONTH": "-3.52108183",
+      "M_NPS": "4.5244690674",
+      "COMPARE_T": "2.8666463993",
+      "YEAR_ON_YEAR": "-5.93663844873333",
+      "rank": 22,
+      "T_NPS": "16.103202847",
+      "PROVINCE_NAME": "辽宁",
+      "U_NPS": "18.969849246",
+      "COMPETITION_GAP": "8.656013289"
+    },
+    {
+      "COMPARE_M": "12.602273897",
+      "MONTH_ON_MONTH": "2.160648594",
+      "M_NPS": "6.2062937063",
+      "COMPARE_T": "15.823492977",
+      "YEAR_ON_YEAR": "14.1398085965",
+      "rank": 23,
+      "T_NPS": "2.9850746269",
+      "PROVINCE_NAME": "江苏",
+      "U_NPS": "18.808567604",
+      "COMPETITION_GAP": "14.212883437"
+    },
+    {
+      "COMPARE_M": "3.6461677472",
+      "MONTH_ON_MONTH": "5.666021194",
+      "M_NPS": "13.610149942",
+      "COMPARE_T": "-0.91583958996",
+      "YEAR_ON_YEAR": "16.0048067520867",
+      "rank": 24,
+      "T_NPS": "18.172157279",
+      "PROVINCE_NAME": "河北",
+      "U_NPS": "17.25631769",
+      "COMPETITION_GAP": "1.3651640786"
+    },
+    {
+      "COMPARE_M": "6.8399260634",
+      "MONTH_ON_MONTH": "10.5232083022",
+      "M_NPS": "8.3953241233",
+      "COMPARE_T": "9.5178823334",
+      "YEAR_ON_YEAR": "16.4782681535",
+      "rank": 25,
+      "T_NPS": "5.7173678533",
+      "PROVINCE_NAME": "浙江",
+      "U_NPS": "15.235250187",
+      "COMPETITION_GAP": "8.1789041984"
+    },
+    {
+      "COMPARE_M": "6.4757545656",
+      "MONTH_ON_MONTH": "0.948425363",
+      "M_NPS": "8.1805359661",
+      "COMPARE_T": "1.7674016429",
+      "YEAR_ON_YEAR": "12.1687466808433",
+      "rank": 26,
+      "T_NPS": "12.888888889",
+      "PROVINCE_NAME": "贵州",
+      "U_NPS": "14.656290532",
+      "COMPETITION_GAP": "4.1215781043"
+    },
+    {
+      "COMPARE_M": "15.271209516",
+      "MONTH_ON_MONTH": "8.5607486404",
+      "M_NPS": "-0.68787618229",
+      "COMPARE_T": "11.521216098",
+      "YEAR_ON_YEAR": "17.1251014072467",
+      "rank": 27,
+      "T_NPS": "3.0621172353",
+      "PROVINCE_NAME": "湖北",
+      "U_NPS": "14.583333333",
+      "COMPETITION_GAP": "13.396212807"
+    },
+    {
+      "COMPARE_M": "-4.4061047751",
+      "MONTH_ON_MONTH": "3.424536064",
+      "M_NPS": "18.445839874",
+      "COMPARE_T": "2.5042117991",
+      "YEAR_ON_YEAR": "8.24094011883333",
+      "rank": 28,
+      "T_NPS": "11.5355233",
+      "PROVINCE_NAME": "安徽",
+      "U_NPS": "14.039735099",
+      "COMPETITION_GAP": "-0.95094648798"
+    },
+    {
+      "COMPARE_M": "11.011391354",
+      "MONTH_ON_MONTH": "4.5817690571",
+      "M_NPS": "-0.81855388813",
+      "COMPARE_T": "16.649078499",
+      "YEAR_ON_YEAR": "10.8467671679",
+      "rank": 29,
+      "T_NPS": "-6.456241033",
+      "PROVINCE_NAME": "北京",
+      "U_NPS": "10.192837466",
+      "COMPETITION_GAP": "13.830234926"
+    },
+    {
+      "COMPARE_M": "3.2808631884",
+      "MONTH_ON_MONTH": "-2.68240053575",
+      "M_NPS": "-3.7974683544",
+      "COMPARE_T": "-11.94093751",
+      "YEAR_ON_YEAR": "5.23450520935",
+      "rank": 30,
+      "T_NPS": "11.424332344",
+      "PROVINCE_NAME": "重庆",
+      "U_NPS": "-0.51660516605",
+      "COMPETITION_GAP": "-4.3300371609"
+    },
+    {
+      "COMPARE_M": "-12.519866732",
+      "MONTH_ON_MONTH": "-12.38838375048",
+      "M_NPS": "12.125",
+      "COMPARE_T": "-5.9814589112",
+      "YEAR_ON_YEAR": "12.32968856772",
+      "rank": 31,
+      "T_NPS": "5.5865921788",
+      "PROVINCE_NAME": "福建",
+      "U_NPS": "-0.39486673248",
+      "COMPETITION_GAP": "-9.2506628219"
+    }
+  ],
   "deptOPERATORYW": [
     {
       "USER_TYPE": "中国联通",
@@ -779,20 +1532,6 @@
     {
       "USER_TYPE": "中国移动",
       "COUNT": 29386
-    }
-  ],
-  "allDeptTypeKD": [
-    {
-      "KD_NUM_PERCENT": "82.1",
-      "USER_TYPE": "FTTH"
-    },
-    {
-      "KD_NUM_PERCENT": "13.3",
-      "USER_TYPE": "LAN"
-    },
-    {
-      "KD_NUM_PERCENT": "4.7",
-      "USER_TYPE": "XDSL"
     }
   ]
 }

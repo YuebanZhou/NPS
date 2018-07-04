@@ -677,17 +677,19 @@ if (type == "移网") {
       wltable.sort(sortBy('lift', false));
       var wlstr = '';
       for (var i = 0; i < wltable.length; i++) {
+        // var temp=[wltable[i].name.split("标签")]
+        // wltable[i].name=temp;
         wlstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ wltable[i].name + `</td>
-          <td width="10%" align="canter">`+ wltable[i].seme + `</td>
-          <td width="10%" align="canter">`+ wltable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ wltable[i].name + `</td>
+          <td width="15%" align="canter">`+ wltable[i].seme + `</td>
+          <td width="15%" align="canter">`+ wltable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
         </tr>
-    
         `
       }
+
       $("#con1 #tplWrapper_TemplateZ").html(wlstr)
 
       // 业务
@@ -746,10 +748,10 @@ if (type == "移网") {
         ywstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ ywtable[i].name + `</td>
-          <td width="10%" align="canter">`+ ywtable[i].seme + `</td>
-          <td width="10%" align="canter">`+ ywtable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ ywtable[i].name + `</td>
+          <td width="15%" align="canter">`+ ywtable[i].seme + `</td>
+          <td width="15%" align="canter">`+ ywtable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
         </tr>
     
         `
@@ -813,10 +815,10 @@ if (type == "移网") {
         fwstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ fwtable[i].name + `</td>
-          <td width="10%" align="canter">`+ fwtable[i].seme + `</td>
-          <td width="10%" align="canter">`+ fwtable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (fwtable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ fwtable[i].name + `</td>
+          <td width="15%" align="canter">`+ fwtable[i].seme + `</td>
+          <td width="15%" align="canter">`+ fwtable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (fwtable[i].lift).toFixed(2) + `</td>
         </tr>
     
         `
@@ -896,10 +898,10 @@ if (type == "宽带") {
         wlstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ wltable[i].name + `</td>
-          <td width="10%" align="canter">`+ wltable[i].seme + `</td>
-          <td width="10%" align="canter">`+ wltable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ wltable[i].name + `</td>
+          <td width="15%" align="canter">`+ wltable[i].seme + `</td>
+          <td width="15%" align="canter">`+ wltable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (wltable[i].lift).toFixed(2) + `</td>
         </tr>
     
         `
@@ -965,10 +967,10 @@ if (type == "宽带") {
         ywstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ ywtable[i].name + `</td>
-          <td width="10%" align="canter">`+ ywtable[i].seme + `</td>
-          <td width="10%" align="canter">`+ ywtable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ ywtable[i].name + `</td>
+          <td width="15%" align="canter">`+ ywtable[i].seme + `</td>
+          <td width="15%" align="canter">`+ ywtable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (ywtable[i].lift).toFixed(2) + `</td>
         </tr>
     
         `
@@ -1031,10 +1033,10 @@ if (type == "宽带") {
         fwstr += `
         <tr>
           <td width="10%" align="canter">`+ (i + 1) + `</td>
-          <td width="60%" align="canter">`+ fwtable[i].name + `</td>
-          <td width="10%" align="canter">`+ fwtable[i].seme + `</td>
-          <td width="10%" align="canter">`+ fwtable[i].circle + `</td>
-          <td width="10%" align="canter">`+ (fwtable[i].lift).toFixed(2) + `</td>
+          <td width="40%" align="canter" class="name">`+ fwtable[i].name + `</td>
+          <td width="15%" align="canter">`+ fwtable[i].seme + `</td>
+          <td width="15%" align="canter">`+ fwtable[i].circle + `</td>
+          <td width="20%" align="canter">`+ (fwtable[i].lift).toFixed(2) + `</td>
         </tr>
     
         `

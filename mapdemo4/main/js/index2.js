@@ -1,4 +1,5 @@
-var yearq = localStorage.getItem("yearq")
+// var yearq = localStorage.getItem("yearq")
+var yearq = "2018Q1"
 
 var chart1 = [];
 var chart2 = [];
@@ -30,9 +31,9 @@ var skd2 = []
 var skd3 = []
 var skd4 = []
 // 模拟获取部门名称
-// var apartment = "市场营销部";
 var apartment = localStorage.getItem("apartment")
-$(".toptitle .apartment").html(apartment);
+// var apartment = "客户服务部"
+$(".apartment").html(apartment);
 
 // 切换移网和宽带
 $(".btnzu1 .btn1").click(function () {
@@ -71,7 +72,7 @@ $(".btnzu2 .btn1").click(function () {
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第一季度");
   yearq = "2017Q1"
-  localStorage.setItem("yearq", yearq)
+  // localStorage.setItem("yearq", yearq)
   getMessage(yearq)
 })
 $(".btnzu2 .btn2").click(function () {
@@ -83,7 +84,7 @@ $(".btnzu2 .btn2").click(function () {
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第二季度");
   yearq = "2017Q2"
-  localStorage.setItem("yearq", yearq)
+  // localStorage.setItem("yearq", yearq)
   getMessage(yearq)
 })
 $(".btnzu2 .btn3").click(function () {
@@ -95,7 +96,7 @@ $(".btnzu2 .btn3").click(function () {
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第三季度");
   yearq = "2017Q3"
-  localStorage.setItem("yearq", yearq)
+  // localStorage.setItem("yearq", yearq)
   getMessage(yearq)
 })
 $(".btnzu2 .btn4").click(function () {
@@ -107,7 +108,7 @@ $(".btnzu2 .btn4").click(function () {
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第四季度");
   yearq = "2017Q4"
-  localStorage.setItem("yearq", yearq)
+  // localStorage.setItem("yearq", yearq)
   getMessage(yearq)
 })
 $(".btnzu2 .btn5").click(function () {
@@ -119,7 +120,7 @@ $(".btnzu2 .btn5").click(function () {
   $(".btnzu2 .btn5").addClass("active");
   $(".top .age").html("2018年第一季度");
   yearq = "2018Q1"
-  localStorage.setItem("yearq", yearq)
+  // localStorage.setItem("yearq", yearq)
   getMessage(yearq)
 })
 
@@ -1013,44 +1014,48 @@ function getMessage(yearq) {
       /* ***** chart部分 start ***** */
       // chart1
       function chart1yw() {
+        $("#chart1r").hide()
+        $("#chart1").show()
         if (result.deptOPERATORYW) {
           uv1 = result.deptOPERATORYW[0].COUNT
           mv1 = result.deptOPERATORYW[1].COUNT
           tv1 = result.deptOPERATORYW[2].COUNT
           drawchart1(uv1, mv1, tv1);
+          $(".part1 h4").show()
         } else {
           $("#chart1").hide()
-          $("#chart1r").hide()
+          $(".part1 h4").hide()
         }
       }
       function chart1kd() {
+        $("#chart1r").show()
+        $("#chart1").hide()
         if (result.deptOPERATORKD) {
           uv2 = result.deptOPERATORKD[0].COUNT
           mv2 = result.deptOPERATORKD[1].COUNT
           tv2 = result.deptOPERATORKD[2].COUNT
           drawchart1r(uv2, mv2, tv2);
+          $(".part1 h4").show()
         } else {
-          $("#chart1").hide()
           $("#chart1r").hide()
+          $(".part1 h4").hide()
         }
       }
       chart1yw()
       // 切换移网
       $(".btnzu1box .btn1").click(function () {
         chart1yw();
-        $("#chart1").show()
-        $("#chart1r").hide()
       })
       // 切换宽带
       $(".btnzu1box .btn2").click(function () {
         chart1kd();
-        $("#chart1").hide()
-        $("#chart1r").show()
-
       })
 
       // chart2
       function chart2yw() {
+        $("#chart2").show()
+        $("#chart2r").hide()
+
         if (result.quotaDeptAGEYW) {
           var age1 = [];
           var agedata1 = [];
@@ -1065,13 +1070,15 @@ function getMessage(yearq) {
             })
           }
           drawchart2(age1, agedata1);
+
         } else {
           $("#chart2").hide()
-          $("#chart2r").hide()
-
         }
       }
       function chart2kd() {
+        $("#chart2").hide()
+        $("#chart2r").show()
+
         if (result.quotaDeptAGEKD) {
           var age2 = [];
           var agedata2 = [];
@@ -1085,31 +1092,27 @@ function getMessage(yearq) {
             })
           }
           drawchart2r(age2, agedata2);
-        } else {
-          $("#chart2").hide()
-          $("#chart2r").hide()
 
+        } else {
+          $("#chart2r").hide()
         }
       }
       chart2yw()
       // 切换移网
       $(".btnzu1box .btn1").click(function () {
         chart2yw();
-        $("#chart2").show()
-        $("#chart2r").hide()
-
       })
       // 切换宽带
       $(".btnzu1box .btn2").click(function () {
         chart2kd();
-        $("#chart2").hide()
-        $("#chart2r").show()
-
       })
 
 
       // cahrt3
       function chart3yw() {
+        $("#chart3").show()
+        $("#chart3r").hide()
+
         if (result.quotaDeptTypeYW) {
           q4[0] = result.quotaDeptTypeYW[2].COUNT
           q4[1] = result.quotaDeptTypeYW[0].COUNT
@@ -1118,57 +1121,57 @@ function getMessage(yearq) {
           q1[1] = result.quotaDeptTypeYW[0].COUNT
           q1[2] = result.quotaDeptTypeYW[1].COUNT
           drawchart3(q4, q1);
+
         } else {
           $("#chart3").hide()
-          $("#chart3r").hide()
         }
       }
       function chart3kd() {
+        $("#chart3").hide()
+        $("#chart3r").show()
+
         if (result.quotaDeptSexKD) {
           for (var i = 0; i < result.quotaDeptSexKD.length; i++) {
             if (result.quotaDeptSexKD[i].SEX == "女" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国联通") {
-              s1[0] = result.quotaDeptSexKD[i].COUNT
+              girl[0] = result.quotaDeptSexKD[i].COUNT
             }
             if (result.quotaDeptSexKD[i].SEX == "女" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国移动") {
-              s1[1] = result.quotaDeptSexKD[i].COUNT
+              girl[1] = result.quotaDeptSexKD[i].COUNT
             }
             if (result.quotaDeptSexKD[i].SEX == "女" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国电信") {
-              s1[2] = result.quotaDeptSexKD[i].COUNT
+              girl[2] = result.quotaDeptSexKD[i].COUNT
             }
             if (result.quotaDeptSexKD[i].SEX == "男" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国联通") {
-              s2[0] = result.quotaDeptSexKD[i].COUNT
+              boy[0] = result.quotaDeptSexKD[i].COUNT
             }
             if (result.quotaDeptSexKD[i].SEX == "男" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国移动") {
-              s2[1] = result.quotaDeptSexKD[i].COUNT
+              boy[1] = result.quotaDeptSexKD[i].COUNT
             }
             if (result.quotaDeptSexKD[i].SEX == "男" && result.quotaDeptSexKD[i].OPERATOR_TYPE == "中国电信") {
-              s2[2] = result.quotaDeptSexKD[i].COUNT
+              boy[2] = result.quotaDeptSexKD[i].COUNT
             }
           }
-          drawchart3r(q4, q1);
-        } else {
-          $("#chart3").hide()
-          $("#chart3r").hide()
+          drawchart3r(girl, boy);
 
+        } else {
+          $("#chart3r").hide()
         }
       }
       chart3yw()
       // 切换移网
       $(".btnzu1box .btn1").click(function () {
         chart3yw();
-        $("#chart3").show()
-        $("#chart3r").hide()
       })
       // 切换宽带
       $(".btnzu1box .btn2").click(function () {
         chart3kd();
-        $("#chart3").hide()
-        $("#chart3r").show()
-
       })
 
       // chart4
       function chart4yw() {
+        $("#chart4").show()
+        $("#chart4r").hide()
+
         if (result.quotaDeptStarYW) {
           for (var i = 0; i < result.quotaDeptStarYW.length; i++) {
             if (result.quotaDeptStarYW[i].USER_LEVEL == "1") {
@@ -1223,10 +1226,12 @@ function getMessage(yearq) {
 
         } else {
           $("#chart4").hide()
-          $("#chart4r").hide()
         }
       }
       function chart4kd() {
+        $("#chart4").hide()
+        $("#chart4r").show()
+
         if (result.allDeptTypeKD) {
           for (var i = 0; i < result.allDeptTypeKD.length; i++) {
             if (result.allDeptTypeKD[i].USER_TYPE == "FTTH") {
@@ -1258,10 +1263,6 @@ function getMessage(yearq) {
             }
 
           }
-          console.log(skd1[1]);
-          console.log(skd2[1]);
-          console.log(skd3[1]);
-
           var sum = skd1[1] + skd2[1] + skd3[1]
           skd1[1] = parseFloat(skd1[1] / sum * 100).toFixed(2)
           skd2[1] = parseFloat(skd2[1] / sum * 100).toFixed(2)
@@ -1270,10 +1271,9 @@ function getMessage(yearq) {
 
           drawchart4r(skd1, skd2, skd3);
 
-        }else {
-          $("#chart4").hide()
+        } else {
           $("#chart4r").hide()
-  
+
         }
       }
 
@@ -1281,14 +1281,10 @@ function getMessage(yearq) {
       // 切换移网
       $(".btnzu1box .btn1").click(function () {
         chart4yw();
-        $("#chart4").show()
-        $("#chart4r").hide()
       })
       // 切换宽带
       $(".btnzu1box .btn2").click(function () {
         chart4kd()
-        $("#chart4").hide()
-        $("#chart4r").show()
       })
 
       /* ***** chart部分 end ***** */
@@ -1297,14 +1293,29 @@ function getMessage(yearq) {
       function fiveboxyw() {
         $(".five .num1").html(parseFloat(result.pieYWDept[0].YEAR_NPS).toFixed(2))
         $(".five .num2").html(parseFloat(result.pieYWDept[0].YEAR_LIFT).toFixed(2))
-        $(".five .num3").html(parseFloat(result.pieYWDept[0].YEAR_FINISH).toFixed(2))
+        var finish = result.pieYWDept[0].YEAR_FINISH * 100;
+        if (finish > 100) {
+          finish = 100
+        }
+        if (finish < 0) {
+          finish = 0
+        }
+        $(".five .num3").html(parseFloat(finish).toFixed(0) + "%")
         $(".five .num4").html(parseFloat(result.pieYWDept[0].QUARTER_NPS).toFixed(2))
         $(".five .num5").html(parseFloat(result.pieYWDept[0].QUARTER_LIFT).toFixed(2))
       }
       function fiveboxkd() {
         $(".five .num1").html(parseFloat(result.pieKDDept[0].YEAR_NPS).toFixed(2))
         $(".five .num2").html(parseFloat(result.pieKDDept[0].YEAR_LIFT).toFixed(2))
-        $(".five .num3").html(parseFloat(result.pieKDDept[0].YEAR_FINISH).toFixed(2))
+        var finish = result.pieYWDept[0].YEAR_FINISH * 100;
+        if (finish > 100) {
+          finish = 100
+        }
+        if (finish < 0) {
+          finish = 0
+        }
+
+        $(".five .num3").html(parseFloat(finish).toFixed(0) + "%")
         $(".five .num4").html(parseFloat(result.pieKDDept[0].QUARTER_NPS).toFixed(2))
         $(".five .num5").html(parseFloat(result.pieKDDept[0].QUARTER_LIFT).toFixed(2))
 
@@ -1408,8 +1419,8 @@ function getMessage(yearq) {
             unps: parseFloat(result.deptNPSYW[i].U_NPS).toFixed(2),
             // uuser: parseFloat(result.deptNPSYW[i].U_NPS).toFixed(2),
             // ulift: parseFloat(result.deptNPSYW[i].U_NPS).toFixed(2),
-            // same: parseFloat(result.deptNPSYW[i].U_NPS).toFixed(2),
-            // circle: parseFloat(result.deptNPSYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.deptNPSYW[i].YEAR_ON_YEAR).toFixed(2),
+            circle: parseFloat(result.deptNPSYW[i].MONTH_ON_MONTH).toFixed(2),
             mnps: parseFloat(result.deptNPSYW[i].M_NPS).toFixed(2),
             mm: parseFloat(result.deptNPSYW[i].COMPARE_M).toFixed(2),
             tnps: parseFloat(result.deptNPSYW[i].T_NPS).toFixed(2),
@@ -1421,12 +1432,10 @@ function getMessage(yearq) {
           strtable2 += `
           <tr>
             <td width="7%" align="center">`+ table2[i].num + `</td>
-            <td width="13%" align="center">`+ table2[i].name + `</td>
+            <td width="30%" align="center">`+ table2[i].name + `</td>
             <td width="8%" align="center">`+ table2[i].unps + `</td>
-            <td width="8%" align="center">—</td>
-            <td width="8%" align="center">—</td>
-            <td width="8%" align="center">—</td>
-            <td width="8%" align="center">—</td>
+            <td width="8%" align="center">`+ table2[i].same + `</td>
+            <td width="8%" align="center">`+ table2[i].circle + `</td>
             <td width="8%" align="center">`+ table2[i].mnps + `</td>
             <td width="8%" align="center">`+ table2[i].mm + `</td>
             <td width="8%" align="center">`+ table2[i].tnps + `</td>
@@ -1447,10 +1456,10 @@ function getMessage(yearq) {
             num: i + 1,
             name: result.deptNPSKD[i].L_NAME,
             unps: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
-            uuser: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
-            ulift: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
-            same: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
-            circle: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
+            //uuser: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
+            //ulift: parseFloat(result.deptNPSKD[i].U_NPS).toFixed(2),
+            same: parseFloat(result.deptNPSKD[i].YEAR_ON_YEAR).toFixed(2),
+            circle: parseFloat(result.deptNPSKD[i].MONTH_ON_MONTH).toFixed(2),
             mnps: parseFloat(result.deptNPSKD[i].M_NPS).toFixed(2),
             mm: parseFloat(result.deptNPSKD[i].COMPARE_M).toFixed(2),
             tnps: parseFloat(result.deptNPSKD[i].T_NPS).toFixed(2),
@@ -1462,10 +1471,8 @@ function getMessage(yearq) {
           strtable2 += `
           <tr>
             <td width="7%" align="center">`+ table2[i].num + `</td>
-            <td width="13%" align="center">`+ table2[i].name + `</td>
+            <td width="30%" align="center">`+ table2[i].name + `</td>
             <td width="8%" align="center">`+ table2[i].unps + `</td>
-            <td width="8%" align="center">`+ table2[i].uuser + `</td>
-            <td width="8%" align="center">`+ table2[i].ulift + `</td>
             <td width="8%" align="center">`+ table2[i].same + `</td>
             <td width="8%" align="center">`+ table2[i].circle + `</td>
             <td width="8%" align="center">`+ table2[i].mnps + `</td>
@@ -1528,6 +1535,93 @@ function getMessage(yearq) {
       })
 
       /* ***** rank end ***** */
+      /* ***** table3 start ***** */
+      function table3yw() {
+        var strtable3 = '';
+        var table3 = [];
+        for (var i = 0; i < result.deptProYW.length; i++) {
+          table3.push({
+            num: result.deptProYW[i].rank,
+            name: result.deptProYW[i].PROVINCE_NAME,
+            unps: parseFloat(result.deptProYW[i].U_NPS).toFixed(2),
+            // ulift:parseFloat(result.deptProYW[i].U_NPS).toFixed(2),
+            same: parseFloat(result.deptProYW[i].YEAR_ON_YEAR).toFixed(2),
+            circle: parseFloat(result.deptProYW[i].MONTH_ON_MONTH).toFixed(2),
+            mnps: parseFloat(result.deptProYW[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.deptProYW[i].COMPARE_M).toFixed(2),
+            tnps: parseFloat(result.deptProYW[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.deptProYW[i].COMPARE_T).toFixed(2),
+            match: parseFloat(result.deptProYW[i].COMPETITION_GAP).toFixed(2)
+          })
+        }
+        for (var i = 0; i < table3.length; i++) {
+          strtable3 += `
+          <tr>
+            <td width="10%" align="center">`+ table3[i].num + `</td>
+            <td width="10%" align="center">`+ table3[i].name + `</td>
+            <td width="10%" align="center">`+ table3[i].unps + `</td>
+            <td width="10%" align="center">`+ table3[i].same + `</td>
+            <td width="10%" align="center">`+ table3[i].circle + `</td>
+            <td width="10%" align="center">`+ table3[i].mnps + `</td>
+            <td width="10%" align="center">`+ table3[i].mm + `</td>
+            <td width="10%" align="center">`+ table3[i].tnps + `</td>
+            <td width="10%" align="center">`+ table3[i].mt + `</td>
+            <td width="10%" align="center">`+ table3[i].match + `</td>
+          </tr>
+          `
+        }
+        $(".promx #tplWrapper_TemplateZ").html(strtable3)
+
+
+      }
+      function table3kd() {
+        var strtable3 = '';
+        var table3 = [];
+        for (var i = 0; i < result.deptProKD.length; i++) {
+          table3.push({
+            num: result.deptProKD[i].rank,
+            name: result.deptProKD[i].PROVINCE_NAME,
+            unps: parseFloat(result.deptProKD[i].U_NPS).toFixed(2),
+            // ulift:parseFloat(result.deptProKD[i].U_NPS).toFixed(2),
+            same: parseFloat(result.deptProKD[i].YEAR_ON_YEAR).toFixed(2),
+            circle: parseFloat(result.deptProKD[i].MONTH_ON_MONTH).toFixed(2),
+            mnps: parseFloat(result.deptProKD[i].M_NPS).toFixed(2),
+            mm: parseFloat(result.deptProKD[i].COMPARE_M).toFixed(2),
+            tnps: parseFloat(result.deptProKD[i].T_NPS).toFixed(2),
+            mt: parseFloat(result.deptProKD[i].COMPARE_T).toFixed(2),
+            match: parseFloat(result.deptProKD[i].COMPETITION_GAP).toFixed(2)
+          })
+        }
+        for (var i = 0; i < table3.length; i++) {
+          strtable3 += `
+          <tr>
+            <td width="10%" align="center">`+ table3[i].num + `</td>
+            <td width="10%" align="center">`+ table3[i].name + `</td>
+            <td width="10%" align="center">`+ table3[i].unps + `</td>
+            <td width="10%" align="center">`+ table3[i].same + `</td>
+            <td width="10%" align="center">`+ table3[i].circle + `</td>
+            <td width="10%" align="center">`+ table3[i].mnps + `</td>
+            <td width="10%" align="center">`+ table3[i].mm + `</td>
+            <td width="10%" align="center">`+ table3[i].tnps + `</td>
+            <td width="10%" align="center">`+ table3[i].mt + `</td>
+            <td width="10%" align="center">`+ table3[i].match + `</td>
+          </tr>
+          `
+        }
+        $(".promx #tplWrapper_TemplateZ").html(strtable3)
+
+      }
+      table3yw()
+      // 切换移网
+      $(".btnzu1box .btn1").click(function () {
+        table3yw()
+      })
+      // 切换宽带
+      $(".btnzu1box .btn2").click(function () {
+        table3kd()
+      })
+
+      /* ***** table3 end ***** */
       delnan()
       $(".btnzu1box .btn1").click(function () {
         delnan()
@@ -1595,5 +1689,3 @@ function delnan() {
   });
 
 }
-
-

@@ -1,24 +1,37 @@
-// var yearq = localStorage.getItem("yearq")
+var curWwwPath=window.document.location.href;
+var pathName=window.document.location.pathname;
+var pos=curWwwPath.indexOf(pathName);
+var localhostPaht=curWwwPath.substring(0,pos);
+var projectName=pathName.substring(0,pathName.substr(1).indexOf('/')+1);
+
+
+
+const ajaxBaseURL = localhostPaht+projectName;
+console.log(ajaxBaseURL);
+
+var yearq=localStorage.getItem("yearq")
+var SYS_ID=localStorage.getItem("SYS_ID",SYS_ID);
+var SYS_VALUE=localStorage.getItem("SYS_VALUE",SYS_VALUE);
+var DEPT_ID=localStorage.getItem("DEPT_ID",DEPT_ID);
+var DEPT_NAME=localStorage.getItem("DEPT_NAME",DEPT_NAME);
+var provinceName=localStorage.getItem("provinceName",provinceName);
 var yearq = "2018Q1"
 var chart1 = [];
 var chart2 = [];
 var chart3 = [];
 var chart4 = [];
 // chart1
-var uv1 = [];
-var mv1 = [];
-var tv1 = [];
-var uv2 = [];
-var mv2 = [];
-var tv2 = [];
-
+var uv = [];
+var mv = [];
+var tv = [];
 // chart2
+var age = [];
+var agedata = [];
+var sum = 0;
+var avg = 0;
 // chart3
 var q4 = [];
 var q1 = [];
-var girl = [];
-var boy = [];
-
 // chart4
 var s1 = []
 var s2 = []
@@ -26,11 +39,6 @@ var s3 = []
 var s4 = []
 var s5 = []
 var s6 = []
-var skd1 = []
-var skd2 = []
-var skd3 = []
-var skd4 = []
-
 // table
 var prorank = []
 var str = ''
@@ -59,9 +67,8 @@ var rankarea = ''
 var rankall = ''
 
 // 模拟获取省份名称
-// var proname = "山东"
+var proname = provinceName;
 // var proname = "海南"
-var proname = localStorage.getItem("proname")
 
 // 切换移网和宽带
 $(".btnzu1 .btn1").click(function () {
@@ -100,9 +107,8 @@ $(".btnzu2 .btn1").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第一季度");
-  yearq = "2017Q1"
-  // localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q1";
+  getMessage(yearq);
 })
 $(".btnzu2 .btn2").click(function () {
   // 17Q2
@@ -112,9 +118,8 @@ $(".btnzu2 .btn2").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第二季度");
-  yearq = "2017Q2"
-  // localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q2";
+  getMessage(yearq);
 })
 $(".btnzu2 .btn3").click(function () {
   // 17Q3
@@ -124,9 +129,8 @@ $(".btnzu2 .btn3").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第三季度");
-  yearq = "2017Q3"
-  // localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q3";
+  getMessage(yearq);
 })
 $(".btnzu2 .btn4").click(function () {
   // 17Q4
@@ -136,9 +140,8 @@ $(".btnzu2 .btn4").click(function () {
   $(".btnzu2 .btn4").addClass("active");
   $(".btnzu2 .btn5").removeClass("active");
   $(".top .age").html("2017年第四季度");
-  yearq = "2017Q4"
-  // localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2017Q4";
+  getMessage(yearq);
 })
 $(".btnzu2 .btn5").click(function () {
   // 18Q1
@@ -148,9 +151,8 @@ $(".btnzu2 .btn5").click(function () {
   $(".btnzu2 .btn4").removeClass("active");
   $(".btnzu2 .btn5").addClass("active");
   $(".top .age").html("2018年第一季度");
-  yearq = "2018Q1"
-  // localStorage.setItem("yearq", yearq)
-  getMessage(yearq)
+  yearq="2018Q1";
+  getMessage(yearq);
 })
 
 // 整体网络业务服务
@@ -181,6 +183,7 @@ $(".btnzu3 .btn1").click(function () {
     `
   }
   $(".talezbmx tbody").html(strZT)
+
 })
 $(".btnzu3 .btn2").click(function () {
   // 网络
@@ -266,7 +269,7 @@ $(".btnzu3 .btn4").click(function () {
   $(".talezbmx tbody").html(strFW)
 })
 $(".enter1").click(function () {
-  window.location.href = "index.html"
+  window.location.href = ajaxBaseURL+"/show/showReportPage"
 })
 
 
@@ -1125,16 +1128,14 @@ function drawchart4r(skd1, skd2, skd3) {
   chart4r.setOption(option4r)
 }
 
-getMessage(yearq)
+getMessage(yearq);
 // 获取数据
-function getMessage(yearq) {
+function getMessage(yearq){
   $.ajax({
-    type: "post",
+    type: "get",
     dataType: "json",
-    url: "json/index1.json",
-    data: {
-      yearq: yearq
-    },
+    url: "../reportPage/json/index1.json",
+    //url: ajaxBaseURL+"/show/showProvicne/"+provinceName+"/"+yearq,
     success: function (result) {
       console.log("请求成功");
       // console.log(result);
@@ -2361,6 +2362,7 @@ function getMessage(yearq) {
       console.log("请求失败");
     }
   })
+
 }
 function delnan() {
   $('.tablemx tbody tr').each(function (i) {
@@ -2396,4 +2398,7 @@ function delnan() {
   });
 
 }
+
+
+
 

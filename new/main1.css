@@ -17,7 +17,7 @@ body {
   width: 90%;
   
   /* width: 1000px; */
-  /* margin: 0 auto; */
+  /*margin: 0 auto;*/
   float: right;
   
 }
@@ -304,7 +304,7 @@ body {
   margin-top: 5px;
   margin-bottom: 30px;
   text-align: center;
-  /* background-color: #fff; */
+  
 
 }
 .talezbmx tbody tr:nth-child(odd){
